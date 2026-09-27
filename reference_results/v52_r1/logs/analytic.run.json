@@ -1,0 +1,13 @@
+{
+  "stage": "analytic",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appsDE_verify_reduced_identities.py",
+    "--output",
+    "<OUTPUT>/analytic_v40"
+  ],
+  "returncode": 0,
+  "seconds": 4.001006251000035,
+  "log": "logs/analytic.log"
+}

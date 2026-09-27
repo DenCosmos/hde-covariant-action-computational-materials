@@ -1,0 +1,15 @@
+Parsed 331 algebraic functions in 1.4s
+Contact 0000: exact identities passed
+Contact 0001: exact identities passed
+Contact 0011: exact identities passed
+Contact 0022: exact identities passed
+Contact 0101: exact identities passed
+Contact 0111: exact identities passed
+Contact 0122: exact identities passed
+Contact 0202: exact identities passed
+Contact 0212: exact identities passed
+Contact 1111: exact identities passed
+Contact 1122: exact identities passed
+Contact 1212: exact identities passed
+Contact 2222: exact identities passed
+PASS: 186 tests; 4.9s

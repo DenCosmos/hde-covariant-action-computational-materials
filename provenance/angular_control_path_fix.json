@@ -1,0 +1,8 @@
+{
+  "file": "scripts/article_appC5_verify_angular_controls.py",
+  "kind": "Confirmed path-only integration defect; scientific algebra unchanged",
+  "old_sha256": "0017bfa152b9dce6a4d73c8cf9e1bbdb16c9e0cdec9a20c47f0e02886e9dd3d3",
+  "new_sha256": "dd53e545a60ef1d80a3f135afd270f46c5df7b3bd9afe2ba5b3803d062af89bd",
+  "change": "Use the selected V52_RESULTS_ROOT for angular independent controls instead of an unselected fixed results/angular_v40 directory.",
+  "original_independent_portability_run": "Preserved unmodified and deliberately stopped after all 9 fresh radial generation jobs passed, before the affected angular control. Its incomplete invocation is NOT a full PASS. Final frozen-code validation uses fingerprint-validated current-session checkpoints."
+}

@@ -1,0 +1,753 @@
+{
+  "passed": true,
+  "checks": 186,
+  "runtime_s": 4.810494815000027,
+  "sympy": "1.14.0",
+  "scope": "Printed-coefficient algebra and indexing, NOT full rederivation of mixed gravitational amplitudes",
+  "tests": [
+    {
+      "test": "All 331 R functions are defined exactly once and parsed",
+      "passed": true
+    },
+    {
+      "test": "Every R index resolves to a definition",
+      "passed": true
+    },
+    {
+      "test": "Numerators and denominators are paired",
+      "passed": true
+    },
+    {
+      "test": "Thirteen contact representatives",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0000, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0000, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0000, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0000, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0000, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0001, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0001, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0001, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0001, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0001, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0011, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0011, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0011, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0011, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0011, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0022, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0022, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0022, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0022, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0022, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0101, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0101, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0101, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0101, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0101, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0111, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0111, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0111, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0111, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0111, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0122, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0122, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0122, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0122, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0122, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0202, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0202, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0202, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0202, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0202, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0212, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0212, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0212, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0212, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 0212, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1111, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1111, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1111, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1111, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1111, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1122, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1122, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1122, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1122, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1122, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1212, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1212, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1212, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1212, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 1212, power 0",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 2222, power -4",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 2222, power -3",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 2222, power -2",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 2222, power -1",
+      "passed": true
+    },
+    {
+      "test": "h=b+u+v: 2222, power 0",
+      "passed": true
+    },
+    {
+      "test": "The reconstruction table has 81 rows",
+      "passed": true
+    },
+    {
+      "test": "Unique reconstruction-table component indices",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0000",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0001",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0002",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0010",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0011",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0012",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0020",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0021",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0022",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0100",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0101",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0102",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0110",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0111",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0112",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0120",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0121",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0122",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0200",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0201",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0202",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0210",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0211",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0212",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0220",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0221",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 0222",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1000",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1001",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1002",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1010",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1011",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1012",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1020",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1021",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1022",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1100",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1101",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1102",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1110",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1111",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1112",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1120",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1121",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1122",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1200",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1201",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1202",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1210",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1211",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1212",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1220",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1221",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 1222",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2000",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2001",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2002",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2010",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2011",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2012",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2020",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2021",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2022",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2100",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2101",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2102",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2110",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2111",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2112",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2120",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2121",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2122",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2200",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2201",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2202",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2210",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2211",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2212",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2220",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2221",
+      "passed": true
+    },
+    {
+      "test": "Reconstruction indexing 2222",
+      "passed": true
+    },
+    {
+      "test": "41 even-polarization components; 40 odd components vanish",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W10",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W01",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W20",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W11",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W02",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W30",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W21",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W12",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W03",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W40",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W31",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W22",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W13",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W04",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W50",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W41",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W32",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W23",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W14",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W05",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W60",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W51",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W42",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W33",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W24",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W15",
+      "passed": true
+    },
+    {
+      "test": "Printed local derivative W06",
+      "passed": true
+    },
+    {
+      "test": "Printed local vertex L2",
+      "passed": true
+    },
+    {
+      "test": "Printed local vertex L3",
+      "passed": true
+    },
+    {
+      "test": "Printed local vertex L4",
+      "passed": true
+    },
+    {
+      "test": "Printed local vertex L5",
+      "passed": true
+    },
+    {
+      "test": "Printed local vertex L6",
+      "passed": true
+    },
+    {
+      "test": "All 54 pair-species headings are present",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+--- GitHub_bundle/scripts/verify_entropy.py
++++ scripts/article_sec7_3_verify_entropy.py
+@@ -2,6 +2,19 @@
+ """Fifteen exact entropy and dimensional checks. Run: python verify_entropy.py.
+ Adapted from the supplied entropy verifier; historical V41 filename checks removed.
+ Requires SymPy. Does not establish general nonequilibrium horizon thermodynamics.
++
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article 7.3, eq:generalized-apparent-entropy (218).
++  article 7.3, eq:generalized-entropy-background (219).
++  article 7.3, eq:generalized-entropy-matching (220).
++  article 7.3, eq:generalized-entropy-no-ghost (221).
++  article 7.3, eq:generalized-entropy-critical-radius (222).
++  article 7.3, eq:generalized-entropy-time-derivative (223).
++Method: Symbolic entropy derivatives and dimensional checks.
++Inputs: Embedded entropy parameters r,nu,gamma,m,enthalpy positive.
++Outputs below the selected results root: logs/entropy.log.
++Provenance: GitHub_bundle/scripts/verify_entropy.py.
++Scope limit: Not a general nonequilibrium thermodynamic derivation; dimensional checks are consistency checks.
+ """
+ from __future__ import annotations
+ 
+@@ -16,6 +29,7 @@
+     raise SystemExit('Для проверки установите SymPy: python -m pip install sympy') from exc
+ 
+ 
++# V52: article eq:generalized-apparent-entropy (218); article eq:generalized-entropy-background (219); article eq:generalized-entropy-matching (220); article eq:generalized-entropy-no-ghost (221); article eq:generalized-entropy-critical-radius (222); article eq:generalized-entropy-time-derivative (223).
+ def main() -> None:
+     checks: list[str] = []
+ 

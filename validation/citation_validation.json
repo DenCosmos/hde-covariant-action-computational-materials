@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "level": "Local YAML/required-field/identifier/release consistency checks only; NOT official CFF schema validation",
+  "official_cffconvert_status": "NOT RUN",
+  "tests": [
+    {
+      "id": "required.cff-version",
+      "status": "PASS"
+    },
+    {
+      "id": "required.message",
+      "status": "PASS"
+    },
+    {
+      "id": "required.title",
+      "status": "PASS"
+    },
+    {
+      "id": "required.authors",
+      "status": "PASS"
+    },
+    {
+      "id": "cff_version",
+      "status": "PASS"
+    },
+    {
+      "id": "software_type",
+      "status": "PASS"
+    },
+    {
+      "id": "release_version",
+      "status": "PASS"
+    },
+    {
+      "id": "author.0.name",
+      "status": "PASS"
+    },
+    {
+      "id": "author.0.orcid",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+#!/usr/bin/env python3
+"""Т07--Т09: читаемый математический каталог, не дамп JSON.
+
+Тринадцать контактов, их три раздельные части, все 54 пары A/B,
+явные алгебраические функции и точные реестры восстановления.
+"""
+from __future__ import annotations
+from pathlib import Path
+import json,csv,itertools,re,math,time
+import sympy as sp
+import radial_coeff_algebra as a
+from assemble_radial_v40 import parse,load
+B=Path(__file__).resolve().parents[1];D=B/'results/radial_generic';R,Z=a.F.gens
+
+def to_z(v):
+    u=(1-Z)/(1+Z)
+    def pol(p):
+        parity={m[1]%2 for m in p}
+        if len(parity)>1:raise ValueError('Mixed parity')
+        b=next(iter(parity),0)
+        return sum((c*R**m[0]*u**((m[1]-b)//2) for m,c in p.items()),a.F.zero),b
+    d={};odd={}
+    for ph,rat in v.d.items():
+        n,p=pol(rat.numer);de,b=pol(rat.denom)
+        if p==b:d[ph]=n/de
+        elif p-b==1:odd[ph]=n/de/(1+Z)
+        else:odd[ph]=n/de/(1-Z)
+    return a.Coeff(d),a.Coeff(odd)
+
+def expr(v):
+    z=sp.Symbol('z',real=True)
+    return (v[0].expr()+sp.sqrt(1-a.HALF_ANGLE**2)*v[1].expr()).subs(a.HALF_ANGLE,z)
+def tex(x):return sp.latex(x,fold_short_frac=False,order='lex')
+def equation(body,label):return '\\begin{equation}\n'+body+'\n\\label{'+label+'}\n\\end{equation}\n'
+
+def multiline_sum(ex,width=65):
+    terms=sp.Add.make_args(sp.expand(ex));lines=[];current=''
+    for term in terms:
+        negative=term.could_extract_minus_sign();s=tex(-term if negative else term)
+        addition=(' - ' if negative else (' + ' if current or lines else ''))+s
+        # approximate the number of printed glyphs, rather than LaTeX bytes
+        measure=re.sub(r'\\[A-Za-z]+','X',current+addition)
+        if current and len(measure)>width:lines.append(current);current=addition
+        else:current+=addition
+    if current:lines.append(current)
+    if len(lines)==1:return lines[0]
+    return '\\shortstack[l]{'+'\\\\\n'.join('$\\displaystyle '+line+'$' for line in lines)+'}'
+
+def rational_equation(ex,number):
+    # Coefficients have a single phase in almost all cases. A common denominator
+    # gives a stable, fully explicit numerator without new LaTeX macros.
+    n,d=sp.fraction(sp.factor(ex));n=sp.expand(n)
+    if len(tex(ex))<185:return equation(f'R_{{{number}}}(r,z)='+tex(ex),f'eq:cat-rational-{number}')
+    body=f'R_{{{number}}}(r,z)=\\frac{{N_{{{number}}}(r,z)}}{{D_{{{number}}}(r,z)}}.'
+    out=equation(body,f'eq:cat-rational-{number}')
+    out+=equation(f'N_{{{number}}}(r,z)='+multiline_sum(n,62),f'eq:cat-numerator-{number}')
+    out+=equation(f'D_{{{number}}}(r,z)='+tex(sp.factor(d)),f'eq:cat-denominator-{number}')
+    return out
+
+def main():
+    from build_local_catalogue_v40 import main as build_local
+    build_local()
+    started=time.monotonic();coeffs=[];ids={};maps=[]
+    def put(v):
+        v=to_z(v);e=expr(v);key=str(e)
+        if e==0:return '0'
+        if key not in ids:ids[key]=len(coeffs)+1;coeffs.append(e)
+        return f'R_{{{ids[key]}}}'
+    def poly_map(key,values):
+        if not values:return equation(key+'=0.',f'eq:cat-map-{len(maps)+1}')
+        items=[f'{key}_{{{p}}}={put(v)}' for p,v in sorted(values.items())]
+        return equation('\\shortstack[l]{'+'\\\\\n'.join('$\\displaystyle '+q+'$' for q in items)+'}',f'eq:cat-map-{len(maps)+1}')
+    rows=list(csv.DictReader((D/'reconstruction.csv').open()));seeds=sorted({row['seed'] for row in rows if row['nonzero']=='1'})
+    out=[r'''\documentclass[10pt,a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[margin=20mm]{geometry}
+\usepackage{hyperref}
+\title{Математический каталог к версии 40}
+\author{}
+\date{10 сентября 2026 г.}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Область применения и индексация}
+Каталог относится к радиационной ветви $U=0$ и к кинематике независимых радиусов $r=k'/k>0$, $-1<z<1$, $x=k\eta$. Это не общая гравитационная амплитуда на произвольном фоне. В формулах статьи сохраняются внешние частотные множители, общий масштаб и отдельная объёмная нормировка строго однородных линий.
+
+Индексы позиций $0,1,2,3$ соответствуют позициям $1,2,3,4$ статьи. Индексы полей $0,1,2$ означают скаляр, первую и вторую линейные тензорные поляризации. Направленные внутрь импульсы в единицах $k$ равны
+\begin{equation}
+\shortstack[l]{$\displaystyle \mathbf p_0=(0,0,1),\quad \mathbf p_1=(0,0,-1),$\\
+$\displaystyle \mathbf p_2=(-r\sqrt{1-z^2},0,-rz),\quad \mathbf p_3=(r\sqrt{1-z^2},0,rz).$}
+\label{eq:cat-momenta}
+\end{equation}
+Знаковые частоты равны $(c_{A_0},c_{A_1},-rc_{A_2},-rc_{A_3})$, где $c_0=1/\sqrt3$, $c_1=c_2=1$. Для каждого внешнего импульса $\mathbf n=\mathbf p/|\mathbf p|$ используются $\mathbf e=(0,1,0)$, $\mathbf b=(-n_z,0,n_x)$, $E_1=\mathbf e\mathbf e-\mathbf b\mathbf b$, $E_2=\mathbf e\mathbf b+\mathbf b\mathbf e$; квадраты обеих норм равны двум. Параметр исходного алгебраического вычисления $t_\theta$ связан с $z$ равенством $t_\theta^2=(1-z)/(1+z)$.
+
+Для внутреннего импульса $\mathbf p$ ненулевой нормы используется ненормированный $\mathbf b=(-p_z,0,p_x)$: $E_1=\mathbf e\mathbf e-\mathbf b\mathbf b/p^2$, $E_2=\mathbf e\mathbf b+\mathbf b\mathbf e$. Квадраты норм скаляра и двух тензоров равны $1,2,2p^2$. Переход от $\mathbf p$ к $-\mathbf p$ между концами даёт множители $\tau_I=(1,1,-1)$.
+
+При $\mathbf p=0$ используются пять симметричных бесследовых матриц. Две диагональные матрицы имеют вид $\mathrm{diag}(1,-1,0)$ и $\mathrm{diag}(1,1,-2)$. Остальные три имеют единицы в парах позиций $xy,yx$, $xz,zx$ и $yz,zy$ соответственно. Квадраты их норм равны $2,6,2,2,2$. Кинетический знак однородной скалярной координаты равен $-1$. Ковариации геометрических координат делятся на положительный квадрат геометрической нормы; скалярный знак учитывается свободным движением, а не отрицательной вероятностью состояния.
+
+\section{Тринадцать базисных контактов и восстановление 81 компоненты}
+Для каждой контактной компоненты ниже приводятся четыре набора коэффициентов: $h_p$ --- полный гамильтонов контакт; $b_p$ --- минус исходный лагранжев контакт; $u_p$ --- сумма контактов исключённых связей; $v_p$ --- сумма скоростных контактов преобразования Лежандра. Во всех случаях
+\begin{equation}
+\frac{H_4}{g_{\mathrm R}^2k^4}=\sum_{p=-4}^{0}h_px^p,\qquad h_p=b_p+u_p+v_p.
+\label{eq:cat-contact-parts}
+\end{equation}
+Коэффициенты при неуказанных степенях равны нулю. Обозначения $R_s$ в следующих формулах означают явные алгебраические функции раздела~\ref{sec:cat-rationals}, а не внешние электронные записи. При записи через $z$ некоторые источники глобальных декартовых тензоров содержат $\sqrt{1-z^2}$; после перехода к $t_\theta$ все функции рациональны.
+
+Пусть $T$ переставляет входящие и исходящие пары, а $S$ переставляет две позиции внутри одной пары. Точные правила имеют вид
+\begin{equation}
+ h_p^{B A C D}(r,z)=h_p^{A B D C}(r,z)=h_p^{A B C D}(r,-z),\qquad
+ h_p^{C D A B}(r,z)=r^{4+p}\overline{h_p^{A B C D}(1/r,z)}.
+\label{eq:cat-contact-symmetries}
+\end{equation}
+Сначала упорядочиваются индексы внутри каждой пары, затем пары упорядочиваются лексикографически. Нечётное число внутренних перестановок даёт $z\mapsto-z$. Перестановка пар даёт $r\mapsto1/r$, комплексное сопряжение и множитель $r^{4+p}$. Во всех 81 компонентах эти тождества проверены отдельно. Для трёх раздельных частей правила следуют из тех же перестановок внешних аргументов плотности и суммы трёх разбиений.
+
+Компоненты с нечётным числом полей второго тензорного вида тождественно равны нулю вследствие отражения $y\mapsto-y$. Таких компонент 40; остальные 41 восстанавливаются из 13 представителей.
+''']
+    for seed in seeds:
+        d=json.loads((D/'contacts'/(seed+'.json')).read_text());groups=[load(d['full_H4']),load(d['bare_H4']),{},{}]
+        for p in d['partitions']:
+            groups[2]=a.la_add(groups[2],load(p['auxiliary']));groups[3]=a.la_add(groups[3],load(p['legendre']))
+        out.append('\\subsection{Компонента '+seed+'}\n')
+        for name,vals in zip(['h','b','u','v'],groups):
+            maps.append('')
+            out.append(poly_map(name+'^{'+seed+'}',vals))
+    out.append(r'''\subsection{Полный реестр}
+В столбце $S$ единица означает $z\mapsto-z$, в столбце $T$ --- радиальное сопряжённое преобразование из \eqref{eq:cat-contact-symmetries}. Для нулевых строк преобразования не требуются.
+\begin{longtable}{ccccc}
+Компонента & Представитель & $S$ & $T$ & Ненулевая\\\hline
+''')
+    for row in rows:out.append(' & '.join([row['component'],row['seed'],row['t_to_inverse_t'],row['r_to_inverse_r_conjugate_scale'],row['nonzero']])+r'\\'+'\n')
+    out.append('\\end{longtable}\n')
+    out.append(r'''\section{Координатные и скоростные коэффициенты всех 54 пар}
+\label{sec:cat-pairs}
+В заголовке $ij:ab$ первые два индекса означают позиции импульсов, вторые --- виды двух внешних полей. Коэффициенты определены равенством
+\begin{equation}
+\frac{[L_3]_{ij,I}}{g_{\mathrm R}k^3}=e^{-i\Omega_{ij}x}\big[A_{ij,I}(x)X_I+B_{ij,I}(x)\partial_xX_I\big],\qquad
+A_{ij,I}=\sum_{p=-3}^{0}A_{ij,I,p}x^p,\quad B_{ij,I}=\sum_{p=-2}^{0}B_{ij,I,p}x^p.
+\label{eq:cat-pair-polynomials}
+\end{equation}
+Общий множитель $g_{\mathrm R}k^3$ выделен в соответствии с нормировкой статьи. Производная $\partial_x$ берётся по $x=k\eta$. Пространственный импульс пробной внутренней линии равен $-(\mathbf p_i+\mathbf p_j)$, но её поляризационный базис построен по $\mathbf p_i+\mathbf p_j$. Индекс $I=0,1,2$ относится к ненулевой линии; для пар $01$ и $23$ индекс $I=0,1,\ldots,5$ относится к шести однородным направлениям. Все отсутствующие коэффициенты равны нулю.
+''')
+    for p in sorted((D/'pair').glob('*.json')):
+        data=json.loads(p.read_text());key=p.stem
+        out.append('\\subsection{Пара '+key[:2]+':'+key[2:]+'}\n')
+        for k in ['A','B']:
+            for I,vals in enumerate(data[k]):
+                maps.append('')
+                out.append(poly_map(k+'^{'+key+';'+str(I)+'}',load(vals)))
+    out.append(r'''\section{Двадцать четыре упорядоченные обменные записи}
+Для каждого внешнего набора таблица ниже задаёт все записи, в том числе записи с нулевыми коэффициентами.
+\begin{longtable}{cccc}
+Разбиение & Поздняя пара & Ранняя пара & Внутренние индексы\\\hline
+$02|13$ & $02$ & $13$ & $0,1,2$\\
+$02|13$ & $13$ & $02$ & $0,1,2$\\
+$03|12$ & $03$ & $12$ & $0,1,2$\\
+$03|12$ & $12$ & $03$ & $0,1,2$\\
+$01|23$ & $01$ & $23$ & $0,1,2,3,4,5$\\
+$01|23$ & $23$ & $01$ & $0,1,2,3,4,5$\\
+\end{longtable}
+Для ненулевой линии $\nu_I=c_I|\mathbf p_i+\mathbf p_j|$; коэффициент при двух временах получается конечным умножением
+\begin{equation}
+ \frac{\tau_I}{2\nu_I\mathcal N_I}
+ [A_{a,I}(x)-i\nu_I B_{a,I}(x)]
+ [A_{b,I}(y)+i\nu_I B_{b,I}(y)].
+\label{eq:cat-ordered-exchange}
+\end{equation}
+Каждый коэффициент $x^py^s$ умножается на $-D_{ps}(\Omega_a+\nu_I,\Omega_b-\nu_I)$. Обратный порядок берётся из отдельной строки.
+
+Для глобальной координаты вместо \eqref{eq:cat-ordered-exchange} используются $X_a=A_a$, $Y_a=\sigma_I[(x-x_i)A_a+B_a]$ и ковариационная билинейная форма, напечатанная в формуле с меткой \texttt{eq:v34-global-contraction} статьи. Для скаляра $\sigma_I=-1$ и деления на отрицательную норму нет; для тензоров $\sigma_I=1$ и сохраняется деление на $2,6,2,2,2$. Физические ковариации $C_{QQ},C_{PP},C_{QP}$ фиксируются до выбора $k$, а безразмерные преобразуются как $C_{qq}=kC_{QQ}$, $C_{pp}=C_{PP}/k$, $C_{qp}=C_{QP}$. Дополнительный объёмный множитель и две пространственные дельта-функции не включены в $A,B$.
+''')
+    out.append('\\section{Конечная угловая реконструкция}\n')
+    af=B/'patches/fragments/angular_catalogue.tex'
+    if not af.is_file():
+        raise FileNotFoundError(f'Отсутствует обязательный угловой каталог: {af}')
+    out.append(af.read_text(encoding='utf-8'))
+    out.append((B/'patches/fragments/local_catalogue.tex').read_text())
+    out.append('\\section{Явные алгебраические функции}\n\\label{sec:cat-rationals}\nВсе следующие выражения определены при указанных в первом разделе значениях аргументов. Мягкий совместный предел берётся после объединения вкладов.\n')
+    for n,e in enumerate(coeffs,1):out.append(rational_equation(e,n))
+    out.append('\\end{document}\n')
+    (B/'mathematical_catalogue_v40.tex').write_text(''.join(out),encoding='utf-8')
+    (B/'results/catalogue_summary.json').write_text(json.dumps({'contact_seeds':len(seeds),'contact_components':81,'pairs':54,'rational_functions':len(coeffs),'seconds':time.monotonic()-started,'success':True},indent=2))
+    print('Catalogue generated:',len(coeffs),'explicit rational functions; elapsed',round(time.monotonic()-started,2))
+if __name__=='__main__':main()

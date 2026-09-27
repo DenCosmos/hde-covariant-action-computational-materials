@@ -1,0 +1,113 @@
+--- GitHub_bundle/original_scripts/verify_analytic_v40.py
++++ scripts/article_appsDE_verify_reduced_identities.py
+@@ -1,22 +1,36 @@
+ #!/usr/bin/env python3
+ # -*- coding: utf-8 -*-
+-"""Независимые символьные проверки новых расчётов V40 (Т01--Т06).
+-
+-Т01: редукция исходного квадратичного действия, смешанный и потенциальный
+-коэффициенты, простое пересечение и коэффициент Вронскиана.
+-Т02: точное действие для Q=delta Phi, каноническая масса, обе асимптотики
+-n=10, преобразование Лиувилля и показатель внутренней кривизны при n>10.
+-Т03: инвариантная кривая, функция Ляпунова, знаковые и временные оценки.
+-Т04: независимая каноническая производная и дивергентные тождества генератора.
+-Т05: полный скалярный кубический/квартичный полином, источники lapse/shift,
+-квадратичный источник тензора и исключение общих вспомогательных переменных.
+-Т06: положительная мажоранта всех рассматриваемых древесных вкладов,
+-размерностная однородность и воспроизведение энергетического интервала.
+-
+-Код проверяет алгебру. Аналитические доказательства существования решений,
+-компактности и асимптотических оценок приведены в article_v40.tex.
+-Запуск: python scripts/verify_analytic_v40.py
+-Требуется только SymPy. Результаты: results/analytic_v40/{checks.csv,expressions.txt}.
++"""Exact symbolic checks of the reduced actions and background identities (T01--T06).
++
++The checks cover quadratic reduction, canonical variables and late-time
++asymptotics, an invariant curve and Lyapunov identities, nonlinear canonical
++identities, cubic/quartic scalar polynomials and a tree-level majorant.
++These algebraic checks do not independently establish the existence,
++compactness or asymptotic estimates proved analytically in the manuscript.
++Historical output folder names are retained for compatibility.
++Requires SymPy. Use --output to select the output directory.
++
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article D.1, eq:scalar-finite-k-complete-action (441).
++  article D.1, eq:scalar-finite-k-complete-coefficients (442).
++  article D.1, eq:scalar-finite-k-complete-equation (443).
++  article 7.1, eq:crossing-linear-leading-coefficients (210).
++  article D.2, eq:power-finite-k-linear-equation (448).
++  article D.2, eq:power-exact-Q-coefficients (449).
++  article D.2, eq:power-canonical-mass-rational (450).
++  article D.2, eq:power-canonical-mass-limits (451).
++  article 7.7, eq:power-global-dimensionless-system (256).
++  article 7.7, eq:v33-lyapunov (254).
++  article 7.7, eq:v33-second-desitter-instability (259).
++  article 5, sec:hamiltonian (5).
++  article E, app:quartic-explicit-sources (E).
++  article E.3, eq:local-majorant-tree-polynomial (476).
++  article E.3, eq:local-majorant-explicit-Ckappa (477).
++Method: Exact auxiliary elimination, differentiation, and polynomial identities.
++Inputs: Embedded symbolic actions; no catalogue input.
++Outputs below the selected results root: analytic_v40/checks.csv, analytic_v40/run_summary.json.
++Provenance: GitHub_bundle/scripts/verify_analytic.py.
++Scope limit: Algebraic identities, not independent existence/compactness proofs or regulator-free unitarity.
+ """
+ from __future__ import annotations
+ import argparse,csv,json,platform,time,traceback
+@@ -42,6 +56,7 @@
+     EXPRESSIONS.append((name,str(value)))
+ 
+ 
++# V52: article eq:scalar-finite-k-complete-action (441); article eq:scalar-finite-k-complete-coefficients (442); article eq:scalar-finite-k-complete-equation (443); article eq:crossing-linear-leading-coefficients (210).
+ def quadratic_and_crossing():
+     """Т01; eq:scalar-finite-k-complete-action и eq:crossing-linear-leading-coefficients."""
+     M,H,L,q=s.symbols('M H L q',positive=True)
+@@ -76,6 +91,7 @@
+     check('T01.reduction_of_order_Wronskian',(u*s.diff(vlog,t)-s.diff(u,t)*vlog).subs(s.diff(J,t),1/(p*u**2)),p1/p)
+ 
+ 
++# V52: article eq:power-finite-k-linear-equation (448); article eq:power-exact-Q-coefficients (449); article eq:power-canonical-mass-rational (450); article eq:power-canonical-mass-limits (451).
+ def canonical_and_late():
+     """Т02; eq:power-finite-k-linear-equation--eq:power-canonical-mass-limits."""
+     M,H,L,Delta=s.symbols('M H L Delta',positive=True);chi=s.symbols('chi',negative=True)
+@@ -131,6 +147,7 @@
+     check('T02.intrinsic_3_curvature_linearization',s.diff(curvature,eps).subs(eps,0),-4*s.diff(zz,xx,2)/aa**2)
+ 
+ 
++# V52: article eq:power-global-dimensionless-system (256); article eq:v33-lyapunov (254); article eq:v33-second-desitter-instability (259).
+ def background_global():
+     """Т03: алгебраические составляющие глобального доказательства."""
+     y,h,n=s.symbols('y h n',positive=True)
+@@ -156,6 +173,7 @@
+     record('dimensionless_G',g);record('dimensionless_Lyapunov',F)
+ 
+ 
++# V52: article sec:hamiltonian (5).
+ def gauge_generator():
+     """Т04: каноническая производная независимо от готовой скобки и 3D-дивергенция."""
+     L,p,M,root_h=s.symbols('L pL M sqrt_h',positive=True)
+@@ -183,6 +201,7 @@
+     record('generator_coefficients', 'pL: epsilon_dot-N*K*epsilon/3+L^4 Div(L^-3 A)/3; C: D_t eta-gamma; Ci: A^i-xi^i; pN: D_t gamma; pi: D_t xi^i')
+ 
+ 
++# V52: article app:quartic-explicit-sources (E).
+ def scalar_polynomials_and_sources():
+     """Т05; полное разложение без замораживания P_phi и без отбрасывания градиентов."""
+     e=s.symbols('e');q,u,a,v,w,g2=s.symbols('Q u alpha v w g2')
+@@ -227,6 +246,7 @@
+     record('Jalpha_matter',Ja);record('Ji_matter_divided_by_grad_Q',Ji);record('complete_P4',PP4)
+ 
+ 
++# V52: article eq:local-majorant-tree-polynomial (476); article eq:local-majorant-explicit-Ckappa (477).
+ def nonresonant_majorant():
+     """Т06; восстановление M,H,E и конечной константы, не порога точной унитарности."""
+     M,H,E,k=s.symbols('M H E kappa',positive=True)
+@@ -265,7 +285,7 @@
+ 
+ 
+ def main():
+-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',type=Path,default=BASE/'results/analytic_v40')
++    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',type=Path,default=BASE/'results/current/analytic_v40')
+     args=ap.parse_args();args.output.mkdir(parents=True,exist_ok=True)
+     groups=[quadratic_and_crossing,canonical_and_late,background_global,gauge_generator,scalar_polynomials_and_sources,nonresonant_majorant]
+     success=False

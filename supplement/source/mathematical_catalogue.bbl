@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Yerokhin(2026)]{YerokhinV52Article}
+Danylo Yerokhin.
+\newblock {A minimal local covariant action for holographic dark energy:
+  constraints, perturbations, and nonlinear dynamics}.
+\newblock Unpublished manuscript, version V52, 27 September 2026, 2026.
+\newblock Main article with Appendices A--E. No arXiv identifier or journal
+  reference has been assigned in this local package.
+
+\end{thebibliography}

@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""Т11: проверка комплектности V40 и точного воспроизведения 22 замен.
+
+Это структурная проверка выпуска, а не независимое доказательство физики.
+Запускать из любого каталога: python scripts/audit_release_v40.py
+"""
+from __future__ import annotations
+import ast
+import collections
+import csv
+import hashlib
+import json
+from pathlib import Path
+import re
+import sys
+
+BASE = Path(__file__).resolve().parents[1]
+CHECKS: list[dict[str, object]] = []
+
+
+def check(name: str, condition: bool, detail: object = '') -> None:
+    CHECKS.append({'id': name, 'status': 'PASS' if condition else 'FAIL', 'detail': detail})
+    if not condition:
+        raise AssertionError(f'{name}: {detail}')
+
+
+def read_json(relative: str) -> dict:
+    return json.loads((BASE / relative).read_text(encoding='utf-8'))
+
+
+def main() -> int:
+    target = BASE / 'results/release_audit.json'
+    try:
+        old = (BASE / 'source/article_v39.tex').read_text(encoding='utf-8')
+        new = (BASE / 'article_v40.tex').read_text(encoding='utf-8')
+        manifest = read_json('patches/replacements_v39_to_v40.json')
+        sha = lambda text: hashlib.sha256(text.encode('utf-8')).hexdigest()
+        check('T11.source_SHA256', sha(old) == manifest['base_sha256'], sha(old))
+        check('T11.result_SHA256', sha(new) == manifest['result_sha256'], sha(new))
+        check('T11.exactly_22_patches', len(manifest['patches']) == 22)
+        reconstructed = old
+        intervals = []
+        for patch in manifest['patches']:
+            check('T11.unique_' + patch['id'], old.count(patch['find']) == 1)
+            start = old.index(patch['find'])
+            end = start + len(patch['find'])
+            check('T11.nonoverlap_' + patch['id'], all(end <= a or b <= start for a, b in intervals))
+            intervals.append((start, end))
+        for patch in reversed(manifest['patches']):
+            reconstructed = reconstructed.replace(patch['find'], patch['replace'], 1)
+        check('T11.patch_reproduction_byte_exact', reconstructed.encode() == new.encode())
+        labels_old = set(re.findall(r'\\label\{([^}]+)\}', old))
+        labels_new = re.findall(r'\\label\{([^}]+)\}', new)
+        check('T11.all_442_original_labels', len(labels_old) == 442 and labels_old <= set(labels_new))
+        check('T11.article_unique_labels', len(labels_new) == len(set(labels_new)) == manifest['result_label_count'], len(labels_new))
+        for filename in ['article_v40.tex', 'mathematical_catalogue_v40.tex']:
+            source = (BASE / filename).read_text(encoding='utf-8')
+            labels = re.findall(r'\\label\{([^}]+)\}', source)
+            refs = re.findall(r'\\(?:eqref|ref|pageref)\{([^}]+)\}', source)
+            check('T11.unique_labels_' + filename, len(labels) == len(set(labels)))
+            check('T11.resolved_refs_' + filename, set(refs) <= set(labels), sorted(set(refs)-set(labels)))
+        # New LaTeX follows the requested plain-source restrictions.
+        forbidden = re.compile(r'\\(?:newcommand|renewcommand|providecommand|NewDocumentCommand|def|let|definecolor|colorlet)\b|\\\[|\\\(|\\begin\{(?:align\*?|aligned|cases|gather\*?|multline\*?|displaymath)\}')
+        added = '\n'.join(item['replace'] for item in manifest['patches'])
+        check('T11.no_forbidden_new_LaTeX', forbidden.search(added) is None)
+        for sub, expected in [('bare', 81), ('pair', 54), ('contacts', 81)]:
+            count = len(list((BASE / 'results/radial_generic' / sub).glob('*.json')))
+            check('T07.' + sub + '_complete', count == expected, count)
+        assembly = read_json('results/radial_generic/assembly_summary.json')
+        check('T07.41_nonzero_contacts', assembly['nonzero_contacts'] == 41)
+        sym = read_json('results/radial_generic/symmetry_check.json')
+        check('T07.972_exact_permutations', sym['success'] and sym['permutation_identities'] == 972)
+        check('T07.13_independent_contacts', sym['nonzero_seeds'] == 13)
+        files = list((BASE / 'results/angular_v40').glob('j*_*.json'))
+        sizes = collections.Counter(read_json(str(p.relative_to(BASE)))['j'] for p in files)
+        check('T08.74_positions_by_j', sizes == {0: 9, 2: 25, 3: 4, 4: 36}, dict(sizes))
+        angular = read_json('results/angular_v40/complete_summary.json')
+        check('T08.74_bulk_74_boundary', angular['success'] and angular['bulk_positions'] == angular['boundary_positions'] == 74)
+        check('T08.24_ordered_exchanges', angular['ordered_exchanges_per_position'] == 24)
+        # Each independent coefficient verification keeps a readable CSV.
+        expected_csv = {
+            'analytic_v40/checks.csv': 53,
+            'local_vertices_v40/checks.csv': 62,
+            'radial_generic/assembly_checks.csv': 4,
+            'radial_generic/independent_controls.csv': 18,
+            'angular_v40/independent_controls.csv': 77,
+            'soft_v40/checks.csv': 209,
+        }
+        for name, count in expected_csv.items():
+            with (BASE / 'results' / name).open(encoding='utf-8-sig', newline='') as stream:
+                rows = list(csv.DictReader(stream))
+            check(name + '.count', len(rows) == count, len(rows))
+            check(name + '.all_PASS', all(row['status'] == 'PASS' for row in rows))
+        local = read_json('results/local_vertices_v40/results.json')
+        check('T09.27_derivatives_5_vertices', len(local['derivatives']) == 27 and set(local['vertices']) == {'2','3','4','5','6'})
+        noncom = read_json('results/noncom_v40/verification.json')
+        check('T07.noncom_audit_220', noncom['success'] and noncom['exact_checks'] == 220)
+        check('T07.noncom_57_full_nonzero', noncom['counts']['entries_not_vanishing_after_aggregation'] == 57)
+        for name in ['numerical_results.json', 'crossing_history.csv', 'crossing_convergence.csv',
+                     'saddle_rates.csv', 'late_rates.csv', 'late_n10_history.csv', 'late_n12_history.csv']:
+            check('T10.protocol_' + name, (BASE / 'results/n02_background_diagnostics' / name).is_file())
+        catalogue = read_json('results/catalogue_summary.json')
+        check('T07.catalogue_331_functions', catalogue['success'] and catalogue['rational_functions'] == 331)
+        for filename in ['article_v40.pdf', 'mathematical_catalogue_v40.pdf', 'article_v40.bbl',
+                         'references_v36.bib', 'README.txt', 'REPORT_V40.md']:
+            path = BASE / filename
+            check('release.file_' + filename, path.is_file() and path.stat().st_size > 100)
+        for filename in ['article_v40.log', 'mathematical_catalogue_v40.log']:
+            path = BASE / filename
+            if not path.exists():
+                path = BASE / 'results/tex_build' / filename
+            if path.exists():
+                log = path.read_text(encoding='utf-8', errors='replace')
+                check('release.no_unresolved_' + filename, 'undefined references' not in log and 'multiply defined' not in log)
+        for script in sorted((BASE / 'scripts').glob('*.py')):
+            ast.parse(script.read_text(encoding='utf-8'), filename=str(script))
+        check('release.all_Python_sources_parse', True)
+        payload = {'success': True, 'checks': CHECKS, 'check_count': len(CHECKS),
+                   'source_sha256': sha(old), 'article_sha256': sha(new),
+                   'scope': 'Structural, provenance and recorded-verification audit; not a new proof of all physical assertions.'}
+        target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        print(f'PASS: {len(CHECKS)} release checks; 22 exact edits; 442 original labels preserved.')
+        return 0
+    except Exception as exc:
+        target.write_text(json.dumps({'success': False, 'error': repr(exc), 'checks': CHECKS}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        print(f'FAIL: {exc}', file=sys.stderr)
+        return 1
+
+if __name__ == '__main__':
+    raise SystemExit(main())

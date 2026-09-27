@@ -1,0 +1,58 @@
+--- GitHub_bundle/original_scripts/assemble_radial_v40.py
++++ scripts/supplement_sec1_2_assemble_contacts.py
+@@ -1,18 +1,40 @@
+ #!/usr/bin/env python3
+-"""Т07: сборка 81 полного контакта из общих радиальных плотностей.
++"""V52-R1: supplement sec1 2 assemble contacts.
++Article: A minimal local covariant action for holographic dark energy:
++constraints, perturbations, and nonlinear dynamics (scientific version V52).
++Method: exact rational ADM, source contraction, or coefficient validation,
++as implemented below; derived from original_scripts/assemble_radial_v40.py unchanged in
++scientific algebra. Only imports, paths, checkpoint guards and reporting adapted.
++Assumptions: radiation background U=0, k=g_R=1, r>0, t=tan(theta/2)>0.
++External real TT tensors have norm 2. Internal norms and homogeneous kinetic
++signs are retained explicitly. No regulator-free unitary S-matrix is asserted.
++Inputs and outputs: see SCRIPT_REFERENCE_MAP.md and REPRODUCIBILITY.md.
++Run: python scripts/supplement_sec1_2_assemble_contacts.py (see --help for generator options).
++Dependencies: Python and SymPy; local lib modules. No network or LaTeX required.
+ 
+-Учитываются исходный четвертичный лагранжиан, скалярные и поперечные
+-вспомогательные переменные и все физические скорости. Три разбиения
+-хранятся раздельно для последующей угловой проекции. Контрольные формулы:
+-eq:v34-scalar-leading-contact, eq:v34-scalar-equal-radii-contact.
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article C.3, eq:radiation-contact-decomposition (351).
++  article 6.10, eq:v33-legendre-contact (191).
++  supplement 1.5.2, eq:cat-partition-contact-sum (498).
++  supplement 1.5.2, eq:cat-partition-velocity-nonzero (499).
++  supplement 1.5.2, eq:cat-partition-velocity-homogeneous (500).
++Method: Contract three auxiliary partitions and signed Legendre products, H4=-L4+aux+Legendre.
++Inputs: 54 new pair records and 81 new bare records.
++Outputs below the selected results root: radial_generic/contacts/*.json, radial_generic/assembly_summary.json.
++Provenance: GitHub_bundle/original_scripts/assemble_radial_v40.py.
++Scope limit: Radiation COM frame; not the separate fixed non-COM configuration.
+ """
+ from __future__ import annotations
++import sys
++from pathlib import Path
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"lib"))
++from release_paths import RESULTS
+ import itertools,json,time,csv,ast,pickle
+ from pathlib import Path
+ import sympy as s
+ import radial_coeff_algebra as a
+-from generate_radial_v40 import atomic
+-BASE=Path(__file__).resolve().parents[1];D=BASE/'results'/'radial_generic'
++from supplement_sec1_3_generate_radial_sources import atomic
++BASE=Path(__file__).resolve().parents[1];D=RESULTS/'radial_generic'
+ r,t=a.RADIUS,a.HALF_ANGLE
+ PARS=(((0,1),(2,3)),((0,2),(1,3)),((0,3),(1,2)))
+ START=time.monotonic()
+@@ -49,6 +71,7 @@
+     out['p2']=parse(d['p2']);out['norms']=[parse(x) for x in d['norms']]
+     return out
+ 
++# V52: article eq:radiation-contact-decomposition (351); article eq:v33-legendre-contact (191); supplement eq:cat-partition-contact-sum (498); supplement eq:cat-partition-velocity-nonzero (499); supplement eq:cat-partition-velocity-homogeneous (500).
+ def main():
+     pairs={}
+     for p in sorted((D/'pair').glob('*.json')):

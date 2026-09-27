@@ -1,0 +1,5 @@
+{
+  "success": true,
+  "checks": 209,
+  "joint_limit": "r=1+mu*q, q->0; all nine hard pairs and all 81 contacts"
+}

@@ -1,0 +1,7 @@
+# Tested runtime: CPython 3.13.5, Linux x86_64. Installation from PyPI was not verified here.
+sympy==1.14.0
+mpmath==1.3.0
+numpy==2.3.5
+scipy==1.17.0
+matplotlib==3.10.8
+PyYAML==6.0.3

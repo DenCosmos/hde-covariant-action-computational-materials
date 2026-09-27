@@ -1,0 +1,18 @@
+{
+  "stage": "radial_bare_54_81",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/supplement_sec1_3_generate_radial_sources.py",
+    "--task",
+    "bare",
+    "--start",
+    "54",
+    "--stop",
+    "81",
+    "--resume"
+  ],
+  "returncode": 0,
+  "seconds": 1.003601346999858,
+  "log": "logs/radial_bare_54_81.log"
+}

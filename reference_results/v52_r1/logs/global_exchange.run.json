@@ -1,0 +1,11 @@
+{
+  "stage": "global_exchange",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appC7_complete_global_exchange.py"
+  ],
+  "returncode": 0,
+  "seconds": 14.002409058000012,
+  "log": "logs/global_exchange.log"
+}

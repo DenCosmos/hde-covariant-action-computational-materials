@@ -1,0 +1,23 @@
+{
+  "windows": [
+    [
+      0.75,
+      1.25
+    ],
+    [
+      1.0,
+      2.0
+    ],
+    [
+      2.0,
+      3.0
+    ]
+  ],
+  "orders": [
+    48,
+    80
+  ],
+  "absolute_zero_threshold": 1e-09,
+  "difference_multiplier": 100,
+  "convergence_tolerance": 1e-08
+}

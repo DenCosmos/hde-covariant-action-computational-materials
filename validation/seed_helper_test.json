@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "Staging helper only, not a scientific verification",
+  "input_angular_records": 74,
+  "derived_global_fields_cleared": 74,
+  "source_vs_staged_hashes_recorded": true,
+  "scientific_verification_status": "NOT RUN by this helper"
+}

@@ -1,0 +1,51 @@
+{
+  "species": [
+    2,
+    1,
+    0,
+    1
+  ],
+  "bare_H4": {},
+  "partitions": [
+    {
+      "partition": 0,
+      "left": [
+        0,
+        1
+      ],
+      "right": [
+        2,
+        3
+      ],
+      "auxiliary": {},
+      "legendre": {}
+    },
+    {
+      "partition": 1,
+      "left": [
+        0,
+        2
+      ],
+      "right": [
+        1,
+        3
+      ],
+      "auxiliary": {},
+      "legendre": {}
+    },
+    {
+      "partition": 2,
+      "left": [
+        0,
+        3
+      ],
+      "right": [
+        1,
+        2
+      ],
+      "auxiliary": {},
+      "legendre": {}
+    }
+  ],
+  "full_H4": {}
+}

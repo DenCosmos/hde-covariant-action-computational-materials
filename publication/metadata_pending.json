@@ -1,0 +1,32 @@
+{
+  "computational_version": "V52-R1",
+  "scientific_article_version": "V52",
+  "proposed_tag": "v52-r1",
+  "title": "Computational materials and mathematical supplement for A minimal local covariant action for holographic dark energy: constraints, perturbations, and nonlinear dynamics",
+  "author": {
+    "given_names": "Danylo",
+    "family_name": "Yerokhin",
+    "affiliation": "V. N. Karazin Kharkiv National University",
+    "orcid": "0009-0003-8645-327X"
+  },
+  "repository_url": null,
+  "version_doi": null,
+  "concept_doi": null,
+  "article_doi": null,
+  "actual_release_date": null,
+  "code_license": "All rights reserved; limited scholarly verification permission (custom)",
+  "text_license": "All rights reserved; limited scholarly verification permission (custom)",
+  "data_license": "All rights reserved; limited scholarly verification permission (custom)",
+  "code_license_file": "LICENSE",
+  "text_license_file": "LICENSE",
+  "data_license_file": "LICENSE",
+  "author_metadata_confirmed": false,
+  "public_access_confirmed": false,
+  "licenses_confirmed": true,
+  "final_commit_hash_location": "External release record, GitHub release description, Zenodo metadata and article citation; never inside its own commit",
+  "status": "LICENSE_SELECTED_LOCAL_CANDIDATE_NOT_PUBLISHED",
+  "copyright_holder": "Danylo Yerokhin",
+  "license_decision_date": "2026-09-27",
+  "license_url": null,
+  "publication_target": "github"
+}

@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python",
+    "scripts/article_appC3_verify_contact_permutations.py"
+  ],
+  "returncode": 0,
+  "seconds": 30.00139855999987,
+  "status": "PASS"
+}

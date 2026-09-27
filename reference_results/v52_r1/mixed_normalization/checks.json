@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "checks": 11,
+  "scalar_residuals": 17,
+  "seconds": 0.11286683800017272,
+  "tests": [
+    {
+      "id": "canonical_action_up_to_boundary",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "method": "exact algebra",
+      "publication_labels": [
+        "eq:v34-canonical-matrices",
+        "eq:v34-antisymmetric-matrix",
+        "eq:v34-canonical-frequency",
+        "eq:v34-canonical-action"
+      ],
+      "tolerance": "exact zero"
+    },
+    {
+      "id": "canonical_momentum",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "method": "exact algebra",
+      "publication_labels": [
+        "eq:v34-canonical-evolution"
+      ],
+      "tolerance": "exact zero"
+    },
+    {
+      "id": "Euler_equations",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "method": "exact algebra",
+      "publication_labels": [
+        "eq:v34-canonical-evolution"
+      ],
+      "tolerance": "exact zero"
+    },
+    {
+      "id": "symplectic_norm_conservation",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "method": "exact algebra",
+      "publication_labels": [
+        "eq:v34-symplectic-norm"
+      ],
+      "tolerance": "exact zero"
+    },
+    {
+      "id": "frozen_determinant",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "method": "exact algebra",
+      "publication_labels": [
+        "eq:v34-frequency-determinant"
+      ],
+      "tolerance": "exact zero"
+    },
+    {
+      "id": "squared_frequency_root_-1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "method": "exact algebra",
+      "publication_labels": [
+        "eq:v34-frequency-roots"
+      ],
+      "tolerance": "exact zero"
+    },
+    {
+      "id": "squared_frequency_root_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "method": "exact algebra",
+      "publication_labels": [
+        "eq:v34-frequency-roots"
+      ],
+      "tolerance": "exact zero"
+    },
+    {
+      "id": "eigenvector_on_characteristic_surface",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "method": "polynomial remainder modulo det F=0",
+      "publication_labels": [
+        "eq:v34-frequency-determinant",
+        "eq:v34-spectral-residue"
+      ],
+      "tolerance": "exact zero"
+    },
+    {
+      "id": "simple_pole_residue",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "method": "cleared denominators then polynomial remainder; requires simple pole, N nonzero and e nonzero",
+      "publication_labels": [
+        "eq:v34-spectral-residue"
+      ],
+      "tolerance": "exact zero"
+    },
+    {
+      "id": "frequency_derivative_norm",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "method": "exact algebra",
+      "publication_labels": [
+        "eq:v34-spectral-residue",
+        "eq:v34-group-velocity"
+      ],
+      "tolerance": "exact zero"
+    },
+    {
+      "id": "momentum_derivative_for_group_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "method": "exact algebra",
+      "publication_labels": [
+        "eq:v34-group-velocity"
+      ],
+      "tolerance": "exact zero"
+    }
+  ],
+  "scope": "Canonical and simple-pole identities only; no independent mixed scattering matrix, chosen vacuum, stability domain or regulator-free unitary limit."
+}

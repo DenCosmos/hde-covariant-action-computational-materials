@@ -1,0 +1,33 @@
+--- GitHub_bundle/scripts/verify_catalogue.py
++++ scripts/supplement_sec1_verify_printed_catalogue.py
+@@ -7,6 +7,17 @@
+ mixed gravitational exchange amplitude.
+ 
+ Run from the package root: python scripts/verify_catalogue.py
++
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  supplement 1.2, sec:cat-contacts (1.2).
++  supplement 1.2.14, sec:cat-component-table (1.2.14).
++  supplement 1.3, sec:cat-pairs (1.3).
++  supplement 1.6, sec:cat-local-vertices (1.6).
++Method: Parse 331 rational functions and reconstruction/vertex tables; exact identities in printed coefficients.
++Inputs: supplement/source; newly calculated local_vertices_v40.
++Outputs below the selected results root: catalogue_checks.json.
++Provenance: GitHub_bundle/scripts/verify_catalogue.py.
++Scope limit: Printed-coefficient checks, not independent ADM derivation; the separate strict comparator supplies that comparison.
+ """
+ from __future__ import annotations
+ import argparse, itertools, json, re, time
+@@ -56,10 +67,11 @@
+ def math(text: str) -> sp.Expr:
+     return parse_expr(plain_latex(text),local_dict=LOCALS,transformations=TRANSFORMS)
+ 
++# V52: supplement sec:cat-contacts (1.2); supplement sec:cat-component-table (1.2.14); supplement sec:cat-pairs (1.3); supplement sec:cat-local-vertices (1.6).
+ def main() -> None:
+     parser=argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--source',type=Path,default=Path(__file__).resolve().parents[1]/'supplement/source')
+-    parser.add_argument('--results',type=Path,default=Path(__file__).resolve().parents[1]/'results/rechecked_v52')
++    parser.add_argument('--results',type=Path,default=Path(__file__).resolve().parents[1]/'results/current')
+     args=parser.parse_args(); args.results.mkdir(exist_ok=True,parents=True)
+     text=(args.source/'mathematical_catalogue.tex').read_text()
+     out=args.results/'catalogue_checks.json'; checks=[]; start=time.monotonic()

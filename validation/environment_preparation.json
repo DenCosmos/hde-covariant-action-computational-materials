@@ -1,0 +1,153 @@
+{
+  "method": "Fresh venv without system-site-packages, populated by byte copies of installed distributions. Network pip install failed (DNS). Not claimed as a clean PyPI installation.",
+  "distributions": [
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "copied_files": 3103,
+      "skipped_external_paths": [
+        "../../../bin/isympy",
+        "../../../share/man/man1/isympy.1"
+      ]
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "copied_files": 180,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "numpy",
+      "version": "2.3.5",
+      "copied_files": 1311,
+      "skipped_external_paths": [
+        "../../../bin/f2py",
+        "../../../bin/numpy-config"
+      ]
+    },
+    {
+      "name": "scipy",
+      "version": "1.17.0",
+      "copied_files": 2400,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.10.8",
+      "copied_files": 884,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "contourpy",
+      "version": "1.3.3",
+      "copied_files": 43,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "copied_files": 10,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "fonttools",
+      "version": "4.63.0",
+      "copied_files": 697,
+      "skipped_external_paths": [
+        "../../../bin/fonttools",
+        "../../../bin/pyftmerge",
+        "../../../bin/pyftsubset",
+        "../../../bin/ttx",
+        "../../../share/man/man1/ttx.1"
+      ]
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.0",
+      "copied_files": 14,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "packaging",
+      "version": "25.0",
+      "copied_files": 41,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "copied_files": 240,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.2",
+      "copied_files": 42,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "copied_files": 45,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "copied_files": 9,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "copied_files": 44,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0",
+      "copied_files": 82,
+      "skipped_external_paths": [
+        "../../../bin/jsonschema"
+      ]
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "copied_files": 56,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "copied_files": 34,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0",
+      "copied_files": 34,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.5.1",
+      "copied_files": 12,
+      "skipped_external_paths": []
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "copied_files": 9,
+      "skipped_external_paths": []
+    }
+  ],
+  "matplotlib_sandbox_adjustment": {
+    "reason": "Removed container-injected output-serializer monkeypatch after upstream module body; it imported caas_jupyter_tools unavailable in isolated venv. Scientific upstream module prefix retained.",
+    "original_sha256": "83418d1cef777f4f6beb4e4a53342159b55c658de627a7e01cf584b4717cc2e5",
+    "isolated_sha256": "c6c47d1ecf25d7934f38c8a55c3b8e116d41aa08d8ecfa82f6ae8af589216a3a",
+    "original_has_isolated_prefix": true,
+    "distributed_environment_files": false
+  },
+  "official_cffconvert_installation": "BLOCKED: unavailable package and DNS failure; only limited local validator used"
+}

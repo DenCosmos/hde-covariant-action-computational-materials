@@ -1,0 +1,8 @@
+{
+  "status": "RUNNING",
+  "elapsed_seconds": 120.01809396199997,
+  "command": [
+    "python",
+    "scripts/supplement_secs1_2_1_5_compare_recomputed_coefficients.py"
+  ]
+}

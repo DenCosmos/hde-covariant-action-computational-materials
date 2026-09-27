@@ -1,0 +1,6806 @@
+[
+  {
+    "kind": "bare_H4",
+    "component": "2210",
+    "permutation": "2210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2210",
+    "permutation": "2201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2210",
+    "permutation": "1022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1202",
+    "permutation": "2102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1202",
+    "permutation": "1220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1202",
+    "permutation": "0212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1101",
+    "permutation": "1101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1101",
+    "permutation": "1110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1101",
+    "permutation": "0111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0011",
+    "permutation": "0011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0011",
+    "permutation": "0011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0011",
+    "permutation": "1100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0101",
+    "permutation": "1001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0101",
+    "permutation": "0110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0101",
+    "permutation": "0101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0210",
+    "permutation": "2010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0210",
+    "permutation": "0201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0210",
+    "permutation": "1002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1200",
+    "permutation": "2100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1200",
+    "permutation": "1200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1200",
+    "permutation": "0012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0012",
+    "permutation": "0012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0012",
+    "permutation": "0021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0012",
+    "permutation": "1200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2211",
+    "permutation": "2211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2211",
+    "permutation": "2211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2211",
+    "permutation": "1122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0112",
+    "permutation": "1012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0112",
+    "permutation": "0121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0112",
+    "permutation": "1201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1120",
+    "permutation": "1120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1120",
+    "permutation": "1102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1120",
+    "permutation": "2011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2002",
+    "permutation": "0202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2002",
+    "permutation": "2020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2002",
+    "permutation": "0220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1211",
+    "permutation": "2111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1211",
+    "permutation": "1211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1211",
+    "permutation": "1112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1221",
+    "permutation": "2121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1221",
+    "permutation": "1212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1221",
+    "permutation": "2112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1222",
+    "permutation": "2122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1222",
+    "permutation": "1222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1222",
+    "permutation": "2212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2202",
+    "permutation": "2202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2202",
+    "permutation": "2220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2202",
+    "permutation": "0222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0022",
+    "permutation": "0022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0022",
+    "permutation": "0022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0022",
+    "permutation": "2200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1100",
+    "permutation": "1100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1100",
+    "permutation": "1100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1100",
+    "permutation": "0011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0102",
+    "permutation": "1002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0102",
+    "permutation": "0120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0102",
+    "permutation": "0201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0201",
+    "permutation": "2001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0201",
+    "permutation": "0210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0201",
+    "permutation": "0102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2122",
+    "permutation": "1222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2122",
+    "permutation": "2122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2122",
+    "permutation": "2221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2212",
+    "permutation": "2212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2212",
+    "permutation": "2221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2212",
+    "permutation": "1222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2221",
+    "permutation": "2221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2221",
+    "permutation": "2212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2221",
+    "permutation": "2122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1012",
+    "permutation": "0112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1012",
+    "permutation": "1021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1012",
+    "permutation": "1210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2001",
+    "permutation": "0201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2001",
+    "permutation": "2010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2001",
+    "permutation": "0120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1102",
+    "permutation": "1102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1102",
+    "permutation": "1120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1102",
+    "permutation": "0211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0222",
+    "permutation": "2022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0222",
+    "permutation": "0222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0222",
+    "permutation": "2202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0010",
+    "permutation": "0010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0010",
+    "permutation": "0001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0010",
+    "permutation": "1000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2110",
+    "permutation": "1210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2110",
+    "permutation": "2101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2110",
+    "permutation": "1021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0020",
+    "permutation": "0020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0020",
+    "permutation": "0002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0020",
+    "permutation": "2000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0111",
+    "permutation": "1011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0111",
+    "permutation": "0111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0111",
+    "permutation": "1101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0220",
+    "permutation": "2020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0220",
+    "permutation": "0202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0220",
+    "permutation": "2002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1010",
+    "permutation": "0110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1010",
+    "permutation": "1001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1010",
+    "permutation": "1010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0100",
+    "permutation": "1000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0100",
+    "permutation": "0100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0100",
+    "permutation": "0001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2121",
+    "permutation": "1221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2121",
+    "permutation": "2112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2121",
+    "permutation": "2121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0110",
+    "permutation": "1010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0110",
+    "permutation": "0101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0110",
+    "permutation": "1001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2022",
+    "permutation": "0222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2022",
+    "permutation": "2022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2022",
+    "permutation": "2220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2011",
+    "permutation": "0211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2011",
+    "permutation": "2011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2011",
+    "permutation": "1120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2101",
+    "permutation": "1201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2101",
+    "permutation": "2110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2101",
+    "permutation": "0121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1201",
+    "permutation": "2101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1201",
+    "permutation": "1210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1201",
+    "permutation": "0112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1001",
+    "permutation": "0101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1001",
+    "permutation": "1010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1001",
+    "permutation": "0110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0211",
+    "permutation": "2011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0211",
+    "permutation": "0211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0211",
+    "permutation": "1102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0021",
+    "permutation": "0021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0021",
+    "permutation": "0012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0021",
+    "permutation": "2100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2112",
+    "permutation": "1212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2112",
+    "permutation": "2121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2112",
+    "permutation": "1221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2102",
+    "permutation": "1202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2102",
+    "permutation": "2120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2102",
+    "permutation": "0221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1011",
+    "permutation": "0111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1011",
+    "permutation": "1011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1011",
+    "permutation": "1110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2000",
+    "permutation": "0200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2000",
+    "permutation": "2000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2000",
+    "permutation": "0020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1002",
+    "permutation": "0102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1002",
+    "permutation": "1020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1002",
+    "permutation": "0210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1121",
+    "permutation": "1121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1121",
+    "permutation": "1112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1121",
+    "permutation": "2111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2111",
+    "permutation": "1211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2111",
+    "permutation": "2111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2111",
+    "permutation": "1121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1122",
+    "permutation": "1122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1122",
+    "permutation": "1122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1122",
+    "permutation": "2211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1210",
+    "permutation": "2110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1210",
+    "permutation": "1201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1210",
+    "permutation": "1012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2100",
+    "permutation": "1200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2100",
+    "permutation": "2100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2100",
+    "permutation": "0021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0120",
+    "permutation": "1020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0120",
+    "permutation": "0102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0120",
+    "permutation": "2001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2120",
+    "permutation": "1220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2120",
+    "permutation": "2102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2120",
+    "permutation": "2021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1112",
+    "permutation": "1112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1112",
+    "permutation": "1121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1112",
+    "permutation": "1211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0200",
+    "permutation": "2000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0200",
+    "permutation": "0200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0200",
+    "permutation": "0002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1020",
+    "permutation": "0120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1020",
+    "permutation": "1002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1020",
+    "permutation": "2010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1212",
+    "permutation": "2112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1212",
+    "permutation": "1221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1212",
+    "permutation": "1212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1000",
+    "permutation": "0100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1000",
+    "permutation": "1000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1000",
+    "permutation": "0010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1022",
+    "permutation": "0122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1022",
+    "permutation": "1022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1022",
+    "permutation": "2210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2010",
+    "permutation": "0210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2010",
+    "permutation": "2001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2010",
+    "permutation": "1020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2021",
+    "permutation": "0221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2021",
+    "permutation": "2012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2021",
+    "permutation": "2120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0212",
+    "permutation": "2012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0212",
+    "permutation": "0221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0212",
+    "permutation": "1202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1220",
+    "permutation": "2120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1220",
+    "permutation": "1202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1220",
+    "permutation": "2012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2020",
+    "permutation": "0220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2020",
+    "permutation": "2002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2020",
+    "permutation": "2020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2012",
+    "permutation": "0212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2012",
+    "permutation": "2021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2012",
+    "permutation": "1220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0001",
+    "permutation": "0001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0001",
+    "permutation": "0010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0001",
+    "permutation": "0100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0221",
+    "permutation": "2021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0221",
+    "permutation": "0212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0221",
+    "permutation": "2102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0202",
+    "permutation": "2002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0202",
+    "permutation": "0220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0202",
+    "permutation": "0202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0122",
+    "permutation": "1022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0122",
+    "permutation": "0122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0122",
+    "permutation": "2201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2201",
+    "permutation": "2201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2201",
+    "permutation": "2210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2201",
+    "permutation": "0122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0121",
+    "permutation": "1021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0121",
+    "permutation": "0112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0121",
+    "permutation": "2101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1110",
+    "permutation": "1110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1110",
+    "permutation": "1101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1110",
+    "permutation": "1011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1021",
+    "permutation": "0121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1021",
+    "permutation": "1012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "1021",
+    "permutation": "2110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2220",
+    "permutation": "2220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2220",
+    "permutation": "2202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2220",
+    "permutation": "2022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2200",
+    "permutation": "2200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2200",
+    "permutation": "2200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "2200",
+    "permutation": "0022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0002",
+    "permutation": "0002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0002",
+    "permutation": "0020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "bare_H4",
+    "component": "0002",
+    "permutation": "0200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2210",
+    "permutation": "2210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2210",
+    "permutation": "2201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2210",
+    "permutation": "1022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1202",
+    "permutation": "2102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1202",
+    "permutation": "1220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1202",
+    "permutation": "0212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1101",
+    "permutation": "1101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1101",
+    "permutation": "1110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1101",
+    "permutation": "0111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0011",
+    "permutation": "0011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0011",
+    "permutation": "0011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0011",
+    "permutation": "1100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0101",
+    "permutation": "1001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0101",
+    "permutation": "0110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0101",
+    "permutation": "0101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0210",
+    "permutation": "2010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0210",
+    "permutation": "0201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0210",
+    "permutation": "1002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1200",
+    "permutation": "2100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1200",
+    "permutation": "1200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1200",
+    "permutation": "0012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0012",
+    "permutation": "0012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0012",
+    "permutation": "0021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0012",
+    "permutation": "1200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2211",
+    "permutation": "2211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2211",
+    "permutation": "2211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2211",
+    "permutation": "1122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0112",
+    "permutation": "1012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0112",
+    "permutation": "0121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0112",
+    "permutation": "1201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1120",
+    "permutation": "1120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1120",
+    "permutation": "1102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1120",
+    "permutation": "2011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2002",
+    "permutation": "0202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2002",
+    "permutation": "2020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2002",
+    "permutation": "0220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1211",
+    "permutation": "2111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1211",
+    "permutation": "1211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1211",
+    "permutation": "1112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1221",
+    "permutation": "2121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1221",
+    "permutation": "1212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1221",
+    "permutation": "2112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1222",
+    "permutation": "2122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1222",
+    "permutation": "1222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1222",
+    "permutation": "2212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2202",
+    "permutation": "2202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2202",
+    "permutation": "2220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2202",
+    "permutation": "0222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0022",
+    "permutation": "0022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0022",
+    "permutation": "0022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0022",
+    "permutation": "2200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1100",
+    "permutation": "1100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1100",
+    "permutation": "1100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1100",
+    "permutation": "0011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0102",
+    "permutation": "1002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0102",
+    "permutation": "0120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0102",
+    "permutation": "0201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0201",
+    "permutation": "2001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0201",
+    "permutation": "0210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0201",
+    "permutation": "0102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2122",
+    "permutation": "1222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2122",
+    "permutation": "2122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2122",
+    "permutation": "2221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2212",
+    "permutation": "2212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2212",
+    "permutation": "2221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2212",
+    "permutation": "1222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2221",
+    "permutation": "2221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2221",
+    "permutation": "2212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2221",
+    "permutation": "2122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1012",
+    "permutation": "0112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1012",
+    "permutation": "1021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1012",
+    "permutation": "1210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2001",
+    "permutation": "0201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2001",
+    "permutation": "2010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2001",
+    "permutation": "0120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1102",
+    "permutation": "1102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1102",
+    "permutation": "1120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1102",
+    "permutation": "0211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0222",
+    "permutation": "2022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0222",
+    "permutation": "0222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0222",
+    "permutation": "2202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0010",
+    "permutation": "0010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0010",
+    "permutation": "0001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0010",
+    "permutation": "1000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2110",
+    "permutation": "1210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2110",
+    "permutation": "2101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2110",
+    "permutation": "1021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0020",
+    "permutation": "0020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0020",
+    "permutation": "0002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0020",
+    "permutation": "2000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0111",
+    "permutation": "1011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0111",
+    "permutation": "0111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0111",
+    "permutation": "1101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0220",
+    "permutation": "2020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0220",
+    "permutation": "0202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0220",
+    "permutation": "2002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1010",
+    "permutation": "0110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1010",
+    "permutation": "1001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1010",
+    "permutation": "1010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0100",
+    "permutation": "1000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0100",
+    "permutation": "0100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0100",
+    "permutation": "0001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2121",
+    "permutation": "1221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2121",
+    "permutation": "2112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2121",
+    "permutation": "2121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0110",
+    "permutation": "1010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0110",
+    "permutation": "0101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0110",
+    "permutation": "1001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2022",
+    "permutation": "0222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2022",
+    "permutation": "2022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2022",
+    "permutation": "2220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2011",
+    "permutation": "0211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2011",
+    "permutation": "2011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2011",
+    "permutation": "1120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2101",
+    "permutation": "1201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2101",
+    "permutation": "2110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2101",
+    "permutation": "0121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1201",
+    "permutation": "2101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1201",
+    "permutation": "1210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1201",
+    "permutation": "0112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1001",
+    "permutation": "0101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1001",
+    "permutation": "1010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1001",
+    "permutation": "0110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0211",
+    "permutation": "2011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0211",
+    "permutation": "0211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0211",
+    "permutation": "1102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0021",
+    "permutation": "0021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0021",
+    "permutation": "0012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0021",
+    "permutation": "2100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2112",
+    "permutation": "1212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2112",
+    "permutation": "2121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2112",
+    "permutation": "1221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2102",
+    "permutation": "1202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2102",
+    "permutation": "2120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2102",
+    "permutation": "0221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1011",
+    "permutation": "0111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1011",
+    "permutation": "1011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1011",
+    "permutation": "1110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2000",
+    "permutation": "0200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2000",
+    "permutation": "2000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2000",
+    "permutation": "0020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1002",
+    "permutation": "0102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1002",
+    "permutation": "1020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1002",
+    "permutation": "0210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1121",
+    "permutation": "1121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1121",
+    "permutation": "1112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1121",
+    "permutation": "2111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2111",
+    "permutation": "1211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2111",
+    "permutation": "2111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2111",
+    "permutation": "1121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1122",
+    "permutation": "1122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1122",
+    "permutation": "1122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1122",
+    "permutation": "2211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1210",
+    "permutation": "2110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1210",
+    "permutation": "1201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1210",
+    "permutation": "1012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2100",
+    "permutation": "1200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2100",
+    "permutation": "2100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2100",
+    "permutation": "0021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0120",
+    "permutation": "1020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0120",
+    "permutation": "0102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0120",
+    "permutation": "2001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2120",
+    "permutation": "1220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2120",
+    "permutation": "2102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2120",
+    "permutation": "2021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1112",
+    "permutation": "1112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1112",
+    "permutation": "1121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1112",
+    "permutation": "1211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0200",
+    "permutation": "2000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0200",
+    "permutation": "0200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0200",
+    "permutation": "0002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1020",
+    "permutation": "0120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1020",
+    "permutation": "1002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1020",
+    "permutation": "2010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1212",
+    "permutation": "2112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1212",
+    "permutation": "1221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1212",
+    "permutation": "1212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1000",
+    "permutation": "0100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1000",
+    "permutation": "1000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1000",
+    "permutation": "0010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1022",
+    "permutation": "0122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1022",
+    "permutation": "1022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1022",
+    "permutation": "2210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2010",
+    "permutation": "0210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2010",
+    "permutation": "2001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2010",
+    "permutation": "1020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2021",
+    "permutation": "0221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2021",
+    "permutation": "2012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2021",
+    "permutation": "2120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0212",
+    "permutation": "2012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0212",
+    "permutation": "0221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0212",
+    "permutation": "1202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1220",
+    "permutation": "2120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1220",
+    "permutation": "1202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1220",
+    "permutation": "2012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2020",
+    "permutation": "0220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2020",
+    "permutation": "2002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2020",
+    "permutation": "2020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2012",
+    "permutation": "0212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2012",
+    "permutation": "2021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2012",
+    "permutation": "1220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0001",
+    "permutation": "0001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0001",
+    "permutation": "0010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0001",
+    "permutation": "0100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0221",
+    "permutation": "2021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0221",
+    "permutation": "0212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0221",
+    "permutation": "2102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0202",
+    "permutation": "2002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0202",
+    "permutation": "0220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0202",
+    "permutation": "0202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0122",
+    "permutation": "1022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0122",
+    "permutation": "0122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0122",
+    "permutation": "2201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2201",
+    "permutation": "2201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2201",
+    "permutation": "2210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2201",
+    "permutation": "0122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0121",
+    "permutation": "1021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0121",
+    "permutation": "0112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0121",
+    "permutation": "2101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1110",
+    "permutation": "1110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1110",
+    "permutation": "1101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1110",
+    "permutation": "1011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1021",
+    "permutation": "0121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1021",
+    "permutation": "1012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "1021",
+    "permutation": "2110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2220",
+    "permutation": "2220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2220",
+    "permutation": "2202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2220",
+    "permutation": "2022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2200",
+    "permutation": "2200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2200",
+    "permutation": "2200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "2200",
+    "permutation": "0022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0002",
+    "permutation": "0002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0002",
+    "permutation": "0020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "auxiliary",
+    "component": "0002",
+    "permutation": "0200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2210",
+    "permutation": "2210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2210",
+    "permutation": "2201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2210",
+    "permutation": "1022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1202",
+    "permutation": "2102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1202",
+    "permutation": "1220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1202",
+    "permutation": "0212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1101",
+    "permutation": "1101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1101",
+    "permutation": "1110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1101",
+    "permutation": "0111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0011",
+    "permutation": "0011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0011",
+    "permutation": "0011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0011",
+    "permutation": "1100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0101",
+    "permutation": "1001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0101",
+    "permutation": "0110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0101",
+    "permutation": "0101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0210",
+    "permutation": "2010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0210",
+    "permutation": "0201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0210",
+    "permutation": "1002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1200",
+    "permutation": "2100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1200",
+    "permutation": "1200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1200",
+    "permutation": "0012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0012",
+    "permutation": "0012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0012",
+    "permutation": "0021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0012",
+    "permutation": "1200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2211",
+    "permutation": "2211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2211",
+    "permutation": "2211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2211",
+    "permutation": "1122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0112",
+    "permutation": "1012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0112",
+    "permutation": "0121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0112",
+    "permutation": "1201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1120",
+    "permutation": "1120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1120",
+    "permutation": "1102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1120",
+    "permutation": "2011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2002",
+    "permutation": "0202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2002",
+    "permutation": "2020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2002",
+    "permutation": "0220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1211",
+    "permutation": "2111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1211",
+    "permutation": "1211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1211",
+    "permutation": "1112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1221",
+    "permutation": "2121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1221",
+    "permutation": "1212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1221",
+    "permutation": "2112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1222",
+    "permutation": "2122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1222",
+    "permutation": "1222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1222",
+    "permutation": "2212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2202",
+    "permutation": "2202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2202",
+    "permutation": "2220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2202",
+    "permutation": "0222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0022",
+    "permutation": "0022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0022",
+    "permutation": "0022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0022",
+    "permutation": "2200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1100",
+    "permutation": "1100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1100",
+    "permutation": "1100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1100",
+    "permutation": "0011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0102",
+    "permutation": "1002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0102",
+    "permutation": "0120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0102",
+    "permutation": "0201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0201",
+    "permutation": "2001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0201",
+    "permutation": "0210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0201",
+    "permutation": "0102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2122",
+    "permutation": "1222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2122",
+    "permutation": "2122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2122",
+    "permutation": "2221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2212",
+    "permutation": "2212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2212",
+    "permutation": "2221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2212",
+    "permutation": "1222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2221",
+    "permutation": "2221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2221",
+    "permutation": "2212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2221",
+    "permutation": "2122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1012",
+    "permutation": "0112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1012",
+    "permutation": "1021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1012",
+    "permutation": "1210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2001",
+    "permutation": "0201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2001",
+    "permutation": "2010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2001",
+    "permutation": "0120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1102",
+    "permutation": "1102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1102",
+    "permutation": "1120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1102",
+    "permutation": "0211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0222",
+    "permutation": "2022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0222",
+    "permutation": "0222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0222",
+    "permutation": "2202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0010",
+    "permutation": "0010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0010",
+    "permutation": "0001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0010",
+    "permutation": "1000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2110",
+    "permutation": "1210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2110",
+    "permutation": "2101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2110",
+    "permutation": "1021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0020",
+    "permutation": "0020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0020",
+    "permutation": "0002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0020",
+    "permutation": "2000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0111",
+    "permutation": "1011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0111",
+    "permutation": "0111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0111",
+    "permutation": "1101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0220",
+    "permutation": "2020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0220",
+    "permutation": "0202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0220",
+    "permutation": "2002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1010",
+    "permutation": "0110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1010",
+    "permutation": "1001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1010",
+    "permutation": "1010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0100",
+    "permutation": "1000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0100",
+    "permutation": "0100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0100",
+    "permutation": "0001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2121",
+    "permutation": "1221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2121",
+    "permutation": "2112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2121",
+    "permutation": "2121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0110",
+    "permutation": "1010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0110",
+    "permutation": "0101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0110",
+    "permutation": "1001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2022",
+    "permutation": "0222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2022",
+    "permutation": "2022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2022",
+    "permutation": "2220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2011",
+    "permutation": "0211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2011",
+    "permutation": "2011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2011",
+    "permutation": "1120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2101",
+    "permutation": "1201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2101",
+    "permutation": "2110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2101",
+    "permutation": "0121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1201",
+    "permutation": "2101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1201",
+    "permutation": "1210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1201",
+    "permutation": "0112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1001",
+    "permutation": "0101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1001",
+    "permutation": "1010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1001",
+    "permutation": "0110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0211",
+    "permutation": "2011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0211",
+    "permutation": "0211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0211",
+    "permutation": "1102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0021",
+    "permutation": "0021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0021",
+    "permutation": "0012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0021",
+    "permutation": "2100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2112",
+    "permutation": "1212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2112",
+    "permutation": "2121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2112",
+    "permutation": "1221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2102",
+    "permutation": "1202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2102",
+    "permutation": "2120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2102",
+    "permutation": "0221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1011",
+    "permutation": "0111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1011",
+    "permutation": "1011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1011",
+    "permutation": "1110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2000",
+    "permutation": "0200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2000",
+    "permutation": "2000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2000",
+    "permutation": "0020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1002",
+    "permutation": "0102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1002",
+    "permutation": "1020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1002",
+    "permutation": "0210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1121",
+    "permutation": "1121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1121",
+    "permutation": "1112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1121",
+    "permutation": "2111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2111",
+    "permutation": "1211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2111",
+    "permutation": "2111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2111",
+    "permutation": "1121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1122",
+    "permutation": "1122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1122",
+    "permutation": "1122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1122",
+    "permutation": "2211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1210",
+    "permutation": "2110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1210",
+    "permutation": "1201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1210",
+    "permutation": "1012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2100",
+    "permutation": "1200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2100",
+    "permutation": "2100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2100",
+    "permutation": "0021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0120",
+    "permutation": "1020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0120",
+    "permutation": "0102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0120",
+    "permutation": "2001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2120",
+    "permutation": "1220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2120",
+    "permutation": "2102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2120",
+    "permutation": "2021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1112",
+    "permutation": "1112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1112",
+    "permutation": "1121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1112",
+    "permutation": "1211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0200",
+    "permutation": "2000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0200",
+    "permutation": "0200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0200",
+    "permutation": "0002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1020",
+    "permutation": "0120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1020",
+    "permutation": "1002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1020",
+    "permutation": "2010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1212",
+    "permutation": "2112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1212",
+    "permutation": "1221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1212",
+    "permutation": "1212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1000",
+    "permutation": "0100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1000",
+    "permutation": "1000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1000",
+    "permutation": "0010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1022",
+    "permutation": "0122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1022",
+    "permutation": "1022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1022",
+    "permutation": "2210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2010",
+    "permutation": "0210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2010",
+    "permutation": "2001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2010",
+    "permutation": "1020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2021",
+    "permutation": "0221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2021",
+    "permutation": "2012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2021",
+    "permutation": "2120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0212",
+    "permutation": "2012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0212",
+    "permutation": "0221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0212",
+    "permutation": "1202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1220",
+    "permutation": "2120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1220",
+    "permutation": "1202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1220",
+    "permutation": "2012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2020",
+    "permutation": "0220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2020",
+    "permutation": "2002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2020",
+    "permutation": "2020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2012",
+    "permutation": "0212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2012",
+    "permutation": "2021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2012",
+    "permutation": "1220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0001",
+    "permutation": "0001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0001",
+    "permutation": "0010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0001",
+    "permutation": "0100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0221",
+    "permutation": "2021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0221",
+    "permutation": "0212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0221",
+    "permutation": "2102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0202",
+    "permutation": "2002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0202",
+    "permutation": "0220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0202",
+    "permutation": "0202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0122",
+    "permutation": "1022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0122",
+    "permutation": "0122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0122",
+    "permutation": "2201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2201",
+    "permutation": "2201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2201",
+    "permutation": "2210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2201",
+    "permutation": "0122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0121",
+    "permutation": "1021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0121",
+    "permutation": "0112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0121",
+    "permutation": "2101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1110",
+    "permutation": "1110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1110",
+    "permutation": "1101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1110",
+    "permutation": "1011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1021",
+    "permutation": "0121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1021",
+    "permutation": "1012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "1021",
+    "permutation": "2110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2220",
+    "permutation": "2220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2220",
+    "permutation": "2202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2220",
+    "permutation": "2022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2200",
+    "permutation": "2200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2200",
+    "permutation": "2200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "2200",
+    "permutation": "0022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0002",
+    "permutation": "0002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0002",
+    "permutation": "0020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "legendre",
+    "component": "0002",
+    "permutation": "0200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2210",
+    "permutation": "2210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2210",
+    "permutation": "2201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2210",
+    "permutation": "1022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1202",
+    "permutation": "2102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1202",
+    "permutation": "1220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1202",
+    "permutation": "0212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1101",
+    "permutation": "1101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1101",
+    "permutation": "1110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1101",
+    "permutation": "0111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0011",
+    "permutation": "0011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0011",
+    "permutation": "0011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0011",
+    "permutation": "1100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0101",
+    "permutation": "1001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0101",
+    "permutation": "0110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0101",
+    "permutation": "0101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0210",
+    "permutation": "2010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0210",
+    "permutation": "0201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0210",
+    "permutation": "1002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1200",
+    "permutation": "2100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1200",
+    "permutation": "1200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1200",
+    "permutation": "0012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0012",
+    "permutation": "0012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0012",
+    "permutation": "0021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0012",
+    "permutation": "1200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2211",
+    "permutation": "2211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2211",
+    "permutation": "2211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2211",
+    "permutation": "1122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0112",
+    "permutation": "1012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0112",
+    "permutation": "0121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0112",
+    "permutation": "1201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1120",
+    "permutation": "1120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1120",
+    "permutation": "1102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1120",
+    "permutation": "2011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2002",
+    "permutation": "0202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2002",
+    "permutation": "2020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2002",
+    "permutation": "0220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1211",
+    "permutation": "2111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1211",
+    "permutation": "1211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1211",
+    "permutation": "1112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1221",
+    "permutation": "2121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1221",
+    "permutation": "1212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1221",
+    "permutation": "2112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1222",
+    "permutation": "2122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1222",
+    "permutation": "1222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1222",
+    "permutation": "2212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2202",
+    "permutation": "2202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2202",
+    "permutation": "2220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2202",
+    "permutation": "0222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0022",
+    "permutation": "0022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0022",
+    "permutation": "0022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0022",
+    "permutation": "2200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1100",
+    "permutation": "1100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1100",
+    "permutation": "1100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1100",
+    "permutation": "0011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0102",
+    "permutation": "1002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0102",
+    "permutation": "0120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0102",
+    "permutation": "0201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0201",
+    "permutation": "2001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0201",
+    "permutation": "0210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0201",
+    "permutation": "0102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2122",
+    "permutation": "1222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2122",
+    "permutation": "2122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2122",
+    "permutation": "2221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2212",
+    "permutation": "2212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2212",
+    "permutation": "2221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2212",
+    "permutation": "1222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2221",
+    "permutation": "2221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2221",
+    "permutation": "2212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2221",
+    "permutation": "2122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1012",
+    "permutation": "0112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1012",
+    "permutation": "1021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1012",
+    "permutation": "1210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2001",
+    "permutation": "0201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2001",
+    "permutation": "2010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2001",
+    "permutation": "0120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1102",
+    "permutation": "1102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1102",
+    "permutation": "1120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1102",
+    "permutation": "0211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2222",
+    "permutation": "2222",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0222",
+    "permutation": "2022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0222",
+    "permutation": "0222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0222",
+    "permutation": "2202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0010",
+    "permutation": "0010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0010",
+    "permutation": "0001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0010",
+    "permutation": "1000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2110",
+    "permutation": "1210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2110",
+    "permutation": "2101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2110",
+    "permutation": "1021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0020",
+    "permutation": "0020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0020",
+    "permutation": "0002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0020",
+    "permutation": "2000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0111",
+    "permutation": "1011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0111",
+    "permutation": "0111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0111",
+    "permutation": "1101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0220",
+    "permutation": "2020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0220",
+    "permutation": "0202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0220",
+    "permutation": "2002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1010",
+    "permutation": "0110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1010",
+    "permutation": "1001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1010",
+    "permutation": "1010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0100",
+    "permutation": "1000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0100",
+    "permutation": "0100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0100",
+    "permutation": "0001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2121",
+    "permutation": "1221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2121",
+    "permutation": "2112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2121",
+    "permutation": "2121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0110",
+    "permutation": "1010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0110",
+    "permutation": "0101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0110",
+    "permutation": "1001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2022",
+    "permutation": "0222",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2022",
+    "permutation": "2022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2022",
+    "permutation": "2220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2011",
+    "permutation": "0211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2011",
+    "permutation": "2011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2011",
+    "permutation": "1120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2101",
+    "permutation": "1201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2101",
+    "permutation": "2110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2101",
+    "permutation": "0121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1201",
+    "permutation": "2101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1201",
+    "permutation": "1210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1201",
+    "permutation": "0112",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1001",
+    "permutation": "0101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1001",
+    "permutation": "1010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1001",
+    "permutation": "0110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0211",
+    "permutation": "2011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0211",
+    "permutation": "0211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0211",
+    "permutation": "1102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0021",
+    "permutation": "0021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0021",
+    "permutation": "0012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0021",
+    "permutation": "2100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2112",
+    "permutation": "1212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2112",
+    "permutation": "2121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2112",
+    "permutation": "1221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2102",
+    "permutation": "1202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2102",
+    "permutation": "2120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2102",
+    "permutation": "0221",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1011",
+    "permutation": "0111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1011",
+    "permutation": "1011",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1011",
+    "permutation": "1110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2000",
+    "permutation": "0200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2000",
+    "permutation": "2000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2000",
+    "permutation": "0020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1002",
+    "permutation": "0102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1002",
+    "permutation": "1020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1002",
+    "permutation": "0210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1121",
+    "permutation": "1121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1121",
+    "permutation": "1112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1121",
+    "permutation": "2111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1111",
+    "permutation": "1111",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2111",
+    "permutation": "1211",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2111",
+    "permutation": "2111",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2111",
+    "permutation": "1121",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1122",
+    "permutation": "1122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1122",
+    "permutation": "1122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1122",
+    "permutation": "2211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1210",
+    "permutation": "2110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1210",
+    "permutation": "1201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1210",
+    "permutation": "1012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2100",
+    "permutation": "1200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2100",
+    "permutation": "2100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2100",
+    "permutation": "0021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0120",
+    "permutation": "1020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0120",
+    "permutation": "0102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0120",
+    "permutation": "2001",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2120",
+    "permutation": "1220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2120",
+    "permutation": "2102",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2120",
+    "permutation": "2021",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1112",
+    "permutation": "1112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1112",
+    "permutation": "1121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1112",
+    "permutation": "1211",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0200",
+    "permutation": "2000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0200",
+    "permutation": "0200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0200",
+    "permutation": "0002",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1020",
+    "permutation": "0120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1020",
+    "permutation": "1002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1020",
+    "permutation": "2010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1212",
+    "permutation": "2112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1212",
+    "permutation": "1221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1212",
+    "permutation": "1212",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1000",
+    "permutation": "0100",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1000",
+    "permutation": "1000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1000",
+    "permutation": "0010",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1022",
+    "permutation": "0122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1022",
+    "permutation": "1022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1022",
+    "permutation": "2210",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2010",
+    "permutation": "0210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2010",
+    "permutation": "2001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2010",
+    "permutation": "1020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2021",
+    "permutation": "0221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2021",
+    "permutation": "2012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2021",
+    "permutation": "2120",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0212",
+    "permutation": "2012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0212",
+    "permutation": "0221",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0212",
+    "permutation": "1202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1220",
+    "permutation": "2120",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1220",
+    "permutation": "1202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1220",
+    "permutation": "2012",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2020",
+    "permutation": "0220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2020",
+    "permutation": "2002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2020",
+    "permutation": "2020",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2012",
+    "permutation": "0212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2012",
+    "permutation": "2021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2012",
+    "permutation": "1220",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0001",
+    "permutation": "0001",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0001",
+    "permutation": "0010",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0001",
+    "permutation": "0100",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0221",
+    "permutation": "2021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0221",
+    "permutation": "0212",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0221",
+    "permutation": "2102",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0202",
+    "permutation": "2002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0202",
+    "permutation": "0220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0202",
+    "permutation": "0202",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0122",
+    "permutation": "1022",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0122",
+    "permutation": "0122",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0122",
+    "permutation": "2201",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0000",
+    "permutation": "0000",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2201",
+    "permutation": "2201",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2201",
+    "permutation": "2210",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2201",
+    "permutation": "0122",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0121",
+    "permutation": "1021",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0121",
+    "permutation": "0112",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0121",
+    "permutation": "2101",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1110",
+    "permutation": "1110",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1110",
+    "permutation": "1101",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1110",
+    "permutation": "1011",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1021",
+    "permutation": "0121",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1021",
+    "permutation": "1012",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "1021",
+    "permutation": "2110",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2220",
+    "permutation": "2220",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2220",
+    "permutation": "2202",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2220",
+    "permutation": "2022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2200",
+    "permutation": "2200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2200",
+    "permutation": "2200",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "2200",
+    "permutation": "0022",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0002",
+    "permutation": "0002",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0002",
+    "permutation": "0020",
+    "transformation": "t_inverse",
+    "status": "PASS"
+  },
+  {
+    "kind": "full_H4",
+    "component": "0002",
+    "permutation": "0200",
+    "transformation": "r_inverse_conjugate_scale",
+    "status": "PASS"
+  }
+]

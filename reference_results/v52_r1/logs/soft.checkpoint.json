@@ -1,0 +1,8 @@
+{
+  "status": "RUNNING",
+  "elapsed_seconds": 60.010160223000184,
+  "command": [
+    "python",
+    "scripts/article_appC6_verify_soft_limit.py"
+  ]
+}

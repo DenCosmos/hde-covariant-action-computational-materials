@@ -1,0 +1,13 @@
+{
+  "stage": "printed_catalogue",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/supplement_sec1_verify_printed_catalogue.py",
+    "--results",
+    "<OUTPUT>"
+  ],
+  "returncode": 0,
+  "seconds": 6.001378321000175,
+  "log": "logs/printed_catalogue.log"
+}

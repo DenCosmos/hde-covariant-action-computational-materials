@@ -1,0 +1,11 @@
+{
+  "stage": "soft",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appC6_verify_soft_limit.py"
+  ],
+  "returncode": 0,
+  "seconds": 69.01226345500027,
+  "log": "logs/soft.log"
+}

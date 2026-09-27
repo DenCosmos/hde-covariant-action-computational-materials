@@ -1,0 +1,64 @@
+
+quadratic_and_crossing
+[0.45s] PASS T01.exact_K_from_raw_action
+[0.48s] PASS T01.exact_C_from_raw_action
+[0.51s] PASS T01.exact_V_from_raw_action
+[0.52s] PASS T01.auxiliary_determinant
+[0.89s] PASS T01.crossing_K_prime
+[0.94s] PASS T01.crossing_C_prime
+[0.94s] PASS T01.crossing_potential
+[0.94s] PASS T01.crossing_D_nonzero_expression
+[0.97s] PASS T01.reduction_of_order_Wronskian
+
+canonical_and_late
+[0.97s] PASS T02.single_field_mixed_coefficient
+[0.97s] PASS T02.single_field_potential
+[0.99s] PASS T02.exact_canonical_transformation
+[1.09s] PASS T02.general_mass_limit_n_gt10
+[1.10s] PASS T02.exact_n10_mass_over_H2
+[1.10s] PASS T02.n10_mass_limit
+[1.11s] PASS T02.n10_growing_leading_ODE
+[1.12s] PASS T02.n10_decaying_leading_ODE
+[1.12s] PASS T02.n10_decaying_observable_cancellation
+[1.13s] PASS T02.n10_growing_observable_leading
+[1.15s] PASS T02.Liouville_transformation
+[1.16s] PASS T02.intrinsic_curvature_exponent
+[1.17s] PASS T02.intrinsic_3_curvature_linearization
+
+background_global
+[1.19s] PASS T03.mismatch_sign_flow
+[1.22s] PASS T03.exact_Lyapunov_derivative
+[1.23s] PASS T03.strict_maximum_below_one
+[1.23s] PASS T03.original_saddle_growth
+[1.23s] PASS T03.small_y_negative_bound_identity
+[1.24s] PASS T03.integrated_positive_L_bound
+[1.25s] PASS T03.H_zero_second_derivative
+[1.25s] PASS T03.finite_Ricci_at_H_zero
+
+gauge_generator
+[1.27s] PASS T04.pL_C_canonical_derivative
+[1.28s] PASS T04.L_C_canonical_derivative
+[1.34s] PASS T04.elliptic_divergence_3D
+[1.37s] PASS T04.weighted_energy_identity
+[1.37s] PASS T04.secondary_C_substitution
+[1.37s] PASS T04.secondary_Ci_substitution
+
+scalar_polynomials_and_sources
+[1.46s] PASS T05.X_order_1
+[1.46s] PASS T05.X_order_2
+[1.46s] PASS T05.X_order_3
+[1.46s] PASS T05.X_order_4
+[2.80s] PASS T05.complete_cubic_density
+[2.82s] PASS T05.complete_quartic_density
+[2.85s] PASS T05.explicit_lapse_source
+[2.85s] PASS T05.explicit_shift_source
+[2.86s] PASS T05.explicit_polarized_cubic_polynomial
+[2.88s] PASS T05.matter_tensor_source
+[2.94s] PASS T05.gravity_linear_tensor_source
+[2.94s] PASS T05.alpha2
+[2.94s] PASS T05.B2
+[2.94s] PASS T05.scalar_auxiliary_quartic_contact
+
+nonresonant_majorant
+[3.11s] PASS T06.majorant_normalization
+Completed 53 checks; success=True

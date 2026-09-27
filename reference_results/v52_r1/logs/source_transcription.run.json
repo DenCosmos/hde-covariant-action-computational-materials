@@ -1,0 +1,17 @@
+{
+  "stage": "source_transcription",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_V52_verify_source_transcription.py",
+    "--article-source",
+    "@LOCAL_WORKSPACE@/input/V52_complete_package/article/source/main.tex",
+    "--results",
+    "<OUTPUT>",
+    "--report",
+    "<OUTPUT>/release_checks.json"
+  ],
+  "returncode": 0,
+  "seconds": 1.0006565869998667,
+  "log": "logs/source_transcription.log"
+}

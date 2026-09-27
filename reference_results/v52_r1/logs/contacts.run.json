@@ -1,0 +1,11 @@
+{
+  "stage": "contacts",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/supplement_sec1_2_assemble_contacts.py"
+  ],
+  "returncode": 0,
+  "seconds": 27.003924925999854,
+  "log": "logs/contacts.log"
+}

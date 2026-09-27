@@ -1,0 +1,13 @@
+{
+  "stage": "figure02",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_fig02_plot_phase_portrait.py",
+    "--output",
+    "<OUTPUT>/figure02"
+  ],
+  "returncode": 0,
+  "seconds": 2.0011427559998083,
+  "log": "logs/figure02.log"
+}

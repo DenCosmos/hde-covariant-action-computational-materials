@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "id": "metadata_gate",
+      "expected_returncode": 2,
+      "actual_returncode": 2,
+      "status": "PASS",
+      "seconds": 0.03471427300019059,
+      "command": [
+        "<WORKSPACE>/venv/bin/python",
+        "<WORKSPACE>/V52_R1_repository/tools/finalize_metadata.py"
+      ]
+    },
+    {
+      "id": "invalid_workers",
+      "expected_returncode": 2,
+      "actual_returncode": 2,
+      "status": "PASS",
+      "seconds": 0.05087894000007509,
+      "command": [
+        "<WORKSPACE>/venv/bin/python",
+        "<WORKSPACE>/V52_R1_repository/run_all.py",
+        "--workers",
+        "0"
+      ]
+    },
+    {
+      "id": "protected_output",
+      "expected_returncode": 2,
+      "actual_returncode": 2,
+      "status": "PASS",
+      "seconds": 0.05831486700026289,
+      "command": [
+        "<WORKSPACE>/venv/bin/python",
+        "<WORKSPACE>/V52_R1_repository/run_all.py",
+        "--output",
+        "<WORKSPACE>/V52_R1_repository/reference_results"
+      ]
+    },
+    {
+      "id": "noncom_partial",
+      "expected_returncode": 2,
+      "actual_returncode": 2,
+      "status": "PASS",
+      "seconds": 6.220359970000118,
+      "command": [
+        "<WORKSPACE>/venv/bin/python",
+        "<WORKSPACE>/V52_R1_repository/scripts/article_appC3_compute_noncom_matrix_elements.py",
+        "--start",
+        "0",
+        "--stop",
+        "1",
+        "--output",
+        "<WORKSPACE>/interface_tests/partial_noncom"
+      ]
+    },
+    {
+      "id": "missing_article",
+      "expected_returncode": 2,
+      "actual_returncode": 2,
+      "status": "PASS",
+      "seconds": 0.03280843799984723,
+      "command": [
+        "<WORKSPACE>/venv/bin/python",
+        "<WORKSPACE>/V52_R1_repository/scripts/article_V52_verify_source_transcription.py",
+        "--article-source",
+        "<WORKSPACE>/interface_tests/missing.tex",
+        "--results",
+        "<WORKSPACE>/interface_tests",
+        "--report",
+        "<WORKSPACE>/interface_tests/missing_report.json"
+      ],
+      "note": "Unavailable required source is BLOCKED/code 2 by design; initial harness wrongly expected code 1 and was corrected, then the command was rerun."
+    },
+    {
+      "id": "offline_guard_blocks_connect",
+      "status": "PASS",
+      "actual_returncode": 0,
+      "expected_returncode": 0,
+      "seconds": 0.014866846000131773
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "change_type": "Author-approved licensing and GitHub-only publication preparation",
+  "computational_version": "V52-R1",
+  "scientific_article_version": "V52",
+  "licence_basis": "The user explicitly approved applying the restrictive licence offered in the conversation. The holder name follows the existing article/citation metadata, without adding a middle initial.",
+  "licence_body": "Agreed text retained; the holder is written as Danylo Yerokhin to match the source metadata.",
+  "new_permissions_vs_agreed_text": "None; platform and statutory caveats are explained separately in LICENSE_SCOPE.md.",
+  "no_remote_actions": true,
+  "zenodo_deferred": true,
+  "changed_files": [
+    {
+      "path": "CHANGELOG.md",
+      "before_sha256": "8f31ec04749a9c71b37f761c6f1d87e2b56bc66acf3a658c0c15df0a27c06a60",
+      "after_sha256": "d90241bcaa80b76caae6bfba829bef444715b531789110641596ccad23288c7f"
+    },
+    {
+      "path": "CITATION.bib",
+      "before_sha256": "094761385f2f8374d9b450cc5fe7d6216a1ab22137a2c4155b4499ba2386971d",
+      "after_sha256": "adfc7e166c456e258490f0dbe783baee75259914adc55ccfefb5fbb6e6973222"
+    },
+    {
+      "path": "CITATION.cff",
+      "before_sha256": "025d224599209bb3922bb15602bd851ce342fd3b44d8c8f5ff1446916eece3f6",
+      "after_sha256": "24216e9fc558bb903703f4ecc53e7a2b47f1c66c1e1966e789d183f327f6f220"
+    },
+    {
+      "path": "KNOWN_LIMITATIONS.md",
+      "before_sha256": "6cefed0750b31c972d69d9a1ee96bb25d8a0edce3b7b6f95b3b211fb413d2940",
+      "after_sha256": "df5fa21e42fdda6e6695f37dbcefca49f5d58171b9db6aa1e6ae13c5782dfc21"
+    },
+    {
+      "path": "PUBLICATION_GUIDE_RU.md",
+      "before_sha256": "96df910105bbdee3b0d47f64dc26c07055b9f291dbd778d5293436f9fe6374d6",
+      "after_sha256": "bbbc8914dda912e3e33806a347b212a7d5f9535b9aa298d525de6d97ea31cd0b"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "3c8be3855d90eb15495c2ba805c3f65679f9b05793e4540eb1d27064cbc4baa3",
+      "after_sha256": "071b406156d61df6a3cab74fac60ee68257acab9fe826d304c4e046687a93d40"
+    },
+    {
+      "path": "REPORT_RU.md",
+      "before_sha256": "226249ee29f65bf0f5332f5458eb4ccd5052b441a48c458aaa91ce642c2cdd7d",
+      "after_sha256": "2620f91ede6d541a01909544e2413559812a91775110bec1599c401800136ed6"
+    },
+    {
+      "path": "VALIDATION_SUMMARY.md",
+      "before_sha256": "7d0fe0282e2fc88c007c445fd8eecbe0bf11cd9cdc4beb89a2f564a3be5286cd",
+      "after_sha256": "58d01ff3f7c3b395aaca09d7b3488897a614d330b0a57245da4717b5e1ae39cd"
+    },
+    {
+      "path": "publication/ZENODO_FORM_FIELDS.md",
+      "before_sha256": "e55be78564fb44b322d5e345b2ff3fcfbe78f6ac0453d024a2455bc71eb0eaf6",
+      "after_sha256": "b53b85561cfe1e5b690104754d056fd755705988dca83fbde9aa2088ab7a50e6"
+    },
+    {
+      "path": "publication/metadata_pending.json",
+      "before_sha256": "4d5621a632ebc7ddf76db9e23d0e491e55a1b8f853a5e16cdf7d70a9020b62df",
+      "after_sha256": "adba9266ca7392cd83a92e40a2fa6776816cad6463aeb62a55ad9d70de056016"
+    },
+    {
+      "path": "tools/build_archives.py",
+      "before_sha256": "29400773646eb2044f5b5203ced711aec61d3f845bcfcefc94b4125f82056463",
+      "after_sha256": "66e73675dc4c53719033735f3ac6fa1f42c650aef206e5a0c7882d1e06fc6d71"
+    },
+    {
+      "path": "tools/check_release.py",
+      "before_sha256": "8074218ae2b23e632d8b21caf04ab85aa2f47c1370477fb96e257b4be68f8640",
+      "after_sha256": "f5412687c5a828c56256870b0dddf370a5d4fbd984f36ceb8d77b07ab99fe017"
+    },
+    {
+      "path": "tools/finalize_metadata.py",
+      "before_sha256": "d8d6ef0cd4b8799b7737e114783bdbdeb971b3e891124b999b9d558ce6fae054",
+      "after_sha256": "79699601bd2608683c0625a02fef53903c5c916aa91a83b8294085db8291f422"
+    }
+  ],
+  "added_files": [
+    {
+      "path": "LICENSE",
+      "sha256": "84b9cf7626c6e1cd5c7681601d768608b4d2e7906bd5a21c0a138a6212f7b748"
+    },
+    {
+      "path": "LICENSE_SCOPE.md",
+      "sha256": "f539fdc63c1d5c683ae75400457c2e92359eb099ca30f9fa8a66dd252598b324"
+    },
+    {
+      "path": "validation/license_update_checks.json",
+      "sha256": "8dcee122ab4c734db2dbf7a136e2f07a6b7b2f4d268fafb2bef3f9a08e5ba9f9"
+    }
+  ],
+  "removed_files": [
+    "LICENSE_PENDING.md"
+  ],
+  "manifest_note": "SHA256SUMS regenerated separately. This provenance record does not attempt to hash itself or its containing ZIP."
+}

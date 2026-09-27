@@ -1,0 +1,541 @@
+{
+  "input_fingerprint": "53c3e80e380ee7e9e2818fe3e0af2cd72f578f69ca8c68bde6205588dd944ada",
+  "component": "0222",
+  "computation_seconds": 1.2948822400001063,
+  "data": {
+    "external_species": [
+      0,
+      2,
+      2,
+      2
+    ],
+    "contact": {
+      "bare_L4": {},
+      "auxiliary_H4": {},
+      "legendre_H4": {},
+      "full_H4": {},
+      "partitions": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "auxiliary_H4": {},
+          "legendre_H4": {}
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "auxiliary_H4": {
+            "-4": "-41*sqrt(6)/16",
+            "-3": "-33*sqrt(2)*I/8 + sqrt(6)*I/8",
+            "-2": "11*sqrt(6)/2 + 39*sqrt(2)/4",
+            "-1": "-15*sqrt(2)*I/4 + 5*sqrt(6)*I/4"
+          },
+          "legendre_H4": {
+            "-4": "3*sqrt(6)",
+            "-3": "-3*sqrt(6)*I/2 + 9*sqrt(2)*I/2"
+          }
+        },
+        {
+          "pair": [
+            0,
+            3
+          ],
+          "auxiliary_H4": {
+            "-4": "41*sqrt(6)/16",
+            "-3": "-sqrt(6)*I/8 + 33*sqrt(2)*I/8",
+            "-2": "-39*sqrt(2)/4 - 11*sqrt(6)/2",
+            "-1": "-5*sqrt(6)*I/4 + 15*sqrt(2)*I/4"
+          },
+          "legendre_H4": {
+            "-4": "-3*sqrt(6)",
+            "-3": "-9*sqrt(2)*I/2 + 3*sqrt(6)*I/2"
+          }
+        }
+      ]
+    },
+    "exchange": [
+      {
+        "pair_late": [
+          0,
+          1
+        ],
+        "pair_early": [
+          2,
+          3
+        ],
+        "internal": 0,
+        "frequency": "2*sqrt(3)/3",
+        "A": "2 + 4*sqrt(3)/3",
+        "B": "-4 - 2*sqrt(3)/3",
+        "late_L3": {},
+        "early_L3": {
+          "-3": "4",
+          "-2": "-10*I - 2*sqrt(3)*I",
+          "-1": "-4*sqrt(3) - 2"
+        },
+        "D_coefficients": {}
+      },
+      {
+        "pair_late": [
+          2,
+          3
+        ],
+        "pair_early": [
+          0,
+          1
+        ],
+        "internal": 0,
+        "frequency": "2*sqrt(3)/3",
+        "A": "-4 + 2*sqrt(3)/3",
+        "B": "2",
+        "late_L3": {
+          "-3": "4",
+          "-2": "-10*I + 2*sqrt(3)*I",
+          "-1": "-2 + 4*sqrt(3)"
+        },
+        "early_L3": {},
+        "D_coefficients": {}
+      },
+      {
+        "pair_late": [
+          0,
+          1
+        ],
+        "pair_early": [
+          2,
+          3
+        ],
+        "internal": 1,
+        "frequency": "2",
+        "A": "2*sqrt(3)/3 + 4",
+        "B": "-6",
+        "late_L3": {},
+        "early_L3": {
+          "-1": "-15*sqrt(6)"
+        },
+        "D_coefficients": {}
+      },
+      {
+        "pair_late": [
+          2,
+          3
+        ],
+        "pair_early": [
+          0,
+          1
+        ],
+        "internal": 1,
+        "frequency": "2",
+        "A": "-2",
+        "B": "2*sqrt(3)/3",
+        "late_L3": {
+          "-1": "-15*sqrt(6)"
+        },
+        "early_L3": {},
+        "D_coefficients": {}
+      },
+      {
+        "pair_late": [
+          0,
+          1
+        ],
+        "pair_early": [
+          2,
+          3
+        ],
+        "internal": 2,
+        "frequency": "2",
+        "A": "2*sqrt(3)/3 + 4",
+        "B": "-6",
+        "late_L3": {
+          "-3": "-4",
+          "-2": "-10*I - 2*sqrt(3)*I",
+          "-1": "2 + 4*sqrt(3)"
+        },
+        "early_L3": {},
+        "D_coefficients": {}
+      },
+      {
+        "pair_late": [
+          2,
+          3
+        ],
+        "pair_early": [
+          0,
+          1
+        ],
+        "internal": 2,
+        "frequency": "2",
+        "A": "-2",
+        "B": "2*sqrt(3)/3",
+        "late_L3": {},
+        "early_L3": {
+          "-3": "-4",
+          "-2": "-2*sqrt(3)*I",
+          "-1": "-6"
+        },
+        "D_coefficients": {}
+      },
+      {
+        "pair_late": [
+          0,
+          2
+        ],
+        "pair_early": [
+          1,
+          3
+        ],
+        "internal": 0,
+        "frequency": "sqrt(2)",
+        "A": "-2 + 2*sqrt(3)/3 + sqrt(2)",
+        "B": "-sqrt(2)",
+        "late_L3": {
+          "-3": "11*sqrt(6)/4",
+          "-2": "-5*sqrt(6)*I/2 + 9*sqrt(2)*I/2 + 4*sqrt(3)*I",
+          "-1": "-6 - 2*sqrt(6) + 2*sqrt(3) + 3*sqrt(2)"
+        },
+        "early_L3": {
+          "-3": "2",
+          "-2": "-3*sqrt(2)*I/2",
+          "-1": "5/2"
+        },
+        "D_coefficients": {
+          "-3,-3": "11*sqrt(3)/4",
+          "-3,-2": "-33*sqrt(6)*I/16",
+          "-3,-1": "55*sqrt(3)/16",
+          "-2,-3": "-5*sqrt(3)*I/2 + 9*I/2 + 2*sqrt(6)*I",
+          "-2,-2": "-15*sqrt(6)/8 + 27*sqrt(2)/8 + 3*sqrt(3)",
+          "-2,-1": "-25*sqrt(3)*I/8 + 45*I/8 + 5*sqrt(6)*I/2",
+          "-1,-3": "-3*sqrt(2) - 2*sqrt(3) + sqrt(6) + 3",
+          "-1,-2": "-9*sqrt(2)*I/4 - 3*sqrt(3)*I/2 + 3*sqrt(6)*I/2 + 9*I/2",
+          "-1,-1": "-15*sqrt(2)/4 - 5*sqrt(3)/2 + 5*sqrt(6)/4 + 15/4"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          3
+        ],
+        "pair_early": [
+          0,
+          2
+        ],
+        "internal": 0,
+        "frequency": "sqrt(2)",
+        "A": "sqrt(2)",
+        "B": "-2 - sqrt(2) + 2*sqrt(3)/3",
+        "late_L3": {
+          "-3": "2",
+          "-2": "3*sqrt(2)*I/2",
+          "-1": "5/2"
+        },
+        "early_L3": {
+          "-3": "11*sqrt(6)/4",
+          "-2": "-4*sqrt(3)*I - 5*sqrt(6)*I/2 + 9*sqrt(2)*I/2",
+          "-1": "-2*sqrt(6) - 2*sqrt(3) + 3*sqrt(2) + 6"
+        },
+        "D_coefficients": {
+          "-3,-3": "11*sqrt(3)/4",
+          "-3,-2": "-2*sqrt(6)*I - 5*sqrt(3)*I/2 + 9*I/2",
+          "-3,-1": "-2*sqrt(3) - sqrt(6) + 3 + 3*sqrt(2)",
+          "-2,-3": "33*sqrt(6)*I/16",
+          "-2,-2": "-27*sqrt(2)/8 + 15*sqrt(6)/8 + 3*sqrt(3)",
+          "-2,-1": "-3*sqrt(6)*I/2 - 3*sqrt(3)*I/2 + 9*sqrt(2)*I/4 + 9*I/2",
+          "-1,-3": "55*sqrt(3)/16",
+          "-1,-2": "-5*sqrt(6)*I/2 - 25*sqrt(3)*I/8 + 45*I/8",
+          "-1,-1": "-5*sqrt(3)/2 - 5*sqrt(6)/4 + 15/4 + 15*sqrt(2)/4"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          2
+        ],
+        "pair_early": [
+          1,
+          3
+        ],
+        "internal": 1,
+        "frequency": "sqrt(6)",
+        "A": "-2 + 2*sqrt(3)/3 + sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-3": "-2",
+          "-2": "-7*sqrt(6)*I/8 - sqrt(3)*I + 13*I/4",
+          "-1": "-3*sqrt(3)/2 - sqrt(6) - 3/2 + 3*sqrt(2)/4"
+        },
+        "early_L3": {
+          "-1": "59*sqrt(6)/4"
+        },
+        "D_coefficients": {
+          "-3,-1": "-59/4",
+          "-2,-1": "-413*sqrt(6)*I/64 - 59*sqrt(3)*I/8 + 767*I/32",
+          "-1,-1": "-177*sqrt(3)/16 - 59*sqrt(6)/8 - 177/16 + 177*sqrt(2)/32"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          3
+        ],
+        "pair_early": [
+          0,
+          2
+        ],
+        "internal": 1,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6) - 2 + 2*sqrt(3)/3",
+        "late_L3": {
+          "-1": "59*sqrt(6)/4"
+        },
+        "early_L3": {
+          "-3": "-2",
+          "-2": "-sqrt(3)*I + 7*sqrt(6)*I/8 + 13*I/4",
+          "-1": "-3*sqrt(3)/2 - 3/2 - 3*sqrt(2)/4 + sqrt(6)"
+        },
+        "D_coefficients": {
+          "-1,-3": "-59/4",
+          "-1,-2": "-59*sqrt(3)*I/8 + 413*sqrt(6)*I/64 + 767*I/32",
+          "-1,-1": "-177*sqrt(3)/16 - 177/16 - 177*sqrt(2)/32 + 59*sqrt(6)/8"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          2
+        ],
+        "pair_early": [
+          1,
+          3
+        ],
+        "internal": 2,
+        "frequency": "sqrt(6)",
+        "A": "-2 + 2*sqrt(3)/3 + sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-3": "2*sqrt(6)",
+          "-2": "-13*sqrt(6)*I/4 + 3*sqrt(2)*I + 21*I/4",
+          "-1": "-3*sqrt(3)/2 + 3*sqrt(6)/2 + 6 + 9*sqrt(2)/2"
+        },
+        "early_L3": {
+          "-1": "21"
+        },
+        "D_coefficients": {
+          "-3,-1": "21",
+          "-2,-1": "-273*I/8 + 21*sqrt(3)*I/2 + 147*sqrt(6)*I/16",
+          "-1,-1": "-63*sqrt(2)/8 + 63/4 + 21*sqrt(6)/2 + 63*sqrt(3)/4"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          3
+        ],
+        "pair_early": [
+          0,
+          2
+        ],
+        "internal": 2,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6) - 2 + 2*sqrt(3)/3",
+        "late_L3": {
+          "-1": "21"
+        },
+        "early_L3": {
+          "-3": "2*sqrt(6)",
+          "-2": "-13*sqrt(6)*I/4 - 21*I/4 + 3*sqrt(2)*I",
+          "-1": "-6 + 3*sqrt(3)/2 + 3*sqrt(6)/2 + 9*sqrt(2)/2"
+        },
+        "D_coefficients": {
+          "-1,-3": "21",
+          "-1,-2": "-273*I/8 - 147*sqrt(6)*I/16 + 21*sqrt(3)*I/2",
+          "-1,-1": "-21*sqrt(6)/2 + 63*sqrt(2)/8 + 63/4 + 63*sqrt(3)/4"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          3
+        ],
+        "pair_early": [
+          1,
+          2
+        ],
+        "internal": 0,
+        "frequency": "sqrt(2)",
+        "A": "-2 + 2*sqrt(3)/3 + sqrt(2)",
+        "B": "-sqrt(2)",
+        "late_L3": {
+          "-3": "-11*sqrt(6)/4",
+          "-2": "-4*sqrt(3)*I - 9*sqrt(2)*I/2 + 5*sqrt(6)*I/2",
+          "-1": "-3*sqrt(2) - 2*sqrt(3) + 2*sqrt(6) + 6"
+        },
+        "early_L3": {
+          "-3": "2",
+          "-2": "-3*sqrt(2)*I/2",
+          "-1": "5/2"
+        },
+        "D_coefficients": {
+          "-3,-3": "-11*sqrt(3)/4",
+          "-3,-2": "33*sqrt(6)*I/16",
+          "-3,-1": "-55*sqrt(3)/16",
+          "-2,-3": "-2*sqrt(6)*I - 9*I/2 + 5*sqrt(3)*I/2",
+          "-2,-2": "-3*sqrt(3) - 27*sqrt(2)/8 + 15*sqrt(6)/8",
+          "-2,-1": "-5*sqrt(6)*I/2 - 45*I/8 + 25*sqrt(3)*I/8",
+          "-1,-3": "-3 - sqrt(6) + 2*sqrt(3) + 3*sqrt(2)",
+          "-1,-2": "-9*I/2 - 3*sqrt(6)*I/2 + 3*sqrt(3)*I/2 + 9*sqrt(2)*I/4",
+          "-1,-1": "-15/4 - 5*sqrt(6)/4 + 5*sqrt(3)/2 + 15*sqrt(2)/4"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          2
+        ],
+        "pair_early": [
+          0,
+          3
+        ],
+        "internal": 0,
+        "frequency": "sqrt(2)",
+        "A": "sqrt(2)",
+        "B": "-2 - sqrt(2) + 2*sqrt(3)/3",
+        "late_L3": {
+          "-3": "2",
+          "-2": "3*sqrt(2)*I/2",
+          "-1": "5/2"
+        },
+        "early_L3": {
+          "-3": "-11*sqrt(6)/4",
+          "-2": "-9*sqrt(2)*I/2 + 5*sqrt(6)*I/2 + 4*sqrt(3)*I",
+          "-1": "-6 - 3*sqrt(2) + 2*sqrt(3) + 2*sqrt(6)"
+        },
+        "D_coefficients": {
+          "-3,-3": "-11*sqrt(3)/4",
+          "-3,-2": "-9*I/2 + 5*sqrt(3)*I/2 + 2*sqrt(6)*I",
+          "-3,-1": "-3*sqrt(2) - 3 + sqrt(6) + 2*sqrt(3)",
+          "-2,-3": "-33*sqrt(6)*I/16",
+          "-2,-2": "-3*sqrt(3) - 15*sqrt(6)/8 + 27*sqrt(2)/8",
+          "-2,-1": "-9*I/2 - 9*sqrt(2)*I/4 + 3*sqrt(3)*I/2 + 3*sqrt(6)*I/2",
+          "-1,-3": "-55*sqrt(3)/16",
+          "-1,-2": "-45*I/8 + 25*sqrt(3)*I/8 + 5*sqrt(6)*I/2",
+          "-1,-1": "-15*sqrt(2)/4 - 15/4 + 5*sqrt(6)/4 + 5*sqrt(3)/2"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          3
+        ],
+        "pair_early": [
+          1,
+          2
+        ],
+        "internal": 1,
+        "frequency": "sqrt(6)",
+        "A": "-2 + 2*sqrt(3)/3 + sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-3": "2",
+          "-2": "-13*I/4 + sqrt(3)*I + 7*sqrt(6)*I/8",
+          "-1": "-3*sqrt(2)/4 + 3/2 + sqrt(6) + 3*sqrt(3)/2"
+        },
+        "early_L3": {
+          "-1": "59*sqrt(6)/4"
+        },
+        "D_coefficients": {
+          "-3,-1": "59/4",
+          "-2,-1": "-767*I/32 + 59*sqrt(3)*I/8 + 413*sqrt(6)*I/64",
+          "-1,-1": "-177*sqrt(2)/32 + 177/16 + 59*sqrt(6)/8 + 177*sqrt(3)/16"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          2
+        ],
+        "pair_early": [
+          0,
+          3
+        ],
+        "internal": 1,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6) - 2 + 2*sqrt(3)/3",
+        "late_L3": {
+          "-1": "59*sqrt(6)/4"
+        },
+        "early_L3": {
+          "-3": "2",
+          "-2": "-13*I/4 - 7*sqrt(6)*I/8 + sqrt(3)*I",
+          "-1": "-sqrt(6) + 3*sqrt(2)/4 + 3/2 + 3*sqrt(3)/2"
+        },
+        "D_coefficients": {
+          "-1,-3": "59/4",
+          "-1,-2": "-767*I/32 - 413*sqrt(6)*I/64 + 59*sqrt(3)*I/8",
+          "-1,-1": "-59*sqrt(6)/8 + 177*sqrt(2)/32 + 177/16 + 177*sqrt(3)/16"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          3
+        ],
+        "pair_early": [
+          1,
+          2
+        ],
+        "internal": 2,
+        "frequency": "sqrt(6)",
+        "A": "-2 + 2*sqrt(3)/3 + sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-3": "2*sqrt(6)",
+          "-2": "-13*sqrt(6)*I/4 + 3*sqrt(2)*I + 21*I/4",
+          "-1": "-3*sqrt(3)/2 + 3*sqrt(6)/2 + 6 + 9*sqrt(2)/2"
+        },
+        "early_L3": {
+          "-1": "-21"
+        },
+        "D_coefficients": {
+          "-3,-1": "-21",
+          "-2,-1": "-147*sqrt(6)*I/16 - 21*sqrt(3)*I/2 + 273*I/8",
+          "-1,-1": "-63*sqrt(3)/4 - 21*sqrt(6)/2 - 63/4 + 63*sqrt(2)/8"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          2
+        ],
+        "pair_early": [
+          0,
+          3
+        ],
+        "internal": 2,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6) - 2 + 2*sqrt(3)/3",
+        "late_L3": {
+          "-1": "-21"
+        },
+        "early_L3": {
+          "-3": "2*sqrt(6)",
+          "-2": "-13*sqrt(6)*I/4 - 21*I/4 + 3*sqrt(2)*I",
+          "-1": "-6 + 3*sqrt(3)/2 + 3*sqrt(6)/2 + 9*sqrt(2)/2"
+        },
+        "D_coefficients": {
+          "-1,-3": "-21",
+          "-1,-2": "-21*sqrt(3)*I/2 + 147*sqrt(6)*I/16 + 273*I/8",
+          "-1,-1": "-63*sqrt(3)/4 - 63/4 - 63*sqrt(2)/8 + 21*sqrt(6)/2"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+Wab = partial_Phi^a partial_s^b W, evaluated at the background.
+
+L2
+-W01*grad_phi_squared/(2*s) + W02*phi_dot**2/2 + W11*phi*phi_dot + W20*phi**2/2
+
+L3
+W01*grad_phi_squared*phi_dot/(2*s**2) - W02*grad_phi_squared*phi_dot/(2*s) + W03*phi_dot**3/6 - W11*grad_phi_squared*phi/(2*s) + W12*phi*phi_dot**2/2 + W21*phi**2*phi_dot/2 + W30*phi**3/6
+
+L4
+-W01*grad_phi_squared**2/(8*s**3) - W01*grad_phi_squared*phi_dot**2/(2*s**3) + W02*grad_phi_squared**2/(8*s**2) + W02*grad_phi_squared*phi_dot**2/(2*s**2) - W03*grad_phi_squared*phi_dot**2/(4*s) + W04*phi_dot**4/24 + W11*grad_phi_squared*phi*phi_dot/(2*s**2) - W12*grad_phi_squared*phi*phi_dot/(2*s) + W13*phi*phi_dot**3/6 - W21*grad_phi_squared*phi**2/(4*s) + W22*phi**2*phi_dot**2/4 + W31*phi**3*phi_dot/6 + W40*phi**4/24
+
+L5
+3*W01*grad_phi_squared**2*phi_dot/(8*s**4) + W01*grad_phi_squared*phi_dot**3/(2*s**4) - 3*W02*grad_phi_squared**2*phi_dot/(8*s**3) - W02*grad_phi_squared*phi_dot**3/(2*s**3) + W03*grad_phi_squared**2*phi_dot/(8*s**2) + W03*grad_phi_squared*phi_dot**3/(4*s**2) - W04*grad_phi_squared*phi_dot**3/(12*s) + W05*phi_dot**5/120 - W11*grad_phi_squared**2*phi/(8*s**3) - W11*grad_phi_squared*phi*phi_dot**2/(2*s**3) + W12*grad_phi_squared**2*phi/(8*s**2) + W12*grad_phi_squared*phi*phi_dot**2/(2*s**2) - W13*grad_phi_squared*phi*phi_dot**2/(4*s) + W14*phi*phi_dot**4/24 + W21*grad_phi_squared*phi**2*phi_dot/(4*s**2) - W22*grad_phi_squared*phi**2*phi_dot/(4*s) + W23*phi**2*phi_dot**3/12 - W31*grad_phi_squared*phi**3/(12*s) + W32*phi**3*phi_dot**2/12 + W41*phi**4*phi_dot/24 + W50*phi**5/120
+
+L6
+-W01*grad_phi_squared**3/(16*s**5) - 3*W01*grad_phi_squared**2*phi_dot**2/(4*s**5) - W01*grad_phi_squared*phi_dot**4/(2*s**5) + W02*grad_phi_squared**3/(16*s**4) + 3*W02*grad_phi_squared**2*phi_dot**2/(4*s**4) + W02*grad_phi_squared*phi_dot**4/(2*s**4) - W03*grad_phi_squared**3/(48*s**3) - 5*W03*grad_phi_squared**2*phi_dot**2/(16*s**3) - W03*grad_phi_squared*phi_dot**4/(4*s**3) + W04*grad_phi_squared**2*phi_dot**2/(16*s**2) + W04*grad_phi_squared*phi_dot**4/(12*s**2) - W05*grad_phi_squared*phi_dot**4/(48*s) + W06*phi_dot**6/720 + 3*W11*grad_phi_squared**2*phi*phi_dot/(8*s**4) + W11*grad_phi_squared*phi*phi_dot**3/(2*s**4) - 3*W12*grad_phi_squared**2*phi*phi_dot/(8*s**3) - W12*grad_phi_squared*phi*phi_dot**3/(2*s**3) + W13*grad_phi_squared**2*phi*phi_dot/(8*s**2) + W13*grad_phi_squared*phi*phi_dot**3/(4*s**2) - W14*grad_phi_squared*phi*phi_dot**3/(12*s) + W15*phi*phi_dot**5/120 - W21*grad_phi_squared**2*phi**2/(16*s**3) - W21*grad_phi_squared*phi**2*phi_dot**2/(4*s**3) + W22*grad_phi_squared**2*phi**2/(16*s**2) + W22*grad_phi_squared*phi**2*phi_dot**2/(4*s**2) - W23*grad_phi_squared*phi**2*phi_dot**2/(8*s) + W24*phi**2*phi_dot**4/48 + W31*grad_phi_squared*phi**3*phi_dot/(12*s**2) - W32*grad_phi_squared*phi**3*phi_dot/(12*s) + W33*phi**3*phi_dot**3/36 - W41*grad_phi_squared*phi**4/(48*s) + W42*phi**4*phi_dot**2/48 + W51*phi**5*phi_dot/120 + W60*phi**6/720

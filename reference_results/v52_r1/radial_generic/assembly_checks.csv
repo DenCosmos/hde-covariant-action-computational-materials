@@ -1,0 +1,5 @@
+calculation,status,residual
+T07.scalar_leading_contact,PASS,0
+T07.scalar_equal_radius_contact,PASS,0
+T07.all_81_components,PASS,0
+T07.40_parity_zeros_41_nonzero,PASS,0

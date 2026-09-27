@@ -1,0 +1,55 @@
+--- GitHub_bundle/original_scripts/verify_soft_v40.py
++++ scripts/article_appC6_verify_soft_limit.py
+@@ -1,16 +1,38 @@
+ #!/usr/bin/env python3
+-"""Т08: совместный мягкий предел, девять пар и пять граничных слагаемых.
++"""V52-R1: article appC6 verify soft limit.
++Article: A minimal local covariant action for holographic dark energy:
++constraints, perturbations, and nonlinear dynamics (scientific version V52).
++Method: exact rational ADM, source contraction, or coefficient validation,
++as implemented below; derived from original_scripts/verify_soft_v40.py unchanged in
++scientific algebra. Only imports, paths, checkpoint guards and reporting adapted.
++Assumptions: radiation background U=0, k=g_R=1, r>0, t=tan(theta/2)>0.
++External real TT tensors have norm 2. Internal norms and homogeneous kinetic
++signs are retained explicitly. No regulator-free unitary S-matrix is asserted.
++Inputs and outputs: see SCRIPT_REFERENCE_MAP.md and REPRODUCIBILITY.md.
++Run: python scripts/article_appC6_verify_soft_limit.py (see --help for generator options).
++Dependencies: Python and SymPy; local lib modules. No network or LaTeX required.
+ 
+-Подстановка r=1+mu*q выполняется в точном рациональном поле. Проверяются
+-коэффициенты кубических вершин и контакта; это не численная выборка r=1.
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article 6.10, eq:v34r-soft-scalar-vertex (195).
++  article 6.10, eq:v33-soft-singularity (196).
++  article C.6, eq:boundary-five-groups-leading (393).
++  article C.6, eq:boundary-scalar-five-coefficients (394).
++Method: Exact Laurent soft coefficients and five boundary leading groups.
++Inputs: New radial pairs and contact records; r=1+mu*q before q->0.
++Outputs below the selected results root: soft_v40/summary.json; soft_v40/checks.csv; soft_v40/five_groups.txt.
++Provenance: GitHub_bundle/original_scripts/verify_soft_v40.py.
++Scope limit: Does not prove existence of an unregulated unitary limit. Equal radii are not substituted before the joint soft limit.
+ """
++import sys
+ from pathlib import Path
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"lib"))
++from release_paths import RESULTS
+ import json,csv,itertools
+ import sympy as sp
+ import radial_coeff_algebra as a
+-from assemble_radial_v40 import decode_file,load
+-from angular_coefficients_v40 import transfer,f_boundary
+-B=Path(__file__).resolve().parents[1];D=B/'results/radial_generic';OUT=B/'results/soft_v40';R,Q=a.F.gens
++from supplement_sec1_2_assemble_contacts import decode_file,load
++from article_appC5_compute_angular_coefficients import transfer,f_boundary
++B=Path(__file__).resolve().parents[1];D=RESULTS/'radial_generic';OUT=RESULTS/'soft_v40';R,Q=a.F.gens
+ CHECK=[];EXP=[]
+ def joint(v):
+     def poly(p):return sum((co*(1+R*Q)**mon[0]*Q**mon[1] for mon,co in p.items()),a.F.zero)
+@@ -23,6 +45,7 @@
+ def check(name,test,detail):
+     if not test:raise AssertionError(name+': '+str(detail))
+     CHECK.append({'id':name,'status':'PASS','detail':str(detail)})
++# V52: article eq:v34r-soft-scalar-vertex (195); article eq:v33-soft-singularity (196); article eq:boundary-five-groups-leading (393); article eq:boundary-scalar-five-coefficients (394).
+ def main():
+     OUT.mkdir(parents=True,exist_ok=True)
+     for sa,sb in itertools.product(range(3),repeat=2):

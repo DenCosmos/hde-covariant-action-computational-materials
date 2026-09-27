@@ -1,0 +1,11 @@
+{
+  "stage": "angular_controls",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appC5_verify_angular_controls.py"
+  ],
+  "returncode": 0,
+  "seconds": 1.0008410730001742,
+  "log": "logs/angular_controls.log"
+}

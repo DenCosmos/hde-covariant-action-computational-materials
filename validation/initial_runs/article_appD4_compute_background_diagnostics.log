@@ -1,0 +1,6 @@
+Deriving background and perturbation coefficients
+Checking saddle eigenvalue convergence
+Checking logarithmic crossing solutions
+Checking late-time physical observables
+Saved numerical_results.json and convergence CSV files in @LOCAL_WORKSPACE@/V52_R1_repository/results/current/n02_background_diagnostics
+PASS: 35 exact symbolic checks; all numerical assertions passed.

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "method": "Rendered original and recomputed figure PDFs inspected visually; numerical checks are the primary scientific comparison. No byte-equality assertion.",
+  "article_figures_replaced": false,
+  "figures": [
+    {
+      "figure": 1,
+      "content": "Same c=1.2 pole crossing, finite unreduced trajectory, vanishing reduced denominator; constraint/determinant/round-trip checks saved."
+    },
+    {
+      "figure": 2,
+      "content": "Same nullclines, fixed points and analytic flow; new explicit early-time seed, with seed-halving test; trajectory extended beyond original short segment."
+    },
+    {
+      "figure": 3,
+      "content": "Same normalized cubic estimates, c=1 limit and controlling minimum; plotting layout is not byte-identical."
+    }
+  ]
+}

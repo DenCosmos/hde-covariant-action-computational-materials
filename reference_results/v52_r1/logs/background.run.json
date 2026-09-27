@@ -1,0 +1,13 @@
+{
+  "stage": "background",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appD4_compute_background_diagnostics.py",
+    "--output",
+    "<OUTPUT>"
+  ],
+  "returncode": 0,
+  "seconds": 6.001511804000074,
+  "log": "logs/background.log"
+}

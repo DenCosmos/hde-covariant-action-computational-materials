@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+# Custom restrictive terms: see LICENSE and LICENSE_SCOPE.md.
+# Do not use "All Rights Reserved" or an invented LicenseRef in the SPDX-only license field.
+# Add license-url only when the actual public URL of LICENSE is available.
+message: >-
+  Please cite computational version V52-R1 and its actual GitHub release URL
+  when available, together with the associated scientific publication.
+  Copyright 2026 Danylo Yerokhin. All rights reserved; limited scholarly
+  verification permission only. See LICENSE. This local copy has not been
+  published and contains no assigned repository URL or DOI.
+title: "Computational materials and mathematical supplement for A minimal local covariant action for holographic dark energy: constraints, perturbations, and nonlinear dynamics"
+type: software
+version: V52-R1
+authors:
+  - family-names: Yerokhin
+    given-names: Danylo
+    affiliation: V. N. Karazin Kharkiv National University
+    orcid: "https://orcid.org/0009-0003-8645-327X"
+abstract: >-
+  Exact and numerical computations supporting scientific article V52:
+  local scalar vertices, reduced identities, finite-time radiation contact
+  and scalar-tensor exchange coefficients, non-center-of-mass checks,
+  angular dictionaries and three figure reconstructions. The unchanged
+  mathematical supplement is included; the main article is not.
+  No regulator-free unitary limit is established by this package.
+keywords:
+  - holographic dark energy
+  - covariant action
+  - scalar perturbations
+  - finite-time transitions
+  - reproducibility

@@ -1,0 +1,3666 @@
+{
+  "status": "PASS",
+  "checks": 338,
+  "seconds": 53.269261379,
+  "groups": [
+    {
+      "function": "test_radiation_expansion",
+      "checks": 32,
+      "seconds": 4.49392250100027,
+      "status": "PASS"
+    },
+    {
+      "function": "test_general_Legendre_transform",
+      "checks": 1,
+      "seconds": 2.603115219999836,
+      "status": "PASS"
+    },
+    {
+      "function": "test_complete_example",
+      "checks": 16,
+      "seconds": 6.719810316999883,
+      "status": "PASS"
+    },
+    {
+      "function": "test_time_integrals",
+      "checks": 56,
+      "seconds": 0.07164424599977792,
+      "status": "PASS"
+    },
+    {
+      "function": "test_signed_Legendre_transform",
+      "checks": 1,
+      "seconds": 2.455506061000051,
+      "status": "PASS"
+    },
+    {
+      "function": "test_homogeneous_and_state",
+      "checks": 10,
+      "seconds": 0.107240714999989,
+      "status": "PASS"
+    },
+    {
+      "function": "test_generic_scalar_contact",
+      "checks": 6,
+      "seconds": 0.18043518300009964,
+      "status": "PASS"
+    },
+    {
+      "function": "test_direct_com",
+      "checks": 117,
+      "seconds": 10.62683508300006,
+      "status": "PASS"
+    },
+    {
+      "function": "test_angular_projection",
+      "checks": 37,
+      "seconds": 3.934377446000326,
+      "status": "PASS"
+    },
+    {
+      "function": "test_radial_kernel",
+      "checks": 21,
+      "seconds": 18.80163711000023,
+      "status": "PASS"
+    },
+    {
+      "function": "test_channel_count_and_leakage",
+      "checks": 23,
+      "seconds": 0.013960171999769955,
+      "status": "PASS"
+    },
+    {
+      "function": "test_nonlinear",
+      "checks": 10,
+      "seconds": 0.024349000999791315,
+      "status": "PASS"
+    },
+    {
+      "function": "test_simple_wave",
+      "checks": 8,
+      "seconds": 3.2253320439999698,
+      "status": "PASS"
+    }
+  ],
+  "tests": [
+    {
+      "name": "exact_quadratic_w",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "exact_quadratic_v_((ANP([MPQ(1,144), MPQ(0,1), MPQ(-35,288), MPQ(0,1), MPQ(7,9), MPQ(0,1), MPQ(13,24), MPQ(0,1)], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ)), (ANP([], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([MPQ(-1,192), MPQ(0,1), MPQ(35,384), MPQ(0,1), MPQ(-7,12), MPQ(0,1), MPQ(-13,32), MPQ(0,1)], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([MPQ(-1,1536), MPQ(0,1), MPQ(5,768), MPQ(0,1), MPQ(5,384), MPQ(0,1), MPQ(-19,64)], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ)), (ANP([], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([MPQ(-1,1536), MPQ(0,1), MPQ(5,768), MPQ(0,1), MPQ(5,384), MPQ(0,1), MPQ(-19,64)], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([MPQ(-1,576), MPQ(0,1), MPQ(35,1152), MPQ(0,1), MPQ(-7,36), MPQ(0,1), MPQ(-13,96), MPQ(0,1)], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ)))",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "exact_quadratic_v_((ANP([], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([MPQ(-1,768), MPQ(0,1), MPQ(5,384), MPQ(0,1), MPQ(5,192), MPQ(0,1), MPQ(-19,32)], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([MPQ(-1,288), MPQ(0,1), MPQ(35,576), MPQ(0,1), MPQ(-7,18), MPQ(0,1), MPQ(-13,48), MPQ(0,1)], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ)), (ANP([MPQ(-1,768), MPQ(0,1), MPQ(5,384), MPQ(0,1), MPQ(5,192), MPQ(0,1), MPQ(-19,32)], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ)), (ANP([MPQ(-1,288), MPQ(0,1), MPQ(35,576), MPQ(0,1), MPQ(-7,18), MPQ(0,1), MPQ(-13,48), MPQ(0,1)], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ), ANP([], [MPQ(1,1), MPQ(0,1), MPQ(-16,1), MPQ(0,1), MPQ(88,1), MPQ(0,1), MPQ(192,1), MPQ(0,1), MPQ(144,1)], QQ)))",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "independent_scalar_ADM_expansion_order_3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "independent_scalar_ADM_expansion_order_4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_0_alpha",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_0_beta0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_0_beta1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_0_beta2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "scalar_Legendre_source_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "tensor_Legendre_source_0_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "complete_vww_without_time_integration_by_parts_0_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "tensor_Legendre_source_0_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "complete_vww_without_time_integration_by_parts_0_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_1_alpha",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_1_beta0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_1_beta1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_1_beta2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "scalar_Legendre_source_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "tensor_Legendre_source_1_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "complete_vww_without_time_integration_by_parts_1_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "tensor_Legendre_source_1_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "complete_vww_without_time_integration_by_parts_1_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_2_alpha",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_2_beta0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_2_beta1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "auxiliary_variation_2_beta2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "scalar_Legendre_source_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "tensor_Legendre_source_2_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "complete_vww_without_time_integration_by_parts_2_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "tensor_Legendre_source_2_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "complete_vww_without_time_integration_by_parts_2_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radiation_expansion"
+    },
+    {
+      "name": "two_field_Legendre_transform_independent",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_general_Legendre_transform"
+    },
+    {
+      "name": "qqqq_bare_L4",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "qqqq_auxiliary_H4",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "qqqq_legendre_H4",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "qqqq_full_H4",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "full_qqqq_exchange_six_polynomial_reduction",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "local_Feynman_amplitude",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "local_Hamiltonian_equals_Feynman",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "integrated_contact_upper_boundary",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "integrated_contact_zero_interval",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "two_scalars_to_tensor_exact_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "two_scalars_to_tensor_exact_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "integrated_cubic_exact",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "on_shell_wvv_leading_cancellation_00",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "on_shell_wvv_leading_cancellation_01",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "on_shell_wvv_leading_cancellation_10",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "on_shell_wvv_leading_cancellation_11",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_complete_example"
+    },
+    {
+      "name": "exact_power_primitive_-6",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_-6",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_primitive_-5",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_-5",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_primitive_-4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_-4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_primitive_-3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_-3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_primitive_-2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_-2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_primitive_-1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_-1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_primitive_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_primitive_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_primitive_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_primitive_3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_primitive_4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "exact_power_lower_endpoint_4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-3_-3",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-3_-3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-3_-2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-3_-2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-3_-1",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-3_-1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-3_0",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-3_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-2_-3",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-2_-3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-2_-2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-2_-2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-2_-1",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-2_-1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-2_0",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-2_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-1_-3",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-1_-3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-1_-2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-1_-2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-1_-1",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-1_-1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_-1_0",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_-1_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_0_-3",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_0_-3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_0_-2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_0_-2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_0_-1",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_0_-1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_moment_0_0",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "ordered_shuffle_0_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "generic_ordered_moment_identity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "Bogoliubov_four_frequency_weights",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_time_integrals"
+    },
+    {
+      "name": "new_signed_Legendre_transform",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_signed_Legendre_transform"
+    },
+    {
+      "name": "new_exact_homogeneous_lapse",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_homogeneous_and_state"
+    },
+    {
+      "name": "new_exact_homogeneous_reduction",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_homogeneous_and_state"
+    },
+    {
+      "name": "new_homogeneous_scalar_quartic_expansion",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_homogeneous_and_state"
+    },
+    {
+      "name": "new_homogeneous_lapse_Hessian",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_homogeneous_and_state"
+    },
+    {
+      "name": "new_five_global_tensors_orthonormal",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_homogeneous_and_state"
+    },
+    {
+      "name": "new_global_traceless_projector",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_homogeneous_and_state"
+    },
+    {
+      "name": "new_free_global_correlator_equation",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_homogeneous_and_state"
+    },
+    {
+      "name": "new_free_global_correlator_Hermiticity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_homogeneous_and_state"
+    },
+    {
+      "name": "new_global_equal_time_commutator",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_homogeneous_and_state"
+    },
+    {
+      "name": "new_two_orderings_commutator",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_homogeneous_and_state"
+    },
+    {
+      "name": "new_generic_bare_L4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_generic_scalar_contact"
+    },
+    {
+      "name": "new_generic_full_H4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_generic_scalar_contact"
+    },
+    {
+      "name": "new_generic_scalar_exchange",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_generic_scalar_contact"
+    },
+    {
+      "name": "new_generic_tensor_exchange",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_generic_scalar_contact"
+    },
+    {
+      "name": "new_COM_leading_amplitude",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_generic_scalar_contact"
+    },
+    {
+      "name": "new_leading_covariant_independent",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_generic_scalar_contact"
+    },
+    {
+      "name": "new_full_COM_contact_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_lapse_0_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_momentum_0_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_lapse_0_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_momentum_0_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[0, 2]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[1, 3]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[0, 2]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[1, 3]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[0, 2]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[1, 3]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[0, 3]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[1, 2]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[0, 3]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[1, 2]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[0, 3]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_0_[1, 2]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_coordinate_0_[0, 1]",
+      "status": "PASS",
+      "residuals": [],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_coordinate_0_[2, 3]",
+      "status": "PASS",
+      "residuals": [],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[0, 1]_1_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[0, 1]_1_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[2, 3]_1_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[2, 3]_1_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[0, 1]_2_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[0, 1]_2_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[2, 3]_2_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[2, 3]_2_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[0, 1]_3_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[0, 1]_3_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[2, 3]_3_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[2, 3]_3_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[0, 1]_4_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[0, 1]_4_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[2, 3]_4_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[2, 3]_4_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[0, 1]_5_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[0, 1]_5_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[2, 3]_5_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_0_[2, 3]_5_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_full_COM_contact_1/3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_lapse_1/3_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_momentum_1/3_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_lapse_1/3_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_momentum_1/3_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[0, 2]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[1, 3]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[0, 2]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[1, 3]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[0, 2]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[1, 3]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[0, 3]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[1, 2]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[0, 3]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[1, 2]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[0, 3]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_1/3_[1, 2]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_coordinate_1/3_[0, 1]",
+      "status": "PASS",
+      "residuals": [],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_coordinate_1/3_[2, 3]",
+      "status": "PASS",
+      "residuals": [],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[0, 1]_1_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[0, 1]_1_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[2, 3]_1_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[2, 3]_1_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[0, 1]_2_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[0, 1]_2_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[2, 3]_2_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[2, 3]_2_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[0, 1]_3_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[0, 1]_3_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[2, 3]_3_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[2, 3]_3_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[0, 1]_4_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[0, 1]_4_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[2, 3]_4_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[2, 3]_4_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[0, 1]_5_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[0, 1]_5_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[2, 3]_5_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_1/3_[2, 3]_5_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_full_COM_contact_-1/3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_lapse_-1/3_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_momentum_-1/3_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_lapse_-1/3_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_momentum_-1/3_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[0, 2]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[1, 3]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[0, 2]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[1, 3]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[0, 2]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[1, 3]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[0, 3]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[1, 2]_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[0, 3]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[1, 2]_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[0, 3]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_nonzero_vertex_-1/3_[1, 2]_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_coordinate_-1/3_[0, 1]",
+      "status": "PASS",
+      "residuals": [],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_scalar_coordinate_-1/3_[2, 3]",
+      "status": "PASS",
+      "residuals": [],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[0, 1]_1_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[0, 1]_1_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[2, 3]_1_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[2, 3]_1_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[0, 1]_2_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[0, 1]_2_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[2, 3]_2_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[2, 3]_2_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[0, 1]_3_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[0, 1]_3_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[2, 3]_3_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[2, 3]_3_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[0, 1]_4_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[0, 1]_4_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[2, 3]_4_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[2, 3]_4_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[0, 1]_5_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[0, 1]_5_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[2, 3]_5_late_coordinate",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_global_tensor_-1/3_[2, 3]_5_late_velocity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_direct_com"
+    },
+    {
+      "name": "new_contact_angular_moments_0",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_endpoint_log_finite_part_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_all_exchange_angular_moments_j0_n0_to2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_contact_angular_moments_1",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_endpoint_log_finite_part_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_all_exchange_angular_moments_j1_n0_to2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_contact_angular_moments_2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_endpoint_log_finite_part_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_all_exchange_angular_moments_j2_n0_to2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_contact_angular_moments_3",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_endpoint_log_finite_part_3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_all_exchange_angular_moments_j3_n0_to2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_contact_angular_moments_4",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_endpoint_log_finite_part_4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_all_exchange_angular_moments_j4_n0_to2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_contact_angular_moments_5",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_endpoint_log_finite_part_5",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_all_exchange_angular_moments_j5_n0_to2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_contact_angular_moments_6",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_endpoint_log_finite_part_6",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_all_exchange_angular_moments_j6_n0_to2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_contact_angular_moments_7",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_endpoint_log_finite_part_7",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_all_exchange_angular_moments_j7_n0_to2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_contact_angular_moments_8",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_endpoint_log_finite_part_8",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_all_exchange_angular_moments_j8_n0_to2",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_double_time_binomial_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_double_time_binomial_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_double_time_binomial_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_double_time_binomial_3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_double_time_binomial_4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_double_time_binomial_5",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_double_time_binomial_6",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_double_time_binomial_7",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_contact_j0_values",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_contact_j2_values",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_angular_projection"
+    },
+    {
+      "name": "new_general_radial_transverse_projection",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_equal_radius_transverse_contact",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_forward_residue",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_Legendre_Q_finite_formula_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_radial_angular_integral_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_Legendre_Q_finite_formula_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_radial_angular_integral_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_Legendre_Q_finite_formula_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_radial_angular_integral_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_Legendre_Q_finite_formula_3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_radial_angular_integral_3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_Legendre_Q_finite_formula_4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_radial_angular_integral_4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_Legendre_Q_finite_formula_5",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_radial_angular_integral_5",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_Legendre_Q_finite_formula_6",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_radial_angular_integral_6",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_Legendre_Q_finite_formula_7",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_radial_angular_integral_7",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_Legendre_Q_finite_formula_8",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_radial_angular_integral_8",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_radial_kernel"
+    },
+    {
+      "name": "new_helicity_channel_count_1_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_1_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_1_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_1_3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_1_4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_1_5",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_1_6",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_1_7",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_1_8",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_1_9",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_2_0",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_2_1",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_2_2",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_2_3",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_2_4",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_2_5",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_2_6",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_2_7",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_2_8",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_helicity_channel_count_2_9",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_cubic_local_particle_numbers_with_global_variables",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_one_particle_leakage_probability",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_leakage_zero_interval",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_channel_count_and_leakage"
+    },
+    {
+      "name": "new_spatial_Phi_constraint",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_nonlinear"
+    },
+    {
+      "name": "new_spatial_chi_constraint",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_nonlinear"
+    },
+    {
+      "name": "new_spatial_pressure_constraint",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_nonlinear"
+    },
+    {
+      "name": "new_nonlinear_Euler_equation",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_nonlinear"
+    },
+    {
+      "name": "new_transverse_chi_second_derivative",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_nonlinear"
+    },
+    {
+      "name": "new_transverse_H_second_derivative",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_nonlinear"
+    },
+    {
+      "name": "new_transverse_H_third_derivative",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_nonlinear"
+    },
+    {
+      "name": "new_transverse_L_second_derivative",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_nonlinear"
+    },
+    {
+      "name": "new_transverse_L_third_derivative",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_nonlinear"
+    },
+    {
+      "name": "new_exact_Einstein_branch_transport",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_nonlinear"
+    },
+    {
+      "name": "new_radiation_scalar_conformal_identity",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_simple_wave"
+    },
+    {
+      "name": "new_simple_wave_integrability",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_simple_wave"
+    },
+    {
+      "name": "new_simple_wave_field_equation",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_simple_wave"
+    },
+    {
+      "name": "new_characteristic_speed_derivative",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_simple_wave"
+    },
+    {
+      "name": "new_simple_wave_original_fields",
+      "status": "PASS",
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "function": "test_simple_wave"
+    },
+    {
+      "name": "new_simple_wave_original_transport",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_simple_wave"
+    },
+    {
+      "name": "new_characteristic_jacobian",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_simple_wave"
+    },
+    {
+      "name": "new_gradient_catastrophe_denominator",
+      "status": "PASS",
+      "residuals": [
+        "0"
+      ],
+      "function": "test_simple_wave"
+    }
+  ],
+  "scope": "Preserved exact identities and special radiation/scalar/nonlinear calculations; not a full arbitrary-background multichannel scattering calculation."
+}

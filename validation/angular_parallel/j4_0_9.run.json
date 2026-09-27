@@ -1,0 +1,17 @@
+{
+  "stage": "j4_0_9",
+  "status": "PASS",
+  "returncode": 0,
+  "seconds": 290.03611873900036,
+  "command": [
+    "python",
+    "scripts/article_appC5_compute_angular_coefficients.py",
+    "--j",
+    "4",
+    "--start",
+    "0",
+    "--stop",
+    "9",
+    "--resume"
+  ]
+}

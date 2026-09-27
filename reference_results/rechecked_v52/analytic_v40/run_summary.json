@@ -1,0 +1,7 @@
+{
+  "success": true,
+  "checks": 53,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "elapsed_seconds": 2.948791402999973
+}

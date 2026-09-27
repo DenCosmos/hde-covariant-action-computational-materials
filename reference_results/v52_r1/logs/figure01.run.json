@@ -1,0 +1,13 @@
+{
+  "stage": "figure01",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_fig01_plot_pole_crossing.py",
+    "--output",
+    "<OUTPUT>/figure01"
+  ],
+  "returncode": 0,
+  "seconds": 3.0038655040002595,
+  "log": "logs/figure01.log"
+}

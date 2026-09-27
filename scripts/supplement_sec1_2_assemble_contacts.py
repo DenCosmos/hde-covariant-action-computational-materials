@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+"""V52-R1: supplement sec1 2 assemble contacts.
+Article: A minimal local covariant action for holographic dark energy:
+constraints, perturbations, and nonlinear dynamics (scientific version V52).
+Method: exact rational ADM, source contraction, or coefficient validation,
+as implemented below; derived from original_scripts/assemble_radial_v40.py unchanged in
+scientific algebra. Only imports, paths, checkpoint guards and reporting adapted.
+Assumptions: radiation background U=0, k=g_R=1, r>0, t=tan(theta/2)>0.
+External real TT tensors have norm 2. Internal norms and homogeneous kinetic
+signs are retained explicitly. No regulator-free unitary S-matrix is asserted.
+Inputs and outputs: see SCRIPT_REFERENCE_MAP.md and REPRODUCIBILITY.md.
+Run: python scripts/supplement_sec1_2_assemble_contacts.py (see --help for generator options).
+Dependencies: Python and SymPy; local lib modules. No network or LaTeX required.
+
+PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
+  article C.3, eq:radiation-contact-decomposition (351).
+  article 6.10, eq:v33-legendre-contact (191).
+  supplement 1.5.2, eq:cat-partition-contact-sum (498).
+  supplement 1.5.2, eq:cat-partition-velocity-nonzero (499).
+  supplement 1.5.2, eq:cat-partition-velocity-homogeneous (500).
+Method: Contract three auxiliary partitions and signed Legendre products, H4=-L4+aux+Legendre.
+Inputs: 54 new pair records and 81 new bare records.
+Outputs below the selected results root: radial_generic/contacts/*.json, radial_generic/assembly_summary.json.
+Provenance: GitHub_bundle/original_scripts/assemble_radial_v40.py.
+Scope limit: Radiation COM frame; not the separate fixed non-COM configuration.
+"""
+from __future__ import annotations
+import sys
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"lib"))
+from release_paths import RESULTS
+import itertools,json,time,csv,ast,pickle
+from pathlib import Path
+import sympy as s
+import radial_coeff_algebra as a
+from supplement_sec1_3_generate_radial_sources import atomic
+BASE=Path(__file__).resolve().parents[1];D=RESULTS/'radial_generic'
+r,t=a.RADIUS,a.HALF_ANGLE
+PARS=(((0,1),(2,3)),((0,2),(1,3)),((0,3),(1,2)))
+START=time.monotonic()
+def parse(text):
+    """Parse the internally generated rational expression directly in its field.
+    Only integer arithmetic, r,t,I and sqrt(3) are accepted; no code execution.
+    """
+    def visit(node):
+        if isinstance(node,ast.Constant) and isinstance(node.value,int):return a.K.convert(node.value)
+        if isinstance(node,ast.Name):return {'r':a.K.gens[0],'t':a.K.gens[1],'I':a.I}[node.id]
+        if isinstance(node,ast.UnaryOp) and isinstance(node.op,ast.USub):return -visit(node.operand)
+        if isinstance(node,ast.Call) and isinstance(node.func,ast.Name) and node.func.id=='sqrt' and len(node.args)==1 and isinstance(node.args[0],ast.Constant) and node.args[0].value==3:return a.SQ3
+        if isinstance(node,ast.BinOp):
+            if isinstance(node.op,ast.Pow):
+                exponent=ast.literal_eval(node.right)
+                if not isinstance(exponent,int):raise ValueError('Noninteger power')
+                return visit(node.left)**exponent
+            l=visit(node.left);r=visit(node.right)
+            if isinstance(node.op,ast.Add):return l+r
+            if isinstance(node.op,ast.Sub):return l-r
+            if isinstance(node.op,ast.Mult):return l*r
+            if isinstance(node.op,ast.Div):return l/r
+        raise ValueError(f'Unsupported rational expression: {ast.dump(node)}')
+    return visit(ast.parse(text,mode='eval').body)
+def load(d):return {int(k):parse(v) for k,v in d.items()}
+def normalized(v):
+    return v.expr()
+
+def enc(d):return {str(k):str(normalized(v)) for k,v in sorted(d.items()) if v}
+def decode_file(path):
+    d=json.loads(path.read_text());out={**d}
+    for key in ['Jalpha','JB']:out[key]=load(d[key])
+    for key in ['Ji','JT','A','B']:out[key]=[load(x) for x in d[key]]
+    out['p2']=parse(d['p2']);out['norms']=[parse(x) for x in d['norms']]
+    return out
+
+# V52: article eq:radiation-contact-decomposition (351); article eq:v33-legendre-contact (191); supplement eq:cat-partition-contact-sum (498); supplement eq:cat-partition-velocity-nonzero (499); supplement eq:cat-partition-velocity-homogeneous (500).
+def main():
+    pairs={}
+    for p in sorted((D/'pair').glob('*.json')):
+        pairs[p.stem]=decode_file(p)
+        print(f'[{time.monotonic()-START:.1f}s] loaded pair {p.stem}',flush=True)
+    assert len(pairs)==54
+    rows=[];checks=[];nonzero=0
+    for key in itertools.product(range(3),repeat=4):
+        name=''.join(map(str,key));bare=load(json.loads((D/'bare'/(name+'.json')).read_text())['bare_L4'])
+        full=a.la_scale(bare,-1);groups=[]
+        for j,(left,right) in enumerate(PARS):
+            aa=pairs[f'{left[0]}{left[1]}{key[left[0]]}{key[left[1]]}'];bb=pairs[f'{right[0]}{right[1]}{key[right[0]]}{key[right[1]]}']
+            if aa['p2']:
+                aux=a.la_scale(a.la_add(a.la_mul(aa['Jalpha'],bb['JB']),a.la_mul(bb['Jalpha'],aa['JB'])),-6,-1)
+                aux=a.la_add(aux,a.la_scale(a.la_mul(aa['JB'],bb['JB']),-18,-2))
+                for k in range(3):aux=a.la_add(aux,a.la_scale(a.la_mul(aa['JT'][k],bb['JT'][k]),24/aa['p2'],-2))
+                transport=[1,1,-1]
+            else:
+                aux=a.la_scale(a.la_mul(aa['Jalpha'],bb['Jalpha']),2);transport=[1]*6
+            leg={}
+            for I,norm in enumerate(aa['norms']):leg=a.la_add(leg,a.la_scale(a.la_mul(aa['B'][I],bb['B'][I]),transport[I]/norm))
+            full=a.la_add(full,a.la_add(aux,leg))
+            groups.append({'partition':j,'left':list(left),'right':list(right),'auxiliary':enc(aux),'legendre':enc(leg)})
+        parity=sum(k==2 for k in key)%2
+        if parity:assert not full,name
+        if full:nonzero+=1
+        assert all(-4<=p<=0 for p in full), (name,full.keys())
+        if name=='0000':
+            z=(1-t*t)/(1+t*t)
+            assert not (full[0]-a.alg(s.Rational(4,9)*r*r*(3-z*z)))
+            checks.append(('T07.scalar_leading_contact','PASS','0'))
+            expr=sum(normalized(v).subs(r,1)*s.Symbol('x')**p for p,v in full.items());x=s.Symbol('x')
+            expected=s.Rational(4,3)-s.Rational(4,9)*z*z+(64+16*z*z-32/(1-z*z))/x**2+(368+24*z*z)/x**4
+            residual=s.factor(s.cancel(expr-expected));assert residual==0,residual
+            checks.append(('T07.scalar_equal_radius_contact','PASS','0'))
+        record={'species':list(key),'bare_H4':enc(a.la_scale(bare,-1)),'partitions':groups,'full_H4':enc(full)}
+        atomic(D/'contacts'/(name+'.json'),record)
+        rows.append((name,int(bool(full)),','.join(map(str,sorted(full)))))
+        print(f'[{time.monotonic()-START:.1f}s] contact {name}; nonzero={bool(full)}',flush=True)
+    assert nonzero==41,nonzero
+    checks.extend([('T07.all_81_components','PASS','0'),('T07.40_parity_zeros_41_nonzero','PASS','0')])
+    for path,data,header in [(D/'component_registry.csv',rows,['A1A2A3A4','nonzero_contact','powers_x']),(D/'assembly_checks.csv',checks,['calculation','status','residual'])]:
+        with path.open('w',newline='',encoding='utf-8') as f:w=csv.writer(f);w.writerow(header);w.writerows(data)
+    atomic(D/'assembly_summary.json',{'components':81,'nonzero_contacts':nonzero,'checks':len(checks),'seconds':time.monotonic()-START})
+    print('DONE: 81 contacts, 41 nonzero, all checks passed.',flush=True)
+if __name__=='__main__':main()

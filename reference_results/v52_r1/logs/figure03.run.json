@@ -1,0 +1,15 @@
+{
+  "stage": "figure03",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_fig03_plot_strong_coupling.py",
+    "--output",
+    "<OUTPUT>/figures",
+    "--data-output",
+    "<OUTPUT>/figures"
+  ],
+  "returncode": 0,
+  "seconds": 1.0006551330002367,
+  "log": "logs/figure03.log"
+}

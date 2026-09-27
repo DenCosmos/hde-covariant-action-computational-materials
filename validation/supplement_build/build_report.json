@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "source_sha256": {
+    "references.bib": "21f663a0b7bb360fa045e485b1fdd0e4eb1f119f433d5b74f1f2574b31fcbd91",
+    "mathematical_catalogue.tex": "7848e7e464dbe277c8f1161b6f232681bd239f7604f6b4286980aeec0cdfb3ad",
+    "mathematical_catalogue.bbl": "bc31b8d4282dbd15c402749ab558be2f079c1997df5b887e0e1648892fc6a85f"
+  },
+  "commands": [
+    {
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "mathematical_catalogue.tex"
+      ],
+      "returncode": 0,
+      "seconds": 2.4041560370001207
+    },
+    {
+      "command": [
+        "bibtex.original",
+        "mathematical_catalogue"
+      ],
+      "returncode": 0,
+      "seconds": 0.18891779000023234
+    },
+    {
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "mathematical_catalogue.tex"
+      ],
+      "returncode": 0,
+      "seconds": 2.4765900779998447
+    },
+    {
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "mathematical_catalogue.tex"
+      ],
+      "returncode": 0,
+      "seconds": 2.789019731999815
+    }
+  ],
+  "scope": "Independent LaTeX build of unchanged supplement; no historical editorial generators"
+}

@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+"""Recompute the fixed non-COM connected tree kernels for article V52, Appendix C.3.
+
+A minimal local covariant action for holographic dark energy: constraints,
+perturbations, and nonlinear dynamics. Computational version V52-R1.
+Article eq:radiation-noncom-check-momenta (356), not the COM catalogue table.
+Method: exact multilinear ADM expansion, auxiliary and Legendre contacts,
+all three internal species in all three partitions and both time orderings.
+Inputs: parameters/noncom.json (read at runtime); no historical coefficient table.
+Output: channel checkpoints, coefficients.json, component_registry.csv, verification.json.
+Example: python scripts/article_appC3_compute_noncom_matrix_elements.py --output results/current/noncom
+Requires SymPy and lib/article_appC_noncom_engine.py, adapted from noncom_original.py.
+U=0 radiation, no independent matter, reference conformal Fock basis, positive
+finite endpoints retained as parameters. This does NOT construct a physical
+IR-finite S matrix or prove regulator removal. Exact nonzero classification
+uses the contact Laurent polynomial and exchange coefficients after grouping
+identical ordered frequency pairs; no numerical threshold is introduced.
+
+PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
+  article C.3, eq:radiation-noncom-check-momenta (356).
+  article C.2, eq:v34r-exact-scalar-density (342).
+  article C.2, eq:v34r-exact-gravity-density (343).
+  article 6.10, eq:v33-legendre-contact (191).
+  article C.3, eq:radiation-contact-decomposition (351).
+  article C.3, eq:radiation-ordered-pair-reconstruction (354).
+Method: Exact multilinear ADM expansion, auxiliary and Legendre contact, all 18 ordered exchanges per external component.
+Inputs: parameters/noncom.json read at runtime; lib/article_appC_noncom_engine.py.
+Outputs below the selected results root: noncom/coefficients.json, noncom/component_registry.csv, noncom/verification.json.
+Provenance: NEW checkpointed driver of preserved original_scripts/noncom_original.py engine; replaces missing-data-only verifier.
+Scope limit: All 81 separate non-COM combinations; 57 tested only after computation. No infinite-time or regulator-removal claim.
+"""
+from __future__ import annotations
+import argparse,csv,hashlib,itertools,json,os,sys,time,traceback
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'lib'))
+import article_appC_noncom_engine as src
+import sympy as sp
+
+
+def atomic(path:Path,obj:object)->None:
+    path.parent.mkdir(parents=True,exist_ok=True)
+    tmp=path.with_suffix(path.suffix+'.tmp')
+    tmp.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    os.replace(tmp,path)
+
+
+# V52: article eq:radiation-noncom-check-momenta (356); article eq:radiation-contact-decomposition (351); article eq:radiation-ordered-pair-reconstruction (354).
+def audit(channels:dict)->tuple[list[dict],dict,list[dict]]:
+    """Eq. (356) kinematics; exact grouped coefficients, not a sampled amplitude."""
+    checks=[];registry=[];ngroups=0
+    def check(name,condition):checks.append({'id':name,'status':'PASS' if bool(condition) else 'FAIL','tolerance':'exact zero in QQ(i,sqrt(2),sqrt(3))'})
+    check('all_81_components',set(channels)=={''.join(map(str,s)) for s in itertools.product(range(3),repeat=4)})
+    for k,d in channels.items():
+        ex=src.aggregate_exchange(d['exchange'])
+        grouped=[{'A':str(A),'B':str(B),'D_coefficients':{f'{r},{s}':str(v) for (r,s),v in sorted(c.items())}} for (A,B),c in ex.items()]
+        d['aggregated_exchange']=grouped
+        contact={int(p):src.parse_exact(v) for p,v in d['contact']['full_H4'].items()}
+        nonzero=any(v!=0 for v in contact.values()) or bool(ex)
+        ngroups+=len(ex)
+        registry.append({'component':k,'contact_nonzero':any(v!=0 for v in contact.values()),'exchange_nonzero':bool(ex),'full_grouped_kernel_nonzero':nonzero,'ordered_frequency_groups':len(ex)})
+        check(k+'.18_ordered_exchange_entries',len(d['exchange'])==18)
+        omega=sp.expand(sum((1 if i<2 else -1)*(2/sp.sqrt(3) if s=='0' else 2) for i,s in enumerate(k)))
+        check(k+'.frequency_sum',all(sp.expand(src.parse_exact(e['A'])+src.parse_exact(e['B'])-omega)==0 for e in d['exchange']))
+        check(k+'.contact_degrees',all(-4<=p<=0 for p in contact))
+        pieces=d['contact']
+        check(k+'.contact_recomposition',all(sp.expand(contact.get(p,0)+src.parse_exact(pieces['bare_L4'].get(str(p),'0'))-src.parse_exact(pieces['auxiliary_H4'].get(str(p),'0'))-src.parse_exact(pieces['legendre_H4'].get(str(p),'0')))==0 for p in range(-4,1)))
+        rev=k[2:]+k[:2]
+        if rev in channels:
+            b=channels[rev]['contact']['full_H4'];phase=(-1)**sum(s!='0' for s in k)
+            check(k+'.contact_reflection_Hermiticity',all(sp.expand(sp.conjugate(contact.get(p,0))-phase*src.parse_exact(b.get(str(p),'0')))==0 for p in set(contact)|set(map(int,b))))
+    count=sum(int(r['full_grouped_kernel_nonzero']) for r in registry)
+    # The expected count is a test only; all results are retained on disagreement.
+    check('comparison_to_V52_claim_57',count==57)
+    return checks,{'entries':len(channels),'entries_not_vanishing_after_aggregation':count,'nonzero_ordered_frequency_groups':ngroups,'V52_expected_nonzero':57},registry
+
+
+# V52: article eq:radiation-noncom-check-momenta (356); article eq:v34r-exact-scalar-density (342); article eq:v34r-exact-gravity-density (343); article eq:v33-legendre-contact (191).
+def main()->int:
+    ap=argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--parameters',type=Path,default=ROOT/'parameters/noncom.json')
+    ap.add_argument('--output',type=Path,default=ROOT/'results/current/noncom')
+    ap.add_argument('--start',type=int,default=0);ap.add_argument('--stop',type=int,default=81)
+    ap.add_argument('--resume',action='store_true')
+    ap.add_argument('--audit-only',action='store_true',help='Audit coefficients recomputed in this output folder; does not count as a fresh ADM computation.')
+    args=ap.parse_args();args.output.mkdir(parents=True,exist_ok=True)
+    config=json.loads(args.parameters.read_text())
+    src.P=[tuple(src.parse_exact(v) for v in p) for p in config['momenta']]
+    # Published signs and frequencies in sample_legs are unchanged.
+    if src.P!=[(0,1,sp.sqrt(3)),(0,1,-sp.sqrt(3)),(-sp.sqrt(3),-1,0),(sp.sqrt(3),-1,0)]:
+        ap.error('This V52 release implements only the explicitly published fixed kinematics.')
+    fingerprint=hashlib.sha256(args.parameters.read_bytes()+Path(src.__file__).read_bytes()).hexdigest()
+    start=time.monotonic();channels={};checkpoint=args.output/'checkpoints';checkpoint.mkdir(exist_ok=True)
+    if args.audit_only:
+        channels=json.loads((args.output/'coefficients.json').read_text())['channels']
+    else:
+        specs=list(itertools.product(range(3),repeat=4))
+        if not 0<=args.start<=args.stop<=81:ap.error('Require 0 <= start <= stop <= 81')
+        for idx in range(args.start,args.stop):
+            s=specs[idx];key=''.join(map(str,s));p=checkpoint/(key+'.json')
+            if args.resume and p.exists():
+                obj=json.loads(p.read_text())
+                if obj.get('input_fingerprint')!=fingerprint:raise ValueError('Checkpoint fingerprint mismatch: '+key)
+                print('Validated checkpoint',key,flush=True);continue
+            t=time.monotonic();print('START',idx+1,'/81',key,flush=True)
+            legs=src.sample_legs(s)
+            ct,_=src.contact(legs);ex=src.exchange(legs)
+            atomic(p,{'input_fingerprint':fingerprint,'component':key,'computation_seconds':time.monotonic()-t,'data':{'external_species':list(s),'contact':ct,'exchange':ex}})
+            n=idx-args.start+1;elapsed=time.monotonic()-start
+            print(f'DONE {key}; {100*n/(args.stop-args.start):.1f}%; elapsed={elapsed:.1f}s; ETA={(args.stop-idx-1)*elapsed/n:.1f}s',flush=True)
+        for p in sorted(checkpoint.glob('*.json')):
+            obj=json.loads(p.read_text())
+            if obj.get('input_fingerprint')!=fingerprint:raise ValueError('Checkpoint fingerprint mismatch: '+p.name)
+            channels[obj['component']]=obj['data']
+    obj={'schema':'Connected finite-time tree kernels, not a partial-wave S matrix','article_version':'V52','computational_version':'V52-R1','input_fingerprint':fingerprint,'parameters':config,'channels':channels,'units':'x=k0*eta; H4/(g_R^2*k0^4), L3/(g_R*k0^3); external frequency and volume normalizations retained separately'}
+    atomic(args.output/'coefficients.json',obj)
+    if len(channels)!=81:
+        atomic(args.output/'verification.json',{'status':'BLOCKED','reason':'Partial channel computation','completed':len(channels),'required':81,'seconds':time.monotonic()-start})
+        return 2
+    checks,counts,registry=audit(channels)
+    # Independently evaluate temporal identities afresh, never read an old success flag.
+    src.CHECKS.clear();src.test_time_integrals()
+    checks.extend({'id':x['name'],'status':x['status'],'tolerance':'exact symbolic zero'} for x in src.CHECKS)
+    for j,p in enumerate(src.P):
+        ps=sp.Matrix(p);n=ps/2
+        for I,e in enumerate(src.polarizations(p)):
+            E=sp.Matrix([[src.K.to_sympy(v) for v in row] for row in e])
+            checks.append({'id':f'normalization.p{j}.pol{I}','status':'PASS' if E.trace()==0 and sp.simplify((E.T*E).trace())==1 and all(sp.simplify(v)==0 for v in E*n) else 'FAIL','tolerance':'exact symbolic zero'})
+    obj['counts']=counts;obj['nonzero_criterion']=config['nonzero_criterion'];atomic(args.output/'coefficients.json',obj)
+    with (args.output/'component_registry.csv').open('w',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=list(registry[0]));w.writeheader();w.writerows(registry)
+    ok=all(c['status']=='PASS' for c in checks)
+    atomic(args.output/'verification.json',{'status':'PASS' if ok else 'FAIL','counts':counts,'checks':checks,'seconds':time.monotonic()-start,'execution':'audit_only' if args.audit_only else 'ADM_recomputation_or_explicit_validated_resume','scope':'Fixed-kinematics contact and all scalar/tensor exchanges; does not prove regulator-free unitarity.'})
+    print('COUNTS',counts,'STATUS','PASS' if ok else 'FAIL',flush=True)
+    return 0 if ok else 1
+
+if __name__=='__main__':
+    try:raise SystemExit(main())
+    except Exception:traceback.print_exc();raise

@@ -1,0 +1,2369 @@
+{
+  "status": "PASS",
+  "counts": {
+    "entries": 81,
+    "entries_not_vanishing_after_aggregation": 57,
+    "nonzero_ordered_frequency_groups": 366,
+    "V52_expected_nonzero": 57
+  },
+  "checks": [
+    {
+      "id": "all_81_components",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0000.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0000.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0000.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0000.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0000.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0001.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0001.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0001.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0001.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0001.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0002.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0002.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0002.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0002.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0002.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0010.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0010.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0010.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0010.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0010.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0011.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0011.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0011.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0011.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0011.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0012.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0012.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0012.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0012.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0012.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0020.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0020.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0020.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0020.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0020.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0021.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0021.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0021.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0021.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0021.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0022.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0022.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0022.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0022.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0022.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0100.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0100.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0100.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0100.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0100.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0101.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0101.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0101.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0101.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0101.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0102.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0102.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0102.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0102.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0102.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0110.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0110.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0110.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0110.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0110.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0111.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0111.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0111.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0111.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0111.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0112.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0112.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0112.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0112.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0112.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0120.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0120.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0120.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0120.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0120.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0121.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0121.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0121.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0121.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0121.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0122.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0122.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0122.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0122.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0122.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0200.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0200.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0200.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0200.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0200.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0201.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0201.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0201.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0201.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0201.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0202.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0202.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0202.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0202.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0202.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0210.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0210.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0210.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0210.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0210.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0211.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0211.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0211.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0211.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0211.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0212.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0212.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0212.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0212.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0212.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0220.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0220.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0220.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0220.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0220.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0221.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0221.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0221.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0221.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0221.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0222.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0222.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0222.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0222.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "0222.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1000.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1000.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1000.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1000.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1000.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1001.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1001.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1001.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1001.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1001.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1002.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1002.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1002.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1002.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1002.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1010.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1010.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1010.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1010.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1010.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1011.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1011.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1011.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1011.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1011.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1012.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1012.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1012.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1012.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1012.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1020.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1020.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1020.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1020.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1020.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1021.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1021.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1021.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1021.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1021.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1022.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1022.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1022.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1022.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1022.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1100.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1100.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1100.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1100.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1100.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1101.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1101.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1101.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1101.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1101.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1102.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1102.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1102.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1102.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1102.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1110.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1110.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1110.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1110.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1110.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1111.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1111.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1111.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1111.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1111.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1112.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1112.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1112.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1112.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1112.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1120.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1120.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1120.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1120.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1120.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1121.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1121.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1121.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1121.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1121.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1122.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1122.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1122.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1122.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1122.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1200.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1200.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1200.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1200.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1200.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1201.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1201.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1201.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1201.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1201.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1202.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1202.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1202.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1202.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1202.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1210.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1210.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1210.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1210.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1210.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1211.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1211.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1211.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1211.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1211.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1212.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1212.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1212.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1212.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1212.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1220.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1220.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1220.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1220.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1220.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1221.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1221.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1221.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1221.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1221.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1222.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1222.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1222.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1222.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "1222.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2000.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2000.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2000.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2000.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2000.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2001.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2001.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2001.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2001.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2001.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2002.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2002.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2002.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2002.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2002.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2010.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2010.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2010.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2010.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2010.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2011.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2011.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2011.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2011.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2011.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2012.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2012.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2012.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2012.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2012.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2020.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2020.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2020.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2020.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2020.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2021.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2021.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2021.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2021.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2021.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2022.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2022.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2022.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2022.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2022.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2100.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2100.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2100.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2100.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2100.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2101.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2101.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2101.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2101.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2101.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2102.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2102.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2102.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2102.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2102.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2110.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2110.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2110.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2110.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2110.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2111.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2111.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2111.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2111.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2111.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2112.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2112.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2112.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2112.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2112.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2120.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2120.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2120.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2120.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2120.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2121.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2121.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2121.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2121.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2121.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2122.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2122.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2122.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2122.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2122.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2200.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2200.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2200.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2200.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2200.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2201.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2201.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2201.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2201.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2201.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2202.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2202.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2202.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2202.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2202.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2210.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2210.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2210.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2210.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2210.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2211.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2211.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2211.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2211.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2211.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2212.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2212.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2212.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2212.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2212.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2220.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2220.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2220.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2220.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2220.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2221.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2221.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2221.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2221.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2221.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2222.18_ordered_exchange_entries",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2222.frequency_sum",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2222.contact_degrees",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2222.contact_recomposition",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "2222.contact_reflection_Hermiticity",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "comparison_to_V52_claim_57",
+      "status": "PASS",
+      "tolerance": "exact zero in QQ(i,sqrt(2),sqrt(3))"
+    },
+    {
+      "id": "exact_power_primitive_-6",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_-6",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_primitive_-5",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_-5",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_primitive_-4",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_-4",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_primitive_-3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_-3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_primitive_-2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_-2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_primitive_-1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_-1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_primitive_0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_primitive_1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_primitive_2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_primitive_3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_primitive_4",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "exact_power_lower_endpoint_4",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-3_-3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-3_-3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-3_-2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-3_-2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-3_-1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-3_-1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-3_0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-3_0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-2_-3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-2_-3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-2_-2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-2_-2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-2_-1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-2_-1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-2_0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-2_0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-1_-3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-1_-3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-1_-2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-1_-2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-1_-1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-1_-1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_-1_0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_-1_0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_0_-3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_0_-3",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_0_-2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_0_-2",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_0_-1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_0_-1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_moment_0_0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "ordered_shuffle_0_0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "generic_ordered_moment_identity",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "Bogoliubov_four_frequency_weights",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "normalization.p0.pol0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "normalization.p0.pol1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "normalization.p1.pol0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "normalization.p1.pol1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "normalization.p2.pol0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "normalization.p2.pol1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "normalization.p3.pol0",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    },
+    {
+      "id": "normalization.p3.pol1",
+      "status": "PASS",
+      "tolerance": "exact symbolic zero"
+    }
+  ],
+  "seconds": 3.7483027219996075,
+  "execution": "ADM_recomputation_or_explicit_validated_resume",
+  "scope": "Fixed-kinematics contact and all scalar/tensor exchanges; does not prove regulator-free unitarity."
+}

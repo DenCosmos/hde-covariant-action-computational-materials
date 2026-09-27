@@ -1,0 +1,14 @@
+{
+  "c": 1.2,
+  "q_star": 0.3333333333333333,
+  "interval_tau": [
+    -0.45,
+    0.45
+  ],
+  "V_initial": 1.0,
+  "zeta_initial": 0.2,
+  "rtol": 2e-11,
+  "atol": 2e-13,
+  "max_step": 0.002,
+  "samples": 1001
+}

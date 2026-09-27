@@ -1,0 +1,13 @@
+{
+  "stage": "local_vertices",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/supplement_sec1_6_verify_local_vertices.py",
+    "--output",
+    "<OUTPUT>/local_vertices_v40"
+  ],
+  "returncode": 0,
+  "seconds": 2.000921895999909,
+  "log": "logs/local_vertices.log"
+}

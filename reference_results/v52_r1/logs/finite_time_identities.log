@@ -1,0 +1,39 @@
+START 1/13 test_radiation_expansion
+Running test_radiation_expansion
+DONE test_radiation_expansion 32 checks
+START 2/13 test_general_Legendre_transform
+Running test_general_Legendre_transform
+DONE test_general_Legendre_transform 1 checks
+START 3/13 test_complete_example
+Running test_complete_example
+DONE test_complete_example 16 checks
+START 4/13 test_time_integrals
+Running test_time_integrals
+DONE test_time_integrals 56 checks
+START 5/13 test_signed_Legendre_transform
+DONE test_signed_Legendre_transform 1 checks
+START 6/13 test_homogeneous_and_state
+Running test_homogeneous_and_state
+DONE test_homogeneous_and_state 10 checks
+START 7/13 test_generic_scalar_contact
+Running test_generic_scalar_contact
+DONE test_generic_scalar_contact 6 checks
+START 8/13 test_direct_com
+Running test_direct_com
+DONE test_direct_com 117 checks
+START 9/13 test_angular_projection
+Running test_angular_projection
+DONE test_angular_projection 37 checks
+START 10/13 test_radial_kernel
+Running test_radial_kernel
+DONE test_radial_kernel 21 checks
+START 11/13 test_channel_count_and_leakage
+Running test_channel_count_and_leakage
+DONE test_channel_count_and_leakage 23 checks
+START 12/13 test_nonlinear
+Running test_nonlinear
+DONE test_nonlinear 10 checks
+START 13/13 test_simple_wave
+Running test_simple_wave
+DONE test_simple_wave 8 checks
+PASS 338 exact checks

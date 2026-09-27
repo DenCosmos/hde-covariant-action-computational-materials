@@ -1,0 +1,15 @@
+{
+  "stage": "noncom_windows",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appC3_verify_noncom_finite_windows.py",
+    "--input",
+    "<OUTPUT>/noncom/coefficients.json",
+    "--output",
+    "<OUTPUT>/noncom"
+  ],
+  "returncode": 0,
+  "seconds": 15.003250832000049,
+  "log": "logs/noncom_windows.log"
+}

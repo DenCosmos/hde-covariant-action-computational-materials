@@ -1,0 +1,13 @@
+{
+  "stage": "finite_time_identities",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appC_verify_finite_time_and_nonlinear_identities.py",
+    "--output",
+    "<OUTPUT>/engine_regressions"
+  ],
+  "returncode": 0,
+  "seconds": 54.00931136200006,
+  "log": "logs/finite_time_identities.log"
+}

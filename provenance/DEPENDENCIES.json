@@ -1,0 +1,725 @@
+[
+  {
+    "file": "lib/article_appC_noncom_engine.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "ast",
+      "dataclasses",
+      "functools",
+      "itertools",
+      "json",
+      "pathlib",
+      "platform",
+      "sympy",
+      "time"
+    ],
+    "functions": [
+      "alg",
+      "mat_zero",
+      "mat_eye",
+      "mat_add",
+      "mat_scale",
+      "mat_mul",
+      "trace",
+      "norm2",
+      "dot",
+      "polarizations",
+      "lagrangian",
+      "scalar_variables",
+      "compact",
+      "la_add",
+      "la_scale",
+      "la_mul",
+      "lc",
+      "lp",
+      "Lvertex",
+      "sources",
+      "contact",
+      "exchange",
+      "sample_legs",
+      "compute_all",
+      "check",
+      "parse_exact",
+      "L_power",
+      "L_divided",
+      "exact_single",
+      "exact_ordered",
+      "aggregate_exchange",
+      "inv_lap",
+      "test_radiation_expansion",
+      "test_general_Legendre_transform",
+      "test_complete_example",
+      "test_time_integrals",
+      "audit_table",
+      "angular_polarizations",
+      "angular_sources",
+      "angular_contact",
+      "angular_exchange",
+      "initialize_com",
+      "test_direct_com",
+      "invariant_scalar_cubic",
+      "test_generic_scalar_contact",
+      "test_signed_Legendre_transform",
+      "test_homogeneous_and_state",
+      "polynomial_integral",
+      "angular_polynomial_coefficients",
+      "test_angular_projection",
+      "legendre_Q_explicit",
+      "radial_transverse_moment",
+      "test_radial_kernel",
+      "test_channel_count_and_leakage",
+      "test_nonlinear",
+      "test_simple_wave",
+      "main_new",
+      "__init__",
+      "c",
+      "leg",
+      "__init__",
+      "__add__",
+      "__neg__",
+      "__sub__",
+      "__rsub__",
+      "__mul__",
+      "__truediv__",
+      "__pow__",
+      "dx",
+      "trunc",
+      "take",
+      "expr",
+      "visit",
+      "count",
+      "flow"
+    ],
+    "sha256": "205a7ffe68e9d04b35c542d25d0c657f2126f14f222c4b6cbe3e47500f4a0545"
+  },
+  {
+    "file": "lib/half_angle_transform.py",
+    "imports": [
+      "radial_coeff_algebra"
+    ],
+    "functions": [
+      "to_z",
+      "pol"
+    ],
+    "sha256": "3d7998334fbf77fef26715963cd9381ecff6b283e7e80f586f56aa75448d70c5"
+  },
+  {
+    "file": "lib/radial_coeff_algebra.py",
+    "imports": [
+      "__future__",
+      "sympy",
+      "sympy.polys.fields"
+    ],
+    "functions": [
+      "alg",
+      "la_add",
+      "la_scale",
+      "la_mul",
+      "__init__",
+      "__bool__",
+      "__add__",
+      "__neg__",
+      "__sub__",
+      "__rsub__",
+      "__mul__",
+      "inverse",
+      "__truediv__",
+      "__rtruediv__",
+      "__pow__",
+      "expr",
+      "convert"
+    ],
+    "sha256": "2197aaf2f06d95a8b4c8c004f4ff3275a3f126bf689cae55e09008f4943c2019"
+  },
+  {
+    "file": "lib/radiation_adm_v40.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "ast",
+      "dataclasses",
+      "functools",
+      "itertools",
+      "json",
+      "pathlib",
+      "platform",
+      "sympy",
+      "time"
+    ],
+    "functions": [
+      "alg",
+      "mat_zero",
+      "mat_eye",
+      "mat_add",
+      "mat_scale",
+      "mat_mul",
+      "trace",
+      "norm2",
+      "dot",
+      "polarizations",
+      "lagrangian",
+      "scalar_variables",
+      "compact",
+      "la_add",
+      "la_scale",
+      "la_mul",
+      "lc",
+      "lp",
+      "Lvertex",
+      "sources",
+      "contact",
+      "exchange",
+      "sample_legs",
+      "compute_all",
+      "parse_exact",
+      "L_power",
+      "L_divided",
+      "exact_single",
+      "exact_ordered",
+      "aggregate_exchange",
+      "inv_lap",
+      "angular_polarizations",
+      "angular_sources",
+      "angular_contact",
+      "angular_exchange",
+      "initialize_com",
+      "invariant_scalar_cubic",
+      "polynomial_integral",
+      "angular_polynomial_coefficients",
+      "legendre_Q_explicit",
+      "radial_transverse_moment",
+      "__init__",
+      "c",
+      "leg",
+      "__init__",
+      "__add__",
+      "__neg__",
+      "__sub__",
+      "__rsub__",
+      "__mul__",
+      "__truediv__",
+      "__pow__",
+      "dx",
+      "trunc",
+      "take",
+      "expr",
+      "visit"
+    ],
+    "sha256": "489cae0fb7a34a5ba5a678179758ad708985a4e69f4e9b57928805ca580152c0"
+  },
+  {
+    "file": "lib/release_paths.py",
+    "imports": [
+      "os",
+      "pathlib"
+    ],
+    "functions": [],
+    "sha256": "3046e53569abdef8cdca550b232f43c16ba09d45e1b1e3c7181e6ce92fa91065"
+  },
+  {
+    "file": "scripts/article_V52_verify_source_transcription.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "collections",
+      "csv",
+      "json",
+      "math",
+      "pathlib",
+      "re"
+    ],
+    "functions": [
+      "main",
+      "check",
+      "rows"
+    ],
+    "sha256": "ca573a3a0f2a9cea109632341b37154426041e5174a7c6b6ca3a4a55e5b680e4"
+  },
+  {
+    "file": "scripts/article_appC1_verify_mixed_normalization.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "json",
+      "pathlib",
+      "release_paths",
+      "sympy",
+      "sys",
+      "time"
+    ],
+    "functions": [
+      "main",
+      "check"
+    ],
+    "sha256": "216466bd10f7fc039b8585ae606ec4ebe9e0cd9819b22152e8ba83be5e1c2e61"
+  },
+  {
+    "file": "scripts/article_appC3_compute_noncom_matrix_elements.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "article_appC_noncom_engine",
+      "csv",
+      "hashlib",
+      "itertools",
+      "json",
+      "os",
+      "pathlib",
+      "sympy",
+      "sys",
+      "time",
+      "traceback"
+    ],
+    "functions": [
+      "atomic",
+      "audit",
+      "main",
+      "check"
+    ],
+    "sha256": "725358e1e2c6524a8d486f4b60d11bb99593e937d67423ac86b1b72391c5c550"
+  },
+  {
+    "file": "scripts/article_appC3_verify_contact_permutations.py",
+    "imports": [
+      "csv",
+      "itertools",
+      "json",
+      "pathlib",
+      "radial_coeff_algebra",
+      "release_paths",
+      "supplement_sec1_2_assemble_contacts",
+      "sys"
+    ],
+    "functions": [
+      "reciprocal",
+      "conj",
+      "main",
+      "pp"
+    ],
+    "sha256": "2f7adee09ba9943004872286f2893c391c34813ce017b0c0316deaa6977d59c7"
+  },
+  {
+    "file": "scripts/article_appC3_verify_noncom_finite_windows.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "article_appC_noncom_engine",
+      "csv",
+      "json",
+      "numpy",
+      "pathlib",
+      "sys"
+    ],
+    "functions": [
+      "num",
+      "evaluate",
+      "main",
+      "I",
+      "D"
+    ],
+    "sha256": "5921d875ce62c4affe36f0a266560f415da3cbda9353af6461e0f2cc3f517a3d"
+  },
+  {
+    "file": "scripts/article_appC3_verify_radial_controls.py",
+    "imports": [
+      "csv",
+      "json",
+      "pathlib",
+      "radial_coeff_algebra",
+      "release_paths",
+      "supplement_sec1_2_assemble_contacts",
+      "sympy",
+      "sys"
+    ],
+    "functions": [
+      "check",
+      "pol",
+      "main"
+    ],
+    "sha256": "b1779014d547547fb765e9431c1b987202ccf930bc46814e1dde7020f0ed11f6"
+  },
+  {
+    "file": "scripts/article_appC5_compute_angular_coefficients.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "ast",
+      "csv",
+      "hashlib",
+      "itertools",
+      "json",
+      "math",
+      "pathlib",
+      "radial_coeff_algebra",
+      "release_paths",
+      "supplement_sec1_2_assemble_contacts",
+      "sympy",
+      "sys",
+      "time"
+    ],
+    "functions": [
+      "transfer",
+      "target_laurent",
+      "wigner",
+      "cweights",
+      "channels",
+      "hel_sum",
+      "f_boundary",
+      "encoded_r",
+      "save_coeff",
+      "main",
+      "poly",
+      "semantic",
+      "products"
+    ],
+    "sha256": "b7edf36e2446718cc43434b7c8713244d104009ee9e4ca90090bb17fa542391a"
+  },
+  {
+    "file": "scripts/article_appC5_verify_angular_controls.py",
+    "imports": [
+      "article_appC5_compute_angular_coefficients",
+      "csv",
+      "json",
+      "math",
+      "pathlib",
+      "radial_coeff_algebra",
+      "release_paths",
+      "sympy",
+      "sympy.physics.wigner",
+      "sys"
+    ],
+    "functions": [
+      "check",
+      "main"
+    ],
+    "sha256": "00cff322fef49756e4e9b67a389f86ce3cf459bf0e02c9975c91f96a4f9bc085"
+  },
+  {
+    "file": "scripts/article_appC6_verify_soft_limit.py",
+    "imports": [
+      "article_appC5_compute_angular_coefficients",
+      "csv",
+      "itertools",
+      "json",
+      "pathlib",
+      "radial_coeff_algebra",
+      "release_paths",
+      "supplement_sec1_2_assemble_contacts",
+      "sympy",
+      "sys"
+    ],
+    "functions": [
+      "joint",
+      "valuation",
+      "check",
+      "main",
+      "poly"
+    ],
+    "sha256": "2518b1d1ff918da8a45de88f34a8325ed14dda9266c1cf920471c54138a18b03"
+  },
+  {
+    "file": "scripts/article_appC7_complete_global_exchange.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "article_appC5_compute_angular_coefficients",
+      "csv",
+      "half_angle_transform",
+      "itertools",
+      "json",
+      "math",
+      "pathlib",
+      "radial_coeff_algebra",
+      "release_paths",
+      "supplement_sec1_2_assemble_contacts",
+      "sympy",
+      "sys"
+    ],
+    "functions": [
+      "W",
+      "angular_moment",
+      "main"
+    ],
+    "sha256": "cc06817c627b26892b90826113125af57563d39ef687b7b28dbe5e988ee79703"
+  },
+  {
+    "file": "scripts/article_appC_verify_finite_time_and_nonlinear_identities.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "article_appC_noncom_engine",
+      "json",
+      "pathlib",
+      "release_paths",
+      "sys",
+      "time"
+    ],
+    "functions": [
+      "main"
+    ],
+    "sha256": "78516c6d21c71a20689ab48d9682fd7cad1780e1fda6bbf8de14d9f5ef54e448"
+  },
+  {
+    "file": "scripts/article_appD4_compute_background_diagnostics.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "csv",
+      "json",
+      "numpy",
+      "pathlib",
+      "platform",
+      "scipy",
+      "scipy.integrate",
+      "sympy"
+    ],
+    "functions": [
+      "check",
+      "save_csv",
+      "integrate",
+      "symbolic_reduction",
+      "saddle_numerics",
+      "crossing_numerics",
+      "late_symbolic",
+      "late_numerics",
+      "main",
+      "dt",
+      "g",
+      "g1",
+      "g2",
+      "DN",
+      "background",
+      "rhs",
+      "rhs",
+      "both",
+      "rhs"
+    ],
+    "sha256": "78077e3fa3231163e48952e717789866926d8dbe3e398890b082e62d390fabc3"
+  },
+  {
+    "file": "scripts/article_appsDE_verify_reduced_identities.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "csv",
+      "json",
+      "pathlib",
+      "platform",
+      "sympy",
+      "time",
+      "traceback"
+    ],
+    "functions": [
+      "check",
+      "record",
+      "quadratic_and_crossing",
+      "canonical_and_late",
+      "background_global",
+      "gauge_generator",
+      "scalar_polynomials_and_sources",
+      "nonresonant_majorant",
+      "main"
+    ],
+    "sha256": "2b9152ab7c03b988970feb3192476ac8ebec58f208d3e55eec3c221c2ab07613"
+  },
+  {
+    "file": "scripts/article_fig01_plot_pole_crossing.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib",
+      "scipy.integrate"
+    ],
+    "functions": [
+      "coefficients",
+      "rhs",
+      "main"
+    ],
+    "sha256": "5c6e9bee3c8f34137a415b96c68ee7109899d0596d34d0baae1aebe4cc9ac8c0"
+  },
+  {
+    "file": "scripts/article_fig02_plot_phase_portrait.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib",
+      "scipy.integrate",
+      "scipy.interpolate"
+    ],
+    "functions": [
+      "vector_field",
+      "main",
+      "trajectory",
+      "graph",
+      "jac"
+    ],
+    "sha256": "3d9f5cfc011d399e15a5c638d60a958a4f5c2e9651815f8640d58569538c7145"
+  },
+  {
+    "file": "scripts/article_fig03_plot_strong_coupling.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib"
+    ],
+    "functions": [
+      "normalized_bounds",
+      "main"
+    ],
+    "sha256": "aff16b29715d727c53ad071c49ff60023ecff9cd9e77fbc21eb4b22d2f9aec09"
+  },
+  {
+    "file": "scripts/article_sec7_3_verify_entropy.py",
+    "imports": [
+      "__future__",
+      "collections",
+      "pathlib",
+      "re",
+      "sympy",
+      "sys"
+    ],
+    "functions": [
+      "main",
+      "check",
+      "identity"
+    ],
+    "sha256": "a4661bcacaa4fc2b6ac836a11f2da5d3353ca4181b2e30e9338384ececffba3a"
+  },
+  {
+    "file": "scripts/supplement_sec1_2_assemble_contacts.py",
+    "imports": [
+      "__future__",
+      "ast",
+      "csv",
+      "itertools",
+      "json",
+      "pathlib",
+      "pickle",
+      "radial_coeff_algebra",
+      "release_paths",
+      "supplement_sec1_3_generate_radial_sources",
+      "sympy",
+      "sys",
+      "time"
+    ],
+    "functions": [
+      "parse",
+      "load",
+      "normalized",
+      "enc",
+      "decode_file",
+      "main",
+      "visit"
+    ],
+    "sha256": "f6a3bd9763675b0ca317657458a80a2b41a7c66574728450cb86d439478c9a58"
+  },
+  {
+    "file": "scripts/supplement_sec1_3_generate_radial_sources.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "ast",
+      "hashlib",
+      "itertools",
+      "json",
+      "os",
+      "pathlib",
+      "radiation_adm_v40",
+      "release_paths",
+      "sympy",
+      "sys",
+      "time",
+      "traceback"
+    ],
+    "functions": [
+      "atomic",
+      "encode",
+      "real_basis",
+      "leg",
+      "vertex",
+      "pair_data",
+      "main",
+      "semantic_hash"
+    ],
+    "sha256": "7dc67bdc36ceb5ad1f697b7f3beb97a5fe067ea5570788b4aa87037fa2090665"
+  },
+  {
+    "file": "scripts/supplement_sec1_6_verify_local_vertices.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "csv",
+      "json",
+      "pathlib",
+      "platform",
+      "sympy",
+      "time"
+    ],
+    "functions": [
+      "check",
+      "total_operator",
+      "finite_derivative",
+      "main"
+    ],
+    "sha256": "5347ac1a136fb7c3a4c30a50fa046cb2342edb64ea6c8cdb6c5c251a0b1f600f"
+  },
+  {
+    "file": "scripts/supplement_sec1_verify_printed_catalogue.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "itertools",
+      "json",
+      "pathlib",
+      "re",
+      "sympy",
+      "sympy.parsing.sympy_parser",
+      "time"
+    ],
+    "functions": [
+      "group",
+      "plain_latex",
+      "math",
+      "main",
+      "check"
+    ],
+    "sha256": "62a878e9a509dadce9e9e90a2ffe76693f541c3c704589ab48e262cd79ecbcec"
+  },
+  {
+    "file": "scripts/supplement_secs1_2_1_5_compare_recomputed_coefficients.py",
+    "imports": [
+      "__future__",
+      "argparse",
+      "half_angle_transform",
+      "json",
+      "pathlib",
+      "radial_coeff_algebra",
+      "re",
+      "release_paths",
+      "supplement_sec1_2_assemble_contacts",
+      "supplement_sec1_verify_printed_catalogue",
+      "sympy",
+      "sys",
+      "time"
+    ],
+    "functions": [
+      "restored",
+      "read_printed",
+      "main",
+      "check"
+    ],
+    "sha256": "1e6a32b80a561e7ba1149f51f8df60b35840495a247184dc225902bdd97dcaba"
+  }
+]

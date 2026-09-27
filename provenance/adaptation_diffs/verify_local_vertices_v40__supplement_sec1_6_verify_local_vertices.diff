@@ -1,0 +1,55 @@
+--- GitHub_bundle/original_scripts/verify_local_vertices_v40.py
++++ scripts/supplement_sec1_6_verify_local_vertices.py
+@@ -1,17 +1,23 @@
+ #!/usr/bin/env python3
+ # -*- coding: utf-8 -*-
+-"""Т09. Все 27 производных W(Phi,s) и полные локальные вершины порядков 2--6.
++"""All 27 derivatives of W(Phi,s) and five complete local vertices of orders 2--6.
+ 
+-Используется конечная формула Лагранжа для неявного уравнения
+-s L + L^5 U'(L) + 4 Phi = 0. Формула независимо сопоставляется с
+-дифференцированием в пространстве производных U, а затем с точным
+-радиационным выражением W=-s^4/(768 Phi^3). Члены с явной delta Phi
+-и меньшим числом производных сохраняются. Метрические вершины пятого
+-и шестого порядков этим расчётом не вычисляются.
++The finite Lagrange formula for s L + L^5 U'(L) + 4 Phi = 0 is compared
++with direct differentiation and the exact radiation expression
++W=-s^4/(768 Phi^3). Terms with explicit delta Phi and fewer derivatives
++are retained. This calculation does not generate metric vertices of fifth
++or sixth order. Historical output folder names are retained for compatibility.
++Requires SymPy. Use --output to select the output directory.
+ 
+-Запуск: python scripts/verify_local_vertices_v40.py
+-Результат: results/local_vertices_v40/derivatives.txt, local_vertices.txt,
+-finite_basis.txt, checks.csv. Требуется SymPy.
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article C.9, eq:local-sixth-all-derivatives (419).
++  article C.9, eq:local-sixth-lagrange-proof (421).
++  article C.9, eq:local-sixth-complete-vertices (423).
++Method: Finite Lagrange inversion versus repeated implicit differentiation.
++Inputs: Implicit equation s L+L^5 Uprime+4 Phi=0; embedded generic derivatives; radiation U=0 comparison.
++Outputs below the selected results root: local_vertices_v40/derivatives.txt, local_vertices_v40/results.json, local_vertices_v40/checks.csv.
++Provenance: GitHub_bundle/scripts/verify_local_vertices.py.
++Scope limit: 27 derivatives and five scalar local vertices; no fifth/sixth-order metric vertices.
+ """
+ from __future__ import annotations
+ import argparse,csv,json,platform,time
+@@ -41,6 +47,7 @@
+     return s.factor(out)
+ 
+ 
++# V52: article eq:local-sixth-all-derivatives (419); article eq:local-sixth-lagrange-proof (421); supplement eq:cat-local-W-1-0 (551); supplement eq:cat-local-W-0-1 (552); supplement eq:cat-local-W-2-0 (553); supplement eq:cat-local-W-1-1 (554); supplement eq:cat-local-W-0-2 (555); supplement eq:cat-local-W-3-0 (556); supplement eq:cat-local-W-2-1 (557); supplement eq:cat-local-W-1-2 (558); supplement eq:cat-local-W-0-3 (559); supplement eq:cat-local-W-4-0 (560).
+ def finite_derivative(a,b):
+     n=a+b
+     if n==1:return L**(-4) if a else 1/(3*L**3)
+@@ -53,8 +60,9 @@
+     return s.factor(out)
+ 
+ 
++# V52: article eq:local-sixth-complete-vertices (423); supplement eq:cat-local-L-2 (578); supplement eq:cat-local-L-3 (579); supplement eq:cat-local-L-4 (580); supplement eq:cat-local-L-5 (581); supplement eq:cat-local-L-6 (582).
+ def main():
+-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',type=Path,default=BASE/'results/local_vertices_v40');args=ap.parse_args();args.output.mkdir(parents=True,exist_ok=True)
++    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',type=Path,default=BASE/'results/current/local_vertices_v40');args=ap.parse_args();args.output.mkdir(parents=True,exist_ok=True)
+     derivatives={}
+     Phi,ss=s.symbols('Phi s',nonzero=True)
+     radiation=-ss**4/(768*Phi**3)

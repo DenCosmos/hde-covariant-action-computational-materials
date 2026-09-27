@@ -1,0 +1,31 @@
+{
+  "constraint_max_abs": 1.887379141862766e-15,
+  "constraint_tolerance": 1e-08,
+  "Cauchy_determinant_min_abs": 0.29156536764705493,
+  "determinant_formula_max_abs_error": 1.3322676295501878e-15,
+  "roundtrip_max_abs_error": 4.210520820890906e-14,
+  "roundtrip_tolerance": 2e-07,
+  "finite_all_samples": true,
+  "pole_bracketed": true,
+  "scope": "One specified initial condition; not a general proof of continuation",
+  "parameters": {
+    "c": 1.2,
+    "q_star": 0.3333333333333333,
+    "interval_tau": [
+      -0.45,
+      0.45
+    ],
+    "V_initial": 1.0,
+    "zeta_initial": 0.2,
+    "rtol": 2e-11,
+    "atol": 2e-13,
+    "max_step": 0.002,
+    "samples": 1001
+  },
+  "initial_vector": [
+    1.0,
+    0.7547570007821788,
+    0.2
+  ],
+  "status": "PASS"
+}

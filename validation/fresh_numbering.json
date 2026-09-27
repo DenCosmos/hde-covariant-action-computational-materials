@@ -1,0 +1,11 @@
+{
+  "fresh_compilation": "pdfLaTeX, BibTeX, pdfLaTeX twice; sources unchanged",
+  "label_count": 1669,
+  "original_map_count": 1669,
+  "differences_from_V52": [],
+  "status": "PASS",
+  "documents": {
+    "article": 513,
+    "supplement": 1156
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "command": [
+      "python",
+      "scripts/article_appsDE_verify_reduced_identities.py"
+    ],
+    "returncode": 0,
+    "seconds": 4.619719174000011,
+    "status": "PASS",
+    "log": "validation/initial_runs/article_appsDE_verify_reduced_identities.log"
+  },
+  {
+    "command": [
+      "python",
+      "scripts/supplement_sec1_6_verify_local_vertices.py"
+    ],
+    "returncode": 0,
+    "seconds": 1.640242245999957,
+    "status": "PASS",
+    "log": "validation/initial_runs/supplement_sec1_6_verify_local_vertices.log"
+  },
+  {
+    "command": [
+      "python",
+      "scripts/article_sec7_3_verify_entropy.py"
+    ],
+    "returncode": 0,
+    "seconds": 0.4438232219999918,
+    "status": "PASS",
+    "log": "validation/initial_runs/article_sec7_3_verify_entropy.log"
+  },
+  {
+    "command": [
+      "python",
+      "scripts/supplement_sec1_verify_printed_catalogue.py"
+    ],
+    "returncode": 0,
+    "seconds": 5.505112312999927,
+    "status": "PASS",
+    "log": "validation/initial_runs/supplement_sec1_verify_printed_catalogue.log"
+  },
+  {
+    "command": [
+      "python",
+      "scripts/article_appD4_compute_background_diagnostics.py"
+    ],
+    "returncode": 0,
+    "seconds": 5.737136126999985,
+    "status": "PASS",
+    "log": "validation/initial_runs/article_appD4_compute_background_diagnostics.log"
+  },
+  {
+    "command": [
+      "python",
+      "scripts/article_V52_verify_source_transcription.py",
+      "--article-source",
+      "@LOCAL_WORKSPACE@/input/V52_complete_package/article/source"
+    ],
+    "returncode": 0,
+    "seconds": 0.04507078400001774,
+    "status": "PASS",
+    "log": "validation/initial_runs/article_V52_verify_source_transcription.log"
+  },
+  {
+    "command": [
+      "python",
+      "scripts/article_fig03_plot_strong_coupling.py"
+    ],
+    "returncode": 0,
+    "seconds": 0.8521454469999981,
+    "status": "PASS",
+    "log": "validation/initial_runs/article_fig03_plot_strong_coupling.log"
+  }
+]

@@ -1,0 +1,110 @@
+--- GitHub_bundle/original_scripts/angular_coefficients_v40.py
++++ scripts/article_appC5_compute_angular_coefficients.py
+@@ -1,19 +1,50 @@
+ #!/usr/bin/env python3
+-"""Т08: точное конечное преобразование радиального базиса в угловые коэффициенты.
+-
+-Коэффициенты C_{psl}, H_{pl} и трёх граничных групп вычисляются в Q(r,q)
+-с фазами 1,i,sqrt(3),i*sqrt(3). Вигнеровский корень и бозе-множитель
+-хранятся отдельно. Процедура не подставляет r=1.
++"""V52-R1: article appC5 compute angular coefficients.
++Article: A minimal local covariant action for holographic dark energy:
++constraints, perturbations, and nonlinear dynamics (scientific version V52).
++Method: exact rational ADM, source contraction, or coefficient validation,
++as implemented below; derived from original_scripts/angular_coefficients_v40.py unchanged in
++scientific algebra. Only imports, paths, checkpoint guards and reporting adapted.
++Assumptions: radiation background U=0, k=g_R=1, r>0, t=tan(theta/2)>0.
++External real TT tensors have norm 2. Internal norms and homogeneous kinetic
++signs are retained explicitly. No regulator-free unitary S-matrix is asserted.
++Inputs and outputs: see SCRIPT_REFERENCE_MAP.md and REPRODUCIBILITY.md.
++Run: python scripts/article_appC5_compute_angular_coefficients.py (see --help for generator options).
++Dependencies: Python and SymPy; local lib modules. No network or LaTeX required.
++
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article C.5, eq:v34-wigner-polynomial (373).
++  supplement 1.5, eq:cat-angular-explicit-wigner-coefficients (492).
++  article C.5, eq:v34-transfer-variable (370).
++  supplement 1.5, eq:cat-angular-source-transfer (490).
++  article C.5, eq:v34-helicity-transform (367).
++  article C.5, eq:angular-block-complete-order (379).
++  article C.5, eq:angular-exchange-finite-reconstruction (377).
++  article C.5, eq:angular-contact-finite-reconstruction (378).
++  article C.6, eq:boundary-finite-coefficient-reconstruction (392).
++  supplement 1.5, eq:cat-angular-exchange-convolution (494).
++  supplement 1.5, eq:cat-angular-contact-convolution (495).
++  supplement 1.5, eq:cat-boundary-explicit-basis (496).
++Method: Exact helicity conversion, Wigner polynomial, q-transfer Laurent coefficients; all scalar and tensor internal exchanges.
++Inputs: New 54 pair and 81 contact records; default j=0,2,3,4.
++Outputs below the selected results root: angular_v40/j*.json, angular_v40/block_registry_*.csv.
++Provenance: GitHub_bundle/original_scripts/angular_coefficients_v40.py.
++Scope limit: 74 coefficient positions, not 74 finite energy scattering eigenamplitudes. Finite cutoffs and state parameters remain explicit.
+ """
+ from __future__ import annotations
++import sys
++from pathlib import Path
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"lib"))
++from release_paths import RESULTS
+ import argparse,itertools,json,time,math,csv
+ from pathlib import Path
+ import sympy as sp
+ import radial_coeff_algebra as a
+-from assemble_radial_v40 import parse,load,decode_file,enc
+-B=Path(__file__).resolve().parents[1];D=B/'results/radial_generic';OUT=B/'results/angular_v40'
++from supplement_sec1_2_assemble_contacts import parse,load,decode_file,enc
++B=Path(__file__).resolve().parents[1];D=RESULTS/'radial_generic';OUT=RESULTS/'angular_v40'
+ R,Q=a.F.gens
+ # In the target field, the second generator denotes q, not t_theta.
++# V52: article eq:v34-transfer-variable (370); supplement eq:cat-angular-source-transfer (490).
+ def transfer(v,sgn=1):
+     """Substitute t_theta**2=(1-z)/(1+z), z=sgn*(1+r*r-q*q)/(2*r)."""
+     z=sgn*(1+R*R-Q*Q)/(2*R);u=(1-z)/(1+z)
+@@ -41,6 +72,7 @@
+         for l,rat1 in byq.items():out[l]=out.get(l,a.Z)+a.Coeff({phase:rat1})
+     return out
+ 
++# V52: article eq:v34-wigner-polynomial (373); supplement eq:cat-angular-explicit-wigner-coefficients (492).
+ def wigner(j,m,n,sgn):
+     if max(abs(m),abs(n))>j:return a.Z
+     z=sgn*(1+R*R-Q*Q)/(2*R);v=a.F.zero
+@@ -81,11 +113,28 @@
+     path.parent.mkdir(parents=True,exist_ok=True)
+     path.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ 
++# V52: article eq:v34-helicity-transform (367); article eq:angular-block-complete-order (379); article eq:angular-exchange-finite-reconstruction (377); article eq:angular-contact-finite-reconstruction (378); article eq:boundary-finite-coefficient-reconstruction (392); supplement eq:cat-angular-exchange-convolution (494); supplement eq:cat-angular-contact-convolution (495); supplement eq:cat-boundary-explicit-basis (496).
+ def main():
+-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--j',type=int,nargs='+',default=[0,2,3,4]);ap.add_argument('--start',type=int,default=0);ap.add_argument('--stop',type=int,default=1000000);args=ap.parse_args()
++    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--resume',action='store_true');ap.add_argument('--j',type=int,nargs='+',default=[0,2,3,4]);ap.add_argument('--start',type=int,default=0);ap.add_argument('--stop',type=int,default=1000000);args=ap.parse_args()
+     if any(j<0 for j in args.j):raise ValueError('j must be nonnegative')
+     started=time.monotonic();pairs={p.stem:decode_file(p) for p in (D/'pair').glob('*.json')}
+     contacts={p.stem:json.loads(p.read_text()) for p in (D/'contacts').glob('*.json')}
++    assert len(pairs)==54 and len(contacts)==81, 'Incomplete radial dependencies'
++    import hashlib,ast
++    def semantic(path):
++        tree=ast.parse(path.read_text())
++        for node in ast.walk(tree):
++            if hasattr(node,'body') and isinstance(node.body,list):
++                node.body[:]=[x for x in node.body if not (isinstance(x,ast.Expr) and isinstance(x.value,ast.Constant) and isinstance(x.value.value,str))]
++        return ast.dump(tree,include_attributes=False).encode()
++    digest=hashlib.sha256(sp.__version__.encode())
++    for dependency in [Path(__file__),B/'lib/radial_coeff_algebra.py',B/'scripts/supplement_sec1_2_assemble_contacts.py']:
++        digest.update(semantic(dependency))
++    for folder in ['pair','contacts']:
++        for source in sorted((D/folder).glob('*.json')):
++            digest.update((folder+'/'+source.name).encode());digest.update(source.read_bytes())
++    input_fingerprint=digest.hexdigest()
++
+     # Cache the finite transfer polynomials before multiplying the Wigner factor.
+     ptarget={}
+     for p,d in pairs.items():
+@@ -110,8 +159,10 @@
+         helicities=inc+out;m=inc[0]-inc[1];n=out[0]-out[1];label=f'j{j}_{ic}_{ia}'
+         path=OUT/(label+'.json')
+         if path.exists():
++            if not args.resume:raise FileExistsError('Angular output exists; choose a new output root or --resume after validating radial inputs')
++            if json.loads(path.read_text()).get('input_fingerprint') != input_fingerprint:raise ValueError('Incompatible angular checkpoint: '+path.name)
+             rows.append([j,ic,ia,*helicities,path.name]);continue
+-        record={'j':j,'row_out':ic,'column_in':ia,'helicities':list(helicities),'wigner_prefactor_squared':math.prod(math.factorial(t) for t in [j+m,j-m,j+n,j-n]),'bose_denominator_squared':(1+int(inc[0]==inc[1]))*(1+int(out[0]==out[1])),'contacts':[],'exchange':[],'boundary':[]}
++        record={'input_fingerprint':input_fingerprint,'j':j,'row_out':ic,'column_in':ia,'helicities':list(helicities),'wigner_prefactor_squared':math.prod(math.factorial(t) for t in [j+m,j-m,j+n,j-n]),'bose_denominator_squared':(1+int(inc[0]==inc[1]))*(1+int(out[0]==out[1])),'contacts':[],'exchange':[],'boundary':[]}
+         for group,sgn in enumerate([1,1,-1]):
+             hh=hel_sum(lambda key:hc[key][group],helicities);coeff={}
+             for power,v in hh.items():

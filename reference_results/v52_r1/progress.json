@@ -1,0 +1,433 @@
+{
+  "mode": "full",
+  "elapsed_seconds": 421.09140581300016,
+  "records": [
+    {
+      "stage": "analytic",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appsDE_verify_reduced_identities.py",
+        "--output",
+        "<OUTPUT>/analytic_v40"
+      ],
+      "returncode": 0,
+      "seconds": 4.001006251000035,
+      "log": "logs/analytic.log"
+    },
+    {
+      "stage": "local_vertices",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_6_verify_local_vertices.py",
+        "--output",
+        "<OUTPUT>/local_vertices_v40"
+      ],
+      "returncode": 0,
+      "seconds": 2.000921895999909,
+      "log": "logs/local_vertices.log"
+    },
+    {
+      "stage": "entropy",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_sec7_3_verify_entropy.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.000765827000123,
+      "log": "logs/entropy.log"
+    },
+    {
+      "stage": "printed_catalogue",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_verify_printed_catalogue.py",
+        "--results",
+        "<OUTPUT>"
+      ],
+      "returncode": 0,
+      "seconds": 6.001378321000175,
+      "log": "logs/printed_catalogue.log"
+    },
+    {
+      "stage": "background",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appD4_compute_background_diagnostics.py",
+        "--output",
+        "<OUTPUT>"
+      ],
+      "returncode": 0,
+      "seconds": 6.001511804000074,
+      "log": "logs/background.log"
+    },
+    {
+      "stage": "figure01",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_fig01_plot_pole_crossing.py",
+        "--output",
+        "<OUTPUT>/figure01"
+      ],
+      "returncode": 0,
+      "seconds": 3.0038655040002595,
+      "log": "logs/figure01.log"
+    },
+    {
+      "stage": "figure02",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_fig02_plot_phase_portrait.py",
+        "--output",
+        "<OUTPUT>/figure02"
+      ],
+      "returncode": 0,
+      "seconds": 2.0011427559998083,
+      "log": "logs/figure02.log"
+    },
+    {
+      "stage": "figure03",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_fig03_plot_strong_coupling.py",
+        "--output",
+        "<OUTPUT>/figures",
+        "--data-output",
+        "<OUTPUT>/figures"
+      ],
+      "returncode": 0,
+      "seconds": 1.0006551330002367,
+      "log": "logs/figure03.log"
+    },
+    {
+      "stage": "mixed_normalization",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appC1_verify_mixed_normalization.py",
+        "--output",
+        "<OUTPUT>/mixed_normalization"
+      ],
+      "returncode": 0,
+      "seconds": 1.0007369049999397,
+      "log": "logs/mixed_normalization.log"
+    },
+    {
+      "stage": "finite_time_identities",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appC_verify_finite_time_and_nonlinear_identities.py",
+        "--output",
+        "<OUTPUT>/engine_regressions"
+      ],
+      "returncode": 0,
+      "seconds": 54.00931136200006,
+      "log": "logs/finite_time_identities.log"
+    },
+    {
+      "stage": "source_transcription",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_V52_verify_source_transcription.py",
+        "--article-source",
+        "@LOCAL_WORKSPACE@/input/V52_complete_package/article/source/main.tex",
+        "--results",
+        "<OUTPUT>",
+        "--report",
+        "<OUTPUT>/release_checks.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.0006565869998667,
+      "log": "logs/source_transcription.log"
+    },
+    {
+      "stage": "radial_pair_9_18",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_3_generate_radial_sources.py",
+        "--task",
+        "pair",
+        "--start",
+        "9",
+        "--stop",
+        "18",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 1.0016940840000643,
+      "log": "logs/radial_pair_9_18.log"
+    },
+    {
+      "stage": "radial_pair_0_9",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_3_generate_radial_sources.py",
+        "--task",
+        "pair",
+        "--start",
+        "0",
+        "--stop",
+        "9",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 1.0022742449996258,
+      "log": "logs/radial_pair_0_9.log"
+    },
+    {
+      "stage": "radial_pair_18_27",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_3_generate_radial_sources.py",
+        "--task",
+        "pair",
+        "--start",
+        "18",
+        "--stop",
+        "27",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 1.001606226000149,
+      "log": "logs/radial_pair_18_27.log"
+    },
+    {
+      "stage": "radial_pair_27_36",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_3_generate_radial_sources.py",
+        "--task",
+        "pair",
+        "--start",
+        "27",
+        "--stop",
+        "36",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 1.0011446189996605,
+      "log": "logs/radial_pair_27_36.log"
+    },
+    {
+      "stage": "radial_pair_45_54",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_3_generate_radial_sources.py",
+        "--task",
+        "pair",
+        "--start",
+        "45",
+        "--stop",
+        "54",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 1.0005852090002918,
+      "log": "logs/radial_pair_45_54.log"
+    },
+    {
+      "stage": "radial_pair_36_45",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_3_generate_radial_sources.py",
+        "--task",
+        "pair",
+        "--start",
+        "36",
+        "--stop",
+        "45",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 1.001698721000139,
+      "log": "logs/radial_pair_36_45.log"
+    },
+    {
+      "stage": "radial_bare_0_27",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_3_generate_radial_sources.py",
+        "--task",
+        "bare",
+        "--start",
+        "0",
+        "--stop",
+        "27",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 1.0019189950003238,
+      "log": "logs/radial_bare_0_27.log"
+    },
+    {
+      "stage": "radial_bare_27_54",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_3_generate_radial_sources.py",
+        "--task",
+        "bare",
+        "--start",
+        "27",
+        "--stop",
+        "54",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 1.0007701940003244,
+      "log": "logs/radial_bare_27_54.log"
+    },
+    {
+      "stage": "radial_bare_54_81",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_3_generate_radial_sources.py",
+        "--task",
+        "bare",
+        "--start",
+        "54",
+        "--stop",
+        "81",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 1.003601346999858,
+      "log": "logs/radial_bare_54_81.log"
+    },
+    {
+      "stage": "noncom",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appC3_compute_noncom_matrix_elements.py",
+        "--output",
+        "<OUTPUT>/noncom",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 5.002033779999692,
+      "log": "logs/noncom.log"
+    },
+    {
+      "stage": "contacts",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_sec1_2_assemble_contacts.py"
+      ],
+      "returncode": 0,
+      "seconds": 27.003924925999854,
+      "log": "logs/contacts.log"
+    },
+    {
+      "stage": "permutations",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appC3_verify_contact_permutations.py"
+      ],
+      "returncode": 0,
+      "seconds": 17.002623118999963,
+      "log": "logs/permutations.log"
+    },
+    {
+      "stage": "radial_controls",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appC3_verify_radial_controls.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.000618411999767,
+      "log": "logs/radial_controls.log"
+    },
+    {
+      "stage": "printed_vs_recomputed",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/supplement_secs1_2_1_5_compare_recomputed_coefficients.py"
+      ],
+      "returncode": 0,
+      "seconds": 139.02096876600035,
+      "log": "logs/printed_vs_recomputed.log"
+    },
+    {
+      "stage": "angular",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appC5_compute_angular_coefficients.py",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 52.00824135400035,
+      "log": "logs/angular.log"
+    },
+    {
+      "stage": "global_exchange",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appC7_complete_global_exchange.py"
+      ],
+      "returncode": 0,
+      "seconds": 14.002409058000012,
+      "log": "logs/global_exchange.log"
+    },
+    {
+      "stage": "angular_controls",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appC5_verify_angular_controls.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.0008410730001742,
+      "log": "logs/angular_controls.log"
+    },
+    {
+      "stage": "soft",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appC6_verify_soft_limit.py"
+      ],
+      "returncode": 0,
+      "seconds": 69.01226345500027,
+      "log": "logs/soft.log"
+    },
+    {
+      "stage": "noncom_windows",
+      "status": "PASS",
+      "command": [
+        "python",
+        "scripts/article_appC3_verify_noncom_finite_windows.py",
+        "--input",
+        "<OUTPUT>/noncom/coefficients.json",
+        "--output",
+        "<OUTPUT>/noncom"
+      ],
+      "returncode": 0,
+      "seconds": 15.003250832000049,
+      "log": "logs/noncom_windows.log"
+    }
+  ]
+}

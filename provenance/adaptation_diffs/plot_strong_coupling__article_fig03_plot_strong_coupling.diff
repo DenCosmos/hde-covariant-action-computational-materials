@@ -1,0 +1,34 @@
+--- GitHub_bundle/scripts/plot_strong_coupling.py
++++ scripts/article_fig03_plot_strong_coupling.py
+@@ -4,6 +4,16 @@
+ No fitting or external data are used. On the standard family,
+ |chi| = 6 M_Pl^2 H^2 |c-1|/c. The plotted minimum is a bound from
+ individual cubic coefficients, not a physical unitarity threshold.
++
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article A.11, fig:strong-coupling-standard (3).
++  article A.11, eq:main-standard-cubic-scale (315).
++  article A.11, eq:main-standard-cubic-numerical (317).
++Method: Evaluate the two cubic operator estimates and their minimum.
++Inputs: Embedded c grid and dimensionless normalization from original plotting script.
++Outputs below the selected results root: figures/strong_coupling_scale_standard.csv, figures/strong_coupling_scale_standard.pdf.
++Provenance: GitHub_bundle/scripts/plot_strong_coupling.py.
++Scope limit: Operator estimates are not an independently determined physical unitarity threshold.
+ """
+ from __future__ import annotations
+ import argparse
+@@ -22,11 +32,12 @@
+     c3 = prefactor * np.sqrt(9.0*np.sqrt(3.0)*np.abs(c-1.0)/(2.0*(2.0*c+7.0)))
+     return clock, c3, np.minimum(clock,c3)
+ 
++# V52: article fig:strong-coupling-standard (3); article eq:main-standard-cubic-scale (315); article eq:main-standard-cubic-numerical (317).
+ def main() -> None:
+     base = Path(__file__).resolve().parents[1]
+     parser=argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument('--output',type=Path,default=base/'results/rechecked_v52/figures')
+-    parser.add_argument('--data-output',type=Path,default=base/'results/rechecked_v52/figures')
++    parser.add_argument('--output',type=Path,default=base/'results/current/figures')
++    parser.add_argument('--data-output',type=Path,default=base/'results/current/figures')
+     args=parser.parse_args()
+     args.output.mkdir(parents=True,exist_ok=True)
+     args.data_output.mkdir(parents=True,exist_ok=True)

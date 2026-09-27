@@ -1,0 +1,18 @@
+{
+  "stage": "radial_pair_45_54",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/supplement_sec1_3_generate_radial_sources.py",
+    "--task",
+    "pair",
+    "--start",
+    "45",
+    "--stop",
+    "54",
+    "--resume"
+  ],
+  "returncode": 0,
+  "seconds": 1.0005852090002918,
+  "log": "logs/radial_pair_45_54.log"
+}

@@ -1,0 +1,13 @@
+{
+  "stage": "mixed_normalization",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appC1_verify_mixed_normalization.py",
+    "--output",
+    "<OUTPUT>/mixed_normalization"
+  ],
+  "returncode": 0,
+  "seconds": 1.0007369049999397,
+  "log": "logs/mixed_normalization.log"
+}

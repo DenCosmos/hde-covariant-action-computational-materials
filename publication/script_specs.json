@@ -1,0 +1,985 @@
+[
+  {
+    "script": "scripts/article_appsDE_verify_reduced_identities.py",
+    "kind": "symbolic identities",
+    "origin": "GitHub_bundle/scripts/verify_analytic.py",
+    "outputs": [
+      "analytic_v40/checks.csv",
+      "analytic_v40/run_summary.json"
+    ],
+    "inputs": "Embedded symbolic actions; no catalogue input",
+    "method": "Exact auxiliary elimination, differentiation, and polynomial identities",
+    "function_publication_links": {
+      "quadratic_and_crossing": [
+        "article:eq:scalar-finite-k-complete-action",
+        "article:eq:scalar-finite-k-complete-coefficients",
+        "article:eq:scalar-finite-k-complete-equation",
+        "article:eq:crossing-linear-leading-coefficients"
+      ],
+      "canonical_and_late": [
+        "article:eq:power-finite-k-linear-equation",
+        "article:eq:power-exact-Q-coefficients",
+        "article:eq:power-canonical-mass-rational",
+        "article:eq:power-canonical-mass-limits"
+      ],
+      "background_global": [
+        "article:eq:power-global-dimensionless-system",
+        "article:eq:v33-lyapunov",
+        "article:eq:v33-second-desitter-instability"
+      ],
+      "gauge_generator": [
+        "article:sec:hamiltonian"
+      ],
+      "scalar_polynomials_and_sources": [
+        "article:app:quartic-explicit-sources"
+      ],
+      "nonresonant_majorant": [
+        "article:eq:local-majorant-tree-polynomial",
+        "article:eq:local-majorant-explicit-Ckappa"
+      ]
+    },
+    "publication_links": [
+      "article:eq:scalar-finite-k-complete-action",
+      "article:eq:scalar-finite-k-complete-coefficients",
+      "article:eq:scalar-finite-k-complete-equation",
+      "article:eq:crossing-linear-leading-coefficients",
+      "article:eq:power-finite-k-linear-equation",
+      "article:eq:power-exact-Q-coefficients",
+      "article:eq:power-canonical-mass-rational",
+      "article:eq:power-canonical-mass-limits",
+      "article:eq:power-global-dimensionless-system",
+      "article:eq:v33-lyapunov",
+      "article:eq:v33-second-desitter-instability",
+      "article:sec:hamiltonian",
+      "article:app:quartic-explicit-sources",
+      "article:eq:local-majorant-tree-polynomial",
+      "article:eq:local-majorant-explicit-Ckappa"
+    ],
+    "limits": "Algebraic identities, not independent existence/compactness proofs or regulator-free unitarity.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "quadratic_and_crossing": "scripts/article_appsDE_verify_reduced_identities.py",
+      "canonical_and_late": "scripts/article_appsDE_verify_reduced_identities.py",
+      "background_global": "scripts/article_appsDE_verify_reduced_identities.py",
+      "gauge_generator": "scripts/article_appsDE_verify_reduced_identities.py",
+      "scalar_polynomials_and_sources": "scripts/article_appsDE_verify_reduced_identities.py",
+      "nonresonant_majorant": "scripts/article_appsDE_verify_reduced_identities.py"
+    }
+  },
+  {
+    "script": "scripts/supplement_sec1_6_verify_local_vertices.py",
+    "kind": "symbolic generation and checks",
+    "origin": "GitHub_bundle/scripts/verify_local_vertices.py",
+    "outputs": [
+      "local_vertices_v40/derivatives.txt",
+      "local_vertices_v40/results.json",
+      "local_vertices_v40/checks.csv"
+    ],
+    "inputs": "Implicit equation s L+L^5 Uprime+4 Phi=0; embedded generic derivatives; radiation U=0 comparison",
+    "method": "Finite Lagrange inversion versus repeated implicit differentiation",
+    "function_publication_links": {
+      "finite_derivative": [
+        "article:eq:local-sixth-all-derivatives",
+        "article:eq:local-sixth-lagrange-proof",
+        "supplement:eq:cat-local-W-1-0",
+        "supplement:eq:cat-local-W-0-1",
+        "supplement:eq:cat-local-W-2-0",
+        "supplement:eq:cat-local-W-1-1",
+        "supplement:eq:cat-local-W-0-2",
+        "supplement:eq:cat-local-W-3-0",
+        "supplement:eq:cat-local-W-2-1",
+        "supplement:eq:cat-local-W-1-2",
+        "supplement:eq:cat-local-W-0-3",
+        "supplement:eq:cat-local-W-4-0",
+        "supplement:eq:cat-local-W-3-1",
+        "supplement:eq:cat-local-W-2-2",
+        "supplement:eq:cat-local-W-1-3",
+        "supplement:eq:cat-local-W-0-4",
+        "supplement:eq:cat-local-W-5-0",
+        "supplement:eq:cat-local-W-4-1",
+        "supplement:eq:cat-local-W-3-2",
+        "supplement:eq:cat-local-W-2-3",
+        "supplement:eq:cat-local-W-1-4",
+        "supplement:eq:cat-local-W-0-5",
+        "supplement:eq:cat-local-W-6-0",
+        "supplement:eq:cat-local-W-5-1",
+        "supplement:eq:cat-local-W-4-2",
+        "supplement:eq:cat-local-W-3-3",
+        "supplement:eq:cat-local-W-2-4",
+        "supplement:eq:cat-local-W-1-5",
+        "supplement:eq:cat-local-W-0-6"
+      ],
+      "main": [
+        "article:eq:local-sixth-complete-vertices",
+        "supplement:eq:cat-local-L-2",
+        "supplement:eq:cat-local-L-3",
+        "supplement:eq:cat-local-L-4",
+        "supplement:eq:cat-local-L-5",
+        "supplement:eq:cat-local-L-6"
+      ]
+    },
+    "publication_links": [
+      "article:eq:local-sixth-all-derivatives",
+      "article:eq:local-sixth-lagrange-proof",
+      "supplement:eq:cat-local-W-1-0",
+      "supplement:eq:cat-local-W-0-1",
+      "supplement:eq:cat-local-W-2-0",
+      "supplement:eq:cat-local-W-1-1",
+      "supplement:eq:cat-local-W-0-2",
+      "supplement:eq:cat-local-W-3-0",
+      "supplement:eq:cat-local-W-2-1",
+      "supplement:eq:cat-local-W-1-2",
+      "supplement:eq:cat-local-W-0-3",
+      "supplement:eq:cat-local-W-4-0",
+      "supplement:eq:cat-local-W-3-1",
+      "supplement:eq:cat-local-W-2-2",
+      "supplement:eq:cat-local-W-1-3",
+      "supplement:eq:cat-local-W-0-4",
+      "supplement:eq:cat-local-W-5-0",
+      "supplement:eq:cat-local-W-4-1",
+      "supplement:eq:cat-local-W-3-2",
+      "supplement:eq:cat-local-W-2-3",
+      "supplement:eq:cat-local-W-1-4",
+      "supplement:eq:cat-local-W-0-5",
+      "supplement:eq:cat-local-W-6-0",
+      "supplement:eq:cat-local-W-5-1",
+      "supplement:eq:cat-local-W-4-2",
+      "supplement:eq:cat-local-W-3-3",
+      "supplement:eq:cat-local-W-2-4",
+      "supplement:eq:cat-local-W-1-5",
+      "supplement:eq:cat-local-W-0-6",
+      "article:eq:local-sixth-complete-vertices",
+      "supplement:eq:cat-local-L-2",
+      "supplement:eq:cat-local-L-3",
+      "supplement:eq:cat-local-L-4",
+      "supplement:eq:cat-local-L-5",
+      "supplement:eq:cat-local-L-6"
+    ],
+    "limits": "27 derivatives and five scalar local vertices; no fifth/sixth-order metric vertices.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "finite_derivative": "scripts/supplement_sec1_6_verify_local_vertices.py",
+      "main": "scripts/supplement_sec1_6_verify_local_vertices.py"
+    }
+  },
+  {
+    "script": "scripts/article_sec7_3_verify_entropy.py",
+    "kind": "symbolic identities",
+    "origin": "GitHub_bundle/scripts/verify_entropy.py",
+    "outputs": [
+      "logs/entropy.log"
+    ],
+    "inputs": "Embedded entropy parameters r,nu,gamma,m,enthalpy positive",
+    "method": "Symbolic entropy derivatives and dimensional checks",
+    "function_publication_links": {
+      "main": [
+        "article:eq:generalized-apparent-entropy",
+        "article:eq:generalized-entropy-background",
+        "article:eq:generalized-entropy-matching",
+        "article:eq:generalized-entropy-no-ghost",
+        "article:eq:generalized-entropy-critical-radius",
+        "article:eq:generalized-entropy-time-derivative"
+      ]
+    },
+    "publication_links": [
+      "article:eq:generalized-apparent-entropy",
+      "article:eq:generalized-entropy-background",
+      "article:eq:generalized-entropy-matching",
+      "article:eq:generalized-entropy-no-ghost",
+      "article:eq:generalized-entropy-critical-radius",
+      "article:eq:generalized-entropy-time-derivative"
+    ],
+    "limits": "Not a general nonequilibrium thermodynamic derivation; dimensional checks are consistency checks.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/article_sec7_3_verify_entropy.py"
+    }
+  },
+  {
+    "script": "scripts/supplement_sec1_verify_printed_catalogue.py",
+    "kind": "transcription/structural checks",
+    "origin": "GitHub_bundle/scripts/verify_catalogue.py",
+    "outputs": [
+      "catalogue_checks.json"
+    ],
+    "inputs": "supplement/source; newly calculated local_vertices_v40",
+    "method": "Parse 331 rational functions and reconstruction/vertex tables; exact identities in printed coefficients",
+    "function_publication_links": {
+      "main": [
+        "supplement:sec:cat-contacts",
+        "supplement:sec:cat-component-table",
+        "supplement:sec:cat-pairs",
+        "supplement:sec:cat-local-vertices"
+      ]
+    },
+    "publication_links": [
+      "supplement:sec:cat-contacts",
+      "supplement:sec:cat-component-table",
+      "supplement:sec:cat-pairs",
+      "supplement:sec:cat-local-vertices"
+    ],
+    "limits": "Printed-coefficient checks, not independent ADM derivation; the separate strict comparator supplies that comparison.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/supplement_sec1_verify_printed_catalogue.py"
+    }
+  },
+  {
+    "script": "scripts/article_appD4_compute_background_diagnostics.py",
+    "kind": "numerical diagnostics and symbolic checks",
+    "origin": "GitHub_bundle/scripts/n02_background_diagnostics.py",
+    "outputs": [
+      "n02_background_diagnostics/numerical_results.json",
+      "n02_background_diagnostics/saddle_rates.csv",
+      "n02_background_diagnostics/crossing_convergence.csv",
+      "n02_background_diagnostics/late_rates.csv"
+    ],
+    "inputs": "Embedded parameter grid; see parameters/embedded_parameters.md; runtime output argument only",
+    "method": "DOP853 integration at stored tolerances; auxiliary linear algebra and asymptotic slopes",
+    "function_publication_links": {
+      "symbolic_reduction": [
+        "article:eq:scalar-finite-k-complete-coefficients",
+        "article:eq:power-canonical-mass-rational"
+      ],
+      "saddle_numerics": [
+        "article:eq:power-law-full-background",
+        "article:eq:power-law-full-eigenvalues",
+        "article:tab:v31-numerical-dynamics"
+      ],
+      "crossing_numerics": [
+        "article:eq:numerical-crossing-point-v40",
+        "article:eq:numerical-crossing-initial-background-v40",
+        "article:tab:crossing-reproduction-v40"
+      ],
+      "late_symbolic": [
+        "article:eq:power-canonical-mass-limits"
+      ],
+      "late_numerics": [
+        "article:eq:numerical-late-initial-data-v40",
+        "article:eq:numerical-curvature-envelope-v40",
+        "article:tab:late-rate-convergence-v40"
+      ]
+    },
+    "publication_links": [
+      "article:eq:scalar-finite-k-complete-coefficients",
+      "article:eq:power-canonical-mass-rational",
+      "article:eq:power-law-full-background",
+      "article:eq:power-law-full-eigenvalues",
+      "article:tab:v31-numerical-dynamics",
+      "article:eq:numerical-crossing-point-v40",
+      "article:eq:numerical-crossing-initial-background-v40",
+      "article:tab:crossing-reproduction-v40",
+      "article:eq:power-canonical-mass-limits",
+      "article:eq:numerical-late-initial-data-v40",
+      "article:eq:numerical-curvature-envelope-v40",
+      "article:tab:late-rate-convergence-v40"
+    ],
+    "limits": "Numerical examples and tolerances, not proofs of global dynamics.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "symbolic_reduction": "scripts/article_appD4_compute_background_diagnostics.py",
+      "saddle_numerics": "scripts/article_appD4_compute_background_diagnostics.py",
+      "crossing_numerics": "scripts/article_appD4_compute_background_diagnostics.py",
+      "late_symbolic": "scripts/article_appD4_compute_background_diagnostics.py",
+      "late_numerics": "scripts/article_appD4_compute_background_diagnostics.py"
+    }
+  },
+  {
+    "script": "scripts/article_V52_verify_source_transcription.py",
+    "kind": "editorial/structural and numerical transcription",
+    "origin": "GitHub_bundle/scripts/verify_release.py",
+    "outputs": [
+      "release_checks.json"
+    ],
+    "inputs": "Explicit --article-source main.tex or folder, references.bib, three figures; supplementary source; newly computed numerical CSVs",
+    "method": "Resolve references; parse 18 table values; compare to displayed-decimal tolerances",
+    "function_publication_links": {
+      "main": [
+        "article:app:numerical-protocols",
+        "article:tab:crossing-reproduction-v40",
+        "article:tab:late-rate-convergence-v40",
+        "article:tab:v31-numerical-dynamics"
+      ]
+    },
+    "publication_links": [
+      "article:app:numerical-protocols",
+      "article:tab:crossing-reproduction-v40",
+      "article:tab:late-rate-convergence-v40",
+      "article:tab:v31-numerical-dynamics"
+    ],
+    "limits": "No article redistributed. Saddle maxima are expected test constants; other 18 values parsed. No .aux needed.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/article_V52_verify_source_transcription.py"
+    }
+  },
+  {
+    "script": "scripts/article_fig01_plot_pole_crossing.py",
+    "kind": "new numerical figure reconstruction",
+    "origin": "NEW implementation from V52 equations; original figure retained",
+    "outputs": [
+      "figure01/pole_crossing_c12.csv",
+      "figure01/pole_crossing_c12.pdf",
+      "figure01/checks.json"
+    ],
+    "inputs": "parameters/figure01.json read at runtime",
+    "method": "DOP853 integration of unreduced Euler equation plus differentiated constraint; determinant/residual/reversibility checks",
+    "function_publication_links": {
+      "coefficients": [
+        "article:eq:standard-pole-ratio"
+      ],
+      "rhs": [
+        "article:eq:unreduced-pole-action",
+        "article:eq:pole-A-explicit",
+        "article:eq:pole-unreduced-constraint",
+        "article:eq:pole-constraint-coefficients",
+        "article:eq:pole-cauchy-determinant"
+      ],
+      "main": [
+        "article:fig:pole-crossing-c12"
+      ]
+    },
+    "publication_links": [
+      "article:eq:standard-pole-ratio",
+      "article:eq:unreduced-pole-action",
+      "article:eq:pole-A-explicit",
+      "article:eq:pole-unreduced-constraint",
+      "article:eq:pole-constraint-coefficients",
+      "article:eq:pole-cauchy-determinant",
+      "article:fig:pole-crossing-c12"
+    ],
+    "limits": "One specified regular trajectory. Scientific curves, not byte identity to original PDF.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "coefficients": "scripts/article_fig01_plot_pole_crossing.py",
+      "rhs": "scripts/article_fig01_plot_pole_crossing.py",
+      "main": "scripts/article_fig01_plot_pole_crossing.py"
+    }
+  },
+  {
+    "script": "scripts/article_fig02_plot_phase_portrait.py",
+    "kind": "new numerical figure reconstruction",
+    "origin": "NEW implementation from V52 phase system; original figure retained",
+    "outputs": [
+      "figure02/phase_portrait_c12.pdf",
+      "figure02/phase_portrait_trajectory.csv",
+      "figure02/phase_portrait_field.csv",
+      "figure02/phase_portrait_nullclines.csv",
+      "figure02/checks.json"
+    ],
+    "inputs": "parameters/figure02.json read at runtime; seed and plot mesh are explicit new reconstruction choices",
+    "method": "DOP853 phase trajectory, fixed points, eigenvalues, nullclines, half-seed sensitivity test",
+    "function_publication_links": {
+      "vector_field": [
+        "article:eq:compact-phase-system"
+      ],
+      "main": [
+        "article:fig:phase-portrait",
+        "article:eq:compact-fixed-points",
+        "article:eq:compact-eigenvalues",
+        "article:eq:early-regular-manifold"
+      ]
+    },
+    "publication_links": [
+      "article:eq:compact-phase-system",
+      "article:fig:phase-portrait",
+      "article:eq:compact-fixed-points",
+      "article:eq:compact-eigenvalues",
+      "article:eq:early-regular-manifold"
+    ],
+    "limits": "Background phase portrait, not perturbation stability. Extended trajectory; original only displays an early segment.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "vector_field": "scripts/article_fig02_plot_phase_portrait.py",
+      "main": "scripts/article_fig02_plot_phase_portrait.py"
+    }
+  },
+  {
+    "script": "scripts/article_fig03_plot_strong_coupling.py",
+    "kind": "figure generation",
+    "origin": "GitHub_bundle/scripts/plot_strong_coupling.py",
+    "outputs": [
+      "figures/strong_coupling_scale_standard.csv",
+      "figures/strong_coupling_scale_standard.pdf"
+    ],
+    "inputs": "Embedded c grid and dimensionless normalization from original plotting script",
+    "method": "Evaluate the two cubic operator estimates and their minimum",
+    "function_publication_links": {
+      "main": [
+        "article:fig:strong-coupling-standard",
+        "article:eq:main-standard-cubic-scale",
+        "article:eq:main-standard-cubic-numerical"
+      ]
+    },
+    "publication_links": [
+      "article:fig:strong-coupling-standard",
+      "article:eq:main-standard-cubic-scale",
+      "article:eq:main-standard-cubic-numerical"
+    ],
+    "limits": "Operator estimates are not an independently determined physical unitarity threshold.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/article_fig03_plot_strong_coupling.py"
+    }
+  },
+  {
+    "script": "scripts/article_appC3_compute_noncom_matrix_elements.py",
+    "kind": "restored exact computation",
+    "origin": "NEW checkpointed driver of preserved original_scripts/noncom_original.py engine; replaces missing-data-only verifier",
+    "outputs": [
+      "noncom/coefficients.json",
+      "noncom/component_registry.csv",
+      "noncom/verification.json"
+    ],
+    "inputs": "parameters/noncom.json read at runtime; lib/article_appC_noncom_engine.py",
+    "method": "Exact multilinear ADM expansion, auxiliary and Legendre contact, all 18 ordered exchanges per external component",
+    "function_publication_links": {
+      "main": [
+        "article:eq:radiation-noncom-check-momenta",
+        "article:eq:v34r-exact-scalar-density",
+        "article:eq:v34r-exact-gravity-density",
+        "article:eq:v33-legendre-contact"
+      ],
+      "audit": [
+        "article:eq:radiation-noncom-check-momenta",
+        "article:eq:radiation-contact-decomposition",
+        "article:eq:radiation-ordered-pair-reconstruction"
+      ]
+    },
+    "publication_links": [
+      "article:eq:radiation-noncom-check-momenta",
+      "article:eq:v34r-exact-scalar-density",
+      "article:eq:v34r-exact-gravity-density",
+      "article:eq:v33-legendre-contact",
+      "article:eq:radiation-contact-decomposition",
+      "article:eq:radiation-ordered-pair-reconstruction"
+    ],
+    "limits": "All 81 separate non-COM combinations; 57 tested only after computation. No infinite-time or regulator-removal claim.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/article_appC3_compute_noncom_matrix_elements.py",
+      "audit": "scripts/article_appC3_compute_noncom_matrix_elements.py"
+    }
+  },
+  {
+    "script": "scripts/article_appC3_verify_noncom_finite_windows.py",
+    "kind": "new numerical witness checks",
+    "origin": "NEW independent nested Gauss-Legendre evaluation of the restored V52 finite-window kernel",
+    "outputs": [
+      "noncom/finite_windows.csv",
+      "noncom/finite_window_checks.json"
+    ],
+    "inputs": "Newly computed noncom/coefficients.json; parameters/noncom_windows.json read at runtime",
+    "method": "Independent 48/80-order nested quadrature over three positive finite intervals",
+    "function_publication_links": {
+      "main": [
+        "article:eq:radiation-noncom-check-momenta",
+        "article:eq:v33-radial-kernel",
+        "article:eq:v34-elementary-single",
+        "article:eq:v34-elementary-ordered"
+      ]
+    },
+    "publication_links": [
+      "article:eq:radiation-noncom-check-momenta",
+      "article:eq:v33-radial-kernel",
+      "article:eq:v34-elementary-single",
+      "article:eq:v34-elementary-ordered"
+    ],
+    "limits": "Nonzero witnesses and order-convergence comparison, not a rigorous quadrature bound or all-window identity proof.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/article_appC3_verify_noncom_finite_windows.py"
+    }
+  },
+  {
+    "script": "scripts/supplement_sec1_3_generate_radial_sources.py",
+    "kind": "restored exact ADM generation",
+    "origin": "GitHub_bundle/original_scripts/generate_radial_v40.py; preserved radiation_adm_v40.py",
+    "outputs": [
+      "radial_generic/bare/*.json",
+      "radial_generic/pair/*.json"
+    ],
+    "inputs": "Embedded symbolic r>0,t=tan(theta/2)>0; --task/--start/--stop/--resume control generation",
+    "method": "Exact rational field ADM expansion; 81 bare components, 54 unordered external-pair species combinations",
+    "function_publication_links": {
+      "real_basis": [
+        "article:eq:v34-linear-polarizations",
+        "article:eq:radiation-vertex-coefficient-basis"
+      ],
+      "pair_data": [
+        "article:eq:radiation-cubic-source-definition",
+        "article:eq:v34r-nonzero-constraints",
+        "article:eq:v34r-global-reduction",
+        "supplement:eq:cat-pair-polynomials"
+      ],
+      "main": [
+        "article:eq:radiation-catalogue-external-momenta",
+        "supplement:eq:cat-momenta"
+      ]
+    },
+    "publication_links": [
+      "article:eq:v34-linear-polarizations",
+      "article:eq:radiation-vertex-coefficient-basis",
+      "article:eq:radiation-cubic-source-definition",
+      "article:eq:v34r-nonzero-constraints",
+      "article:eq:v34r-global-reduction",
+      "supplement:eq:cat-pair-polynomials",
+      "article:eq:radiation-catalogue-external-momenta",
+      "supplement:eq:cat-momenta"
+    ],
+    "limits": "TT norm 2 externally; internal cross norm 2q^2; homogeneous scalar negative kinetic sign preserved. Odd-reflection bare zeros are exact symmetry exclusions.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "real_basis": "scripts/supplement_sec1_3_generate_radial_sources.py",
+      "pair_data": "scripts/supplement_sec1_3_generate_radial_sources.py",
+      "main": "scripts/supplement_sec1_3_generate_radial_sources.py"
+    }
+  },
+  {
+    "script": "scripts/supplement_sec1_2_assemble_contacts.py",
+    "kind": "restored exact contact computation",
+    "origin": "GitHub_bundle/original_scripts/assemble_radial_v40.py",
+    "outputs": [
+      "radial_generic/contacts/*.json",
+      "radial_generic/assembly_summary.json"
+    ],
+    "inputs": "54 new pair records and 81 new bare records",
+    "method": "Contract three auxiliary partitions and signed Legendre products, H4=-L4+aux+Legendre",
+    "function_publication_links": {
+      "main": [
+        "article:eq:radiation-contact-decomposition",
+        "article:eq:v33-legendre-contact",
+        "supplement:eq:cat-partition-contact-sum",
+        "supplement:eq:cat-partition-velocity-nonzero",
+        "supplement:eq:cat-partition-velocity-homogeneous"
+      ]
+    },
+    "publication_links": [
+      "article:eq:radiation-contact-decomposition",
+      "article:eq:v33-legendre-contact",
+      "supplement:eq:cat-partition-contact-sum",
+      "supplement:eq:cat-partition-velocity-nonzero",
+      "supplement:eq:cat-partition-velocity-homogeneous"
+    ],
+    "limits": "Radiation COM frame; not the separate fixed non-COM configuration.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/supplement_sec1_2_assemble_contacts.py"
+    }
+  },
+  {
+    "script": "scripts/article_appC3_verify_contact_permutations.py",
+    "kind": "restored exact symmetry checks",
+    "origin": "GitHub_bundle/original_scripts/check_catalogue_v40.py",
+    "outputs": [
+      "radial_generic/permutation_checks.json",
+      "radial_generic/symmetry_check.json",
+      "radial_generic/reconstruction.csv"
+    ],
+    "inputs": "81 newly assembled contact dictionaries",
+    "method": "Within-pair swaps and pair transposition with r-dependent scaling, angle sign and complex conjugation",
+    "function_publication_links": {
+      "main": [
+        "article:eq:radiation-contact-permutations",
+        "supplement:eq:cat-contact-symmetries",
+        "supplement:sec:cat-component-table"
+      ]
+    },
+    "publication_links": [
+      "article:eq:radiation-contact-permutations",
+      "supplement:eq:cat-contact-symmetries",
+      "supplement:sec:cat-component-table"
+    ],
+    "limits": "243 full-contact identities plus 729 component identities = 972. Counts are distinct and not substituted for each other.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/article_appC3_verify_contact_permutations.py"
+    }
+  },
+  {
+    "script": "scripts/article_appC3_verify_radial_controls.py",
+    "kind": "restored exact/sample control checks",
+    "origin": "GitHub_bundle/original_scripts/verify_radial_controls_v40.py",
+    "outputs": [
+      "radial_generic/independent_controls.csv"
+    ],
+    "inputs": "New pair records; explicit generic control formulas",
+    "method": "18 scalar/tensor source and homogeneous checks, including six sampled crossing controls",
+    "function_publication_links": {
+      "main": [
+        "article:eq:radiation-cubic-source-definition",
+        "article:eq:v34-global-source-polynomials"
+      ]
+    },
+    "publication_links": [
+      "article:eq:radiation-cubic-source-definition",
+      "article:eq:v34-global-source-polynomials"
+    ],
+    "limits": "Some controls are exact substitutions at selected points, not identities at every angle.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/article_appC3_verify_radial_controls.py"
+    }
+  },
+  {
+    "script": "scripts/article_appC5_compute_angular_coefficients.py",
+    "kind": "restored mixed angular computation",
+    "origin": "GitHub_bundle/original_scripts/angular_coefficients_v40.py",
+    "outputs": [
+      "angular_v40/j*.json",
+      "angular_v40/block_registry_*.csv"
+    ],
+    "inputs": "New 54 pair and 81 contact records; default j=0,2,3,4",
+    "method": "Exact helicity conversion, Wigner polynomial, q-transfer Laurent coefficients; all scalar and tensor internal exchanges",
+    "function_publication_links": {
+      "wigner": [
+        "article:eq:v34-wigner-polynomial",
+        "supplement:eq:cat-angular-explicit-wigner-coefficients"
+      ],
+      "transfer": [
+        "article:eq:v34-transfer-variable",
+        "supplement:eq:cat-angular-source-transfer"
+      ],
+      "main": [
+        "article:eq:v34-helicity-transform",
+        "article:eq:angular-block-complete-order",
+        "article:eq:angular-exchange-finite-reconstruction",
+        "article:eq:angular-contact-finite-reconstruction",
+        "article:eq:boundary-finite-coefficient-reconstruction",
+        "supplement:eq:cat-angular-exchange-convolution",
+        "supplement:eq:cat-angular-contact-convolution",
+        "supplement:eq:cat-boundary-explicit-basis"
+      ]
+    },
+    "publication_links": [
+      "article:eq:v34-wigner-polynomial",
+      "supplement:eq:cat-angular-explicit-wigner-coefficients",
+      "article:eq:v34-transfer-variable",
+      "supplement:eq:cat-angular-source-transfer",
+      "article:eq:v34-helicity-transform",
+      "article:eq:angular-block-complete-order",
+      "article:eq:angular-exchange-finite-reconstruction",
+      "article:eq:angular-contact-finite-reconstruction",
+      "article:eq:boundary-finite-coefficient-reconstruction",
+      "supplement:eq:cat-angular-exchange-convolution",
+      "supplement:eq:cat-angular-contact-convolution",
+      "supplement:eq:cat-boundary-explicit-basis"
+    ],
+    "limits": "74 coefficient positions, not 74 finite energy scattering eigenamplitudes. Finite cutoffs and state parameters remain explicit.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "wigner": "scripts/article_appC5_compute_angular_coefficients.py",
+      "transfer": "scripts/article_appC5_compute_angular_coefficients.py",
+      "main": "scripts/article_appC5_compute_angular_coefficients.py"
+    }
+  },
+  {
+    "script": "scripts/article_appC7_complete_global_exchange.py",
+    "kind": "restored homogeneous mixed exchange computation",
+    "origin": "GitHub_bundle/original_scripts/complete_angular_global_v40.py; pure to_z extracted from editorial generator without executing it",
+    "outputs": [
+      "angular_v40/complete_summary.json",
+      "angular_v40/block_registry.csv",
+      "angular_v40/j*_*.json"
+    ],
+    "inputs": "New radial source and 74 angular dictionaries; symbolic Gaussian covariance",
+    "method": "Project AA,AB,BA,BB products for scalar and five homogeneous tensor directions; both time orderings",
+    "function_publication_links": {
+      "angular_moment": [
+        "article:eq:v34-angular-moments"
+      ],
+      "main": [
+        "article:eq:v34r-global-free-flow",
+        "article:eq:v34-global-source-polynomials",
+        "article:eq:v34-global-contraction",
+        "article:eq:v34-isolated-zero-distribution",
+        "article:eq:v34r-boundary-table-mixed-dictionary",
+        "article:eq:v34r-boundary-table-square-dictionary"
+      ]
+    },
+    "publication_links": [
+      "article:eq:v34-angular-moments",
+      "article:eq:v34r-global-free-flow",
+      "article:eq:v34-global-source-polynomials",
+      "article:eq:v34-global-contraction",
+      "article:eq:v34-isolated-zero-distribution",
+      "article:eq:v34r-boundary-table-mixed-dictionary",
+      "article:eq:v34r-boundary-table-square-dictionary"
+    ],
+    "limits": "12 nonhomogeneous plus 12 homogeneous ordered exchange blocks per position; no covariance or volume silently selected.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "angular_moment": "scripts/article_appC7_complete_global_exchange.py",
+      "main": "scripts/article_appC7_complete_global_exchange.py"
+    }
+  },
+  {
+    "script": "scripts/article_appC5_verify_angular_controls.py",
+    "kind": "restored angular controls",
+    "origin": "GitHub_bundle/original_scripts/verify_angular_controls_v40.py",
+    "outputs": [
+      "angular_v40/independent_controls.csv"
+    ],
+    "inputs": "74 new angular records and symbolic Wigner formula",
+    "method": "Wigner d comparison at theta=pi/3 for 74 positions plus three scalar contact moments",
+    "function_publication_links": {
+      "main": [
+        "article:eq:v34-wigner-polynomial",
+        "article:eq:v34-angular-contact-series"
+      ]
+    },
+    "publication_links": [
+      "article:eq:v34-wigner-polynomial",
+      "article:eq:v34-angular-contact-series"
+    ],
+    "limits": "77 checks. Wigner point tests alone are not an all-angle identity proof; coefficients were separately generated symbolically.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/article_appC5_verify_angular_controls.py"
+    }
+  },
+  {
+    "script": "scripts/article_appC6_verify_soft_limit.py",
+    "kind": "restored exact soft-limit checks",
+    "origin": "GitHub_bundle/original_scripts/verify_soft_v40.py",
+    "outputs": [
+      "soft_v40/summary.json",
+      "soft_v40/checks.csv",
+      "soft_v40/five_groups.txt"
+    ],
+    "inputs": "New radial pairs and contact records; r=1+mu*q before q->0",
+    "method": "Exact Laurent soft coefficients and five boundary leading groups",
+    "function_publication_links": {
+      "main": [
+        "article:eq:v34r-soft-scalar-vertex",
+        "article:eq:v33-soft-singularity",
+        "article:eq:boundary-five-groups-leading",
+        "article:eq:boundary-scalar-five-coefficients"
+      ]
+    },
+    "publication_links": [
+      "article:eq:v34r-soft-scalar-vertex",
+      "article:eq:v33-soft-singularity",
+      "article:eq:boundary-five-groups-leading",
+      "article:eq:boundary-scalar-five-coefficients"
+    ],
+    "limits": "Does not prove existence of an unregulated unitary limit. Equal radii are not substituted before the joint soft limit.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/article_appC6_verify_soft_limit.py"
+    }
+  },
+  {
+    "script": "scripts/supplement_secs1_2_1_5_compare_recomputed_coefficients.py",
+    "kind": "new independent printed-coefficient comparison",
+    "origin": "NEW parser/comparator; preserved algebra and pure half-angle transform reused",
+    "outputs": [
+      "printed_vs_recomputed/checks.json"
+    ],
+    "inputs": "Unchanged V52 supplementary TeX; independently generated 54 pairs and 81 contacts",
+    "method": "Exact restored r,z functions compared with printed R maps, reconstruction, 46 crossed auxiliary terms and homogeneous lapse polynomials",
+    "function_publication_links": {
+      "read_printed": [
+        "supplement:sec:cat-contacts",
+        "supplement:sec:cat-pairs"
+      ],
+      "main": [
+        "supplement:sec:cat-component-table",
+        "supplement:sec:cat-contact-partitions",
+        "supplement:eq:cat-partition-homogeneous-polynomials",
+        "supplement:eq:cat-partition-auxiliary-minus"
+      ]
+    },
+    "publication_links": [
+      "supplement:sec:cat-contacts",
+      "supplement:sec:cat-pairs",
+      "supplement:sec:cat-component-table",
+      "supplement:sec:cat-contact-partitions",
+      "supplement:eq:cat-partition-homogeneous-polynomials",
+      "supplement:eq:cat-partition-auxiliary-minus"
+    ],
+    "limits": "Catalogue is never regenerated; tests carry exact per-coefficient source labels. No fictitious intermediate data.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "read_printed": "scripts/supplement_secs1_2_1_5_compare_recomputed_coefficients.py",
+      "main": "scripts/supplement_secs1_2_1_5_compare_recomputed_coefficients.py"
+    }
+  },
+  {
+    "script": "scripts/article_appC1_verify_mixed_normalization.py",
+    "kind": "new exact normalization checks",
+    "origin": "NEW implementation directly from unambiguous V52 equations; not found historical code",
+    "outputs": [
+      "mixed_normalization/checks.json"
+    ],
+    "inputs": "Generic real symmetric W and real antisymmetric Omega; positive kinetic matrix; simple positive root, positive nonzero norm",
+    "method": "Independent canonical action boundary check, Euler differentiation, symplectic identity, determinant and simple-pole polynomial remainders",
+    "function_publication_links": {
+      "main": [
+        "article:eq:v34-canonical-matrices",
+        "article:eq:v34-antisymmetric-matrix",
+        "article:eq:v34-canonical-frequency",
+        "article:eq:v34-canonical-action",
+        "article:eq:v34-canonical-evolution",
+        "article:eq:v34-symplectic-norm",
+        "article:eq:v34-frequency-determinant",
+        "article:eq:v34-frequency-roots",
+        "article:eq:v34-spectral-residue",
+        "article:eq:v34-group-velocity"
+      ]
+    },
+    "publication_links": [
+      "article:eq:v34-canonical-matrices",
+      "article:eq:v34-antisymmetric-matrix",
+      "article:eq:v34-canonical-frequency",
+      "article:eq:v34-canonical-action",
+      "article:eq:v34-canonical-evolution",
+      "article:eq:v34-symplectic-norm",
+      "article:eq:v34-frequency-determinant",
+      "article:eq:v34-frequency-roots",
+      "article:eq:v34-spectral-residue",
+      "article:eq:v34-group-velocity"
+    ],
+    "limits": "11 identities; no full independent-matter mixed scattering spectrum or all-background gravitational correction is computed.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "main": "scripts/article_appC1_verify_mixed_normalization.py"
+    }
+  },
+  {
+    "script": "scripts/article_appC_verify_finite_time_and_nonlinear_identities.py",
+    "kind": "restored exact regression driver",
+    "origin": "NEW explicit driver of 13 preserved noncom_original.py test functions",
+    "outputs": [
+      "engine_regressions/checks.json",
+      "engine_regressions/results.json"
+    ],
+    "inputs": "Embedded exact polynomials and special ADM configurations in lib/article_appC_noncom_engine.py",
+    "method": "338 exact tests, including direct ADM points, finite-time/scalar angular/homogeneous and nonlinear identities",
+    "function_publication_links": {
+      "test_radiation_expansion": [
+        "article:eq:v34r-exact-scalar-density",
+        "article:eq:v34r-exact-gravity-density",
+        "article:eq:v34r-extrinsic-density",
+        "article:eq:v34r-nonzero-constraints"
+      ],
+      "test_general_Legendre_transform": [
+        "article:eq:v33-legendre-contact"
+      ],
+      "test_complete_example": [
+        "article:eq:radiation-noncom-check-momenta"
+      ],
+      "test_time_integrals": [
+        "article:eq:v34-elementary-single",
+        "article:eq:v34-elementary-ordered",
+        "article:eq:v34-single-time-series",
+        "article:eq:v34-ordered-time-series",
+        "article:eq:v34-time-order-identity"
+      ],
+      "test_signed_Legendre_transform": [
+        "article:eq:v33-legendre-contact",
+        "article:eq:v34r-global-reduction"
+      ],
+      "test_homogeneous_and_state": [
+        "article:eq:v34r-global-free-flow",
+        "article:eq:v34-global-contraction"
+      ],
+      "test_generic_scalar_contact": [
+        "article:eq:v34-scalar-leading-contact",
+        "article:eq:v34-scalar-equal-radii-contact"
+      ],
+      "test_direct_com": [
+        "article:eq:radiation-contact-decomposition",
+        "article:eq:v34-scalar-equal-radii-contact"
+      ],
+      "test_angular_projection": [
+        "article:eq:v34-angular-exchange-series",
+        "article:eq:v34-angular-contact-series"
+      ],
+      "test_radial_kernel": [
+        "article:eq:radiation-cubic-source-definition"
+      ],
+      "test_channel_count_and_leakage": [
+        "article:eq:v33-channel-counts",
+        "article:eq:v34-finite-time-leakage"
+      ],
+      "test_nonlinear": [
+        "article:eq:v34-crossing-series-H",
+        "article:eq:v34-crossing-series-L",
+        "article:eq:v34r-Bianchi-monotonicity"
+      ],
+      "test_simple_wave": [
+        "article:eq:v34r-simple-wave-equation",
+        "article:eq:v34r-simple-wave-characteristics"
+      ]
+    },
+    "publication_links": [
+      "article:eq:v34r-exact-scalar-density",
+      "article:eq:v34r-exact-gravity-density",
+      "article:eq:v34r-extrinsic-density",
+      "article:eq:v34r-nonzero-constraints",
+      "article:eq:v33-legendre-contact",
+      "article:eq:radiation-noncom-check-momenta",
+      "article:eq:v34-elementary-single",
+      "article:eq:v34-elementary-ordered",
+      "article:eq:v34-single-time-series",
+      "article:eq:v34-ordered-time-series",
+      "article:eq:v34-time-order-identity",
+      "article:eq:v34r-global-reduction",
+      "article:eq:v34r-global-free-flow",
+      "article:eq:v34-global-contraction",
+      "article:eq:v34-scalar-leading-contact",
+      "article:eq:v34-scalar-equal-radii-contact",
+      "article:eq:radiation-contact-decomposition",
+      "article:eq:v34-angular-exchange-series",
+      "article:eq:v34-angular-contact-series",
+      "article:eq:radiation-cubic-source-definition",
+      "article:eq:v33-channel-counts",
+      "article:eq:v34-finite-time-leakage",
+      "article:eq:v34-crossing-series-H",
+      "article:eq:v34-crossing-series-L",
+      "article:eq:v34r-Bianchi-monotonicity",
+      "article:eq:v34r-simple-wave-equation",
+      "article:eq:v34r-simple-wave-characteristics"
+    ],
+    "limits": "Per-function scope only. Scalar j=0..8 moments are separate from the 74 mixed angular positions. No regulator-free S matrix.",
+    "scientific_version": "V52",
+    "computational_release": "V52-R1",
+    "function_locations": {
+      "test_radiation_expansion": "lib/article_appC_noncom_engine.py",
+      "test_general_Legendre_transform": "lib/article_appC_noncom_engine.py",
+      "test_complete_example": "lib/article_appC_noncom_engine.py",
+      "test_time_integrals": "lib/article_appC_noncom_engine.py",
+      "test_signed_Legendre_transform": "lib/article_appC_noncom_engine.py",
+      "test_homogeneous_and_state": "lib/article_appC_noncom_engine.py",
+      "test_generic_scalar_contact": "lib/article_appC_noncom_engine.py",
+      "test_direct_com": "lib/article_appC_noncom_engine.py",
+      "test_angular_projection": "lib/article_appC_noncom_engine.py",
+      "test_radial_kernel": "lib/article_appC_noncom_engine.py",
+      "test_channel_count_and_leakage": "lib/article_appC_noncom_engine.py",
+      "test_nonlinear": "lib/article_appC_noncom_engine.py",
+      "test_simple_wave": "lib/article_appC_noncom_engine.py"
+    }
+  }
+]

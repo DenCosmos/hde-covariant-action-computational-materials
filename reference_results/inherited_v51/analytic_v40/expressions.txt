@@ -1,0 +1,65 @@
+K_ell
+-6*H*M**2*chi/(L*(2*H*L*M**2*q + chi*(-H*L + 2)))
+
+C_ell
+-chi*(-6*H**2*M**2 + 2*H*L*M**2*q + chi*(-H*L + 2) - chi)/(L*(2*H*L*M**2*q + chi*(-H*L + 2)))
+
+V_ell
+-(12*G1*H**3*L**2*M**4*q - 6*G1*H**3*L**2*M**2*chi + 12*G1*H**2*L*M**2*chi + 36*H**4*M**4*chi - 24*H**3*L*M**4*chi*q + 12*H**3*L*M**2*chi**2 - 12*H**2*M**2*chi**2 + chi**3)/(6*H*L*M**2*(2*H*L*M**2*q - H*L*chi + 2*chi))
+
+W_ell
+(36*G1*H**5*L**3*M**6*q - 36*G1*H**4*L**2*M**6*q + 12*G1*H**3*L**3*M**6*q**2 + 12*G1*H**2*L**2*M**4*chi*q - 3*G1*H**2*L**2*M**2*chi**2 + 6*G1*H*L*M**2*chi**2 - 36*H**5*L**2*M**4*chi**2 + 72*H**4*L*M**6*chi*q + 72*H**4*L*M**4*chi**2 - 12*H**3*L**2*M**6*chi*q**2 - 3*H**3*L**2*M**2*chi**3 + 36*H**3*M**4*chi**2 - 12*H**2*L*M**4*chi**2*q + 18*H**2*L*M**2*chi**3 - 6*H*M**2*chi**3 + L*chi**4)/(3*H*L**2*M**2*(2*H*L*M**2*q - H*L*chi + 2*chi)**2)
+
+K1_crossing
+-3*G1*(H*L - 1)/(L**2*q)
+
+C1_crossing
+-G1*(-3*H + L*q)*(H*L - 1)/(L**2*q)
+
+W0_crossing
+G1*(3*H**2*L - 3*H + L*q)/(L**2*q)
+
+m_can_squared_over_H_squared
+-(-48*delta**4*n**3 + 432*delta**4*n**2 - 1296*delta**4*n + 1296*delta**4 - 144*delta**3*n**3 + 1840*delta**3*n**2 - 7040*delta**3*n + 8448*delta**3 + 7*delta**2*n**4 - 300*delta**2*n**3 + 3672*delta**2*n**2 - 15808*delta**2*n + 21664*delta**2 + 10*delta*n**4 - 324*delta*n**3 + 3600*delta*n**2 - 16032*delta*n + 24320*delta + 4*n**4 - 120*n**3 + 1300*n**2 - 6000*n + 10000)/(16*(delta + 1)**2*(2*delta*n - 6*delta + n - 10)**2)
+
+dimensionless_G
+3*n*y**(-n/2 - 1) + 3*(4 - n)/y**n
+
+dimensionless_Lyapunov
+n*y**(3 - n/2)/(n - 6) + y**2*(h*y - 1)**2/2 + y**2 - y**(4 - n)/2
+
+generator_coefficients
+pL: epsilon_dot-N*K*epsilon/3+L^4 Div(L^-3 A)/3; C: D_t eta-gamma; Ci: A^i-xi^i; pN: D_t gamma; pi: D_t xi^i
+
+X1
+-alpha*v**2 + u*v
+
+X2
+3*alpha**2*v**2/2 - 2*alpha*u*v - g2/2 + u**2/2 - v*w
+
+X3
+-2*alpha**3*v**2 + 3*alpha**2*u*v - alpha*u**2 + w*(2*alpha*v - u)
+
+X4
+5*alpha**4*v**2/2 - 4*alpha**3*u*v + 3*alpha**2*u**2/2 + w**2/2 + w*(-3*alpha**2*v + 2*alpha*u)
+
+Jalpha_matter
+-P01*g2 + Q**2*(P20 - P21*v**2)/2 - Q*(P11 + P12*v**2)*(-alpha*v**2 + u*v) + (-P01 - P02*v**2)*(3*alpha**2*v**2/2 - 2*alpha*u*v - g2/2 + u**2/2 - v*w) - (3*P02 + P03*v**2)*(-alpha*v**2 + u*v)**2/2
+
+Ji_matter_divided_by_grad_Q
+-P11*Q*v - (P01 + P02*v**2)*(-alpha*v + u)
+
+complete_P4
+P01*(5*alpha**4*v**2/2 - 4*alpha**3*u*v + 3*alpha**2*u**2/2 + w**2/2 + w*(-3*alpha**2*v + 2*alpha*u)) + P02*((-alpha*v**2 + u*v)*(-2*alpha**3*v**2 + 3*alpha**2*u*v - alpha*u**2 + w*(2*alpha*v - u)) + (3*alpha**2*v**2/2 - 2*alpha*u*v - g2/2 + u**2/2 - v*w)**2/2) + P03*(-alpha*v**2 + u*v)**2*(3*alpha**2*v**2/2 - 2*alpha*u*v - g2/2 + u**2/2 - v*w)/2 + P04*(-alpha*v**2 + u*v)**4/24 + P11*Q*(-2*alpha**3*v**2 + 3*alpha**2*u*v - alpha*u**2 + w*(2*alpha*v - u)) + P12*Q*(-alpha*v**2 + u*v)*(3*alpha**2*v**2/2 - 2*alpha*u*v - g2/2 + u**2/2 - v*w) + P13*Q*(-alpha*v**2 + u*v)**3/6 + P21*Q**2*(3*alpha**2*v**2/2 - 2*alpha*u*v - g2/2 + u**2/2 - v*w)/2 + P22*Q**2*(-alpha*v**2 + u*v)**2/4 + P31*Q**3*(-alpha*v**2 + u*v)/6 + P40*Q**4/24
+
+C_kappa
+9*(36513*kappa**6 + 4116912*kappa**5 + 84853720*kappa**4 + 596429568*kappa**3 + 1290442752*kappa**2 + 7739670528)/kappa**6
+
+C_kappa_at_0.01
+69658201525983452349417.00
+
+E_upper_over_M
+6.155409289882015099333581e-19
+
+energy_powers
+[-2, -1, 0, 1, 2, 3, 4]

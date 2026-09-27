@@ -1,0 +1,137 @@
+--- GitHub_bundle/original_scripts/noncom_original.py
++++ lib/article_appC_noncom_engine.py
+@@ -1,15 +1,20 @@
+ #!/usr/bin/env python3
+ # -*- coding: utf-8 -*-
+-"""Точные символьные вычисления продолжения V31.
+-
+-Запуск: python verify_scattering_extension.py --output /path/to/results
+-Зависимость: SymPy. Файлы статьи или готовые таблицы не требуются.
+-Программа воспроизводит условное радиационное четырёхскалярное ядро,
+-угловые моменты, радиальный поперечный контакт и нелинейные тождества.
+-Это не вычисление общей физической инфракрасно конечной S-матрицы.
+-Алгебраический движок разложения ADM адаптирован из приложенного
+-verify_finite_time_scattering.py; однородная связь выведена отдельно.
+-Все остатки проверяются точно, без численной аппроксимации.
++"""Exact ADM and finite-time verification engine for article V52, release V52-R1.
++A minimal local covariant action for holographic dark energy: constraints,
++perturbations, and nonlinear dynamics.
++Preserved scientific algebra from original_scripts/noncom_original.py.
++Appendices C.2-C.10; exact densities (342)-(349), fixed non-COM momenta (356),
++finite-time integrals (359)-(363), scalar angular and nonlinear controls.
++Method: multilinear nilpotent ADM polynomials over QQ(i,sqrt(2),sqrt(3));
++exact SymPy verification for the explicitly named test functions below.
++Inputs: Leg objects or embedded test configurations; no historical tables.
++Outputs: caller-selected JSON objects; execute the themed scripts rather than
++this legacy main entry point. See SCRIPT_REFERENCE_MAP.md for precise scope.
++Assumptions: U=0 radiation, positive finite time endpoints, explicit tensor
++norms, separately normalized homogeneous subsystem and state parameters.
++No general IR-finite multichannel S matrix or regulator-free unitarity claim.
++Dependencies: Python, SymPy. No LaTeX or network.
+ """
+ from __future__ import annotations
+ from dataclasses import dataclass
+@@ -414,6 +419,7 @@
+     return Poly(poly.r,d)
+ 
+ 
++# V52: article eq:v34r-exact-scalar-density (342); article eq:v34r-exact-gravity-density (343); article eq:v34r-extrinsic-density (344); article eq:v34r-nonzero-constraints (345).
+ def test_radiation_expansion():
+     print("Running test_radiation_expansion", flush=True)
+     t=sp.Symbol('eta',positive=True)
+@@ -453,6 +459,7 @@
+             check(f'complete_vww_without_time_integration_by_parts_{number}_{k}',lagrangian(ls).expr()-expected.expr())
+ 
+ 
++# V52: article eq:v33-legendre-contact (191).
+ def test_general_Legendre_transform():
+     print("Running test_general_Legendre_transform", flush=True)
+     eps=sp.Symbol('eps');p,q=sp.symbols('p q');u,v=sp.symbols('u v')
+@@ -469,6 +476,7 @@
+     check('two_field_Legendre_transform_independent',actual-expected)
+ 
+ 
++# V52: article eq:radiation-noncom-check-momenta (356).
+ def test_complete_example():
+     print("Running test_complete_example", flush=True)
+     ls=sample_legs((0,0,0,0));ct,h=contact(ls)
+@@ -531,6 +539,7 @@
+     return ct
+ 
+ 
++# V52: article eq:v34-elementary-single (359); article eq:v34-elementary-ordered (360); article eq:v34-single-time-series (361); article eq:v34-ordered-time-series (362); article eq:v34-time-order-identity (363).
+ def test_time_integrals():
+     print("Running test_time_integrals", flush=True)
+     T=sp.Symbol('T',positive=True)
+@@ -697,6 +706,7 @@
+             for j,p in enumerate(momenta)]
+ 
+ 
++# V52: article eq:radiation-contact-decomposition (351); article eq:v34-scalar-equal-radii-contact (358).
+ def test_direct_com():
+     print("Running test_direct_com", flush=True)
+     """Independent full ADM evaluations, not tests against a supplied table."""
+@@ -755,6 +765,7 @@
+     return sp.factor(out-4*h*h*sum(velocities)+14*h**3)
+ 
+ 
++# V52: article eq:v34-scalar-leading-contact (357); article eq:v34-scalar-equal-radii-contact (358).
+ def test_generic_scalar_contact():
+     print("Running test_generic_scalar_contact", flush=True)
+     """All-angle derivation by Gram matrices, independent of direct ADM points."""
+@@ -796,6 +807,7 @@
+     return {'bare_L4':str(sp.expand(bare)),'full_H4':str(target),'scalar_vertex':str(vs),'tensor_vertex':str(vt),'leading_amplitude':str(sp.factor(lead))}
+ 
+ 
++# V52: article eq:v33-legendre-contact (191); article eq:v34r-global-reduction (348).
+ def test_signed_Legendre_transform():
+     """Independent Legendre inversion with one negative global kinetic direction."""
+     eps=sp.Symbol('eps');p,q,u,v=sp.symbols('p q u v')
+@@ -813,6 +825,7 @@
+     check('new_signed_Legendre_transform',sp.expand(energy).coeff(eps,2)-expected)
+ 
+ 
++# V52: article eq:v34r-global-free-flow (400); article eq:v34-global-contraction (402).
+ def test_homogeneous_and_state():
+     print("Running test_homogeneous_and_state", flush=True)
+     n,g,u,b=sp.symbols('N g u b',positive=True);a=1+g*u
+@@ -873,6 +886,7 @@
+     return records
+ 
+ 
++# V52: article eq:v34-angular-exchange-series (374); article eq:v34-angular-contact-series (375).
+ def test_angular_projection():
+     print("Running test_angular_projection", flush=True)
+     z,q,h=sp.symbols('z q h',real=True);xx,yy=sp.symbols('x y',positive=True)
+@@ -915,6 +929,7 @@
+     return -2*((2*u-4*u**3)*Q+(u*u-u**4)*sp.diff(Q,u))-m2-2*u*m1-(3*u*u-1)*m0
+ 
+ 
++# V52: article eq:radiation-cubic-source-definition (352).
+ def test_radial_kernel():
+     print("Running test_radial_kernel", flush=True)
+     k,l,z,h=sp.symbols('k l z h',real=True,positive=True);c=1/sp.sqrt(3)
+@@ -942,6 +957,7 @@
+     return data
+ 
+ 
++# V52: article eq:v33-channel-counts (194); article eq:v34-finite-time-leakage (411).
+ def test_channel_count_and_leakage():
+     print("Running test_channel_count_and_leakage", flush=True)
+     def count(nscalar,j):
+@@ -975,6 +991,7 @@
+     return data
+ 
+ 
++# V52: article eq:v34-crossing-series-H (428); article eq:v34-crossing-series-L (429); article eq:v34r-Bianchi-monotonicity (437).
+ def test_nonlinear():
+     print("Running test_nonlinear", flush=True)
+     L,chi=sp.symbols('L chi',positive=True);rho,U,Up,Gp=sp.symbols('rho U Up Gp')
+@@ -1003,6 +1020,7 @@
+     return {'D_rho':str(Dr),'D_chi':str(Dchi),'D_L':str(DL),'Taylor_A':str(A),'Taylor_B':str(B)}
+ 
+ 
++# V52: article eq:v34r-simple-wave-equation (431); article eq:v34r-simple-wave-characteristics (432).
+ def test_simple_wave():
+     print("Running test_simple_wave", flush=True)
+     # Conformal invariance of sqrt(-g)*X_psi^2 in four dimensions.

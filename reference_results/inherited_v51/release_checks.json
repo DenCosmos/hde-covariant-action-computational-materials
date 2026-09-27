@@ -1,0 +1,303 @@
+{
+  "passed": true,
+  "checks": 44,
+  "labels": 1669,
+  "reference_uses": 666,
+  "bibliography_records": 67,
+  "figures": [
+    "strong_coupling_scale_standard.pdf",
+    "pole_crossing_c12.pdf",
+    "phase_portrait_c12.pdf"
+  ],
+  "article_equations": 477,
+  "catalogue_equations": 1145,
+  "tests": [
+    {
+      "test": "All LaTeX labels are unique",
+      "passed": true
+    },
+    {
+      "test": "All LaTeX cross-references resolve",
+      "passed": true
+    },
+    {
+      "test": "67 unique external bibliography records",
+      "passed": true
+    },
+    {
+      "test": "Every citation resolves; every bibliography entry is cited",
+      "passed": true
+    },
+    {
+      "test": "Every LaTeX input file is present",
+      "passed": true
+    },
+    {
+      "test": "All three included figure files are present",
+      "passed": true
+    },
+    {
+      "test": "A single top-level document",
+      "passed": true
+    },
+    {
+      "test": "No obsolete external catalogue citation",
+      "passed": true
+    },
+    {
+      "test": "477 article/appendix equations and 1145 catalogue equations",
+      "passed": true
+    },
+    {
+      "test": "Six late-time numerical rows located in the manuscript",
+      "passed": true
+    },
+    {
+      "test": "Unique late-time CSV match n=10, interval=[4,5]",
+      "passed": true
+    },
+    {
+      "test": "Printed late-time value agrees to all displayed decimals: 0.9996662768",
+      "passed": true
+    },
+    {
+      "test": "Unique late-time CSV match n=10, interval=[6,7]",
+      "passed": true
+    },
+    {
+      "test": "Printed late-time value agrees to all displayed decimals: 0.9999938130",
+      "passed": true
+    },
+    {
+      "test": "Unique late-time CSV match n=10, interval=[7,8]",
+      "passed": true
+    },
+    {
+      "test": "Printed late-time value agrees to all displayed decimals: 0.9999991617",
+      "passed": true
+    },
+    {
+      "test": "Unique late-time CSV match n=12, interval=[2,3]",
+      "passed": true
+    },
+    {
+      "test": "Printed late-time value agrees to all displayed decimals: 0.7508660935",
+      "passed": true
+    },
+    {
+      "test": "Unique late-time CSV match n=12, interval=[3,4]",
+      "passed": true
+    },
+    {
+      "test": "Printed late-time value agrees to all displayed decimals: 0.7500255675",
+      "passed": true
+    },
+    {
+      "test": "Unique late-time CSV match n=12, interval=[4,5]",
+      "passed": true
+    },
+    {
+      "test": "Printed late-time value agrees to all displayed decimals: 0.7499976480",
+      "passed": true
+    },
+    {
+      "test": "Six crossing numerical rows located in the manuscript",
+      "passed": true
+    },
+    {
+      "test": "Unique crossing CSV match mode=1, power=4",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: 0.273174272469",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: 0.272499951022",
+      "passed": true
+    },
+    {
+      "test": "Unique crossing CSV match mode=1, power=8",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: 0.272500910186",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: 0.272499951022",
+      "passed": true
+    },
+    {
+      "test": "Unique crossing CSV match mode=1, power=12",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: 0.272499951018",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: 0.272499951022",
+      "passed": true
+    },
+    {
+      "test": "Unique crossing CSV match mode=2, power=4",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: -0.021830859433",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: -0.021384301713",
+      "passed": true
+    },
+    {
+      "test": "Unique crossing CSV match mode=2, power=8",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: -0.021384416513",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: -0.021384301713",
+      "passed": true
+    },
+    {
+      "test": "Unique crossing CSV match mode=2, power=12",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: -0.021384301713",
+      "passed": true
+    },
+    {
+      "test": "Printed crossing value agrees to all displayed decimals: -0.021384301713",
+      "passed": true
+    },
+    {
+      "test": "All 18 saddle parameter combinations reproduced",
+      "passed": true
+    },
+    {
+      "test": "Printed maximum saddle error matches the rerun",
+      "passed": true
+    },
+    {
+      "test": "Printed saddle tolerance-change estimate matches the rerun",
+      "passed": true
+    }
+  ],
+  "numerical_comparisons": [
+    {
+      "kind": "late",
+      "printed": "0.9996662768",
+      "rerun": 0.9996662767826658,
+      "tolerance": 5.1000000000000005e-11
+    },
+    {
+      "kind": "late",
+      "printed": "0.9999938130",
+      "rerun": 0.9999938130157815,
+      "tolerance": 5.1000000000000005e-11
+    },
+    {
+      "kind": "late",
+      "printed": "0.9999991617",
+      "rerun": 0.9999991617276119,
+      "tolerance": 5.1000000000000005e-11
+    },
+    {
+      "kind": "late",
+      "printed": "0.7508660935",
+      "rerun": 0.7508660934568329,
+      "tolerance": 5.1000000000000005e-11
+    },
+    {
+      "kind": "late",
+      "printed": "0.7500255675",
+      "rerun": 0.750025567457193,
+      "tolerance": 5.1000000000000005e-11
+    },
+    {
+      "kind": "late",
+      "printed": "0.7499976480",
+      "rerun": 0.7499976479594422,
+      "tolerance": 5.1000000000000005e-11
+    },
+    {
+      "kind": "d_ell_d_log_minus_chi",
+      "printed": "0.273174272469",
+      "rerun": 0.2731742724694289,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "flux_log_coefficient",
+      "printed": "0.272499951022",
+      "rerun": 0.2724999510216163,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "d_ell_d_log_minus_chi",
+      "printed": "0.272500910186",
+      "rerun": 0.2725009101858648,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "flux_log_coefficient",
+      "printed": "0.272499951022",
+      "rerun": 0.2724999510216163,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "d_ell_d_log_minus_chi",
+      "printed": "0.272499951018",
+      "rerun": 0.27249995101792435,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "flux_log_coefficient",
+      "printed": "0.272499951022",
+      "rerun": 0.2724999510216163,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "d_ell_d_log_minus_chi",
+      "printed": "-0.021830859433",
+      "rerun": -0.021830859433169616,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "flux_log_coefficient",
+      "printed": "-0.021384301713",
+      "rerun": -0.021384301713332835,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "d_ell_d_log_minus_chi",
+      "printed": "-0.021384416513",
+      "rerun": -0.021384416512534903,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "flux_log_coefficient",
+      "printed": "-0.021384301713",
+      "rerun": -0.021384301713332835,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "d_ell_d_log_minus_chi",
+      "printed": "-0.021384301713",
+      "rerun": -0.021384301713043116,
+      "tolerance": 5.1e-13
+    },
+    {
+      "kind": "flux_log_coefficient",
+      "printed": "-0.021384301713",
+      "rerun": -0.021384301713332835,
+      "tolerance": 5.1e-13
+    }
+  ],
+  "scope": "Source connectivity and transcription of numerical tables, not a complete independent proof."
+}

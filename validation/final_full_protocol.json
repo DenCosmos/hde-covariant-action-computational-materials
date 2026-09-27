@@ -1,0 +1,22 @@
+{
+  "command": [
+    "@LOCAL_WORKSPACE@/venv/bin/python",
+    "-u",
+    "@LOCAL_WORKSPACE@/final portability/V52 R1 frozen/run_all.py",
+    "--mode",
+    "full",
+    "--workers",
+    "4",
+    "--output",
+    "@LOCAL_WORKSPACE@/final portability/V52 R1 frozen/results/full",
+    "--article-source",
+    "@LOCAL_WORKSPACE@/input/V52_complete_package/article/source/main.tex",
+    "--resume"
+  ],
+  "returncode": 0,
+  "seconds": 421.6426847460002,
+  "resume": true,
+  "fresh_zero_run": false,
+  "source_frozen": true,
+  "note": "Heavy records were newly generated in preceding current-session runs. This final run validates checkpoints and reruns audits/derived calculations. Initial incomplete runs are retained separately."
+}

@@ -1,0 +1,50 @@
+--- GitHub_bundle/original_scripts/verify_radial_controls_v40.py
++++ scripts/article_appC3_verify_radial_controls.py
+@@ -1,21 +1,41 @@
+ #!/usr/bin/env python3
+-"""Т07: независимые контрольные формулы кубических концов при r=1.
++"""V52-R1: article appC3 verify radial controls.
++Article: A minimal local covariant action for holographic dark energy:
++constraints, perturbations, and nonlinear dynamics (scientific version V52).
++Method: exact rational ADM, source contraction, or coefficient validation,
++as implemented below; derived from original_scripts/verify_radial_controls_v40.py unchanged in
++scientific algebra. Only imports, paths, checkpoint guards and reporting adapted.
++Assumptions: radiation background U=0, k=g_R=1, r>0, t=tan(theta/2)>0.
++External real TT tensors have norm 2. Internal norms and homogeneous kinetic
++signs are retained explicitly. No regulator-free unitary S-matrix is asserted.
++Inputs and outputs: see SCRIPT_REFERENCE_MAP.md and REPRODUCIBILITY.md.
++Run: python scripts/article_appC3_verify_radial_controls.py (see --help for generator options).
++Dependencies: Python and SymPy; local lib modules. No network or LaTeX required.
+ 
+-Контрольные выражения взяты из прямого ADM-вычисления исходного комплекта
+-V37 (c03_contacts_and_time.test_direct_com). Это дополнение к проверке
+-общего r, а не замена совместного мягкого предела.
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article C.3, eq:radiation-cubic-source-definition (352).
++  article C.7, eq:v34-global-source-polynomials (401).
++Method: 18 scalar/tensor source and homogeneous checks, including six sampled crossing controls.
++Inputs: New pair records; explicit generic control formulas.
++Outputs below the selected results root: radial_generic/independent_controls.csv.
++Provenance: GitHub_bundle/original_scripts/verify_radial_controls_v40.py.
++Scope limit: Some controls are exact substitutions at selected points, not identities at every angle.
+ """
++import sys
+ from pathlib import Path
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"lib"))
++from release_paths import RESULTS
+ import json,csv
+ import sympy as s
+-from assemble_radial_v40 import load
++from supplement_sec1_2_assemble_contacts import load
+ import radial_coeff_algebra as a
+-B=Path(__file__).resolve().parents[1];D=B/'results/radial_generic';r,t=a.RADIUS,a.HALF_ANGLE;x=s.Symbol('x',positive=True);CHECK=[]
++B=Path(__file__).resolve().parents[1];D=RESULTS/'radial_generic';r,t=a.RADIUS,a.HALF_ANGLE;x=s.Symbol('x',positive=True);CHECK=[]
+ def check(name,ex):
+     v=s.simplify(s.expand(ex))
+     if v!=0:raise AssertionError((name,v))
+     CHECK.append([name,'PASS','0'])
+ def pol(d):return sum(v.expr()*x**p for p,v in load(d).items())
++# V52: article eq:radiation-cubic-source-definition (352); article eq:v34-global-source-polynomials (401).
+ def main():
+     d=json.loads((D/'pair/0200.json').read_text())
+     for z in [s.S.Zero,s.Rational(1,3),-s.Rational(1,3)]:

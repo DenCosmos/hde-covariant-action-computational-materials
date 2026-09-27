@@ -1,0 +1,505 @@
+{
+  "input_fingerprint": "53c3e80e380ee7e9e2818fe3e0af2cd72f578f69ca8c68bde6205588dd944ada",
+  "component": "2121",
+  "computation_seconds": 2.0594779079999626,
+  "data": {
+    "external_species": [
+      2,
+      1,
+      2,
+      1
+    ],
+    "contact": {
+      "bare_L4": {
+        "-2": "-315/16"
+      },
+      "auxiliary_H4": {
+        "-4": "-285/64",
+        "-2": "-4997/32"
+      },
+      "legendre_H4": {
+        "-4": "171/32"
+      },
+      "full_H4": {
+        "-4": "57/64",
+        "-2": "-4367/32"
+      },
+      "partitions": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "auxiliary_H4": {},
+          "legendre_H4": {}
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "auxiliary_H4": {
+            "-4": "-15/64",
+            "-2": "-2303/32"
+          },
+          "legendre_H4": {
+            "-4": "9/32"
+          }
+        },
+        {
+          "pair": [
+            0,
+            3
+          ],
+          "auxiliary_H4": {
+            "-4": "-135/32",
+            "-2": "-1347/16"
+          },
+          "legendre_H4": {
+            "-4": "81/16"
+          }
+        }
+      ]
+    },
+    "exchange": [
+      {
+        "pair_late": [
+          0,
+          1
+        ],
+        "pair_early": [
+          2,
+          3
+        ],
+        "internal": 0,
+        "frequency": "2*sqrt(3)/3",
+        "A": "2*sqrt(3)/3 + 4",
+        "B": "-4 - 2*sqrt(3)/3",
+        "late_L3": {},
+        "early_L3": {},
+        "D_coefficients": {}
+      },
+      {
+        "pair_late": [
+          2,
+          3
+        ],
+        "pair_early": [
+          0,
+          1
+        ],
+        "internal": 0,
+        "frequency": "2*sqrt(3)/3",
+        "A": "-4 + 2*sqrt(3)/3",
+        "B": "4 - 2*sqrt(3)/3",
+        "late_L3": {},
+        "early_L3": {},
+        "D_coefficients": {}
+      },
+      {
+        "pair_late": [
+          0,
+          1
+        ],
+        "pair_early": [
+          2,
+          3
+        ],
+        "internal": 1,
+        "frequency": "2",
+        "A": "6",
+        "B": "-6",
+        "late_L3": {},
+        "early_L3": {},
+        "D_coefficients": {}
+      },
+      {
+        "pair_late": [
+          2,
+          3
+        ],
+        "pair_early": [
+          0,
+          1
+        ],
+        "internal": 1,
+        "frequency": "2",
+        "A": "-2",
+        "B": "2",
+        "late_L3": {},
+        "early_L3": {},
+        "D_coefficients": {}
+      },
+      {
+        "pair_late": [
+          0,
+          1
+        ],
+        "pair_early": [
+          2,
+          3
+        ],
+        "internal": 2,
+        "frequency": "2",
+        "A": "6",
+        "B": "-6",
+        "late_L3": {
+          "-1": "-15*sqrt(6)"
+        },
+        "early_L3": {
+          "-1": "-15*sqrt(6)"
+        },
+        "D_coefficients": {
+          "-1,-1": "675/2"
+        }
+      },
+      {
+        "pair_late": [
+          2,
+          3
+        ],
+        "pair_early": [
+          0,
+          1
+        ],
+        "internal": 2,
+        "frequency": "2",
+        "A": "-2",
+        "B": "2",
+        "late_L3": {
+          "-1": "-15*sqrt(6)"
+        },
+        "early_L3": {
+          "-1": "-15*sqrt(6)"
+        },
+        "D_coefficients": {
+          "-1,-1": "675/2"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          2
+        ],
+        "pair_early": [
+          1,
+          3
+        ],
+        "internal": 0,
+        "frequency": "sqrt(2)",
+        "A": "sqrt(2)",
+        "B": "-sqrt(2)",
+        "late_L3": {
+          "-3": "2",
+          "-2": "3*sqrt(2)*I/2",
+          "-1": "5/2"
+        },
+        "early_L3": {
+          "-3": "1/4",
+          "-2": "-3*sqrt(2)*I/16",
+          "-1": "5/16"
+        },
+        "D_coefficients": {
+          "-3,-3": "sqrt(2)/8",
+          "-3,-2": "-3*I/16",
+          "-3,-1": "5*sqrt(2)/32",
+          "-2,-3": "3*I/16",
+          "-2,-2": "9*sqrt(2)/64",
+          "-2,-1": "15*I/64",
+          "-1,-3": "5*sqrt(2)/32",
+          "-1,-2": "-15*I/64",
+          "-1,-1": "25*sqrt(2)/128"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          3
+        ],
+        "pair_early": [
+          0,
+          2
+        ],
+        "internal": 0,
+        "frequency": "sqrt(2)",
+        "A": "sqrt(2)",
+        "B": "-sqrt(2)",
+        "late_L3": {
+          "-3": "1/4",
+          "-2": "3*sqrt(2)*I/16",
+          "-1": "5/16"
+        },
+        "early_L3": {
+          "-3": "2",
+          "-2": "-3*sqrt(2)*I/2",
+          "-1": "5/2"
+        },
+        "D_coefficients": {
+          "-3,-3": "sqrt(2)/8",
+          "-3,-2": "-3*I/16",
+          "-3,-1": "5*sqrt(2)/32",
+          "-2,-3": "3*I/16",
+          "-2,-2": "9*sqrt(2)/64",
+          "-2,-1": "15*I/64",
+          "-1,-3": "5*sqrt(2)/32",
+          "-1,-2": "-15*I/64",
+          "-1,-1": "25*sqrt(2)/128"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          2
+        ],
+        "pair_early": [
+          1,
+          3
+        ],
+        "internal": 1,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-1": "59*sqrt(6)/4"
+        },
+        "early_L3": {
+          "-1": "-481*sqrt(6)/32"
+        },
+        "D_coefficients": {
+          "-1,-1": "-28379*sqrt(6)/256"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          3
+        ],
+        "pair_early": [
+          0,
+          2
+        ],
+        "internal": 1,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-1": "-481*sqrt(6)/32"
+        },
+        "early_L3": {
+          "-1": "59*sqrt(6)/4"
+        },
+        "D_coefficients": {
+          "-1,-1": "-28379*sqrt(6)/256"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          2
+        ],
+        "pair_early": [
+          1,
+          3
+        ],
+        "internal": 2,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-1": "-21"
+        },
+        "early_L3": {
+          "-1": "-141/8"
+        },
+        "D_coefficients": {
+          "-1,-1": "987*sqrt(6)/32"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          3
+        ],
+        "pair_early": [
+          0,
+          2
+        ],
+        "internal": 2,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-1": "-141/8"
+        },
+        "early_L3": {
+          "-1": "-21"
+        },
+        "D_coefficients": {
+          "-1,-1": "987*sqrt(6)/32"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          3
+        ],
+        "pair_early": [
+          1,
+          2
+        ],
+        "internal": 0,
+        "frequency": "sqrt(2)",
+        "A": "sqrt(2)",
+        "B": "-sqrt(2)",
+        "late_L3": {
+          "-3": "-3",
+          "-2": "-9*sqrt(2)*I/4",
+          "-1": "-15/4"
+        },
+        "early_L3": {
+          "-3": "-3",
+          "-2": "9*sqrt(2)*I/4",
+          "-1": "-15/4"
+        },
+        "D_coefficients": {
+          "-3,-3": "9*sqrt(2)/4",
+          "-3,-2": "-27*I/8",
+          "-3,-1": "45*sqrt(2)/16",
+          "-2,-3": "27*I/8",
+          "-2,-2": "81*sqrt(2)/32",
+          "-2,-1": "135*I/32",
+          "-1,-3": "45*sqrt(2)/16",
+          "-1,-2": "-135*I/32",
+          "-1,-1": "225*sqrt(2)/64"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          2
+        ],
+        "pair_early": [
+          0,
+          3
+        ],
+        "internal": 0,
+        "frequency": "sqrt(2)",
+        "A": "sqrt(2)",
+        "B": "-sqrt(2)",
+        "late_L3": {
+          "-3": "-3",
+          "-2": "-9*sqrt(2)*I/4",
+          "-1": "-15/4"
+        },
+        "early_L3": {
+          "-3": "-3",
+          "-2": "9*sqrt(2)*I/4",
+          "-1": "-15/4"
+        },
+        "D_coefficients": {
+          "-3,-3": "9*sqrt(2)/4",
+          "-3,-2": "-27*I/8",
+          "-3,-1": "45*sqrt(2)/16",
+          "-2,-3": "27*I/8",
+          "-2,-2": "81*sqrt(2)/32",
+          "-2,-1": "135*I/32",
+          "-1,-3": "45*sqrt(2)/16",
+          "-1,-2": "-135*I/32",
+          "-1,-1": "225*sqrt(2)/64"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          3
+        ],
+        "pair_early": [
+          1,
+          2
+        ],
+        "internal": 1,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-1": "63*sqrt(6)/8"
+        },
+        "early_L3": {
+          "-1": "63*sqrt(6)/8"
+        },
+        "D_coefficients": {
+          "-1,-1": "3969*sqrt(6)/128"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          2
+        ],
+        "pair_early": [
+          0,
+          3
+        ],
+        "internal": 1,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-1": "63*sqrt(6)/8"
+        },
+        "early_L3": {
+          "-1": "63*sqrt(6)/8"
+        },
+        "D_coefficients": {
+          "-1,-1": "3969*sqrt(6)/128"
+        }
+      },
+      {
+        "pair_late": [
+          0,
+          3
+        ],
+        "pair_early": [
+          1,
+          2
+        ],
+        "internal": 2,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-1": "-147/4"
+        },
+        "early_L3": {
+          "-1": "147/4"
+        },
+        "D_coefficients": {
+          "-1,-1": "-7203*sqrt(6)/64"
+        }
+      },
+      {
+        "pair_late": [
+          1,
+          2
+        ],
+        "pair_early": [
+          0,
+          3
+        ],
+        "internal": 2,
+        "frequency": "sqrt(6)",
+        "A": "sqrt(6)",
+        "B": "-sqrt(6)",
+        "late_L3": {
+          "-1": "147/4"
+        },
+        "early_L3": {
+          "-1": "-147/4"
+        },
+        "D_coefficients": {
+          "-1,-1": "-7203*sqrt(6)/64"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+"""Т08: однородные обмены, граничный словарь и проверка полноты 74 блоков.
+
+Однородные источники свёртываются в фиксированном изотропном гауссовом
+состоянии. Тензорные нормы положительны; знак скалярного свободного движения
+входит через Y=sigma*((x-x_i)*A+B), а не через отрицательную ковариацию.
+"""
+from __future__ import annotations
+import argparse,json,csv,math,itertools
+from pathlib import Path
+import sympy as sp
+import radial_coeff_algebra as a
+from assemble_radial_v40 import decode_file,load
+from angular_coefficients_v40 import channels,cweights,encoded_r
+from build_mathematical_catalogue_v40 import to_z
+B=Path(__file__).resolve().parents[1];D=B/'results/radial_generic';OUT=B/'results/angular_v40';R,Z=a.F.gens
+
+def W(j,m,n):
+    val=a.F.zero
+    for b in range(2*j+1):
+        ar=[j+n-b,b,m-n+b,j-m-b]
+        if min(ar)<0:continue
+        val+=sp.Rational((-1)**(m-n+b),2**j*math.prod(math.factorial(t) for t in ar))*(1+Z)**(j+(n-m)//2-b)*(1-Z)**((m-n)//2+b)
+    return a.Coeff({(0,0):val})
+def angular_moment(v):
+    out=a.Z
+    for phase,rat in v.d.items():
+        assert all(mon[1]==0 for mon in rat.denom),'Global source is not a z polynomial'
+        de=a.F(rat.denom)
+        for mon,co in rat.numer.items():
+            if mon[1]%2==0:out+=a.Coeff({phase:2*co*R**mon[0]/((mon[1]+1)*de)})
+    return out
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--j',type=int,nargs='+',default=[0,2,3,4],help='Nonnegative angular momenta; default reproduces the 74 published positions.')
+    args=parser.parse_args()
+    if any(j<0 for j in args.j):parser.error('j must be nonnegative')
+    js=list(dict.fromkeys(args.j))
+    pairs={p.stem:decode_file(p) for p in (D/'pair').glob('*.json') if p.stem[:2] in ['01','23']}
+    # Products of the global Cartesian sources, before helicity projection.
+    cache={}
+    for keytuple in itertools.product(range(3),repeat=4):
+        key=''.join(map(str,keytuple));cache[key]={}
+        for late,early in [('01','23'),('23','01')]:
+            da=pairs[late+key[int(late[0])]+key[int(late[1])]];db=pairs[early+key[int(early[0])]+key[int(early[1])]]
+            for I in range(6):
+              for form in ['AA','AB','BA','BB']:
+                vals={}
+                norm=1 if I==0 else da['norms'][I]
+                for p,v in da[form[0]][I].items():
+                    for s,w in db[form[1]][I].items():
+                        if not v*w:continue
+                        even,odd=to_z(v*w/norm)
+                        assert not odd,(key,late,I,form,'global half-angle parity')
+                        vals[p,s]=even
+                cache[key][late,I,form]=vals
+    rows=[];checks=0
+    for j in js:
+        ch=channels(j)
+        for ia,inc in enumerate(ch):
+          for ic,out in enumerate(ch):
+            path=OUT/f'j{j}_{ic}_{ia}.json'
+            if not path.exists():raise FileNotFoundError(path)
+            obj=json.loads(path.read_text());hs=inc+out;m=inc[0]-inc[1];n=out[0]-out[1];wig=W(j,m,n)
+            if 'global_exchange' not in obj:
+                glob=[]
+                for late,early in [('01','23'),('23','01')]:
+                  for I in range(6):
+                    rec={'late':list(map(int,late)),'early':list(map(int,early)),'internal':I,'kinetic_sign':-1 if I==0 else 1,'forms':{}}
+                    for form in ['AA','AB','BA','BB']:
+                        acc={}
+                        for choices in itertools.product(*(cweights(h) for h in hs)):
+                            key=''.join(str(t[0]) for t in choices);weight=a.O
+                            for t in choices:weight*=t[1]
+                            for deg,v in cache[key][late,I,form].items():acc[deg]=acc.get(deg,a.Z)+weight*v
+                        rec['forms'][form]={f'{p},{s}':encoded_r(angular_moment(wig*v)) for (p,s),v in acc.items() if angular_moment(wig*v)}
+                    glob.append(rec)
+                obj['global_exchange']=glob
+                obj['global_dictionary']='Each form is integral W(z)*A_a,p A_b,s etc / positive tensor norm. Multiply by p_jmn and the unchanged Gaussian X,Y covariance form; keep V normalization separate.'
+            # Eliminate fixed endpoint-degree indices. The dictionaries in the
+            # manuscript supply x_i^-1 and x_f^-1, exactly once.
+            for rec in obj['boundary']:
+                if 'fI_p_l' in rec:continue
+                rec['fI_p_l']={','.join(k.split(',')[1:]):v for k,v in rec.pop('fI').items()}
+                rec['If_p_l']={','.join([k.split(',')[0],k.split(',')[2]]):v for k,v in rec.pop('If').items()}
+                rec['ff_l']={k.split(',')[2]:v for k,v in rec.pop('ff').items()}
+            assert len(obj['exchange'])==12 and len(obj['global_exchange'])==12 and len(obj['boundary'])==4
+            checks+=3
+            path.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n')
+            rows.append([j,ic,ia,*hs,m,n,path.name])
+            print(path.stem,'global and boundary dictionaries complete',flush=True)
+    assert len(rows)==sum(len(channels(j))**2 for j in js)
+    with (OUT/'block_registry.csv').open('w',newline='') as f:w=csv.writer(f);w.writerow(['j','out_row','in_column','h0','h1','h2','h3','m','n','file']);w.writerows(rows)
+    (OUT/'complete_summary.json').write_text(json.dumps({'success':True,'positions':74,'bulk_positions':74,'boundary_positions':74,'ordered_exchanges_per_position':24,'structural_checks':checks},indent=2))
+    print('COMPLETE:',len(rows),'bulk and boundary positions')
+if __name__=='__main__':main()

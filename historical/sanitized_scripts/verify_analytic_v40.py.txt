@@ -1,0 +1,286 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Независимые символьные проверки новых расчётов V40 (Т01--Т06).
+
+Т01: редукция исходного квадратичного действия, смешанный и потенциальный
+коэффициенты, простое пересечение и коэффициент Вронскиана.
+Т02: точное действие для Q=delta Phi, каноническая масса, обе асимптотики
+n=10, преобразование Лиувилля и показатель внутренней кривизны при n>10.
+Т03: инвариантная кривая, функция Ляпунова, знаковые и временные оценки.
+Т04: независимая каноническая производная и дивергентные тождества генератора.
+Т05: полный скалярный кубический/квартичный полином, источники lapse/shift,
+квадратичный источник тензора и исключение общих вспомогательных переменных.
+Т06: положительная мажоранта всех рассматриваемых древесных вкладов,
+размерностная однородность и воспроизведение энергетического интервала.
+
+Код проверяет алгебру. Аналитические доказательства существования решений,
+компактности и асимптотических оценок приведены в article_v40.tex.
+Запуск: python scripts/verify_analytic_v40.py
+Требуется только SymPy. Результаты: results/analytic_v40/{checks.csv,expressions.txt}.
+"""
+from __future__ import annotations
+import argparse,csv,json,platform,time,traceback
+from pathlib import Path
+import sympy as s
+
+BASE=Path(__file__).resolve().parents[1]
+CHECKS=[]; EXPRESSIONS=[]
+START=time.monotonic()
+
+
+def check(name,got,wanted=0):
+    residual=s.factor(s.cancel(s.expand(got-wanted)))
+    if residual!=0:
+        residual=s.simplify(residual)
+    if residual!=0:
+        raise AssertionError(f'{name}: residual = {residual}')
+    CHECKS.append((name,'PASS','0'))
+    print(f'[{time.monotonic()-START:.2f}s] PASS {name}',flush=True)
+
+
+def record(name,value):
+    EXPRESSIONS.append((name,str(value)))
+
+
+def quadratic_and_crossing():
+    """Т01; eq:scalar-finite-k-complete-action и eq:crossing-linear-leading-coefficients."""
+    M,H,L,q=s.symbols('M H L q',positive=True)
+    chi,G1=s.symbols('chi G1',real=True)
+    ell,vel,alpha,B,rr,pi=s.symbols('ell ell_dot alpha B r pi')
+    D=2*H*L*M**2*q+(2-H*L)*chi
+    raw=M**2*(-3*H**2*alpha**2-2*H*alpha*B)+rr*(-vel+H*ell-alpha-L*B/3+L*q*pi/3)+chi*ell*B/3-chi*q*pi**2/6-chi*ell*q*pi/3-H*G1*ell**2/2
+    # Solve the four independent Euler equations, not a supplied reduced action.
+    auxiliary=s.solve([s.diff(raw,z) for z in (alpha,B,rr,pi)],(alpha,B,rr,pi),dict=True)[0]
+    reduced=s.factor(raw.subs(auxiliary,simultaneous=True))
+    K=-6*H*M**2*chi/(L*D)
+    C=-chi*(D-6*H**2*M**2-chi)/(L*D)
+    V=-H*G1-chi*((6*H**2*M**2-chi)**2-12*H**3*L*M**2*(2*M**2*q-chi))/(6*H*L*M**2*D)
+    check('T01.exact_K_from_raw_action',s.diff(reduced,vel,2),K)
+    check('T01.exact_C_from_raw_action',s.diff(reduced,ell,vel),C)
+    check('T01.exact_V_from_raw_action',s.diff(reduced,ell,2),V)
+    check('T01.auxiliary_determinant',s.hessian(raw,(alpha,B,rr,pi)).det(),2*H*L*M**2*q*D/9)
+    flow={H:chi/(6*M**2),L:H*L-1,q:-2*H*q,chi:G1*(H*L-1)-4*H*chi}
+    dt=lambda f:s.factor(sum(s.diff(f,z)*v for z,v in flow.items()))
+    W=s.factor(dt(C)+3*H*C-V)
+    K1=-3*G1*(H*L-1)/(L**2*q)
+    C1=-G1*(H*L-1)*(L*q-3*H)/(L**2*q)
+    W0=G1*(3*H**2*L-3*H+L*q)/(L**2*q)
+    check('T01.crossing_K_prime',dt(K).subs(chi,0),K1)
+    check('T01.crossing_C_prime',dt(C).subs(chi,0),C1)
+    check('T01.crossing_potential',W.subs(chi,0),W0)
+    check('T01.crossing_D_nonzero_expression',D.subs(chi,0),2*H*L*M**2*q)
+    record('K_ell',K);record('C_ell',C);record('V_ell',s.factor(V));record('W_ell',W)
+    record('K1_crossing',K1);record('C1_crossing',C1);record('W0_crossing',W0)
+    t=s.symbols('t',real=True);u=s.Function('u')(t);J=s.Function('J')(t);p=s.Function('p')(t);p1=s.symbols('p1',nonzero=True)
+    vlog=p1*u*J
+    check('T01.reduction_of_order_Wronskian',(u*s.diff(vlog,t)-s.diff(u,t)*vlog).subs(s.diff(J,t),1/(p*u**2)),p1/p)
+
+
+def canonical_and_late():
+    """Т02; eq:power-finite-k-linear-equation--eq:power-canonical-mass-limits."""
+    M,H,L,Delta=s.symbols('M H L Delta',positive=True);chi=s.symbols('chi',negative=True)
+    ss=-L**3*chi;A=1/(L**6*Delta);b=1/(6*M**2*H*L**3)
+    Wphiphi=16/(L**8*Delta);Wphis=4/(L**7*Delta)
+    f=1/L**4-ss*Wphis;D0=ss**2*A-6*M**2*H**2
+    c=4/L+chi/(6*M**2*H)
+    v=16/L**2+(Delta+4*chi)/(3*M**2*H*L)+chi**2/(36*M**4*H**2)-Delta/(6*M**2)
+    check('T02.single_field_mixed_coefficient',Wphis-ss*A*b,A*c)
+    check('T02.single_field_potential',Wphiphi+2*f*b+D0*b*b,A*v)
+    tt=s.symbols('t',real=True);z=s.Function('z')(tt);rho=s.Function('rho')(tt);cc=s.Function('c')(tt);vv=s.Function('v')(tt);omega2=s.symbols('omega2')
+    Q=z/rho;nu=s.diff(rho,tt)/rho
+    # Qddot+2nu Qdot+(cdot+2nu c-v+omega2)Q=0.
+    transformed=s.diff(Q,tt,2)+2*nu*s.diff(Q,tt)+(s.diff(cc,tt)+2*nu*cc-vv+omega2)*Q
+    wanted=s.diff(z,tt,2)+(omega2-vv+2*nu*cc-nu**2+s.diff(cc,tt)-s.diff(nu,tt))*z
+    check('T02.exact_canonical_transformation',rho*transformed,wanted)
+    n,d=s.symbols('n delta',positive=True);x=1+d;alpha=(n-2)/2
+    bn=n-10+2*(n-3)*d
+    cn=(4-n*d/2)/x
+    nun=s.Rational(3,2)+(n-10)*d/(4*x)+(n-2)*(n-3)*d/(2*bn)
+    hn=-n*d/(2*x)
+    vn=(16+n*bn/2-4*n*d+n*n*d*d/4)/x**2-n*bn/(4*x)
+    mass=s.factor(-vn+2*nun*cn-nun*nun+hn*(cn-nun)-alpha*d*s.diff(cn-nun,d))
+    check('T02.general_mass_limit_n_gt10',mass.subs(d,0),-(n-5)**2/4)
+    mass10=s.factor(mass.subs(n,10))
+    check('T02.exact_n10_mass_over_H2',mass10,(21*d*d+28*d-1)/(4*x*x))
+    check('T02.n10_mass_limit',mass10.subs(d,0),-s.Rational(1,4))
+    record('m_can_squared_over_H_squared',mass)
+    # Expand the two exact n=10 solutions in a^{-1}; the n=10 background
+    # corrections start at a^{-4}, so the a^{-2} coefficients are independent.
+    y,kappa,delta0=s.symbols('a_inverse k_over_Hinf delta0',positive=True)
+    mu=7*kappa*kappa/3
+    DN=lambda f:-y*s.diff(f,y)
+    for p,coef,name in [(-s.Rational(1,2),-mu/2,'growing'),(s.Rational(1,2),-mu/6,'decaying')]:
+        Z=y**p*(1+coef*y*y)
+        residual=s.expand(DN(DN(Z))+(mu*y*y-s.Rational(1,4))*Z)
+        check('T02.n10_'+name+'_leading_ODE',s.expand(residual/y**p).coeff(y,2))
+    zm=y**s.Rational(1,2)*(1-mu*y*y/6)
+    check('T02.n10_decaying_observable_cancellation',s.expand((DN(zm)+zm/2)/y**s.Rational(5,2)),mu/3)
+    zp=y**(-s.Rational(1,2))*(1-mu*y*y/2)
+    check('T02.n10_growing_observable_leading',s.limit(y**s.Rational(1,2)*(DN(zp)+zp/2),y,0),1)
+    omega=s.Function('omega')(tt);theta=s.Function('theta')(tt);Y=s.Function('Y');m2=s.symbols('m2')
+    ansatz=Y(theta)/s.sqrt(omega)
+    ode=(s.diff(ansatz,tt,2)+(omega**2+m2)*ansatz).subs({s.diff(theta,tt,2):s.diff(omega,tt),s.diff(theta,tt):omega})
+    remainder=m2/omega**2-s.diff(omega,tt,2)/(2*omega**3)+3*s.diff(omega,tt)**2/(4*omega**4)
+    check('T02.Liouville_transformation',ode/omega**s.Rational(3,2),s.diff(Y(theta),theta,2)+(1+remainder)*Y(theta))
+    beta=(n-6)/4
+    exponent=-2-s.Rational(3,2)-beta/2+alpha
+    check('T02.intrinsic_curvature_exponent',exponent,3*(n-10)/8)
+    # Independent differential-geometry check for an arbitrary conformal scalar.
+    xx=s.symbols('x');eps=s.symbols('eps');aa=s.symbols('a',positive=True);zz=s.Function('zeta')(xx)
+    curvature=s.exp(-2*eps*zz)/aa**2*(-4*eps*s.diff(zz,xx,2)-2*eps**2*s.diff(zz,xx)**2)
+    check('T02.intrinsic_3_curvature_linearization',s.diff(curvature,eps).subs(eps,0),-4*s.diff(zz,xx,2)/aa**2)
+
+
+def background_global():
+    """Т03: алгебраические составляющие глобального доказательства."""
+    y,h,n=s.symbols('y h n',positive=True)
+    g=3*((4-n)*y**(-n)+n*y**(-1-n/2));yp=h*y-1;hp=g/6-2*h*h
+    hs=y**(-n/2);E=3*(h*h-hs*hs)
+    flow=lambda f:s.diff(f,y)*yp+s.diff(f,h)*hp
+    check('T03.mismatch_sign_flow',flow(E),(-4*h+n*hs/(y*(h+hs)))*E)
+    V=y*y-y**(4-n)/2+n*y**(3-n/2)/(n-6)
+    F=y*y*yp*yp/2+V
+    check('T03.exact_Lyapunov_derivative',flow(F),-3*y*yp*yp)
+    Y2=s.factor(flow(yp).subs(h,1/y))
+    xp=y**(-(n-2)/2)
+    check('T03.strict_maximum_below_one',y*Y2,-(xp-1)*((n-4)*xp-4)/2)
+    check('T03.original_saddle_growth',(-4*h+n*hs/(y*(h+hs))).subs({h:1,y:1}),(n-8)/2)
+    # Reduction g/6 = y^-n/2 [-(n-4)+n y^((n-2)/2)].
+    check('T03.small_y_negative_bound_identity',g/6,y**(-n)*(-(n-4)+n*y**((n-2)/2))/2)
+    hb,yb,c=s.symbols('h_b y_b c',positive=True)
+    upper=hb-c/(n-1)*(y**(1-n)-yb**(1-n))
+    check('T03.integrated_positive_L_bound',s.diff(upper,y),c*y**(-n))
+    hsecond=s.diff(hp,y)*yp+s.diff(hp,h)*hp
+    check('T03.H_zero_second_derivative',hsecond.subs(h,0),-s.diff(g,y)/6)
+    check('T03.finite_Ricci_at_H_zero',6*(hp+2*h*h),g)
+    record('dimensionless_G',g);record('dimensionless_Lyapunov',F)
+
+
+def gauge_generator():
+    """Т04: каноническая производная независимо от готовой скобки и 3D-дивергенция."""
+    L,p,M,root_h=s.symbols('L pL M sqrt_h',positive=True)
+    p11,p22,p33,p12,p13,p23=s.symbols('p11 p22 p33 p12 p13 p23')
+    mom=s.Matrix([[p11,p12,p13],[p12,p22,p23],[p13,p23,p33]])
+    shifted=mom+s.eye(3)*L*p/6
+    Ckin=2/(M*M*root_h)*(s.trace(shifted*shifted)-s.trace(shifted)**2/2)-p
+    K=-s.trace(shifted)/(M*M*root_h)
+    check('T04.pL_C_canonical_derivative',-s.diff(Ckin,L),-K*p/3)
+    check('T04.L_C_canonical_derivative',s.diff(Ckin,p),L*K/3-1)
+    xyz=s.symbols('x y z',real=True)
+    NN=s.Function('N')(*xyz);LL=s.Function('L')(*xyz);eta=s.Function('eta')(*xyz);f=s.Function('f')(*xyz);volume=s.Function('sqrt_h')(*xyz)
+    A=[eta*s.diff(NN,x)-NN*s.diff(eta,x) for x in xyz]
+    # Diagonal Euclidean metric is enough to check every independent directional
+    # Leibniz coefficient; sqrt_h remains arbitrary for the divergence identity.
+    div=lambda V:sum(s.diff(volume*V[i],xyz[i]) for i in range(3))/volume
+    left=LL**4*div([LL**(-3)*v for v in A])/3
+    right=-LL**4*div([NN**2*LL**(-3)*s.diff(eta/NN,x) for x in xyz])/3
+    check('T04.elliptic_divergence_3D',left,right)
+    weight=NN**2*LL**(-3)
+    check('T04.weighted_energy_identity',volume*f*div([weight*s.diff(f,x) for x in xyz]),sum(s.diff(volume*f*weight*s.diff(f,x),x) for x in xyz)-volume*weight*sum(s.diff(f,x)**2 for x in xyz))
+    epsdot,ep,kk,ng,etadt,gamma,xi,avec=s.symbols('epsilon_dot epsilon K N eta_total_dot gamma xi A')
+    check('T04.secondary_C_substitution',(etadt-gamma).subs(gamma,etadt))
+    check('T04.secondary_Ci_substitution',(avec-xi).subs(xi,avec))
+    record('generator_coefficients', 'pL: epsilon_dot-N*K*epsilon/3+L^4 Div(L^-3 A)/3; C: D_t eta-gamma; Ci: A^i-xi^i; pN: D_t gamma; pi: D_t xi^i')
+
+
+def scalar_polynomials_and_sources():
+    """Т05; полное разложение без замораживания P_phi и без отбрасывания градиентов."""
+    e=s.symbols('e');q,u,a,v,w,g2=s.symbols('Q u alpha v w g2')
+    M,H,B,S2=s.symbols('M H B Sigma2')
+    pd={(i,j):s.symbols(f'P{i}{j}') for i in range(5) for j in range(5-i)}
+    X1=v*u-v*v*a
+    X2=u*u/2-2*v*a*u+3*v*v*a*a/2-v*w-g2/2
+    X3=-a*u*u+3*v*a*a*u-2*v*v*a**3+(2*v*a-u)*w
+    X4=3*a*a*u*u/2-4*v*a**3*u+5*v*v*a**4/2+(2*a*u-3*v*a*a)*w+w*w/2
+    Xexact=((v+e*u-e*e*w)**2/(1+e*a)**2-e*e*g2)/2-v*v/2
+    Xseries=s.series(Xexact,e,0,5).removeO()
+    for j,Xj in enumerate([X1,X2,X3,X4],1):check(f'T05.X_order_{j}',Xseries.coeff(e,j),Xj)
+    PP2=pd[0,1]*X2+pd[0,2]*X1*X1/2+pd[1,1]*q*X1+pd[2,0]*q*q/2
+    PP3=pd[0,1]*X3+pd[0,2]*X1*X2+pd[1,1]*q*X2+pd[0,3]*X1**3/6+pd[1,2]*q*X1*X1/2+pd[2,1]*q*q*X1/2+pd[3,0]*q**3/6
+    PP4=pd[0,1]*X4+pd[0,2]*(X1*X3+X2*X2/2)+pd[1,1]*q*X3+pd[0,3]*X1*X1*X2/2+pd[1,2]*q*X1*X2+pd[2,1]*q*q*X2/2+pd[0,4]*X1**4/24+pd[1,3]*q*X1**3/6+pd[2,2]*q*q*X1*X1/4+pd[3,1]*q**3*X1/6+pd[4,0]*q**4/24
+    expansion=sum(p*(e*q)**i*Xseries**j/(s.factorial(i)*s.factorial(j)) for (i,j),p in pd.items())
+    expansion=s.expand((1+e*a)*expansion)
+    check('T05.complete_cubic_density',expansion.coeff(e,3),PP3+a*PP2)
+    check('T05.complete_quartic_density',expansion.coeff(e,4),PP4+a*PP3)
+    KI=pd[0,1]+v*v*pd[0,2]
+    Ja=-KI*X2-(3*pd[0,2]+v*v*pd[0,3])*X1*X1/2-(pd[1,1]+v*v*pd[1,2])*q*X1+(pd[2,0]-v*v*pd[2,1])*q*q/2-pd[0,1]*g2
+    check('T05.explicit_lapse_source',s.diff(PP3+a*PP2,a),Ja)
+    Ji=-(KI*(u-v*a)+v*pd[1,1]*q)
+    check('T05.explicit_shift_source',s.diff(PP3+a*PP2,w),Ji)
+    d=u-v*a
+    cubic=(v*pd[0,2]/2+v**3*pd[0,3]/6)*d**3-a*KI*d*d/2-KI*d*w-(a*pd[0,1]+v*pd[0,2]*d)*g2/2+(pd[1,1]+v*v*pd[1,2])*q*d*d/2-v*pd[1,1]*q*w-pd[1,1]*q*g2/2+v*pd[2,1]*q*q*d/2+a*pd[2,0]*q*q/2+pd[3,0]*q**3/6
+    check('T05.explicit_polarized_cubic_polynomial',PP3+a*PP2,cubic)
+    gx=s.Matrix(s.symbols('gx:3'));gamm=s.Matrix([[s.Symbol('g11'),s.Symbol('g12'),s.Symbol('g13')],[s.Symbol('g12'),s.Symbol('g22'),s.Symbol('g23')],[s.Symbol('g13'),s.Symbol('g23'),-s.Symbol('g11')-s.Symbol('g22')]])
+    # Linear tensor coefficient of -h^ij grad_i Q grad_j Q/2.
+    check('T05.matter_tensor_source',s.diff(-(gx.T*(s.eye(3)-e*gamm)*gx)[0]/2,e),(gx.T*gamm*gx)[0]/2)
+    vals=s.symbols('s11 s22 s33 s12 s13 s23');SS=s.Matrix([[vals[0],vals[3],vals[4]],[vals[3],vals[1],vals[5]],[vals[4],vals[5],vals[2]]])
+    gd=s.Matrix([[s.Symbol('d11'),s.Symbol('d12'),s.Symbol('d13')],[s.Symbol('d12'),s.Symbol('d22'),s.Symbol('d23')],[s.Symbol('d13'),s.Symbol('d23'),-s.Symbol('d11')-s.Symbol('d22')]])
+    adv=s.Matrix([[s.Symbol('a11'),s.Symbol('a12'),s.Symbol('a13')],[s.Symbol('a12'),s.Symbol('a22'),s.Symbol('a23')],[s.Symbol('a13'),s.Symbol('a23'),-s.Symbol('a11')-s.Symbol('a22')]])
+    EE=H*s.eye(3)-SS+e*(gd-adv-SS*gamm+gamm*SS)/2
+    coeff=s.diff(s.trace(EE*EE)-s.trace(EE)**2,e).subs(e,0)
+    check('T05.gravity_linear_tensor_source',coeff,-s.trace(SS*gd)+s.trace(SS*adv))
+    ha,D0,ja,jb=s.symbols('h0 D0 Jalpha JB',nonzero=True)
+    Hess=s.Matrix([[D0,-ha],[-ha,0]]);src=s.Matrix([ja,jb]);y2=-Hess.inv()*src
+    check('T05.alpha2',y2[0],jb/ha);check('T05.B2',y2[1],ja/ha+D0*jb/ha**2)
+    check('T05.scalar_auxiliary_quartic_contact',-(src.T*Hess.inv()*src)[0]/2,ja*jb/ha+D0*jb*jb/(2*ha*ha))
+    record('X1',X1);record('X2',X2);record('X3',X3);record('X4',X4)
+    record('Jalpha_matter',Ja);record('Ji_matter_divided_by_grad_Q',Ji);record('complete_P4',PP4)
+
+
+def nonresonant_majorant():
+    """Т06; восстановление M,H,E и конечной константы, не порога точной унитарности."""
+    M,H,E,k=s.symbols('M H E kappa',positive=True)
+    v=3**s.Rational(1,4)*s.sqrt(M*H)
+    a=1/(s.sqrt(3)*M);u=(12*E+H)/(2*v);g=6*E/v
+    beta=12*s.sqrt(3)/(k*M);B=12*s.sqrt(3)*E/M;S=B;w=beta*g
+    X1=v*u+v*v*a
+    X2=u*u/2+2*v*a*u+3*v*v*a*a/2+v*w+g*g/2
+    X3=a*u*u+3*v*a*a*u+2*v*v*a**3+(2*v*a+u)*w
+    X4=3*a*a*u*u/2+4*v*a**3*u+5*v*v*a**4/2+(2*a*u+3*v*a*a)*w+w*w/2
+    PX=4*v*v/3;PXX=s.Rational(8,3);A=4*v*v
+    P2=PX*X2+PXX*X1*X1/2;P3=PX*X3+PXX*X1*X2;P4=PX*X4+PXX*(X1*X3+X2*X2/2)
+    G3=M*M*(6*H*H*a**3+4*H*a*a*B+a*(S*S+B*B))/2
+    G4=M*M*(6*H*H*a**4+4*H*a**3*B+a*a*(S*S+B*B))/2
+    C3=s.expand(G3+P3+a*P2)
+    Ja=M*M*(18*H*H*a*a+8*H*a*B+S*S+B*B)/2+A*X2+3*PXX*X1*X1/2+PX*g*g
+    Ji=M*M*12*E*(a*(S+B)+2*H*a*a)+A*(u+v*a)*g
+    JB=Ji/(k*E);h0=2*M*M*H;D0=6*M*M*H*H
+    C4=s.expand(G4+P4+a*P3+Ja*JB/h0+D0*JB*JB/(2*h0*h0)+Ji*Ji/(M*M*k*k*E*E))
+    Cgamma=(48+144+31104/k**2)*E*E/M
+    tree=s.expand(6*(24*C4+3*(6*C3)**2/(k*k*E*E)+3*(2*Cgamma)**2/(k*k*E*E)))
+    degrees=set()
+    for term in s.Add.make_args(tree):
+        powers=term.as_powers_dict();d=powers.get(E,0);degrees.add(d)
+        assert d<=4 and powers.get(M,0)==-2 and powers.get(H,0)==2-d,(term,powers)
+        coef=s.simplify(term/(E**d*M**(-2)*H**(2-d)))
+        assert coef.is_positive is True,coef
+    CHECKS.append(('T06.positive_termwise_homogeneity','PASS','0'))
+    Ck=s.factor(tree.subs({M:1,H:1,E:1}))
+    check('T06.majorant_normalization',tree.subs(E,H),Ck*H*H/(M*M))
+    value=s.N(Ck.subs(k,s.Rational(1,100)),25)
+    upper=s.N((s.Rational(1,100)/value)**s.Rational(1,4)*s.Rational(1,10)**12,25)
+    assert 6.154e-19<float(upper)<6.156e-19
+    CHECKS.append(('T06.energy_interval_reproduced','PASS','0'))
+    record('C_kappa',Ck);record('C_kappa_at_0.01',value);record('E_upper_over_M',upper);record('energy_powers',sorted(degrees))
+
+
+def main():
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',type=Path,default=BASE/'results/analytic_v40')
+    args=ap.parse_args();args.output.mkdir(parents=True,exist_ok=True)
+    groups=[quadratic_and_crossing,canonical_and_late,background_global,gauge_generator,scalar_polynomials_and_sources,nonresonant_majorant]
+    success=False
+    try:
+        for fun in groups:
+            print('\n'+fun.__name__,flush=True);fun()
+        success=True
+    except Exception:
+        traceback.print_exc()
+    finally:
+        with (args.output/'checks.csv').open('w',encoding='utf-8',newline='') as f:
+            writer=csv.writer(f);writer.writerow(['calculation','status','exact_residual']);writer.writerows(CHECKS)
+        (args.output/'expressions.txt').write_text('\n\n'.join(name+'\n'+expr for name,expr in EXPRESSIONS)+'\n',encoding='utf-8')
+        (args.output/'run_summary.json').write_text(json.dumps({'success':success,'checks':len(CHECKS),'python':platform.python_version(),'sympy':s.__version__,'elapsed_seconds':time.monotonic()-START},indent=2)+'\n',encoding='utf-8')
+    print(f'Completed {len(CHECKS)} checks; success={success}',flush=True)
+    return 0 if success else 1
+
+if __name__=='__main__':raise SystemExit(main())

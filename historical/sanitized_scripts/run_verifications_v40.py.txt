@@ -1,0 +1,105 @@
+#!/usr/bin/env python3
+"""Т01--Т11: единый запуск воспроизводимых проверок V40.
+
+По умолчанию проверяются готовые коэффициенты и повторяются три численных
+протокола. Большой радиальный каталог не пересчитывается. Режим regenerate
+вновь выполняет прямые ADM-расчёты; готовые отдельные файлы используются как
+контрольные точки. Параметр --fresh сохраняет их в results/previous_runs,
+после чего выполняет полный пересчёт. Чужие исходные файлы не изменяются.
+"""
+from __future__ import annotations
+import argparse
+from datetime import datetime
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import time
+import traceback
+
+BASE = Path(__file__).resolve().parents[1]
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--mode', choices=['audit', 'verify', 'regenerate'], default='verify')
+    parser.add_argument('--fresh', action='store_true', help='Only with regenerate: archive radial/angular checkpoints first.')
+    args = parser.parse_args()
+    if args.fresh and args.mode != 'regenerate':
+        parser.error('--fresh requires --mode regenerate')
+    output = BASE / 'results/runner'
+    output.mkdir(parents=True, exist_ok=True)
+    steps: list[tuple[str, list[str]]] = []
+    if args.mode != 'audit':
+        steps += [(name, []) for name in ['verify_analytic_v40.py', 'verify_local_vertices_v40.py']]
+        if args.mode == 'regenerate':
+            if args.fresh:
+                archive = BASE / 'results/previous_runs' / datetime.now().strftime('%Y%m%d_%H%M%S')
+                archive.mkdir(parents=True, exist_ok=False)
+                for name in ['radial_generic', 'angular_v40']:
+                    path = BASE / 'results' / name
+                    if path.exists():
+                        shutil.move(str(path), str(archive / name))
+            steps += [('generate_radial_v40.py', ['--task', 'bare']),
+                      ('generate_radial_v40.py', ['--task', 'pair'])]
+        steps += [(name, []) for name in ['assemble_radial_v40.py', 'check_catalogue_v40.py',
+                                          'verify_radial_controls_v40.py']]
+        if args.mode == 'regenerate':
+            steps.append(('angular_coefficients_v40.py', ['--j', '0', '2', '3', '4']))
+            steps.append(('complete_angular_global_v40.py', []))
+        steps += [(name, []) for name in ['verify_soft_v40.py', 'verify_angular_controls_v40.py',
+                                          'verify_noncom_v40.py', 'n02_background_diagnostics.py']]
+        if args.mode == 'regenerate':
+            steps.append(('build_mathematical_catalogue_v40.py', []))
+    steps.append(('verify_editorial_changes_v40.py', []))
+    steps.append(('audit_release_v40.py', []))
+    start = time.monotonic()
+    records: list[dict] = []
+    current: subprocess.Popen | None = None
+    with (output / 'run.log').open('w', encoding='utf-8', buffering=1) as log:
+        def emit(message: str) -> None:
+            print(message, flush=True)
+            print(message, file=log, flush=True)
+        try:
+            for index, (name, arguments) in enumerate(steps, 1):
+                stamp = time.monotonic()
+                logname = f'{index:02d}_{Path(name).stem}.log'
+                command = [sys.executable, '-u', str(BASE / 'scripts' / name), *arguments]
+                emit(f'[{index}/{len(steps)}] {(index-1)/len(steps):.0%} {name} {" ".join(arguments)}')
+                with (output / logname).open('w', encoding='utf-8') as stream:
+                    current = subprocess.Popen(command, cwd=BASE, stdout=stream, stderr=subprocess.STDOUT,
+                                               env={**os.environ, 'PYTHONUTF8': '1', 'PYTHONUNBUFFERED': '1'})
+                    while True:
+                        try:
+                            code = current.wait(timeout=60)
+                            break
+                        except subprocess.TimeoutExpired:
+                            elapsed = time.monotonic() - start
+                            # Stages differ greatly; ETA is not an artificial percentage of symbolic work.
+                            emit(f'  Работает {name}: {time.monotonic()-stamp:.0f} с; всего {elapsed:.0f} с. ETA этого символьного этапа не определено.')
+                records.append({'script': name, 'arguments': arguments, 'returncode': code,
+                                'seconds': round(time.monotonic()-stamp, 3), 'log': logname})
+                current = None
+                if code:
+                    raise RuntimeError(f'{name} returned {code}; see {output / logname}')
+                emit(f'  PASS, {records[-1]["seconds"]} с')
+            result = {'success': True, 'mode': args.mode, 'steps': records, 'elapsed_seconds': time.monotonic()-start}
+            (output / 'summary.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+            emit('100%: все выбранные этапы завершены.')
+            return 0
+        except BaseException as exc:
+            if current is not None and current.poll() is None:
+                current.terminate()
+                try:
+                    current.wait(timeout=10)
+                except subprocess.TimeoutExpired:
+                    current.kill()
+            emit(traceback.format_exc())
+            (output / 'summary.json').write_text(json.dumps({'success': False, 'mode': args.mode,
+                                  'steps': records, 'error': repr(exc)}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+            return 1
+
+if __name__ == '__main__':
+    raise SystemExit(main())

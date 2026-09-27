@@ -1,0 +1,14 @@
+{
+  "scientific_version": "V52",
+  "computational_release": "V52-R1",
+  "initial_generation": "New non-COM and first radial/angle records generated in this preparation. Serial angular work was deliberately rescheduled after j0,j2,j3; j4 finished in four successful partitions.",
+  "second_fresh_generation": "Independent path-with-spaces run completed all 9 radial generation jobs (54 pairs and 81 bare components), plus non-COM and quick checks, then was intentionally interrupted before an identified path-dependent angular control. It was NOT a complete full run.",
+  "path_correction": "One angular-control output path was corrected; scientific algebra unchanged.",
+  "final_run": "Frozen portable full run with explicit resume of compatible current-session heavy records. All reported tests were executed again; derived contacts, printed comparisons, homogeneous exchange and controls were calculated anew. This invocation is not a from-zero generation.",
+  "final_returncode": 0,
+  "final_elapsed_seconds": 421.0920483330001,
+  "final_mode": "full",
+  "final_status": "PASS",
+  "future_from_zero_command": "python run_all.py --mode full --workers 4 --output results/fresh --article-source /path/to/V52/article/source/main.tex",
+  "global_fields_on_future_seed": "The public seed helper explicitly clears derived homogeneous-exchange fields for recomputation."
+}

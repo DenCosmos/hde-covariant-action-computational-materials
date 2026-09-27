@@ -1,0 +1,94 @@
+Traceback (most recent call last):
+  File "@LOCAL_WORKSPACE@/V52_R1_repository/scripts/article_fig01_plot_pole_crossing.py", line 92, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "@LOCAL_WORKSPACE@/V52_R1_repository/scripts/article_fig01_plot_pole_crossing.py", line 89, in main
+    for ext in ['pdf','png']:fig.savefig(args.output/('pole_crossing_c12.'+ext),dpi=160)
+                             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/figure.py", line 3490, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2157, in print_figure
+    self.figure.draw(renderer)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/artist.py", line 94, in draw_wrapper
+    result = draw(artist, renderer, *args, **kwargs)
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/artist.py", line 71, in draw_wrapper
+    return draw(artist, renderer)
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/figure.py", line 3257, in draw
+    mimage._draw_list_compositing_images(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        renderer, self, artists, self.suppressComposite)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/image.py", line 134, in _draw_list_compositing_images
+    a.draw(renderer)
+    ~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/artist.py", line 71, in draw_wrapper
+    return draw(artist, renderer)
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/axes/_base.py", line 3226, in draw
+    mimage._draw_list_compositing_images(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        renderer, self, artists, self.get_figure(root=True).suppressComposite)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/image.py", line 134, in _draw_list_compositing_images
+    a.draw(renderer)
+    ~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/artist.py", line 71, in draw_wrapper
+    return draw(artist, renderer)
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/legend.py", line 753, in draw
+    bbox = self._legend_box.get_window_extent(renderer)
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/offsetbox.py", line 367, in get_window_extent
+    bbox = self.get_bbox(renderer)
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/offsetbox.py", line 360, in get_bbox
+    bbox, offsets = self._get_bbox_and_child_offsets(renderer)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/offsetbox.py", line 460, in _get_bbox_and_child_offsets
+    bboxes = [c.get_bbox(renderer) for c in self.get_visible_children()]
+              ~~~~~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/offsetbox.py", line 360, in get_bbox
+    bbox, offsets = self._get_bbox_and_child_offsets(renderer)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/offsetbox.py", line 493, in _get_bbox_and_child_offsets
+    bboxes = [c.get_bbox(renderer) for c in self.get_visible_children()]
+              ~~~~~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/offsetbox.py", line 360, in get_bbox
+    bbox, offsets = self._get_bbox_and_child_offsets(renderer)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/offsetbox.py", line 460, in _get_bbox_and_child_offsets
+    bboxes = [c.get_bbox(renderer) for c in self.get_visible_children()]
+              ~~~~~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/offsetbox.py", line 360, in get_bbox
+    bbox, offsets = self._get_bbox_and_child_offsets(renderer)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/offsetbox.py", line 493, in _get_bbox_and_child_offsets
+    bboxes = [c.get_bbox(renderer) for c in self.get_visible_children()]
+              ~~~~~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/offsetbox.py", line 802, in get_bbox
+    bbox, info, yd = self._text._get_layout(renderer)
+                     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/text.py", line 382, in _get_layout
+    w, h, d = _get_text_metrics_with_cache(
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        renderer, clean_line, self._fontproperties,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ismath=ismath, dpi=self.get_figure(root=True).dpi)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/text.py", line 69, in _get_text_metrics_with_cache
+    return _get_text_metrics_with_cache_impl(
+        weakref.ref(renderer), text, fontprop.copy(), ismath, dpi)
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/text.py", line 77, in _get_text_metrics_with_cache_impl
+    return renderer_ref().get_text_width_height_descent(text, fontprop, ismath)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 152, in get_text_width_height_descent
+    parse = self._text2path.mathtext_parser.parse(s, 72, prop)
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/mathtext.py", line 86, in parse
+    return self._parse_cached(s, dpi, prop, antialiased, load_glyph_flags)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/mathtext.py", line 100, in _parse_cached
+    box = self._parser.parse(s, fontset, fontsize, dpi)
+  File "@LOCAL_WORKSPACE@/venv/lib/python3.13/site-packages/matplotlib/_mathtext.py", line 2167, in parse
+    raise ValueError("\n" + ParseException.explain(err, 0)) from None
+ValueError: 
+\mathcal V
+^
+ParseFatalException: Unknown symbol: \mathcal, found '\'  (at char 0), (line:1, col:1)

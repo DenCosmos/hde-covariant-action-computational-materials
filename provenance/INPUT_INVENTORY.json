@@ -1,0 +1,2448 @@
+[
+  {
+    "path": "FILE_MANIFEST.csv",
+    "size_bytes": 29163,
+    "sha256": "84e1a48b9af62325a06dc8637ed3618f3b347156dc508a9453dd211160ceaffa"
+  },
+  {
+    "path": "GitHub_bundle/.gitignore",
+    "size_bytes": 289,
+    "sha256": "aa7bc89da9991f3dff44ea665410fb28788ba9ee330fd8d2b602a16fe8dee6a9"
+  },
+  {
+    "path": "GitHub_bundle/CITATION.bib",
+    "size_bytes": 961,
+    "sha256": "ed93ecb904383a28440ca456365c55ad2bbbb297c473a418afdbdabb7d2feef8"
+  },
+  {
+    "path": "GitHub_bundle/CITATION.cff",
+    "size_bytes": 1650,
+    "sha256": "08955362d2a26289fc54b1a8d79f16fe6669832c768edc76c90f16bf1aeac0dc"
+  },
+  {
+    "path": "GitHub_bundle/FILE_MANIFEST.csv",
+    "size_bytes": 19369,
+    "sha256": "d0f000e517e22f0dea2720b13c76596f60ca20387ead1d594df64805af5df4ce"
+  },
+  {
+    "path": "GitHub_bundle/LICENSE_PENDING.md",
+    "size_bytes": 513,
+    "sha256": "21b9c4b37c7b9444af72da03757562a52f35322e7a9db540860417f7b1dc8d95"
+  },
+  {
+    "path": "GitHub_bundle/README.md",
+    "size_bytes": 15025,
+    "sha256": "9d2a9d89819370a46e1988f03882c70cd0a2f51083a413f0506b1089e69c81f9"
+  },
+  {
+    "path": "GitHub_bundle/SHA256SUMS.txt",
+    "size_bytes": 12725,
+    "sha256": "31aa1c1e976a19f12034e2b48930615eaa0a11d3cc472b6c99eef313769e3455"
+  },
+  {
+    "path": "GitHub_bundle/data/README.md",
+    "size_bytes": 1205,
+    "sha256": "cea965024d379a3a0d8676fbc24e03f1d22120d9924e62d2bc004380f90f0b7b"
+  },
+  {
+    "path": "GitHub_bundle/data/reference_figures/phase_portrait_c12.pdf",
+    "size_bytes": 39048,
+    "sha256": "d751814efe7eab0cd0b19c9d5cf71012b79b28fe4707816489740555246c05e1"
+  },
+  {
+    "path": "GitHub_bundle/data/reference_figures/pole_crossing_c12.pdf",
+    "size_bytes": 17527,
+    "sha256": "910d634a756d7c1420ba42748190f947ee1b466175fdf42a5bdd1cd2279142df"
+  },
+  {
+    "path": "GitHub_bundle/data/reference_figures/strong_coupling_scale_standard.pdf",
+    "size_bytes": 17126,
+    "sha256": "45ae572ad62356c79a345d935974b3b0bb260c023eb9aeef07aba1876fa23a76"
+  },
+  {
+    "path": "GitHub_bundle/metadata.json",
+    "size_bytes": 762,
+    "sha256": "bebe6f7eb32deb48e9c6006b2f33a1129836bcac924d52c95688b5cff19fc18e"
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/README.md",
+    "size_bytes": 4998,
+    "sha256": "a686dc4b3742dc5ac1ed28a06e2f85628a71ba6409bc5fa286704bd2f1185e79"
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/README_V51.txt",
+    "size_bytes": 472,
+    "sha256": "950e636ba31a7495d3c998d9fb8a52b6d3c78f1c222352e95d5f90b83107aebc"
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/angular_coefficients_v40.py",
+    "size_bytes": 8712,
+    "sha256": "67257a9a07e67c82bf6571005ae827e6cd00499a669a46972747e5c17b43ba42",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse, itertools, json, time, math, csv",
+      "from pathlib import Path",
+      "import sympy as sp",
+      "import radial_coeff_algebra as a",
+      "from assemble_radial_v40 import parse, load, decode_file, enc"
+    ],
+    "functions": [
+      {
+        "name": "transfer",
+        "line": 17
+      },
+      {
+        "name": "target_laurent",
+        "line": 32
+      },
+      {
+        "name": "wigner",
+        "line": 44
+      },
+      {
+        "name": "cweights",
+        "line": 53
+      },
+      {
+        "name": "channels",
+        "line": 54
+      },
+      {
+        "name": "hel_sum",
+        "line": 57
+      },
+      {
+        "name": "f_boundary",
+        "line": 64
+      },
+      {
+        "name": "encoded_r",
+        "line": 77
+      },
+      {
+        "name": "save_coeff",
+        "line": 80
+      },
+      {
+        "name": "main",
+        "line": 84
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/apply_replacements.py",
+    "size_bytes": 950,
+    "sha256": "a9db2c23b1f355f5be37472475c2c1ec1f2bfce5b49b8da2ad7b9a0ae91c3a67",
+    "imports": [
+      "import argparse, hashlib, json",
+      "from pathlib import Path"
+    ],
+    "functions": []
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/assemble_radial_v40.py",
+    "size_bytes": 5958,
+    "sha256": "9b4b9a0da8edbac4d6abe04840ece9fd4d94eb1c670f0768302327befe7d68d4",
+    "imports": [
+      "from __future__ import annotations",
+      "import itertools, json, time, csv, ast, pickle",
+      "from pathlib import Path",
+      "import sympy as s",
+      "import radial_coeff_algebra as a",
+      "from generate_radial_v40 import atomic"
+    ],
+    "functions": [
+      {
+        "name": "parse",
+        "line": 19
+      },
+      {
+        "name": "load",
+        "line": 40
+      },
+      {
+        "name": "normalized",
+        "line": 41
+      },
+      {
+        "name": "enc",
+        "line": 44
+      },
+      {
+        "name": "decode_file",
+        "line": 45
+      },
+      {
+        "name": "main",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/audit_release_v40.py",
+    "size_bytes": 8107,
+    "sha256": "46ee108cd4521bb31de214dd039350f6615473920534602da528fc2545863ac0",
+    "imports": [
+      "from __future__ import annotations",
+      "import ast",
+      "import collections",
+      "import csv",
+      "import hashlib",
+      "import json",
+      "from pathlib import Path",
+      "import re",
+      "import sys"
+    ],
+    "functions": [
+      {
+        "name": "check",
+        "line": 21
+      },
+      {
+        "name": "read_json",
+        "line": 27
+      },
+      {
+        "name": "main",
+        "line": 31
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/build_article_v40.py",
+    "size_bytes": 2579,
+    "sha256": "4e131bfebbc5dd72e1cd5c6c62ee1baa25fce5926e68adc3724f18d358c6092c",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import hashlib",
+      "import json",
+      "from pathlib import Path",
+      "import sys"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 17
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/build_local_catalogue_v40.py",
+    "size_bytes": 3283,
+    "sha256": "39369969c3957e0669eb45cdcae058c1c46c49189f9a62cfbc2ec9da3a9fc0f1",
+    "imports": [
+      "from pathlib import Path",
+      "import json",
+      "import sympy as sp"
+    ],
+    "functions": [
+      {
+        "name": "tex_sum",
+        "line": 14
+      },
+      {
+        "name": "equation",
+        "line": 31
+      },
+      {
+        "name": "main",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/build_mathematical_catalogue_v40.py",
+    "size_bytes": 16394,
+    "sha256": "6c12de73a477f26134303111353869650f368aa5acfa790c58e836cdec54931d",
+    "imports": [
+      "from __future__ import annotations",
+      "from pathlib import Path",
+      "import json, csv, itertools, re, math, time",
+      "import sympy as sp",
+      "import radial_coeff_algebra as a",
+      "from assemble_radial_v40 import parse, load",
+      "from build_local_catalogue_v40 import main as build_local"
+    ],
+    "functions": [
+      {
+        "name": "to_z",
+        "line": 15
+      },
+      {
+        "name": "expr",
+        "line": 30
+      },
+      {
+        "name": "tex",
+        "line": 33
+      },
+      {
+        "name": "equation",
+        "line": 34
+      },
+      {
+        "name": "multiline_sum",
+        "line": 36
+      },
+      {
+        "name": "rational_equation",
+        "line": 49
+      },
+      {
+        "name": "main",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/check_catalogue_v40.py",
+    "size_bytes": 3265,
+    "sha256": "729616b214a1e679ff3e65da219ce561dd6f69963daef89433bfe23a2d491c8d",
+    "imports": [
+      "from pathlib import Path",
+      "import itertools, json, csv",
+      "import radial_coeff_algebra as a",
+      "from assemble_radial_v40 import parse, load"
+    ],
+    "functions": [
+      {
+        "name": "reciprocal",
+        "line": 7
+      },
+      {
+        "name": "conj",
+        "line": 17
+      },
+      {
+        "name": "main",
+        "line": 18
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/complete_angular_global_v40.py",
+    "size_bytes": 5807,
+    "sha256": "3220860162e4e2cd2c76b3602581d194d908910a803ec700d474bd779837ad84",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse, json, csv, math, itertools",
+      "from pathlib import Path",
+      "import sympy as sp",
+      "import radial_coeff_algebra as a",
+      "from assemble_radial_v40 import decode_file, load",
+      "from angular_coefficients_v40 import channels, cweights, encoded_r",
+      "from build_mathematical_catalogue_v40 import to_z"
+    ],
+    "functions": [
+      {
+        "name": "W",
+        "line": 18
+      },
+      {
+        "name": "angular_moment",
+        "line": 25
+      },
+      {
+        "name": "main",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/generate_radial_v40.py",
+    "size_bytes": 5578,
+    "sha256": "6d6e3acc7651a1f3b742cb085e9cd9aae681467982860e127849aab2faed851a",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse, itertools, json, os, time, traceback",
+      "from pathlib import Path",
+      "import sympy as sp",
+      "import radiation_adm_v40 as rad"
+    ],
+    "functions": [
+      {
+        "name": "atomic",
+        "line": 26
+      },
+      {
+        "name": "encode",
+        "line": 33
+      },
+      {
+        "name": "real_basis",
+        "line": 37
+      },
+      {
+        "name": "leg",
+        "line": 57
+      },
+      {
+        "name": "vertex",
+        "line": 62
+      },
+      {
+        "name": "pair_data",
+        "line": 66
+      },
+      {
+        "name": "main",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/n02_background_diagnostics.py",
+    "size_bytes": 15534,
+    "sha256": "dae1bc58743ec3ccdb6c5826216c63c6c40d866de671f06726da360d4a35d615",
+    "imports": [
+      "from __future__ import annotations",
+      "import csv",
+      "import json",
+      "import platform",
+      "from pathlib import Path",
+      "import numpy as np",
+      "import scipy",
+      "from scipy.integrate import solve_ivp",
+      "import sympy as sp",
+      "import argparse"
+    ],
+    "functions": [
+      {
+        "name": "check",
+        "line": 24
+      },
+      {
+        "name": "save_csv",
+        "line": 30
+      },
+      {
+        "name": "integrate",
+        "line": 35
+      },
+      {
+        "name": "symbolic_reduction",
+        "line": 42
+      },
+      {
+        "name": "saddle_numerics",
+        "line": 127
+      },
+      {
+        "name": "crossing_numerics",
+        "line": 153
+      },
+      {
+        "name": "late_symbolic",
+        "line": 209
+      },
+      {
+        "name": "late_numerics",
+        "line": 232
+      },
+      {
+        "name": "main",
+        "line": 277
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/noncom_original.py",
+    "size_bytes": 57218,
+    "sha256": "a8818c6a6452435766c79e8840d7f8cb05e5cebebfff7308dffbcf917410771d",
+    "imports": [
+      "from __future__ import annotations",
+      "from dataclasses import dataclass",
+      "from functools import lru_cache",
+      "from itertools import permutations, product",
+      "import sympy as sp",
+      "import json, time",
+      "from pathlib import Path",
+      "from itertools import product",
+      "import ast",
+      "import argparse",
+      "import platform"
+    ],
+    "functions": [
+      {
+        "name": "alg",
+        "line": 23
+      },
+      {
+        "name": "Ring",
+        "line": 28
+      },
+      {
+        "name": "Poly",
+        "line": 40
+      },
+      {
+        "name": "mat_zero",
+        "line": 83
+      },
+      {
+        "name": "mat_eye",
+        "line": 84
+      },
+      {
+        "name": "mat_add",
+        "line": 85
+      },
+      {
+        "name": "mat_scale",
+        "line": 86
+      },
+      {
+        "name": "mat_mul",
+        "line": 87
+      },
+      {
+        "name": "trace",
+        "line": 88
+      },
+      {
+        "name": "norm2",
+        "line": 90
+      },
+      {
+        "name": "dot",
+        "line": 91
+      },
+      {
+        "name": "polarizations",
+        "line": 94
+      },
+      {
+        "name": "Leg",
+        "line": 108
+      },
+      {
+        "name": "lagrangian",
+        "line": 117
+      },
+      {
+        "name": "scalar_variables",
+        "line": 195
+      },
+      {
+        "name": "compact",
+        "line": 210
+      },
+      {
+        "name": "la_add",
+        "line": 222
+      },
+      {
+        "name": "la_scale",
+        "line": 230
+      },
+      {
+        "name": "la_mul",
+        "line": 234
+      },
+      {
+        "name": "lc",
+        "line": 240
+      },
+      {
+        "name": "lp",
+        "line": 241
+      },
+      {
+        "name": "Lvertex",
+        "line": 246
+      },
+      {
+        "name": "sources",
+        "line": 251
+      },
+      {
+        "name": "contact",
+        "line": 266
+      },
+      {
+        "name": "exchange",
+        "line": 288
+      },
+      {
+        "name": "sample_legs",
+        "line": 309
+      },
+      {
+        "name": "compute_all",
+        "line": 312
+      },
+      {
+        "name": "check",
+        "line": 332
+      },
+      {
+        "name": "parse_exact",
+        "line": 346
+      },
+      {
+        "name": "L_power",
+        "line": 369
+      },
+      {
+        "name": "L_divided",
+        "line": 376
+      },
+      {
+        "name": "exact_single",
+        "line": 386
+      },
+      {
+        "name": "exact_ordered",
+        "line": 392
+      },
+      {
+        "name": "aggregate_exchange",
+        "line": 397
+      },
+      {
+        "name": "inv_lap",
+        "line": 408
+      },
+      {
+        "name": "test_radiation_expansion",
+        "line": 417
+      },
+      {
+        "name": "test_general_Legendre_transform",
+        "line": 456
+      },
+      {
+        "name": "test_complete_example",
+        "line": 472
+      },
+      {
+        "name": "test_time_integrals",
+        "line": 534
+      },
+      {
+        "name": "audit_table",
+        "line": 557
+      },
+      {
+        "name": "angular_polarizations",
+        "line": 586
+      },
+      {
+        "name": "angular_sources",
+        "line": 604
+      },
+      {
+        "name": "angular_contact",
+        "line": 620
+      },
+      {
+        "name": "angular_exchange",
+        "line": 643
+      },
+      {
+        "name": "initialize_com",
+        "line": 682
+      },
+      {
+        "name": "test_direct_com",
+        "line": 700
+      },
+      {
+        "name": "invariant_scalar_cubic",
+        "line": 744
+      },
+      {
+        "name": "test_generic_scalar_contact",
+        "line": 758
+      },
+      {
+        "name": "test_signed_Legendre_transform",
+        "line": 799
+      },
+      {
+        "name": "test_homogeneous_and_state",
+        "line": 816
+      },
+      {
+        "name": "polynomial_integral",
+        "line": 851
+      },
+      {
+        "name": "angular_polynomial_coefficients",
+        "line": 856
+      },
+      {
+        "name": "test_angular_projection",
+        "line": 876
+      },
+      {
+        "name": "legendre_Q_explicit",
+        "line": 907
+      },
+      {
+        "name": "radial_transverse_moment",
+        "line": 911
+      },
+      {
+        "name": "test_radial_kernel",
+        "line": 918
+      },
+      {
+        "name": "test_channel_count_and_leakage",
+        "line": 945
+      },
+      {
+        "name": "test_nonlinear",
+        "line": 978
+      },
+      {
+        "name": "test_simple_wave",
+        "line": 1006
+      },
+      {
+        "name": "main_new",
+        "line": 1034
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/radial_coeff_algebra.py",
+    "size_bytes": 3366,
+    "sha256": "2197aaf2f06d95a8b4c8c004f4ff3275a3f126bf689cae55e09008f4943c2019",
+    "imports": [
+      "from __future__ import annotations",
+      "import sympy as sp",
+      "from sympy.polys.fields import field"
+    ],
+    "functions": [
+      {
+        "name": "Coeff",
+        "line": 12
+      },
+      {
+        "name": "alg",
+        "line": 55
+      },
+      {
+        "name": "Domain",
+        "line": 70
+      },
+      {
+        "name": "la_add",
+        "line": 75
+      },
+      {
+        "name": "la_scale",
+        "line": 82
+      },
+      {
+        "name": "la_mul",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/radiation_adm_v40.py",
+    "size_bytes": 25438,
+    "sha256": "489cae0fb7a34a5ba5a678179758ad708985a4e69f4e9b57928805ca580152c0",
+    "imports": [
+      "from __future__ import annotations",
+      "from dataclasses import dataclass",
+      "from functools import lru_cache",
+      "from itertools import permutations, product",
+      "import sympy as sp",
+      "import json, time",
+      "from pathlib import Path",
+      "from itertools import product",
+      "import ast",
+      "import argparse",
+      "import platform"
+    ],
+    "functions": [
+      {
+        "name": "alg",
+        "line": 40
+      },
+      {
+        "name": "Ring",
+        "line": 51
+      },
+      {
+        "name": "Poly",
+        "line": 64
+      },
+      {
+        "name": "mat_zero",
+        "line": 108
+      },
+      {
+        "name": "mat_eye",
+        "line": 111
+      },
+      {
+        "name": "mat_add",
+        "line": 114
+      },
+      {
+        "name": "mat_scale",
+        "line": 117
+      },
+      {
+        "name": "mat_mul",
+        "line": 120
+      },
+      {
+        "name": "trace",
+        "line": 123
+      },
+      {
+        "name": "norm2",
+        "line": 126
+      },
+      {
+        "name": "dot",
+        "line": 129
+      },
+      {
+        "name": "polarizations",
+        "line": 133
+      },
+      {
+        "name": "Leg",
+        "line": 148
+      },
+      {
+        "name": "lagrangian",
+        "line": 157
+      },
+      {
+        "name": "scalar_variables",
+        "line": 234
+      },
+      {
+        "name": "compact",
+        "line": 250
+      },
+      {
+        "name": "la_add",
+        "line": 267
+      },
+      {
+        "name": "la_scale",
+        "line": 276
+      },
+      {
+        "name": "la_mul",
+        "line": 281
+      },
+      {
+        "name": "lc",
+        "line": 288
+      },
+      {
+        "name": "lp",
+        "line": 291
+      },
+      {
+        "name": "Lvertex",
+        "line": 299
+      },
+      {
+        "name": "sources",
+        "line": 305
+      },
+      {
+        "name": "contact",
+        "line": 322
+      },
+      {
+        "name": "exchange",
+        "line": 345
+      },
+      {
+        "name": "sample_legs",
+        "line": 368
+      },
+      {
+        "name": "compute_all",
+        "line": 372
+      },
+      {
+        "name": "parse_exact",
+        "line": 393
+      },
+      {
+        "name": "L_power",
+        "line": 416
+      },
+      {
+        "name": "L_divided",
+        "line": 423
+      },
+      {
+        "name": "exact_single",
+        "line": 433
+      },
+      {
+        "name": "exact_ordered",
+        "line": 439
+      },
+      {
+        "name": "aggregate_exchange",
+        "line": 444
+      },
+      {
+        "name": "inv_lap",
+        "line": 455
+      },
+      {
+        "name": "angular_polarizations",
+        "line": 465
+      },
+      {
+        "name": "angular_sources",
+        "line": 484
+      },
+      {
+        "name": "angular_contact",
+        "line": 501
+      },
+      {
+        "name": "angular_exchange",
+        "line": 525
+      },
+      {
+        "name": "initialize_com",
+        "line": 559
+      },
+      {
+        "name": "invariant_scalar_cubic",
+        "line": 577
+      },
+      {
+        "name": "polynomial_integral",
+        "line": 591
+      },
+      {
+        "name": "angular_polynomial_coefficients",
+        "line": 596
+      },
+      {
+        "name": "legendre_Q_explicit",
+        "line": 616
+      },
+      {
+        "name": "radial_transverse_moment",
+        "line": 620
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/run_verifications_v40.py",
+    "size_bytes": 6016,
+    "sha256": "65a19b690c0eb4ddcf63d125a33d7faef014358c4ac0cfc5d7bb170801e8a390",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "from datetime import datetime",
+      "import json",
+      "import os",
+      "from pathlib import Path",
+      "import shutil",
+      "import subprocess",
+      "import sys",
+      "import time",
+      "import traceback"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/verify_analytic_v40.py",
+    "size_bytes": 17969,
+    "sha256": "99ef2d8d846a5bc9b6d57b82b437e2039d838f3e155d69262d04c69b6dd4ea87",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse, csv, json, platform, time, traceback",
+      "from pathlib import Path",
+      "import sympy as s"
+    ],
+    "functions": [
+      {
+        "name": "check",
+        "line": 31
+      },
+      {
+        "name": "record",
+        "line": 41
+      },
+      {
+        "name": "quadratic_and_crossing",
+        "line": 45
+      },
+      {
+        "name": "canonical_and_late",
+        "line": 79
+      },
+      {
+        "name": "background_global",
+        "line": 134
+      },
+      {
+        "name": "gauge_generator",
+        "line": 159
+      },
+      {
+        "name": "scalar_polynomials_and_sources",
+        "line": 186
+      },
+      {
+        "name": "nonresonant_majorant",
+        "line": 230
+      },
+      {
+        "name": "main",
+        "line": 267
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/verify_angular_controls_v40.py",
+    "size_bytes": 1967,
+    "sha256": "ea1010b7b84e6eed3d2c9c83b9051c11461bce23cee2fcca7218d531c1b07c4e",
+    "imports": [
+      "from pathlib import Path",
+      "import json, csv, math",
+      "import sympy as s",
+      "from sympy.physics.wigner import wigner_d_small",
+      "import radial_coeff_algebra as a",
+      "from angular_coefficients_v40 import channels, wigner, target_laurent"
+    ],
+    "functions": [
+      {
+        "name": "check",
+        "line": 10
+      },
+      {
+        "name": "main",
+        "line": 14
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/verify_editorial_changes_v40.py",
+    "size_bytes": 3787,
+    "sha256": "97abf1dc5f4bb33f0fe4f3a6944aa930335a2a70dcf3430037041a4e1f0d0dbc",
+    "imports": [
+      "from __future__ import annotations",
+      "import hashlib",
+      "import json",
+      "from pathlib import Path",
+      "import re",
+      "import sys",
+      "import sympy as sp"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 18
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/verify_entropy_v44.py",
+    "size_bytes": 7427,
+    "sha256": "9476d9c692180cd59707dc2910c5a3c084f1e4cb6e3838bfe9a648d13a21142a",
+    "imports": [
+      "from __future__ import annotations",
+      "from collections import Counter",
+      "from pathlib import Path",
+      "import re",
+      "import sys",
+      "import sympy as sp"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 21
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/verify_local_vertices_v40.py",
+    "size_bytes": 6395,
+    "sha256": "9441cbe04f9ee067f9d05585192247d2fc8c6fe8c50c801bca25267312854e6f",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse, csv, json, platform, time",
+      "from pathlib import Path",
+      "import sympy as s"
+    ],
+    "functions": [
+      {
+        "name": "check",
+        "line": 28
+      },
+      {
+        "name": "total_operator",
+        "line": 36
+      },
+      {
+        "name": "finite_derivative",
+        "line": 44
+      },
+      {
+        "name": "main",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/verify_noncom_v40.py",
+    "size_bytes": 976,
+    "sha256": "ea388c64df212df072f85410cd4993901d30cd4ade6ce6581c2f7430817b1d6f",
+    "imports": [
+      "from pathlib import Path",
+      "import json",
+      "import noncom_original as src"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 11
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/verify_radial_controls_v40.py",
+    "size_bytes": 2263,
+    "sha256": "4d1c41fd4d5fec0923450e0a1992f8bd02d0fd68b1584e56c15b3bb9cd7a53ff",
+    "imports": [
+      "from pathlib import Path",
+      "import json, csv",
+      "import sympy as s",
+      "from assemble_radial_v40 import load",
+      "import radial_coeff_algebra as a"
+    ],
+    "functions": [
+      {
+        "name": "check",
+        "line": 14
+      },
+      {
+        "name": "pol",
+        "line": 18
+      },
+      {
+        "name": "main",
+        "line": 19
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/original_scripts/verify_soft_v40.py",
+    "size_bytes": 3919,
+    "sha256": "f4b6df49227172e80414b7dcf00309b6f69727696facb7f70096dd2ad06b07cf",
+    "imports": [
+      "from pathlib import Path",
+      "import json, csv, itertools",
+      "import sympy as sp",
+      "import radial_coeff_algebra as a",
+      "from assemble_radial_v40 import decode_file, load",
+      "from angular_coefficients_v40 import transfer, f_boundary"
+    ],
+    "functions": [
+      {
+        "name": "joint",
+        "line": 15
+      },
+      {
+        "name": "valuation",
+        "line": 18
+      },
+      {
+        "name": "check",
+        "line": 23
+      },
+      {
+        "name": "main",
+        "line": 26
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/parameters/numerical_protocols.json",
+    "size_bytes": 2099,
+    "sha256": "b1638b1eecfef3649a0ea67903e23e330b2021f3dbb14aa68ae22ebf2cba967d"
+  },
+  {
+    "path": "GitHub_bundle/requirements.txt",
+    "size_bytes": 60,
+    "sha256": "42df8f934c255057f78c9d3a63c7fdb85254876c40ea285adf873e957ccc02dd"
+  },
+  {
+    "path": "GitHub_bundle/results/README.md",
+    "size_bytes": 1110,
+    "sha256": "a17a6b07bb7cd3c19df784efff3c107e98462cf71a705aa9076a9f4397fd7840"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/analytic_v40/checks.csv",
+    "size_bytes": 1925,
+    "sha256": "ccc5f08ffe03ad850efbef9dac7800a45f624d38fe544a646570c41d63736db2"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/analytic_v40/expressions.txt",
+    "size_bytes": 3238,
+    "sha256": "19f4d182855121fbd5862e6b504f846f25c5cf4d5df4b2d6e94f2b7b91db23b1"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/analytic_v40/run_summary.json",
+    "size_bytes": 122,
+    "sha256": "3e95558849bf53456f847af477701c64de1503295e121bff87eaaa09821a2d66"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/catalogue_checks.json",
+    "size_bytes": 14855,
+    "sha256": "23fe3fe660f6d301a9ba9fb9536d70bf1789ed72608e545739067407021b7d29"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/entropy_checks.txt",
+    "size_bytes": 1363,
+    "sha256": "38596ff5834cdcdfcc93ab7f52e4735abf9502586ad77d3d18ceafe20ac77f18"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/figures/strong_coupling_checks.txt",
+    "size_bytes": 284,
+    "sha256": "b2ff8d298a7e00f8d18ba8cb478a01cece166f5db774ee2007d3ea97be402a92"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/figures/strong_coupling_scale_standard.csv",
+    "size_bytes": 220564,
+    "sha256": "74c041769bf2c4f30fe1b27b62c2b88103101bfbc15a822d27ca7a5f93b2fa3b"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/figures/strong_coupling_scale_standard.png",
+    "size_bytes": 52735,
+    "sha256": "773f31d4955d57ac14f7c36688295947b1bc7bcfba15af3e8b5efdc9a535fc0d"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/local_vertices_v40/checks.csv",
+    "size_bytes": 2742,
+    "sha256": "2833166b9305eb0fc15772209200af9a3f223bf11bc12ddcde8110a04ff3a3c2"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/local_vertices_v40/derivatives.txt",
+    "size_bytes": 2943,
+    "sha256": "8da8a994751ceca8136d7936ab37ffd22f4c0022de0429858e6b552209c7cfb0"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/local_vertices_v40/finite_basis.txt",
+    "size_bytes": 228,
+    "sha256": "a224dce563be0843cb282e68594c0e0cafec1e16d1f747560590c439f9a2eb71"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/local_vertices_v40/local_vertices.txt",
+    "size_bytes": 2937,
+    "sha256": "ebe2e1ad652c95bd11c28beb5fa9d82bc065e5f6623af0d00fd6f1249e056d53"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/local_vertices_v40/results.json",
+    "size_bytes": 5936,
+    "sha256": "1d896a5e48cf6e9e10ad8f321ab081ab02bda282b9f23d2fc28ec6d21949b2fb"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/n02_background_diagnostics/coefficient_expressions.txt",
+    "size_bytes": 1571,
+    "sha256": "c747d624243aef0e20a8598bc97566a90d23ac56fa76d7e6dacef3e8f6c3da3d"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/n02_background_diagnostics/crossing_convergence.csv",
+    "size_bytes": 1460,
+    "sha256": "a6ac4413db5a4ed0f8b01f439310bab9fd68bcd9eb5c742454504b09853ff19e"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/n02_background_diagnostics/crossing_history.csv",
+    "size_bytes": 212139,
+    "sha256": "d08d4d17238405a2dd34432dae9922b168a243043168303a2e714d9c9e16131d"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/n02_background_diagnostics/late_n10_history.csv",
+    "size_bytes": 1075382,
+    "sha256": "f46eafe7b4c1faad84f2ebdfad613646fd82f0cd707b68018a0a16c1da6b906f"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/n02_background_diagnostics/late_n12_history.csv",
+    "size_bytes": 689376,
+    "sha256": "df8b5ee138ba0a6b40be867ecebcbd97433a7a17944729a098391480222a726f"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/n02_background_diagnostics/late_rates.csv",
+    "size_bytes": 1004,
+    "sha256": "9ae37c83318538e4718d1598192fd116ca61f42699cc4277728b21fe7002a8f6"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/n02_background_diagnostics/numerical_results.json",
+    "size_bytes": 15107,
+    "sha256": "263e6b04166325e4efa31a5cbb5d454b797585fa29bc13c4f20ce9623ac524a6"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/n02_background_diagnostics/saddle_rates.csv",
+    "size_bytes": 1738,
+    "sha256": "b7acc0579c1da09bb1ec38fee4175cb5650d9b5597445dca0ab086cf4555fe99"
+  },
+  {
+    "path": "GitHub_bundle/results/inherited_v51/release_checks.json",
+    "size_bytes": 7834,
+    "sha256": "6f9b645d8fb0ab39155fb9509f36bb3c845517f0b3e5a39c24ab259c34d25a84"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/analytic_v40/checks.csv",
+    "size_bytes": 1925,
+    "sha256": "ccc5f08ffe03ad850efbef9dac7800a45f624d38fe544a646570c41d63736db2"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/analytic_v40/expressions.txt",
+    "size_bytes": 3238,
+    "sha256": "19f4d182855121fbd5862e6b504f846f25c5cf4d5df4b2d6e94f2b7b91db23b1"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/analytic_v40/run_summary.json",
+    "size_bytes": 121,
+    "sha256": "d1116c0d318e2ad05fe7e38257f9c4bbd32380b75440eb5bd60fbcba6ed48934"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/catalogue_checks.json",
+    "size_bytes": 14855,
+    "sha256": "7395a87e88ae48d125d9733006ec114641a69ff9ce37be27056093fe1cbee1c4"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/entropy_checks.txt",
+    "size_bytes": 1363,
+    "sha256": "38596ff5834cdcdfcc93ab7f52e4735abf9502586ad77d3d18ceafe20ac77f18"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/figures/strong_coupling_checks.txt",
+    "size_bytes": 284,
+    "sha256": "b2ff8d298a7e00f8d18ba8cb478a01cece166f5db774ee2007d3ea97be402a92"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/figures/strong_coupling_scale_standard.csv",
+    "size_bytes": 220564,
+    "sha256": "74c041769bf2c4f30fe1b27b62c2b88103101bfbc15a822d27ca7a5f93b2fa3b"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/figures/strong_coupling_scale_standard.pdf",
+    "size_bytes": 17126,
+    "sha256": "05b24fd29af607e6c1db4a1764c8d532e58d80fb79dafa98beb67e49ac8ec152"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/figures/strong_coupling_scale_standard.png",
+    "size_bytes": 52735,
+    "sha256": "773f31d4955d57ac14f7c36688295947b1bc7bcfba15af3e8b5efdc9a535fc0d"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/local_vertices_v40/checks.csv",
+    "size_bytes": 2742,
+    "sha256": "2833166b9305eb0fc15772209200af9a3f223bf11bc12ddcde8110a04ff3a3c2"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/local_vertices_v40/derivatives.txt",
+    "size_bytes": 2943,
+    "sha256": "8da8a994751ceca8136d7936ab37ffd22f4c0022de0429858e6b552209c7cfb0"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/local_vertices_v40/finite_basis.txt",
+    "size_bytes": 228,
+    "sha256": "a224dce563be0843cb282e68594c0e0cafec1e16d1f747560590c439f9a2eb71"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/local_vertices_v40/local_vertices.txt",
+    "size_bytes": 2937,
+    "sha256": "ebe2e1ad652c95bd11c28beb5fa9d82bc065e5f6623af0d00fd6f1249e056d53"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/local_vertices_v40/results.json",
+    "size_bytes": 5936,
+    "sha256": "1d896a5e48cf6e9e10ad8f321ab081ab02bda282b9f23d2fc28ec6d21949b2fb"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/n02_background_diagnostics/coefficient_expressions.txt",
+    "size_bytes": 1571,
+    "sha256": "c747d624243aef0e20a8598bc97566a90d23ac56fa76d7e6dacef3e8f6c3da3d"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/n02_background_diagnostics/crossing_convergence.csv",
+    "size_bytes": 1460,
+    "sha256": "a6ac4413db5a4ed0f8b01f439310bab9fd68bcd9eb5c742454504b09853ff19e"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/n02_background_diagnostics/crossing_history.csv",
+    "size_bytes": 212139,
+    "sha256": "d08d4d17238405a2dd34432dae9922b168a243043168303a2e714d9c9e16131d"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/n02_background_diagnostics/late_n10_history.csv",
+    "size_bytes": 1075382,
+    "sha256": "f46eafe7b4c1faad84f2ebdfad613646fd82f0cd707b68018a0a16c1da6b906f"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/n02_background_diagnostics/late_n12_history.csv",
+    "size_bytes": 689376,
+    "sha256": "df8b5ee138ba0a6b40be867ecebcbd97433a7a17944729a098391480222a726f"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/n02_background_diagnostics/late_rates.csv",
+    "size_bytes": 1004,
+    "sha256": "9ae37c83318538e4718d1598192fd116ca61f42699cc4277728b21fe7002a8f6"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/n02_background_diagnostics/numerical_results.json",
+    "size_bytes": 15107,
+    "sha256": "263e6b04166325e4efa31a5cbb5d454b797585fa29bc13c4f20ce9623ac524a6"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/n02_background_diagnostics/saddle_rates.csv",
+    "size_bytes": 1738,
+    "sha256": "b7acc0579c1da09bb1ec38fee4175cb5650d9b5597445dca0ab086cf4555fe99"
+  },
+  {
+    "path": "GitHub_bundle/results/rechecked_v52/release_checks.json",
+    "size_bytes": 8321,
+    "sha256": "0e1468c38256a15b153fc159e8e73902f52a149bb883b5aff0a8eb355f1c20c6"
+  },
+  {
+    "path": "GitHub_bundle/scripts/n02_background_diagnostics.py",
+    "size_bytes": 15557,
+    "sha256": "3df6e831d2884291e5a5617a2caff958bee314844f671b6696b893f057172831",
+    "imports": [
+      "from __future__ import annotations",
+      "import csv",
+      "import json",
+      "import platform",
+      "from pathlib import Path",
+      "import numpy as np",
+      "import scipy",
+      "from scipy.integrate import solve_ivp",
+      "import sympy as sp",
+      "import argparse"
+    ],
+    "functions": [
+      {
+        "name": "check",
+        "line": 24
+      },
+      {
+        "name": "save_csv",
+        "line": 30
+      },
+      {
+        "name": "integrate",
+        "line": 35
+      },
+      {
+        "name": "symbolic_reduction",
+        "line": 42
+      },
+      {
+        "name": "saddle_numerics",
+        "line": 127
+      },
+      {
+        "name": "crossing_numerics",
+        "line": 153
+      },
+      {
+        "name": "late_symbolic",
+        "line": 209
+      },
+      {
+        "name": "late_numerics",
+        "line": 232
+      },
+      {
+        "name": "main",
+        "line": 277
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/scripts/plot_strong_coupling.py",
+    "size_bytes": 3218,
+    "sha256": "28de9fb08c0d5e9070613c1c1a0af82e343a26f1aa6daf9debd1097ec5c6648e",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "from pathlib import Path",
+      "import numpy as np",
+      "import matplotlib",
+      "import matplotlib.pyplot as plt"
+    ],
+    "functions": [
+      {
+        "name": "normalized_bounds",
+        "line": 16
+      },
+      {
+        "name": "main",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/scripts/verify_analytic.py",
+    "size_bytes": 16718,
+    "sha256": "b03504bd773f79093407f55c1eaf093127e95f843e5a61672a22fc3d4e255cfc",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse, csv, json, platform, time, traceback",
+      "from pathlib import Path",
+      "import sympy as s"
+    ],
+    "functions": [
+      {
+        "name": "check",
+        "line": 22
+      },
+      {
+        "name": "record",
+        "line": 32
+      },
+      {
+        "name": "quadratic_and_crossing",
+        "line": 36
+      },
+      {
+        "name": "canonical_and_late",
+        "line": 70
+      },
+      {
+        "name": "background_global",
+        "line": 125
+      },
+      {
+        "name": "gauge_generator",
+        "line": 150
+      },
+      {
+        "name": "scalar_polynomials_and_sources",
+        "line": 177
+      },
+      {
+        "name": "nonresonant_majorant",
+        "line": 221
+      },
+      {
+        "name": "main",
+        "line": 258
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/scripts/verify_catalogue.py",
+    "size_bytes": 6915,
+    "sha256": "881f4ba0f7a5eceb2fbd6ed660498b69513582d3b1c256630a1d2c054364f10d",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse, itertools, json, re, time",
+      "from pathlib import Path",
+      "import sympy as sp",
+      "from sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication"
+    ],
+    "functions": [
+      {
+        "name": "group",
+        "line": 23
+      },
+      {
+        "name": "plain_latex",
+        "line": 34
+      },
+      {
+        "name": "math",
+        "line": 56
+      },
+      {
+        "name": "main",
+        "line": 59
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/scripts/verify_entropy.py",
+    "size_bytes": 4327,
+    "sha256": "92f75550d3d3fe11c626a7f00ffff51b52eee5abef00b79c6def7fc481ed2f0a",
+    "imports": [
+      "from __future__ import annotations",
+      "from collections import Counter",
+      "from pathlib import Path",
+      "import re",
+      "import sys",
+      "import sympy as sp"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 19
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/scripts/verify_local_vertices.py",
+    "size_bytes": 5934,
+    "sha256": "c7248425afba05d61e088000301dd28a72660a343b6271cc954c65e0823e2fe4",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse, csv, json, platform, time",
+      "from pathlib import Path",
+      "import sympy as s"
+    ],
+    "functions": [
+      {
+        "name": "check",
+        "line": 23
+      },
+      {
+        "name": "total_operator",
+        "line": 31
+      },
+      {
+        "name": "finite_derivative",
+        "line": 39
+      },
+      {
+        "name": "main",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/scripts/verify_release.py",
+    "size_bytes": 7313,
+    "sha256": "8a9740b014efb33dc2148fd3709c2e54a1055283ed499e9bf95d57a7b931599d",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse, collections, csv, json, math, re",
+      "from pathlib import Path"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 12
+      }
+    ]
+  },
+  {
+    "path": "GitHub_bundle/supplement/README.md",
+    "size_bytes": 1499,
+    "sha256": "d54fd961e562fe366223701572f46e4b72a27bb2c54affa7ee385fab2d6cb446"
+  },
+  {
+    "path": "GitHub_bundle/supplement/V52_mathematical_supplement.pdf",
+    "size_bytes": 540438,
+    "sha256": "4d88798b2a4658e7babb7de820dd53ce877bbb472908d8aa6ff06a96e5d503ef"
+  },
+  {
+    "path": "GitHub_bundle/supplement/source/mathematical_catalogue.bbl",
+    "size_bytes": 667,
+    "sha256": "bc31b8d4282dbd15c402749ab558be2f079c1997df5b887e0e1648892fc6a85f"
+  },
+  {
+    "path": "GitHub_bundle/supplement/source/mathematical_catalogue.tex",
+    "size_bytes": 299719,
+    "sha256": "7848e7e464dbe277c8f1161b6f232681bd239f7604f6b4286980aeec0cdfb3ad"
+  },
+  {
+    "path": "GitHub_bundle/supplement/source/references.bib",
+    "size_bytes": 425,
+    "sha256": "21f663a0b7bb360fa045e485b1fdd0e4eb1f119f433d5b74f1f2574b31fcbd91"
+  },
+  {
+    "path": "GitHub_bundle/verification/KNOWN_LIMITATIONS.md",
+    "size_bytes": 3126,
+    "sha256": "86299ce8de70510a3d05d76c1e04851749230c265651bbd4018ec7e093a85f7a"
+  },
+  {
+    "path": "GitHub_bundle/verification/analytic.log",
+    "size_bytes": 2232,
+    "sha256": "66ed555e7fa7c455667d7a9b043d1d4bb850d3c59b53db53714c8bb09af1832f"
+  },
+  {
+    "path": "GitHub_bundle/verification/catalogue.log",
+    "size_bytes": 555,
+    "sha256": "18aa665619911e68bf241ba2b90b776b1002e4252070f01c6a24ff17ddfaabc7"
+  },
+  {
+    "path": "GitHub_bundle/verification/citation_metadata_validation.json",
+    "size_bytes": 558,
+    "sha256": "cdc3ca35872dc9254492fbea0a7c87bf3c5f7a4a6dce84aa0b9c00ebe1d5046e"
+  },
+  {
+    "path": "GitHub_bundle/verification/entropy.log",
+    "size_bytes": 1363,
+    "sha256": "38596ff5834cdcdfcc93ab7f52e4735abf9502586ad77d3d18ceafe20ac77f18"
+  },
+  {
+    "path": "GitHub_bundle/verification/environment.json",
+    "size_bytes": 236,
+    "sha256": "b740e05a4b9dbc918d119d10c60465e806b99ed67389fa0a4a34ecc5fdfe1053"
+  },
+  {
+    "path": "GitHub_bundle/verification/figure.log",
+    "size_bytes": 285,
+    "sha256": "89be703558c2aa258fd3c7dfb41fff6963f745ba938f420c0518cedd5bbeefda"
+  },
+  {
+    "path": "GitHub_bundle/verification/local_vertices.log",
+    "size_bytes": 3085,
+    "sha256": "44b7750469e0cbe29e55ce44bf067f687c5385485e119e7c2be0d93fe6ea811f"
+  },
+  {
+    "path": "GitHub_bundle/verification/numerics.log",
+    "size_bytes": 341,
+    "sha256": "f110d03c8d19c7146396c908c63b9d15889589f1ef18d8ba88d22c445f740682"
+  },
+  {
+    "path": "GitHub_bundle/verification/original_script_sha256.json",
+    "size_bytes": 2265,
+    "sha256": "85b198f65b3d6514f3110ff43346a296a7d588b2bafba45e9da155d0386af321"
+  },
+  {
+    "path": "GitHub_bundle/verification/reference_maps/bibliography_number_map.csv",
+    "size_bytes": 2199,
+    "sha256": "60bd02cbc34ebebfb4d9cca0c48da240d92dbc78a89c73d0be5ab815113e8a40"
+  },
+  {
+    "path": "GitHub_bundle/verification/reference_maps/cross_document_links.csv",
+    "size_bytes": 93241,
+    "sha256": "2827277afd0557c57735a7cf44633de9fbc94da58142804b8b418e4e3a084423"
+  },
+  {
+    "path": "GitHub_bundle/verification/reference_maps/cross_document_links.json",
+    "size_bytes": 111288,
+    "sha256": "1b4007cfd0dfd0e3f989fa66bfc03089beca66db1c23f2bb7241ad032a386906"
+  },
+  {
+    "path": "GitHub_bundle/verification/reference_maps/label_map.csv",
+    "size_bytes": 262799,
+    "sha256": "112085c77b4e0515b65d5297d30bc5d43f41feab54472b3bcd30a2c4809eba91"
+  },
+  {
+    "path": "GitHub_bundle/verification/reference_maps/label_map.json",
+    "size_bytes": 633206,
+    "sha256": "34b00f22749666fcc558e8f7b167343b1596e188226c34e462765f578ad60b86"
+  },
+  {
+    "path": "GitHub_bundle/verification/release.log",
+    "size_bytes": 73,
+    "sha256": "357c66bad852cabad59e9c43671ade96cc366513ae4add0dbbd6c49909ee5872"
+  },
+  {
+    "path": "GitHub_bundle/verification/script_changes.diff",
+    "size_bytes": 10353,
+    "sha256": "c940f3b9ff7630363e2e3e8282675432570a6188849c43fa09dcbba0a208d53e"
+  },
+  {
+    "path": "GitHub_bundle/verification/script_path_changes.json",
+    "size_bytes": 5344,
+    "sha256": "b2bb4c88ac47b3f69f8199745fb3a7b2d1038f03b89e01c46e6d8e3c9dc29393"
+  },
+  {
+    "path": "GitHub_bundle/verification/tests_executed_V52.json",
+    "size_bytes": 2074,
+    "sha256": "5b10df479fc283cdd18ce2930fcf567e5c2c6f3f210a16c9adb9b847f5262a33"
+  },
+  {
+    "path": "README_RU.md",
+    "size_bytes": 1590,
+    "sha256": "f26ac2541957a5c50fb8fa0cee3c1b5379a05332eb8438a440fee0329dc2581e"
+  },
+  {
+    "path": "SHA256SUMS.txt",
+    "size_bytes": 27862,
+    "sha256": "ae72319d7942760fb33fdcb1e14f5a15c3c669f76715337bd37fac7422138c6f"
+  },
+  {
+    "path": "V52_report_RU.md",
+    "size_bytes": 40527,
+    "sha256": "9be787db503b9e5145e57ca585d34b89ef23fbca09b4873a18426bdf731d8cbd"
+  },
+  {
+    "path": "article/V52_article.pdf",
+    "size_bytes": 1142585,
+    "sha256": "2799bdcc06fb45f2950b2a4f50c2405d3096a88bd11ac42425511a6781eaf229"
+  },
+  {
+    "path": "article/source/main.bbl",
+    "size_bytes": 21783,
+    "sha256": "d2dd96b2b3ecc5df1d006f8742a129b775280853984368e7e754c73c5343acb2"
+  },
+  {
+    "path": "article/source/main.tex",
+    "size_bytes": 395429,
+    "sha256": "4850bc604322ab42cdae938db2666c0a36e57e7135c5e73b112c1e28630bb878"
+  },
+  {
+    "path": "article/source/phase_portrait_c12.pdf",
+    "size_bytes": 39048,
+    "sha256": "d751814efe7eab0cd0b19c9d5cf71012b79b28fe4707816489740555246c05e1"
+  },
+  {
+    "path": "article/source/pole_crossing_c12.pdf",
+    "size_bytes": 17527,
+    "sha256": "910d634a756d7c1420ba42748190f947ee1b466175fdf42a5bdd1cd2279142df"
+  },
+  {
+    "path": "article/source/references.bib",
+    "size_bytes": 30251,
+    "sha256": "87a30439b64f3aeb65ce0ecee57b65f79452e2feb82983a04aa5cb3fd1c5591a"
+  },
+  {
+    "path": "article/source/strong_coupling_scale_standard.pdf",
+    "size_bytes": 17126,
+    "sha256": "45ae572ad62356c79a345d935974b3b0bb260c023eb9aeef07aba1876fa23a76"
+  },
+  {
+    "path": "audit/COMMANDS.md",
+    "size_bytes": 1624,
+    "sha256": "d001be44ee1a28abff30675e84bd0e4d904bd576fb8d461df8fe14f6c4b3ca8f"
+  },
+  {
+    "path": "audit/V51.aux",
+    "size_bytes": 215274,
+    "sha256": "e74a51924727d2a69b3da679a40d628c1e5c25b3c82916ef4124942ca709106d"
+  },
+  {
+    "path": "audit/V51_inventory.json",
+    "size_bytes": 17186,
+    "sha256": "ad17b88f141cd61e9f7d028d866451f21111defe3b50b348b9094de494aa5a76"
+  },
+  {
+    "path": "audit/V52_article.aux",
+    "size_bytes": 102673,
+    "sha256": "474adbedef7e54a5c61fedf8fa23b3420f53deae7f2c1dbb5fd2493ea72d843c"
+  },
+  {
+    "path": "audit/V52_supplement.aux",
+    "size_bytes": 108563,
+    "sha256": "cd390bb638bc586b8e18267407abb1e97dab437ec37407f25b400f29b21bd0e6"
+  },
+  {
+    "path": "audit/all_catalogue_mentions.json",
+    "size_bytes": 17346,
+    "sha256": "59014748a32782818a802cd9130a28d8967cd630962e85f5f2fb927cb27c572c"
+  },
+  {
+    "path": "audit/bibliographic_duplicates.json",
+    "size_bytes": 122,
+    "sha256": "e7ab4cc1ec78c64a76d6ef5c641e3f7a8a618b10ca374e13802e16b34bb5dfab"
+  },
+  {
+    "path": "audit/bibliography_number_map.csv",
+    "size_bytes": 2199,
+    "sha256": "60bd02cbc34ebebfb4d9cca0c48da240d92dbc78a89c73d0be5ab815113e8a40"
+  },
+  {
+    "path": "audit/bibliography_number_map.json",
+    "size_bytes": 8092,
+    "sha256": "acf9bc6d1b0873a4f2c51d3c495a393688e34c21bd977e23e8d8d70885826de4"
+  },
+  {
+    "path": "audit/build_working/article_1.stdout",
+    "size_bytes": 8635,
+    "sha256": "bff95e516f677cf2a60f51ac84bdd78905a2a116e6b4803319985553be0df30f"
+  },
+  {
+    "path": "audit/build_working/article_2.stdout",
+    "size_bytes": 158,
+    "sha256": "d2caff4c872bfda81f6cfbbd16a5776ac581dc3493c4dbf936bb5fe55ec45642"
+  },
+  {
+    "path": "audit/build_working/article_3.stdout",
+    "size_bytes": 8553,
+    "sha256": "0aec606dce1d3171e73713f4fd818bf94199b850a329a533564347640edbb8ed"
+  },
+  {
+    "path": "audit/build_working/article_4.stdout",
+    "size_bytes": 8553,
+    "sha256": "0aec606dce1d3171e73713f4fd818bf94199b850a329a533564347640edbb8ed"
+  },
+  {
+    "path": "audit/build_working/article_5.stdout",
+    "size_bytes": 8553,
+    "sha256": "0aec606dce1d3171e73713f4fd818bf94199b850a329a533564347640edbb8ed"
+  },
+  {
+    "path": "audit/build_working/supplement_1.stdout",
+    "size_bytes": 7294,
+    "sha256": "efdc0deb15cb98e1ef0496b06f6b24931cfb1239f67fbe863136d7003440fdc1"
+  },
+  {
+    "path": "audit/build_working/supplement_2.stdout",
+    "size_bytes": 176,
+    "sha256": "5e4ce641c06761978f5ffbf9bdb7eb581090c3920e12b21af98258644131b760"
+  },
+  {
+    "path": "audit/build_working/supplement_3.stdout",
+    "size_bytes": 7294,
+    "sha256": "efdc0deb15cb98e1ef0496b06f6b24931cfb1239f67fbe863136d7003440fdc1"
+  },
+  {
+    "path": "audit/build_working/supplement_4.stdout",
+    "size_bytes": 7294,
+    "sha256": "efdc0deb15cb98e1ef0496b06f6b24931cfb1239f67fbe863136d7003440fdc1"
+  },
+  {
+    "path": "audit/build_working/supplement_5.stdout",
+    "size_bytes": 7294,
+    "sha256": "efdc0deb15cb98e1ef0496b06f6b24931cfb1239f67fbe863136d7003440fdc1"
+  },
+  {
+    "path": "audit/citation_metadata_validation.json",
+    "size_bytes": 558,
+    "sha256": "cdc3ca35872dc9254492fbea0a7c87bf3c5f7a4a6dce84aa0b9c00ebe1d5046e"
+  },
+  {
+    "path": "audit/clean_builds/article/bibtex.stdout",
+    "size_bytes": 158,
+    "sha256": "d2caff4c872bfda81f6cfbbd16a5776ac581dc3493c4dbf936bb5fe55ec45642"
+  },
+  {
+    "path": "audit/clean_builds/article/input_dependencies.json",
+    "size_bytes": 11639,
+    "sha256": "c27b49c1da408b9294af2880a91bfea17564106e08b0ad73c10af464b9011889"
+  },
+  {
+    "path": "audit/clean_builds/article/main.aux",
+    "size_bytes": 102673,
+    "sha256": "474adbedef7e54a5c61fedf8fa23b3420f53deae7f2c1dbb5fd2493ea72d843c"
+  },
+  {
+    "path": "audit/clean_builds/article/main.blg",
+    "size_bytes": 930,
+    "sha256": "8caf45d62bcd44cab99fe1608919eaa6f59f7a4788106f3d19dca9189ec0fbe4"
+  },
+  {
+    "path": "audit/clean_builds/article/main.fls",
+    "size_bytes": 21684,
+    "sha256": "70e19a5ef396bfa064783d3984e8f52c4a9a37ceabc49570d340fe0f58e966de"
+  },
+  {
+    "path": "audit/clean_builds/article/main.log",
+    "size_bytes": 31498,
+    "sha256": "0131ce09a719f901ed546df85a0c1786d96fac4d42fb9ddef3e6c39017cf827c"
+  },
+  {
+    "path": "audit/clean_builds/article/main.toc",
+    "size_bytes": 8515,
+    "sha256": "b93a588a13199151741098f9e1b46686fe4026509269242a8287c6241117f0fd"
+  },
+  {
+    "path": "audit/clean_builds/article/rebuilt_bbl_pass1.stdout",
+    "size_bytes": 8553,
+    "sha256": "0aec606dce1d3171e73713f4fd818bf94199b850a329a533564347640edbb8ed"
+  },
+  {
+    "path": "audit/clean_builds/article/rebuilt_bbl_pass2.stdout",
+    "size_bytes": 8553,
+    "sha256": "0aec606dce1d3171e73713f4fd818bf94199b850a329a533564347640edbb8ed"
+  },
+  {
+    "path": "audit/clean_builds/article/rebuilt_bbl_pass3.stdout",
+    "size_bytes": 8553,
+    "sha256": "0aec606dce1d3171e73713f4fd818bf94199b850a329a533564347640edbb8ed"
+  },
+  {
+    "path": "audit/clean_builds/article/supplied_bbl_final.log",
+    "size_bytes": 31498,
+    "sha256": "0131ce09a719f901ed546df85a0c1786d96fac4d42fb9ddef3e6c39017cf827c"
+  },
+  {
+    "path": "audit/clean_builds/article/supplied_bbl_pass1.stdout",
+    "size_bytes": 76373,
+    "sha256": "4e15274c5d321be96034254eee5389a4e298e7da86df5c75c01e295c933c18f7"
+  },
+  {
+    "path": "audit/clean_builds/article/supplied_bbl_pass2.stdout",
+    "size_bytes": 8635,
+    "sha256": "6df0fcdc420d2be0ab70cc4a02ed26b7303e45c06912b959ebc0d8afff8c8a12"
+  },
+  {
+    "path": "audit/clean_builds/article/supplied_bbl_pass3.stdout",
+    "size_bytes": 8553,
+    "sha256": "0aec606dce1d3171e73713f4fd818bf94199b850a329a533564347640edbb8ed"
+  },
+  {
+    "path": "audit/clean_builds/summary.json",
+    "size_bytes": 4006,
+    "sha256": "dd36409e4bc6edd181dc5e50d51b65df85891c32aeacea395f9dd9b4628a46f4"
+  },
+  {
+    "path": "audit/clean_builds/supplement/bibtex.stdout",
+    "size_bytes": 176,
+    "sha256": "5e4ce641c06761978f5ffbf9bdb7eb581090c3920e12b21af98258644131b760"
+  },
+  {
+    "path": "audit/clean_builds/supplement/input_dependencies.json",
+    "size_bytes": 9335,
+    "sha256": "e082a7bc7486986f32fb3cc69398e3214adb561cfbd144a9a8745a15e2a6f9f5"
+  },
+  {
+    "path": "audit/clean_builds/supplement/mathematical_catalogue.aux",
+    "size_bytes": 108563,
+    "sha256": "cd390bb638bc586b8e18267407abb1e97dab437ec37407f25b400f29b21bd0e6"
+  },
+  {
+    "path": "audit/clean_builds/supplement/mathematical_catalogue.blg",
+    "size_bytes": 893,
+    "sha256": "888abdec5c81303c9f516d9396d4bfaca74e2612328a55d91b05ffebf0c137c3"
+  },
+  {
+    "path": "audit/clean_builds/supplement/mathematical_catalogue.fls",
+    "size_bytes": 17316,
+    "sha256": "980aba41b4b838af4fa925b6dc321e16ee98a9186027dc5e85e6188d8455d4ec"
+  },
+  {
+    "path": "audit/clean_builds/supplement/mathematical_catalogue.log",
+    "size_bytes": 28179,
+    "sha256": "a51e53bcd6d7a22adde4d1f07a2157652777502330d50f49e5cf8bc7da3833de"
+  },
+  {
+    "path": "audit/clean_builds/supplement/mathematical_catalogue.toc",
+    "size_bytes": 8655,
+    "sha256": "609e6763d1785afb1194947fb7ca85dc71ac54cab01b9a468caeab85458ccdad"
+  },
+  {
+    "path": "audit/clean_builds/supplement/rebuilt_bbl_pass1.stdout",
+    "size_bytes": 7294,
+    "sha256": "efdc0deb15cb98e1ef0496b06f6b24931cfb1239f67fbe863136d7003440fdc1"
+  },
+  {
+    "path": "audit/clean_builds/supplement/rebuilt_bbl_pass2.stdout",
+    "size_bytes": 7294,
+    "sha256": "efdc0deb15cb98e1ef0496b06f6b24931cfb1239f67fbe863136d7003440fdc1"
+  },
+  {
+    "path": "audit/clean_builds/supplement/rebuilt_bbl_pass3.stdout",
+    "size_bytes": 7294,
+    "sha256": "efdc0deb15cb98e1ef0496b06f6b24931cfb1239f67fbe863136d7003440fdc1"
+  },
+  {
+    "path": "audit/clean_builds/supplement/supplied_bbl_final.log",
+    "size_bytes": 28179,
+    "sha256": "a51e53bcd6d7a22adde4d1f07a2157652777502330d50f49e5cf8bc7da3833de"
+  },
+  {
+    "path": "audit/clean_builds/supplement/supplied_bbl_pass1.stdout",
+    "size_bytes": 12711,
+    "sha256": "c415affab00fa233dbd258e9e671e6b034b7b1af207d88c95a4cb8f33e65eab7"
+  },
+  {
+    "path": "audit/clean_builds/supplement/supplied_bbl_pass2.stdout",
+    "size_bytes": 7294,
+    "sha256": "efdc0deb15cb98e1ef0496b06f6b24931cfb1239f67fbe863136d7003440fdc1"
+  },
+  {
+    "path": "audit/clean_builds/supplement/supplied_bbl_pass3.stdout",
+    "size_bytes": 7294,
+    "sha256": "efdc0deb15cb98e1ef0496b06f6b24931cfb1239f67fbe863136d7003440fdc1"
+  },
+  {
+    "path": "audit/cross_document_links.csv",
+    "size_bytes": 93241,
+    "sha256": "2827277afd0557c57735a7cf44633de9fbc94da58142804b8b418e4e3a084423"
+  },
+  {
+    "path": "audit/cross_document_links.json",
+    "size_bytes": 111288,
+    "sha256": "1b4007cfd0dfd0e3f989fa66bfc03089beca66db1c23f2bb7241ad032a386906"
+  },
+  {
+    "path": "audit/delivery_reverification.json",
+    "size_bytes": 813,
+    "sha256": "8a74f64e6f479a725c7f4a0180841065ee05c0237d16a45faf486bea27382d19"
+  },
+  {
+    "path": "audit/document_changes.diff",
+    "size_bytes": 51421,
+    "sha256": "eaaf380847b4687b5bbb622910626a928621d4e6d40d1ca8f853eafe3e3755f1"
+  },
+  {
+    "path": "audit/editorial_changes.json",
+    "size_bytes": 9050,
+    "sha256": "9d3dc5c0995287a66180bfe4765674233149da9ee951267dca872c039937a920"
+  },
+  {
+    "path": "audit/file_placement_map.csv",
+    "size_bytes": 24928,
+    "sha256": "87611595b64a6aabb6753dffc50affbee5694df8ef7995f81b9cfe2f42939866"
+  },
+  {
+    "path": "audit/file_placement_map.json",
+    "size_bytes": 35985,
+    "sha256": "b279e4e709980977702034b0de5e5577e1b2e8e05ed4c089f04860eb6f89c926"
+  },
+  {
+    "path": "audit/label_map.csv",
+    "size_bytes": 262799,
+    "sha256": "112085c77b4e0515b65d5297d30bc5d43f41feab54472b3bcd30a2c4809eba91"
+  },
+  {
+    "path": "audit/label_map.json",
+    "size_bytes": 633206,
+    "sha256": "34b00f22749666fcc558e8f7b167343b1596e188226c34e462765f578ad60b86"
+  },
+  {
+    "path": "audit/math_preservation.json",
+    "size_bytes": 1403,
+    "sha256": "8b3f9591d4ec2d0192f0820a8ada77dc7c6eb3dda33619805c1a6263e0a48c7f"
+  },
+  {
+    "path": "audit/original_V51_unchanged.json",
+    "size_bytes": 9948,
+    "sha256": "5f4fb1056a44404b408d9294ac3eb386133f48feb7348ea9f45eee3dd1059878"
+  },
+  {
+    "path": "audit/packaged_source_matches_clean_build.json",
+    "size_bytes": 1804,
+    "sha256": "77bf3ef78a4513e3a99ac85aaac38b6233fc49a5e35d17a1b1ac6da221d1e19a"
+  },
+  {
+    "path": "audit/packaging_checks.json",
+    "size_bytes": 548,
+    "sha256": "589ef1a9e40f9958198e8429798932b42056f5305001b56084927ae966dfbb53"
+  },
+  {
+    "path": "audit/proposed_not_applied.json",
+    "size_bytes": 534,
+    "sha256": "d9cef8d09680385f3d6b68d07054d57ecd9b66718c8472381cc9d6c539142a18"
+  },
+  {
+    "path": "audit/rerun_output_comparison.json",
+    "size_bytes": 4148,
+    "sha256": "99474757a394efdcfae4927330d99346c9a8ec0476d4cde09ca9ab6a05cbdd41"
+  },
+  {
+    "path": "audit/script_changes.diff",
+    "size_bytes": 10353,
+    "sha256": "c940f3b9ff7630363e2e3e8282675432570a6188849c43fa09dcbba0a208d53e"
+  },
+  {
+    "path": "audit/script_dependency_graph.json",
+    "size_bytes": 8588,
+    "sha256": "6e2128ce77b0444ccb3f06746fa394afa823705144ff71bd578f4e29fb96d66e"
+  },
+  {
+    "path": "audit/script_path_changes.json",
+    "size_bytes": 5344,
+    "sha256": "b2bb4c88ac47b3f69f8199745fb3a7b2d1038f03b89e01c46e6d8e3c9dc29393"
+  },
+  {
+    "path": "audit/security_and_paths.json",
+    "size_bytes": 386,
+    "sha256": "3bb88f2e66a13864a6841986f96b21abf5ef707d9c8319698b65521adbe511b1"
+  },
+  {
+    "path": "audit/self_containment_by_reference.json",
+    "size_bytes": 9830,
+    "sha256": "ce0a602a2ac922e1d4151b07788de32928939c0f7cd471e44ba8cbb10a52d3c7"
+  },
+  {
+    "path": "audit/source_dependency_graph.json",
+    "size_bytes": 1931,
+    "sha256": "64022de5cceec3fea8936a0d0282776902325c6cb54aa52db2d3eccaee0a7c0a"
+  },
+  {
+    "path": "audit/structure_and_bibliography.json",
+    "size_bytes": 1312,
+    "sha256": "45ebd3298619b41291c5d1fc4337d1277737b9aabaf7e4c3c229593517b6e3bb"
+  },
+  {
+    "path": "audit/tools/verify_delivery.py",
+    "size_bytes": 6548,
+    "sha256": "a048e4391e455ad603a1f8bcfccf8afd410fc388635dfdcdf8c9fb7176d4aa4c",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import hashlib",
+      "import json",
+      "from pathlib import Path",
+      "import re",
+      "import zipfile"
+    ],
+    "functions": [
+      {
+        "name": "sha",
+        "line": 17
+      },
+      {
+        "name": "uncomment",
+        "line": 21
+      },
+      {
+        "name": "environments",
+        "line": 25
+      },
+      {
+        "name": "inline_math",
+        "line": 30
+      },
+      {
+        "name": "body",
+        "line": 34
+      },
+      {
+        "name": "labels",
+        "line": 40
+      },
+      {
+        "name": "main",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "path": "audit/visual_qa/README.md",
+    "size_bytes": 931,
+    "sha256": "7e6bd73bf713bb76d0ffbd6d2b4aa204f8cc3a87ac3a04d062b297a267130d3d"
+  },
+  {
+    "path": "audit/visual_qa/article_001.png",
+    "size_bytes": 192265,
+    "sha256": "2a2a328d78ea072369486081814518fcddab63a09499c4ce122da8275764b180"
+  },
+  {
+    "path": "audit/visual_qa/article_019.png",
+    "size_bytes": 181163,
+    "sha256": "7e1db7e51cdf5bcdda999c8517b67104c343077b589b39d1400cc05e92475838"
+  },
+  {
+    "path": "audit/visual_qa/article_051.png",
+    "size_bytes": 262598,
+    "sha256": "0fd2e0604fbab9a3ace97e12c2a9c4032d0c2d6c21cc0ba890a6b4c6aec32f40"
+  },
+  {
+    "path": "audit/visual_qa/article_052.png",
+    "size_bytes": 268302,
+    "sha256": "35ed28d6d42b18105ea1bc601a833e4fe6020ae5108741af98a09d27524c7eac"
+  },
+  {
+    "path": "audit/visual_qa/article_054.png",
+    "size_bytes": 65858,
+    "sha256": "49a756a14671ffc7c5e0b6b4c3e625bdf4f52e20e01dfa052bfd7568cfef7795"
+  },
+  {
+    "path": "audit/visual_qa/article_055.png",
+    "size_bytes": 184816,
+    "sha256": "139881c147816a7b90123b9e31af2c5015dad12c5f58991a135306e0acd6177a"
+  },
+  {
+    "path": "audit/visual_qa/article_063.png",
+    "size_bytes": 137499,
+    "sha256": "8ce5f6ace5c96a6b675b78125b795c42d50d56a19e2bf7dda891fc337a60c3f5"
+  },
+  {
+    "path": "audit/visual_qa/article_067.png",
+    "size_bytes": 202552,
+    "sha256": "1b4d8db06ecf3915c68fc5805548f8d3742ae9452a1ee328468b683fda6a05cf"
+  },
+  {
+    "path": "audit/visual_qa/article_068.png",
+    "size_bytes": 188949,
+    "sha256": "6c978e4b86d6524baf31e97ee72c08ee72511010e26c5bd4f4b6aa57a6e3a145"
+  },
+  {
+    "path": "audit/visual_qa/article_069.png",
+    "size_bytes": 189939,
+    "sha256": "99af22755bf4148170351e6f7804c21aca66610f118b6102fb8e7ce0cd67fc35"
+  },
+  {
+    "path": "audit/visual_qa/article_072.png",
+    "size_bytes": 190336,
+    "sha256": "903c62718d8e9333075003677ba6bdc97f9eb3b38dbcc2d7e147f90788d783f7"
+  },
+  {
+    "path": "audit/visual_qa/article_073.png",
+    "size_bytes": 172741,
+    "sha256": "0ea6e05a187438143a061e8416634c653d03684bc3de770de41cc40bc1153771"
+  },
+  {
+    "path": "audit/visual_qa/article_074.png",
+    "size_bytes": 215681,
+    "sha256": "2ea9d9db75c260fe64b8260740371c1e17ef2d57df3af0eb92eeee10b9b42b68"
+  },
+  {
+    "path": "audit/visual_qa/article_088.png",
+    "size_bytes": 181926,
+    "sha256": "2f50de05707bdab1e1ee634f1289fe06293674000a3b4af2e2b2f20b6cad318f"
+  },
+  {
+    "path": "audit/visual_qa/article_089.png",
+    "size_bytes": 220800,
+    "sha256": "9087a4efedc65788a87ac12da5774fb7579baf207afc1d9868c7528b51d83374"
+  },
+  {
+    "path": "audit/visual_qa/article_090.png",
+    "size_bytes": 228151,
+    "sha256": "85272362b06060004f9f95f2e4ac72683215d5f0aaae6275217ca8c2e3006c7f"
+  },
+  {
+    "path": "audit/visual_qa/article_093.png",
+    "size_bytes": 39961,
+    "sha256": "6cd48b96c62595e68311c78cfde35dc1add1d70a61b87850c3e4b035db868e7e"
+  },
+  {
+    "path": "audit/visual_qa/article_overview_001_024.png",
+    "size_bytes": 637409,
+    "sha256": "6a499baa35067b80e1e9d771313134eef299d2ee11cbea88740db633ec96d8c6"
+  },
+  {
+    "path": "audit/visual_qa/article_overview_025_048.png",
+    "size_bytes": 716653,
+    "sha256": "72d131917faa85578372c9c7e0eb79c3f7c2cdcfbde217d710679d9ffb7f94b7"
+  },
+  {
+    "path": "audit/visual_qa/article_overview_049_072.png",
+    "size_bytes": 658360,
+    "sha256": "667bdea3a45ef590fd5053a7526b5d67511d14761f75bd83ebc5176f82cf1ae9"
+  },
+  {
+    "path": "audit/visual_qa/article_overview_073_093.png",
+    "size_bytes": 579576,
+    "sha256": "d7f56d554678653ba31ee4ec230a86145f5951f6c7fe413e84fde8b992f9aeab"
+  },
+  {
+    "path": "audit/visual_qa/pdf_qa.json",
+    "size_bytes": 45115,
+    "sha256": "461d65893045137c00359f3d07849684302bda1e336b32fc4090d845fc2a26ff"
+  },
+  {
+    "path": "audit/visual_qa/supplement_001.png",
+    "size_bytes": 94504,
+    "sha256": "2dae67a9ead79317b585983b98ed793f85e2d98640f7eaeb5cdd32218b8cc98c"
+  },
+  {
+    "path": "audit/visual_qa/supplement_002.png",
+    "size_bytes": 209170,
+    "sha256": "0eb7b968509529a1056feeedc61be714eb294d493aa23082ed5f2275f7e1fe61"
+  },
+  {
+    "path": "audit/visual_qa/supplement_008.png",
+    "size_bytes": 73703,
+    "sha256": "884f42d4538584a8c35727c24c9d71be08c3509af5d70f27c8ef41bb7c46d98b"
+  },
+  {
+    "path": "audit/visual_qa/supplement_009.png",
+    "size_bytes": 60962,
+    "sha256": "777189529bd46643e2d672e79e283d243cb39b212a34ab9e7317508f4477fa0b"
+  },
+  {
+    "path": "audit/visual_qa/supplement_010.png",
+    "size_bytes": 92260,
+    "sha256": "d111129e032d7fa34052e3b0b86209926040cdbb0bd59d16a1fbc7e88204cf39"
+  },
+  {
+    "path": "audit/visual_qa/supplement_030.png",
+    "size_bytes": 177217,
+    "sha256": "b56f808961a4b2c6b7740727a6791d6495996f5be4712acf0f62ccbe46dcc3bd"
+  },
+  {
+    "path": "audit/visual_qa/supplement_031.png",
+    "size_bytes": 189328,
+    "sha256": "47cccb4d3adaedc383e1f506ba3493f180e69fc26236788aa50fc763cda96414"
+  },
+  {
+    "path": "audit/visual_qa/supplement_040.png",
+    "size_bytes": 85011,
+    "sha256": "a203c3acaecb04a6b3732f7f695b63e544b30303b9bdbbf9e73f9341dd904f37"
+  },
+  {
+    "path": "audit/visual_qa/supplement_041.png",
+    "size_bytes": 131939,
+    "sha256": "29e1de5016e19b230e59a054a0e3165bd1030765d979bae0059433d6d32a0fcb"
+  },
+  {
+    "path": "audit/visual_qa/supplement_042.png",
+    "size_bytes": 147735,
+    "sha256": "0ee0a56e53a2e33dd44ca2cbe083f011c36776a7d5e4368b82c1310c170d1eec"
+  },
+  {
+    "path": "audit/visual_qa/supplement_043.png",
+    "size_bytes": 62634,
+    "sha256": "0a39cd08090597c1203017d48ba40d63ca8f5233dfdecc9452d4a9d4e9165d2e"
+  },
+  {
+    "path": "audit/visual_qa/supplement_044.png",
+    "size_bytes": 167907,
+    "sha256": "0498d13298eea49749e34219155e5a61aaecefff29ea2cad0bbd1fcf0e40b926"
+  },
+  {
+    "path": "audit/visual_qa/supplement_063.png",
+    "size_bytes": 43189,
+    "sha256": "580693b7be7e5694560877a8c933cf19a9ae2dcab209974d746741bdfa7903ab"
+  },
+  {
+    "path": "audit/visual_qa/supplement_064.png",
+    "size_bytes": 110303,
+    "sha256": "fb4e5d341494ce5e427314e75fe91505836197acc321417d0abfb71d1d2950ec"
+  },
+  {
+    "path": "audit/visual_qa/supplement_096.png",
+    "size_bytes": 25225,
+    "sha256": "a3815c9b73cb1b67eaa8caf672959540cca795d89ff74fca7e77c7bb487a8231"
+  },
+  {
+    "path": "audit/visual_qa/supplement_097.png",
+    "size_bytes": 26824,
+    "sha256": "afdfcc092999049a9bd42e9d439f701e0221c7f785096974c421f96f7bb1513c"
+  },
+  {
+    "path": "audit/visual_qa/supplement_overview_001_024.png",
+    "size_bytes": 216348,
+    "sha256": "850604039616d954d9d4a8a821b7ae8e7fcc891be2fa3b4cc49751f118e3c651"
+  },
+  {
+    "path": "audit/visual_qa/supplement_overview_025_048.png",
+    "size_bytes": 377479,
+    "sha256": "2958dbbc3ce9b5f7fd490366a79fcb16fe133407ab06b51c08f0ab40cc9042e8"
+  },
+  {
+    "path": "audit/visual_qa/supplement_overview_049_072.png",
+    "size_bytes": 332357,
+    "sha256": "32d235ae469bf7f50f2ca5c47aa0f3ccbb456739bf098a6c1e482a1b8ddcd3cd"
+  },
+  {
+    "path": "audit/visual_qa/supplement_overview_073_096.png",
+    "size_bytes": 313591,
+    "sha256": "aa909cce1ec6a69f7fb66a463a9d42669978102e170d23d10be6c781fc5d9d6f"
+  },
+  {
+    "path": "audit/visual_qa/supplement_overview_097_097.png",
+    "size_bytes": 11173,
+    "sha256": "685dcaacc5579a26e5accf0b0e9c46eb5e4a208698c3bf34d85f6fec0cd599c8"
+  },
+  {
+    "path": "deliverables/V52_GitHub_bundle.zip",
+    "size_bytes": 2783140,
+    "sha256": "7d0d3bac59da3f639698e53c794a31613058b4b5f695d1cf0df6599329129dd7"
+  },
+  {
+    "path": "deliverables/V52_arxiv_source.zip",
+    "size_bytes": 179631,
+    "sha256": "cb7d4062d3f7e68d0d8cb76f9a5065336d52be65c869c360e5317af9b99e80ab"
+  },
+  {
+    "path": "deliverables/V52_mathematical_supplement_source.zip",
+    "size_bytes": 47519,
+    "sha256": "75bf3777f6454a7e0b8e7c00a538ef781641c8df8ac6723d6736d3e0be066308"
+  },
+  {
+    "path": "provenance/V51_complete_package_original.zip",
+    "size_bytes": 3971570,
+    "sha256": "a973ed353fb340a97e6d2f29ef7a69f294d7deda7eecf1e21dca04b223cb8b01"
+  }
+]

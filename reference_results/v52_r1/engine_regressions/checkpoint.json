@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "completed": [
+    {
+      "function": "test_radiation_expansion",
+      "checks": 32,
+      "seconds": 4.49392250100027,
+      "status": "PASS"
+    },
+    {
+      "function": "test_general_Legendre_transform",
+      "checks": 1,
+      "seconds": 2.603115219999836,
+      "status": "PASS"
+    },
+    {
+      "function": "test_complete_example",
+      "checks": 16,
+      "seconds": 6.719810316999883,
+      "status": "PASS"
+    },
+    {
+      "function": "test_time_integrals",
+      "checks": 56,
+      "seconds": 0.07164424599977792,
+      "status": "PASS"
+    },
+    {
+      "function": "test_signed_Legendre_transform",
+      "checks": 1,
+      "seconds": 2.455506061000051,
+      "status": "PASS"
+    },
+    {
+      "function": "test_homogeneous_and_state",
+      "checks": 10,
+      "seconds": 0.107240714999989,
+      "status": "PASS"
+    },
+    {
+      "function": "test_generic_scalar_contact",
+      "checks": 6,
+      "seconds": 0.18043518300009964,
+      "status": "PASS"
+    },
+    {
+      "function": "test_direct_com",
+      "checks": 117,
+      "seconds": 10.62683508300006,
+      "status": "PASS"
+    },
+    {
+      "function": "test_angular_projection",
+      "checks": 37,
+      "seconds": 3.934377446000326,
+      "status": "PASS"
+    },
+    {
+      "function": "test_radial_kernel",
+      "checks": 21,
+      "seconds": 18.80163711000023,
+      "status": "PASS"
+    },
+    {
+      "function": "test_channel_count_and_leakage",
+      "checks": 23,
+      "seconds": 0.013960171999769955,
+      "status": "PASS"
+    },
+    {
+      "function": "test_nonlinear",
+      "checks": 10,
+      "seconds": 0.024349000999791315,
+      "status": "PASS"
+    },
+    {
+      "function": "test_simple_wave",
+      "checks": 8,
+      "seconds": 3.2253320439999698,
+      "status": "PASS"
+    }
+  ]
+}

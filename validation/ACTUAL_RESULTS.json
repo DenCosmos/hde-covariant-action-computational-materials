@@ -1,0 +1,34 @@
+{
+  "full_run_status": "PASS",
+  "stages": 30,
+  "seconds": 421.0920483330001,
+  "full_fresh_zero": false,
+  "noncom": {
+    "entries": 81,
+    "entries_not_vanishing_after_aggregation": 57,
+    "nonzero_ordered_frequency_groups": 366,
+    "V52_expected_nonzero": 57
+  },
+  "permutation_kinds": {
+    "bare_H4": 243,
+    "auxiliary": 243,
+    "legendre": 243,
+    "full_H4": 243
+  },
+  "permutation_checks": 972,
+  "radial_controls": 18,
+  "angular_positions": 74,
+  "ordered_exchanges_per_position": 24,
+  "angular_structural_checks": 222,
+  "angular_controls": 77,
+  "strict_printed_comparisons": 2296,
+  "soft_checks": 209,
+  "mixed_canonical_tests": 11,
+  "preserved_engine_tests": 338,
+  "finite_window_counts": {
+    "('0.75', '1.25')": 57,
+    "('1.0', '2.0')": 57,
+    "('2.0', '3.0')": 57
+  },
+  "window_order_difference": 1.154145394607835e-12
+}

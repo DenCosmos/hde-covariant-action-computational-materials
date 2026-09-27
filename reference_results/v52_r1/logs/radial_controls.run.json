@@ -1,0 +1,11 @@
+{
+  "stage": "radial_controls",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appC3_verify_radial_controls.py"
+  ],
+  "returncode": 0,
+  "seconds": 1.000618411999767,
+  "log": "logs/radial_controls.log"
+}

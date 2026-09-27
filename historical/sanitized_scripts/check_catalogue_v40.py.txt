@@ -1,0 +1,56 @@
+"""Т07: независимая проверка перестановок радиального каталога."""
+from pathlib import Path
+import itertools,json,csv
+import radial_coeff_algebra as a
+from assemble_radial_v40 import parse,load
+B=Path(__file__).resolve().parents[1];D=B/'results/radial_generic'
+def reciprocal(v,index):
+    """Exact variable inversion of a rational polynomial; no approximation."""
+    def pp(p):
+        m=max((mon[index] for mon in p),default=0)
+        return a.F.ring.from_dict({tuple(m-e if j==index else e for j,e in enumerate(mon)):co for mon,co in p.items()}),m
+    out={}
+    for ph,rat in v.d.items():
+        n,mn=pp(rat.numer);d,md=pp(rat.denom)
+        out[ph]=a.F(n)/a.F(d)*a.F.gens[index]**(md-mn)
+    return a.Coeff(out)
+def conj(v):return a.Coeff({p:(-1)**p[0]*v for p,v in v.d.items()})
+def main():
+    values={p.stem:load(json.loads(p.read_text())['full_H4']) for p in (D/'contacts').glob('*.json')}
+    checks=[];rows=[]
+    for kind in ['bare_H4','auxiliary','legendre']:
+        pieces={}
+        for p in (D/'contacts').glob('*.json'):
+            rec=json.loads(p.read_text())
+            if kind=='bare_H4':v=load(rec[kind])
+            else:
+                v={}
+                for part in rec['partitions']:v=a.la_add(v,load(part[kind]))
+            pieces[p.stem]=v
+        for name,h in pieces.items():
+            aa,bb,cc,dd=name
+            for perm in [bb+aa+cc+dd,aa+bb+dd+cc]:
+                for power in set(h)|set(pieces[perm]):
+                    assert not(h.get(power,a.Z)-reciprocal(pieces[perm].get(power,a.Z),1)),(kind,name,perm,power)
+            perm=cc+dd+aa+bb
+            for power in set(h)|set(pieces[perm]):
+                assert not(h.get(power,a.Z)-a.K.gens[0]**(4+power)*conj(reciprocal(pieces[perm].get(power,a.Z),0))),(kind,name,perm,power)
+    for name,h in values.items():
+        A,Bb,C,Dd=map(int,name)
+        for perm,flip in [(f'{Bb}{A}{C}{Dd}',True),(f'{A}{Bb}{Dd}{C}',True)]:
+            for power in set(h)|set(values[perm]):
+                assert not(h.get(power,a.Z)-reciprocal(values[perm].get(power,a.Z),1)),(name,perm,power)
+        perm=f'{C}{Dd}{A}{Bb}'
+        for power in set(h)|set(values[perm]):
+            assert not(h.get(power,a.Z)-a.K.gens[0]**(4+power)*conj(reciprocal(values[perm].get(power,a.Z),0))),(name,perm,power,'transpose')
+        key=[A,Bb,C,Dd];flip=False
+        if key[0]>key[1]:key[0],key[1]=key[1],key[0];flip=not flip
+        if key[2]>key[3]:key[2],key[3]=key[3],key[2];flip=not flip
+        transpose=key[:2]>key[2:]
+        if transpose:key=key[2:]+key[:2]
+        rows.append((name,''.join(map(str,key)),int(flip),int(transpose),int(bool(h))))
+    with (B/'results/radial_generic/reconstruction.csv').open('w',newline='') as f:
+        w=csv.writer(f);w.writerow(['component','seed','t_to_inverse_t','r_to_inverse_r_conjugate_scale','nonzero']);w.writerows(sorted(rows))
+    (D/'symmetry_check.json').write_text(json.dumps({'components':81,'permutation_identities':972,'nonzero_seeds':len({row[1] for row in rows if row[-1]}),'success':True},indent=2))
+    print('All 972 exact permutation identities (full and three separate parts) passed; seeds=',len({row[1] for row in rows if row[-1]}))
+if __name__=='__main__':main()

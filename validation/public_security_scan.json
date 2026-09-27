@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "scope": "Pattern-based credential/private-key scan and explicit workspace-path audit; not a guarantee against every possible secret encoding. No remote upload performed.",
+  "files_scanned": 756,
+  "secret_findings": [],
+  "unresolved_private_paths": [],
+  "path_redactions": [
+    {
+      "file": "publication/PROGRAM_INDEX.json",
+      "original_sha256": "a44a5b4273a7171e4c3d6fc42cca894e03360dd5780795b13cb40b42f34184c5",
+      "public_sha256": "d985e7b483ed70635dc8f6326807a2557f7d7de5c585b50e14ec804d7de42cfa",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "reference_results/v52_r1/logs/background.log",
+      "original_sha256": "1ffa090887689227e27dd14419ce48b9e943a2fc2bf509141c61d9252852de16",
+      "public_sha256": "5af72e045f6cd6e826e7fe00e767e0c653a614b8b738e1ae3157307013f69340",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "reference_results/v52_r1/logs/source_transcription.run.json",
+      "original_sha256": "b8c4d05df7cfde4255bacabe396cde9b0061a8fcad392e8f62569b828c21d0b2",
+      "public_sha256": "195c7c9c25b4186279b337b49cc2a815bd5d9162b7db695cd049825ce2f1be23",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "reference_results/v52_r1/progress.json",
+      "original_sha256": "d05d36ebbc615ce05cdf8de857f5f0de64948a77e8a3d1e4e405e49e9265d9c1",
+      "public_sha256": "fa3e8ee0f46b191c0ece8f8d46ce342a58ba3310b3fdf1deb9bfaca2037f646d",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "reference_results/v52_r1/release_checks.json",
+      "original_sha256": "6844d64cc2496cb73074756c34a89a97206056c9b4b0c29d0ae48f6629495dfc",
+      "public_sha256": "b1c4d2e1d34005dc00e170577b59f1c348cbf5ff29ee773eb336511ff04989f6",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "reference_results/v52_r1/run_summary.json",
+      "original_sha256": "9f2b2cd70f87ec5dd2d551857bd26dac763511bae04b681ecc20aa2b3045e6b3",
+      "public_sha256": "706d01da8912cdd7cbd2edbe5d74052793615fca5031d71a438990041d433f2c",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "validation/article_fig01_plot_pole_crossing.log",
+      "original_sha256": "20c7b11e247a21bed5bcc144a7756db5fc3bfef2d9d061ebecace4c6615d6efd",
+      "public_sha256": "7822f80db66793d3de62060cf600993f38ea541e6805eee5df62c2875f93ac95",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "validation/final_full_console.log",
+      "original_sha256": "2e84573cf0c840bcfb48a5ca0d40a85f44d2b3fe84c7402616de6edc9eb7dc22",
+      "public_sha256": "e63f6fdc80765146504921200f0f3094aaeaf65d21b7eb4e51fc06744cbdfc24",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "validation/final_full_protocol.json",
+      "original_sha256": "88a08a157138adf510bf959061473220be1d516cd3914ff31125e254466ca072",
+      "public_sha256": "695bda24b54e69a34e5d59ffd360ba82c56cac75c3530015d33f0d5a19456bf3",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "validation/initial_runs/article_appD4_compute_background_diagnostics.log",
+      "original_sha256": "ef9b7d2627307d55f20fb03ecd46b5f706ef55383dd7d69dda0a640a03ee3cdc",
+      "public_sha256": "e9be9a80d7689aaed195f7feca9daf83c657ec8a7b92617908acb7f55fceca8b",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "validation/initial_runs/summary.json",
+      "original_sha256": "11541a39d73f7b1a7e6323a9df0ee949d2569d631f0f05a0615ee23f3dc95b4d",
+      "public_sha256": "49e0f2eecf66a903875720aab804a402e104a6fa1334686adc4fe610dc6dd7d2",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    },
+    {
+      "file": "validation/portable_initial_interruption.json",
+      "original_sha256": "45d270a95b4a6b77368bbe62b511e6919d65c437e43ba7d464d21320fd7c0897",
+      "public_sha256": "6e3c47588c38d41d517649529cf66e37263bbcba09ad195635cf8f3459d7b2cd",
+      "change": "Absolute preparation/runtime prefix replaced with a named public placeholder; original remains private. Scientific numerical and symbolic values unchanged."
+    }
+  ],
+  "originals_preserved_privately": true
+}

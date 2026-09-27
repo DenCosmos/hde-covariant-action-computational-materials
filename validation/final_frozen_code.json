@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "science_input_files_compared": 35,
+  "mismatches": [],
+  "fingerprint": "7ee83b1d42bf8353a44be8ce3b194e355d64258f1a1bf4c7750926e7f2357c7a",
+  "scope": "Same scripts/lib/parameters/supplement source in final portable full run and public candidate"
+}

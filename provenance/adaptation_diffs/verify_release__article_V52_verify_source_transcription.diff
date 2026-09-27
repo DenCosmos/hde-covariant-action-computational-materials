@@ -1,0 +1,47 @@
+--- GitHub_bundle/scripts/verify_release.py
++++ scripts/article_V52_verify_source_transcription.py
+@@ -3,22 +3,41 @@
+ 
+ This validates references, input files and numerical transcription; it does not
+ establish all analytical claims in the manuscript. No network is required.
++
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article D.4, app:numerical-protocols (D.4).
++  article D.4, tab:crossing-reproduction-v40 (5).
++  article D.4, tab:late-rate-convergence-v40 (6).
++  article 7.4, tab:v31-numerical-dynamics (3).
++Method: Resolve references; parse 18 table values; compare to displayed-decimal tolerances.
++Inputs: Explicit --article-source main.tex or folder, references.bib, three figures; supplementary source; newly computed numerical CSVs.
++Outputs below the selected results root: release_checks.json.
++Provenance: GitHub_bundle/scripts/verify_release.py.
++Scope limit: No article redistributed. Saddle maxima are expected test constants; other 18 values parsed. No .aux needed.
+ """
+ from __future__ import annotations
+ import argparse, collections, csv, json, math, re
+ from pathlib import Path
+ 
+ 
++# V52: article app:numerical-protocols (D.4); article tab:crossing-reproduction-v40 (5); article tab:late-rate-convergence-v40 (6); article tab:v31-numerical-dynamics (3).
+ def main() -> None:
+     ap = argparse.ArgumentParser(description=__doc__)
+     ap.add_argument('--article-source', '--source', dest='source', type=Path, required=True,
+-                    help='Directory containing the independently supplied V52 main.tex, main.bbl, references.bib and figures')
++                    help='V52 main.tex or its directory; references.bib and the three figure files must be alongside it. No .aux or LaTeX installation is needed.')
+     ap.add_argument('--supplement-source', type=Path,
+                     default=Path(__file__).resolve().parents[1]/'supplement/source')
+     ap.add_argument('--report', type=Path,
+-                    default=Path(__file__).resolve().parents[1]/'results/rechecked_v52/release_checks.json')
+-    ap.add_argument('--results', type=Path, default=Path(__file__).resolve().parents[1]/'results/rechecked_v52')
++                    default=Path(__file__).resolve().parents[1]/'results/current/release_checks.json')
++    ap.add_argument('--results', type=Path, default=Path(__file__).resolve().parents[1]/'results/current')
+     args = ap.parse_args()
++    if args.source.is_file():
++        if args.source.name != 'main.tex':
++            ap.error('--article-source must name the V52 main.tex file or its directory')
++        args.source = args.source.parent
++    for required in ('main.tex', 'references.bib'):
++        if not (args.source / required).is_file():
++            ap.error(f'Missing author-supplied article input: {required}')
+     tests = []
+     def check(condition: bool, description: str) -> None:
+         tests.append({'test': description, 'passed': bool(condition)})

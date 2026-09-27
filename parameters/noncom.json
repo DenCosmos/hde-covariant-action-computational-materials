@@ -1,0 +1,17 @@
+{
+  "article_version": "V52",
+  "computational_version": "V52-R1",
+  "article_label": "eq:radiation-noncom-check-momenta",
+  "momenta": [["0","1","sqrt(3)"],["0","1","-sqrt(3)"],["-sqrt(3)","-1","0"],["sqrt(3)","-1","0"]],
+  "external_species": [0,1,2],
+  "speeds": ["1/sqrt(3)","1","1"],
+  "frequency_signs": [1,1,-1,-1],
+  "external_momentum_magnitude": 2,
+  "polarization_norm_squared": 1,
+  "U": 0,
+  "independent_matter": false,
+  "state": "reference conformal Fock basis",
+  "time_endpoints": "0 < x_i < x_f < infinity; symbolic, not removed",
+  "nonzero_criterion": "Exact nonzero contact Laurent coefficient OR an exact nonzero exchange Laurent coefficient after combining identical ordered frequency pairs (A,B). Not a floating-point threshold or a time-point sample.",
+  "runtime_use": "momenta and release metadata are loaded; speeds/signs and normalization are verified documentary constants of the unchanged engine"
+}

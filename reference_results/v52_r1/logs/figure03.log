@@ -1,0 +1,7 @@
+c=1.2 C3 dimensionless factor: 0.407228009582
+c=1.2 numerical eV bound for |chi|^1/4=1.9e-3 eV: 0.000773733218207
+near-c=1 coefficient: 1.45647531512
+c=1.2 sound speed squared: -7
+kinks: c=11/20 and c=25/16
+The zero at c=1 is the limiting coefficient bound, not a physical threshold.
+

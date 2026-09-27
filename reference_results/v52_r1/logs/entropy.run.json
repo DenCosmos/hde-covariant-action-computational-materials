@@ -1,0 +1,11 @@
+{
+  "stage": "entropy",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_sec7_3_verify_entropy.py"
+  ],
+  "returncode": 0,
+  "seconds": 1.000765827000123,
+  "log": "logs/entropy.log"
+}

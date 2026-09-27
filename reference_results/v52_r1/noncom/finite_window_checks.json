@@ -1,0 +1,34 @@
+{
+  "parameters": {
+    "windows": [
+      [
+        0.75,
+        1.25
+      ],
+      [
+        1.0,
+        2.0
+      ],
+      [
+        2.0,
+        3.0
+      ]
+    ],
+    "orders": [
+      48,
+      80
+    ],
+    "absolute_zero_threshold": 1e-09,
+    "difference_multiplier": 100,
+    "convergence_tolerance": 1e-08
+  },
+  "exact_structurally_nonzero_count": 57,
+  "finite_window_nonzero_witness_count": 57,
+  "same_support": true,
+  "expected_V52_count": 57,
+  "maximum_quadrature_order_difference": 1.154145394607835e-12,
+  "missing_witnesses": [],
+  "unexpected_numeric_nonzeros": [],
+  "scope": "Finite windows and two quadrature orders; numerical convergence comparison, not a rigorous quadrature error bound or a regulator-free limit.",
+  "status": "PASS"
+}

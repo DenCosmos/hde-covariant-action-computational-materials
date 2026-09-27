@@ -1,0 +1,11 @@
+{
+  "stage": "printed_vs_recomputed",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/supplement_secs1_2_1_5_compare_recomputed_coefficients.py"
+  ],
+  "returncode": 0,
+  "seconds": 139.02096876600035,
+  "log": "logs/printed_vs_recomputed.log"
+}

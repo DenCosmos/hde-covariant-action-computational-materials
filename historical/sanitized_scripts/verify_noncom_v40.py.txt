@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+"""Т07: точный аудит исходного внецентрового примера и временных тождеств.
+
+Проверяет ранее вычисленные коэффициенты, а не заново выводит все вершины.
+Исходный неизменённый модуль содержит также compute_all для их регенерации.
+"""
+from pathlib import Path
+import json
+import noncom_original as src
+B=Path(__file__).resolve().parents[1];OUT=B/'results/noncom_v40'
+def main():
+    counts=src.audit_table(OUT/'coefficients.json')
+    src.test_time_integrals()
+    (OUT/'verification.json').write_text(json.dumps({'counts':counts,'exact_checks':len(src.CHECKS),'checks':src.CHECKS,'kind':'exact audit of supplied data and independently evaluated time moments','success':True},ensure_ascii=False,indent=2))
+    print(counts,'checks',len(src.CHECKS))
+if __name__=='__main__':main()

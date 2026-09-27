@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+"""Т07: точные радиальные коэффициенты при независимых k,k' (r=k'/k).
+
+Вычисление из плотностей eq:v34r-exact-scalar-density и
+ eq:v34r-exact-gravity-density, а не интерполяция фиксированной таблицы.
+Базис внешних тензоров E1,E2 имеет норму 2. Внутренний E2 имеет норму 2*p^2;
+деление на нормы выполняется при свертке, без введения квадратных корней.
+Однородная скалярная координата имеет кинетический знак -1.
+Здесь g_R=k=1, eta=x; радиус r и угол t остаются символическими.
+"""
+from __future__ import annotations
+import argparse,itertools,json,os,time,traceback
+from pathlib import Path
+import sympy as sp
+import radiation_adm_v40 as rad
+
+r,t=rad.RADIUS,rad.HALF_ANGLE
+Z,O=rad.Z,rad.O
+SN=rad.alg(2*t/(1+t*t)); CO=rad.alg((1-t*t)/(1+t*t)); RR=rad.alg(r)
+P=((Z,Z,O),(Z,Z,-O),(-RR*SN,Z,-RR*CO),(RR*SN,Z,RR*CO))
+SIG=(1,1,-1,-1)
+MAG=(O,O,RR,RR)
+OUT=Path(__file__).resolve().parents[1]/'results'/'radial_generic'
+
+
+def atomic(path:Path,obj):
+    path.parent.mkdir(parents=True,exist_ok=True)
+    tmp=path.with_suffix(path.suffix+'.tmp')
+    tmp.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    os.replace(tmp,path)
+
+
+def encode(d):
+    return {str(k):str(rad.K.to_sympy(v)) for k,v in sorted(d.items()) if v}
+
+
+def real_basis(p,mag=None):
+    """Returns (Cartesian tensor, squared norm). No hidden sign reversal."""
+    p2=rad.norm2(p)
+    if not p2:
+        return [(((O,Z,Z),(Z,-O,Z),(Z,Z,Z)),rad.alg(2)),
+                (((O,Z,Z),(Z,O,Z),(Z,Z,-2*O)),rad.alg(6)),
+                (((Z,O,Z),(O,Z,Z),(Z,Z,Z)),rad.alg(2)),
+                (((Z,Z,O),(Z,Z,Z),(O,Z,Z)),rad.alg(2)),
+                (((Z,Z,Z),(Z,Z,O),(Z,O,Z)),rad.alg(2))]
+    e=(Z,O,Z); b=(-p[2],Z,p[0])
+    if mag is not None:
+        b=tuple(x/mag for x in b)
+        E1=tuple(tuple(e[i]*e[j]-b[i]*b[j] for j in range(3)) for i in range(3))
+        E2=tuple(tuple(e[i]*b[j]+b[i]*e[j] for j in range(3)) for i in range(3))
+        return [(E1,rad.alg(2)),(E2,rad.alg(2))]
+    E1=tuple(tuple(e[i]*e[j]-b[i]*b[j]/p2 for j in range(3)) for i in range(3))
+    E2=tuple(tuple(e[i]*b[j]+b[i]*e[j] for j in range(3)) for i in range(3))
+    return [(E1,rad.alg(2)),(E2,2*p2)]
+
+
+def leg(i,species):
+    om=SIG[i]*MAG[i]/(rad.SQ3 if species==0 else O)
+    return rad.Leg(P[i],om,'w' if species==0 else 'v',None if species==0 else real_basis(P[i],MAG[i])[species-1][0])
+
+
+def vertex(legs):
+    return rad.Lvertex(tuple(legs))
+
+
+def pair_data(i,j,a,b):
+    ls=(leg(i,a),leg(j,b)); pa=tuple(P[i][k]+P[j][k] for k in range(3)); pp=tuple(-x for x in pa); p2=rad.norm2(pa)
+    ja=vertex(ls+(rad.Leg(pp,0,'alpha'),))
+    ji=[vertex(ls+(rad.Leg(pp,0,'beta'+str(k)),)) for k in range(3)]
+    jb={}
+    if p2:
+        for k in range(3):jb=rad.la_add(jb,rad.la_scale(ji[k],-rad.I*pp[k]/p2))
+        jt=[rad.la_add(ji[k],rad.la_scale(jb,-rad.I*pp[k])) for k in range(3)]
+    else:
+        if any(ji):raise AssertionError(f'Nonzero homogeneous shift source: {i,j,a,b}')
+        jt=[{},{},{}]
+    # Basis is chosen using pa, not the opposite probe momentum. Both endpoints
+    # are transported into this common Cartesian basis during contractions.
+    tensors=real_basis(pa)
+    A=[vertex(ls+(rad.Leg(pp,0,'w',None,1,0),))]
+    B=[vertex(ls+(rad.Leg(pp,0,'w',None,0,1),))]
+    norms=[O if p2 else -O]
+    for e,norm in tensors:
+        A.append(vertex(ls+(rad.Leg(pp,0,'v',e,1,0),)))
+        B.append(vertex(ls+(rad.Leg(pp,0,'v',e,0,1),)))
+        norms.append(norm)
+    return {'indices':[i,j,a,b],'p':[str(rad.K.to_sympy(x)) for x in pa],
+            'p2':str(rad.K.to_sympy(p2)),'homogeneous':not bool(p2),
+            'Jalpha':encode(ja),'Ji':[encode(d) for d in ji],'JB':encode(jb),'JT':[encode(d) for d in jt],
+            'A':[encode(d) for d in A],'B':[encode(d) for d in B],
+            'norms':[str(rad.K.to_sympy(x)) for x in norms]}
+
+
+def main():
+    ap=argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--task',choices=['bare','pair'],required=True)
+    ap.add_argument('--start',type=int,default=0);ap.add_argument('--stop',type=int)
+    args=ap.parse_args();started=time.monotonic()
+    tasks=list(itertools.product(range(3),repeat=4)) if args.task=='bare' else [(i,j,a,b) for i,j in itertools.combinations(range(4),2) for a,b in itertools.product(range(3),repeat=2)]
+    stop=args.stop if args.stop is not None else len(tasks)
+    for idx,key in enumerate(tasks):
+        if not args.start<=idx<stop:continue
+        name=''.join(map(str,key));path=OUT/args.task/(name+'.json')
+        if path.exists():continue
+        print(f'[{time.monotonic()-started:.1f}s] START {args.task} {idx+1}/{len(tasks)} {name}',flush=True)
+        try:
+            if args.task=='bare':
+                # Reflection y -> -y kills an odd number of E2 factors exactly.
+                data={'species':list(key),'parity_zero':sum(k==2 for k in key)%2==1}
+                data['bare_L4']={} if data['parity_zero'] else encode(vertex(tuple(leg(i,a) for i,a in enumerate(key))))
+            else:data=pair_data(*key)
+            atomic(path,data)
+            print(f'[{time.monotonic()-started:.1f}s] DONE {name}',flush=True)
+        except Exception:
+            print(traceback.format_exc(),flush=True);return 1
+    return 0
+
+if __name__=='__main__':raise SystemExit(main())

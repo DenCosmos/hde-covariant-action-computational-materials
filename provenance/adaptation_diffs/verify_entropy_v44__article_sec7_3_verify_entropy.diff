@@ -1,0 +1,82 @@
+--- GitHub_bundle/original_scripts/verify_entropy_v44.py
++++ scripts/article_sec7_3_verify_entropy.py
+@@ -1,9 +1,20 @@
+ #!/usr/bin/env python3
+-"""Символьная и структурная проверка подраздела об обобщённой энтропии.
++"""Fifteen exact entropy and dimensional checks. Run: python verify_entropy.py.
++Adapted from the supplied entropy verifier; historical V41 filename checks removed.
++Requires SymPy. Does not establish general nonequilibrium horizon thermodynamics.
+ 
+-Запуск: python verify_entropy_v41.py
+-Зависимость: SymPy. Файлы article_v41.tex и references_v41.bib должны быть рядом.
+-Скрипт не изменяет исходные файлы и не проверяет остальные выводы статьи заново.
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article 7.3, eq:generalized-apparent-entropy (218).
++  article 7.3, eq:generalized-entropy-background (219).
++  article 7.3, eq:generalized-entropy-matching (220).
++  article 7.3, eq:generalized-entropy-no-ghost (221).
++  article 7.3, eq:generalized-entropy-critical-radius (222).
++  article 7.3, eq:generalized-entropy-time-derivative (223).
++Method: Symbolic entropy derivatives and dimensional checks.
++Inputs: Embedded entropy parameters r,nu,gamma,m,enthalpy positive.
++Outputs below the selected results root: logs/entropy.log.
++Provenance: GitHub_bundle/scripts/verify_entropy.py.
++Scope limit: Not a general nonequilibrium thermodynamic derivation; dimensional checks are consistency checks.
+ """
+ from __future__ import annotations
+ 
+@@ -18,6 +29,7 @@
+     raise SystemExit('Для проверки установите SymPy: python -m pip install sympy') from exc
+ 
+ 
++# V52: article eq:generalized-apparent-entropy (218); article eq:generalized-entropy-background (219); article eq:generalized-entropy-matching (220); article eq:generalized-entropy-no-ghost (221); article eq:generalized-entropy-critical-radius (222); article eq:generalized-entropy-time-derivative (223).
+ def main() -> None:
+     checks: list[str] = []
+ 
+@@ -72,44 +84,7 @@
+              'Размерность фонового уравнения: все члены имеют размерность 4')
+     identity(-3 + 4 - 1, 'Размерность временной производной энтропии равна 1')
+ 
+-    base = Path(__file__).resolve().parent
+-    article_file = base / 'article_v41.tex'
+-    bib_file = base / 'references_v41.bib'
+-    check(article_file.is_file() and bib_file.is_file(), 'Наличие статьи и библиографии')
+-    article = article_file.read_text(encoding='utf-8')
+-    bib = bib_file.read_text(encoding='utf-8')
+-    text = re.sub(r'(?<!\\)%[^\n]*', '', article)
+-    labels = re.findall(r'\\label\{([^}]+)\}', text)
+-    refs = re.findall(r'\\(?:eqref|ref|pageref|autoref|nameref)\{([^}]+)\}', text)
+-    keys = re.findall(r'^\s*@\w+\s*\{\s*([^,\s]+)\s*,', bib, re.M)
+-    citations = {key.strip() for group in re.findall(r'\\cite\w*\*?(?:\[[^\]]*\])*\{([^}]+)\}', text)
+-                 for key in group.split(',')}
+-    check(len(labels) == len(set(labels)), 'Отсутствие повторяющихся меток')
+-    check(not (set(refs) - set(labels)), 'Все внутренние ссылки разрешаются')
+-    check(len(keys) == len(set(keys)), 'Отсутствие повторяющихся библиографических ключей')
+-    check(not (citations - set(keys)), 'Все цитируемые работы присутствуют в библиографии')
+-    check('BasilakosEtAl2025MassHorizon' in citations, 'Новая работа процитирована в статье')
+-    check(r'\bibliography{references_v41}' in article, 'Подключён файл references_v41.bib')
+-    environments: list[str] = []
+-    for match in re.finditer(r'\\(begin|end)\{([^}]+)\}', text):
+-        kind, environment = match.groups()
+-        if kind == 'begin':
+-            environments.append(environment)
+-        elif not environments or environments.pop() != environment:
+-            raise AssertionError(f'Нарушен порядок окружений около позиции {match.start()}')
+-    check(not environments, 'Баланс и вложенность окружений LaTeX')
+-    subsection = text.split(r'\subsection{Обобщённая энтропия и ограничения на фоновую реконструкцию}', 1)[1]
+-    subsection = subsection.split(r'\subsection{Степенной класс: модели Ли, Тсаллиса и Барроу}', 1)[0]
+-    check(subsection.count(r'\begin{equation}') == 6, 'Подраздел содержит шесть отдельных формул')
+-    check(not re.search(r'\\(?:newcommand|renewcommand|providecommand|def|let|NewDocumentCommand)\b', text),
+-          'Новые команды и макросы не вводились')
+-    print(f'\nПроверок выполнено: {len(checks)}. Меток: {len(labels)}. '
+-          f'Библиографических записей: {len(keys)}. Цитируемых ключей: {len(citations)}.')
+-
++    print(f'\nPASS: {len(checks)} entropy / dimension checks.')
+ 
+ if __name__ == '__main__':
+-    try:
+-        main()
+-    except (AssertionError, OSError, ValueError) as exc:
+-        print(f'ОШИБКА: {exc}', file=sys.stderr)
+-        sys.exit(1)
++    main()

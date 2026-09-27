@@ -1,0 +1,91 @@
+--- GitHub_bundle/scripts/n02_background_diagnostics.py
++++ scripts/article_appD4_compute_background_diagnostics.py
+@@ -1,9 +1,25 @@
+ #!/usr/bin/env python3
+-"""Numerical diagnostics for V37, sections 7.1 and 7.3; algorithms from verify_v31.py.
+-Run without arguments to write results/rechecked_v52/n02_background_diagnostics/.
+-The --output argument selects its parent directory. The calculations are unchanged.
+-No source document is read or modified. Numerical examples are diagnostics,
+-not substitutes for the compactness and existence proofs in the manuscript.
++"""Numerical diagnostics for article V52 Appendix D.4; computational release V52-R1.
++Preserved DOP853 algorithms; see the explicit references and parameter record below.
++
++PUBLICATION CROSS-REFERENCES (freshly compiled V52 numbering):
++  article D.1, eq:scalar-finite-k-complete-coefficients (442).
++  article D.2, eq:power-canonical-mass-rational (450).
++  article 7.4, eq:power-law-full-background (231).
++  article 7.4, eq:power-law-full-eigenvalues (232).
++  article 7.4, tab:v31-numerical-dynamics (3).
++  article D.4, eq:numerical-crossing-point-v40 (460).
++  article D.4, eq:numerical-crossing-initial-background-v40 (461).
++  article D.4, tab:crossing-reproduction-v40 (5).
++  article D.2, eq:power-canonical-mass-limits (451).
++  article D.4, eq:numerical-late-initial-data-v40 (462).
++  article D.4, eq:numerical-curvature-envelope-v40 (463).
++  article D.4, tab:late-rate-convergence-v40 (6).
++Method: DOP853 integration at stored tolerances; auxiliary linear algebra and asymptotic slopes.
++Inputs: Embedded parameter grid; see parameters/embedded_parameters.md; runtime output argument only.
++Outputs below the selected results root: n02_background_diagnostics/numerical_results.json, n02_background_diagnostics/saddle_rates.csv, n02_background_diagnostics/crossing_convergence.csv, n02_background_diagnostics/late_rates.csv.
++Provenance: GitHub_bundle/scripts/n02_background_diagnostics.py.
++Scope limit: Numerical examples and tolerances, not proofs of global dynamics.
+ """
+ from __future__ import annotations
+ import csv
+@@ -16,7 +32,7 @@
+ import sympy as sp
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-OUT = ROOT / 'results/rechecked_v52/n02_background_diagnostics'
++OUT = ROOT / 'results/current/n02_background_diagnostics'
+ CHECKS: list[dict] = []
+ EXPRESSIONS: dict[str, str] = {}
+ R = sp.Rational
+@@ -39,6 +55,7 @@
+         raise RuntimeError(sol.message)
+     return sol
+ 
++# V52: article eq:scalar-finite-k-complete-coefficients (442); article eq:power-canonical-mass-rational (450).
+ def symbolic_reduction():
+     M,H,L,q,chi,G1,G2 = sp.symbols('M H L q chi G1 G2', nonzero=True)
+     alpha,B,r,pi,ell,v=sp.symbols('alpha B r pi ell v')
+@@ -124,6 +141,7 @@
+         EXPRESSIONS[key]=str(expr)
+     return sp.lambdify((H,L,q,chi,G1,G2),[K.subs(M,1),W.subs(M,1)],'numpy',cse=True)
+ 
++# V52: article eq:power-law-full-background (231); article eq:power-law-full-eigenvalues (232); article tab:v31-numerical-dynamics (3).
+ def saddle_numerics():
+     print('Checking saddle eigenvalue convergence',flush=True)
+     rows=[]
+@@ -150,6 +168,7 @@
+     save_csv('saddle_rates.csv',rows)
+     return rows
+ 
++# V52: article eq:numerical-crossing-point-v40 (460); article eq:numerical-crossing-initial-background-v40 (461); article tab:crossing-reproduction-v40 (5).
+ def crossing_numerics(kw):
+     print('Checking logarithmic crossing solutions',flush=True)
+     n=12; Lc=1.02; k=1.; chic_start=-1e-2
+@@ -206,6 +225,7 @@
+     save_csv('crossing_convergence.csv',rows);save_csv('crossing_history.csv',histories)
+     return {'background':finalbg,'results':rows}
+ 
++# V52: article eq:power-canonical-mass-limits (451).
+ def late_symbolic(n: int):
+     d=sp.symbols('d',positive=True);x=1+d
+     H=x**R(n,n-2);L=x**R(-2,n-2)
+@@ -229,6 +249,7 @@
+     EXPRESSIONS[f'late_n{n}_coefficients']=str(values)
+     return sp.lambdify(d,values,'numpy',cse=True)
+ 
++# V52: article eq:numerical-late-initial-data-v40 (462); article eq:numerical-curvature-envelope-v40 (463); article tab:late-rate-convergence-v40 (6).
+ def late_numerics():
+     print('Checking late-time physical observables',flush=True)
+     rows=[]
+@@ -278,7 +299,7 @@
+     import argparse
+     global OUT
+     parser=argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument('--output',type=Path,default=ROOT/'results/rechecked_v52')
++    parser.add_argument('--output',type=Path,default=ROOT/'results/current')
+     args=parser.parse_args()
+     OUT=args.output/'n02_background_diagnostics'
+     OUT.mkdir(parents=True,exist_ok=True)

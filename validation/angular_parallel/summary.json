@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "stage": "j4_0_9",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 290.03611873900036,
+      "command": [
+        "python",
+        "scripts/article_appC5_compute_angular_coefficients.py",
+        "--j",
+        "4",
+        "--start",
+        "0",
+        "--stop",
+        "9",
+        "--resume"
+      ]
+    },
+    {
+      "stage": "j4_9_18",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 305.0381307399998,
+      "command": [
+        "python",
+        "scripts/article_appC5_compute_angular_coefficients.py",
+        "--j",
+        "4",
+        "--start",
+        "9",
+        "--stop",
+        "18",
+        "--resume"
+      ]
+    },
+    {
+      "stage": "j4_18_27",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 240.02794786799996,
+      "command": [
+        "python",
+        "scripts/article_appC5_compute_angular_coefficients.py",
+        "--j",
+        "4",
+        "--start",
+        "18",
+        "--stop",
+        "27",
+        "--resume"
+      ]
+    },
+    {
+      "stage": "j4_27_36",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 220.0253716960001,
+      "command": [
+        "python",
+        "scripts/article_appC5_compute_angular_coefficients.py",
+        "--j",
+        "4",
+        "--start",
+        "27",
+        "--stop",
+        "36",
+        "--resume"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.matplotlib-cache/
+results/
+dist/
+*.tmp
+.DS_Store
+Thumbs.db
+*.aux
+*.log
+*.out
+*.toc
+# Validation logs are intentionally versioned evidence, not build litter.
+!validation/**/*.log
+!reference_results/**/*.log
+# Provided bibliography and supplement PDF are intentional release inputs.

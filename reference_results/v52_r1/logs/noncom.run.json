@@ -1,0 +1,14 @@
+{
+  "stage": "noncom",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appC3_compute_noncom_matrix_elements.py",
+    "--output",
+    "<OUTPUT>/noncom",
+    "--resume"
+  ],
+  "returncode": 0,
+  "seconds": 5.002033779999692,
+  "log": "logs/noncom.log"
+}

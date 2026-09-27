@@ -1,0 +1,5 @@
+{
+  "redactions": [],
+  "history_extension": ".py.txt prevents accidental supported-entry-point interpretation",
+  "actual_secrets_disclosed": false
+}

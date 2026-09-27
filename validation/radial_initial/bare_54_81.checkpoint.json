@@ -1,0 +1,1 @@
+{"command": ["python", "scripts/supplement_sec1_3_generate_radial_sources.py", "--task", "bare", "--start", "54", "--stop", "81", "--resume"], "pid": 1012, "elapsed_seconds": 100.00801190200002, "status": "RUNNING"}

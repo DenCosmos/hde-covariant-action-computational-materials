@@ -1,0 +1,67 @@
+STAGED 390 files. Scientific checks NOT RUN. Next: run_all.py --mode full --resume --output @LOCAL_WORKSPACE@/final portability/V52 R1 frozen/results/full
+FINAL FULL RESUMED RUN ['@LOCAL_WORKSPACE@/venv/bin/python', '-u', '@LOCAL_WORKSPACE@/final portability/V52 R1 frozen/run_all.py', '--mode', 'full', '--workers', '4', '--output', '@LOCAL_WORKSPACE@/final portability/V52 R1 frozen/results/full', '--article-source', '@LOCAL_WORKSPACE@/input/V52_complete_package/article/source/main.tex', '--resume']
+START analytic
+PASS analytic 4.0s
+START local_vertices
+PASS local_vertices 2.0s
+START entropy
+PASS entropy 1.0s
+START printed_catalogue
+PASS printed_catalogue 6.0s
+START background
+PASS background 6.0s
+START figure01
+PASS figure01 3.0s
+START figure02
+PASS figure02 2.0s
+START figure03
+PASS figure03 1.0s
+START mixed_normalization
+PASS mixed_normalization 1.0s
+START finite_time_identities
+PASS finite_time_identities 54.0s
+START source_transcription
+PASS source_transcription 1.0s
+START noncom
+START radial_pair_0_9
+STARTSTART radial_pair_18_27
+ radial_pair_9_18
+PASS radial_pair_9_18 1.0s
+START radial_pair_27_36
+PASS radial_pair_0_9 1.0s
+START radial_pair_36_45
+PASS radial_pair_18_27 1.0s
+START radial_pair_45_54
+PASS radial_pair_27_36 1.0s
+START radial_bare_0_27
+PASS radial_pair_45_54 1.0s
+START radial_bare_27_54
+PASS radial_pair_36_45 1.0s
+START radial_bare_54_81
+PASS radial_bare_0_27 1.0s
+PASS radial_bare_27_54 1.0s
+PASS radial_bare_54_81 1.0s
+PASS noncom 5.0s
+START contacts
+PASS contacts 27.0s
+START permutations
+PASS permutations 17.0s
+START radial_controls
+PASS radial_controls 1.0s
+START printed_vs_recomputed
+RUNNING printed_vs_recomputed 60s
+RUNNING printed_vs_recomputed 120s
+PASS printed_vs_recomputed 139.0s
+START angular
+PASS angular 52.0s
+START global_exchange
+PASS global_exchange 14.0s
+START angular_controls
+PASS angular_controls 1.0s
+START soft
+RUNNING soft 60s
+PASS soft 69.0s
+START noncom_windows
+PASS noncom_windows 15.0s
+PASS full return code 0
+FINAL RETURN 0

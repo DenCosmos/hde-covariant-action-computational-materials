@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "scripts/supplement_sec1_3_generate_radial_sources.py",
+    "--task",
+    "pair",
+    "--start",
+    "27",
+    "--stop",
+    "54",
+    "--resume"
+  ],
+  "returncode": 0,
+  "seconds": 1330.091334445,
+  "status": "PASS"
+}

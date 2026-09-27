@@ -1,0 +1,12 @@
+{
+  "stage": "angular",
+  "status": "PASS",
+  "command": [
+    "python",
+    "scripts/article_appC5_compute_angular_coefficients.py",
+    "--resume"
+  ],
+  "returncode": 0,
+  "seconds": 52.00824135400035,
+  "log": "logs/angular.log"
+}

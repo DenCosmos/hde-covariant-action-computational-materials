@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+"""Т09: напечатать 27 проверенных производных и пять полных локальных вершин.
+
+Этот модуль отвечает только за математическое представление. Расчёт и
+независимые проверки выполняет verify_local_vertices_v40.py.
+"""
+from pathlib import Path
+import json
+import sympy as sp
+
+BASE = Path(__file__).resolve().parents[1]
+
+
+def tex_sum(expr, terms_per_line=3):
+    """Break an exact polynomial at term boundaries, without changing it."""
+    terms = list(sp.Add.make_args(sp.expand(expr)))
+    lines = []
+    for start in range(0, len(terms), terms_per_line):
+        pieces = []
+        for index, term in enumerate(terms[start:start + terms_per_line], start):
+            negative = term.could_extract_minus_sign()
+            sign = '- ' if negative else ('+ ' if index else '')
+            pieces.append(sign + sp.latex(-term if negative else term))
+        lines.append(' '.join(pieces))
+    if len(lines) == 1:
+        return lines[0]
+    return (r'\left(\vcenter{\hbox{\shortstack[l]{' + '\\\\\n'.join(
+        r'$\displaystyle ' + line + '$' for line in lines) + r'}}}\right)')
+
+
+def equation(body, label):
+    return '\\begin{equation}\n' + body + '\n\\label{' + label + '}\n\\end{equation}\n'
+
+
+def main():
+    data = json.loads((BASE / 'results/local_vertices_v40/results.json').read_text(encoding='utf-8'))
+    out = [r'''\section{Все 27 производных и пять локальных вершин}
+Здесь $A_L=L^3\Delta_\Phi$, $f_m=d^m(L^5U')/dL^m$ при $m=2,3,4,5$. Все производные потенциала вычисляются на фоне. Обозначения $u=\dot\phi$ и $G_\phi=(\partial_i\phi)^2$ относятся только к этому разделу. Гравитационные связи пятого и шестого порядков не исключаются этим локальным разложением.
+''']
+    names = {'A': sp.Symbol('A_L'), **{f'f{i}': sp.Symbol(f'f_{i}') for i in range(2, 6)}}
+    for key, text in data['derivatives'].items():
+        a, b = key.split(',')
+        value = sp.sympify(text, locals=names)
+        numerator, denominator = sp.fraction(sp.factor(value))
+        if len(sp.latex(sp.expand(numerator))) < 155:
+            body = sp.latex(sp.expand(numerator) / denominator)
+        else:
+            body = r'\frac{1}{' + sp.latex(denominator) + '}' + tex_sum(numerator)
+        out.append(equation(r'\mathcal W_{' + a + b + '}=' + body, f'eq:cat-local-W-{a}-{b}'))
+    names = {'phi': sp.Symbol(r'\phi'), 'phi_dot': sp.Symbol('u'),
+             'grad_phi_squared': sp.Symbol(r'G_\phi')}
+    names.update({f'W{a}{b}': sp.Symbol(r'\mathcal W_{' + str(a) + str(b) + '}')
+                  for n in range(1, 7) for a in range(n + 1) for b in [n - a]})
+    for n, text in data['vertices'].items():
+        out.append(equation(r'\mathcal L_{' + n + '}=' + tex_sum(sp.sympify(text, locals=names)),
+                            f'eq:cat-local-L-{n}'))
+    path = BASE / 'patches/fragments/local_catalogue.tex'
+    path.write_text(''.join(out), encoding='utf-8')
+    print(path)
+
+if __name__ == '__main__':
+    main()

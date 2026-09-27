@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+"""Apply the published exact Find/Replace edits without depending on the builder."""
+import argparse,hashlib,json
+from pathlib import Path
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('source',type=Path);p.add_argument('output',type=Path);a=p.parse_args()
+m=json.loads((Path(__file__).resolve().parents[1]/'patches/replacements_v39_to_v40.json').read_text(encoding='utf-8'))
+s=a.source.read_text(encoding='utf-8')
+if hashlib.sha256(s.encode()).hexdigest()!=m['base_sha256']:raise SystemExit('Source differs from the reviewed V39. No file was changed.')
+for e in reversed(m['patches']):
+ if s.count(e['find'])!=1:raise SystemExit(f"Nonunique/missing match: {e['id']}. No file was written.")
+ s=s.replace(e['find'],e['replace'],1)
+if hashlib.sha256(s.encode()).hexdigest()!=m['result_sha256']:raise SystemExit('Result hash mismatch. No file was written.')
+a.output.write_text(s,encoding='utf-8');print(a.output)

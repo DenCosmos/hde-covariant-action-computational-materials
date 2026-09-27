@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "positions": 74,
+  "bulk_positions": 74,
+  "boundary_positions": 74,
+  "ordered_exchanges_per_position": 24,
+  "structural_checks": 222
+}

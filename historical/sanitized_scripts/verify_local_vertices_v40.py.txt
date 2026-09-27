@@ -1,0 +1,108 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Т09. Все 27 производных W(Phi,s) и полные локальные вершины порядков 2--6.
+
+Используется конечная формула Лагранжа для неявного уравнения
+s L + L^5 U'(L) + 4 Phi = 0. Формула независимо сопоставляется с
+дифференцированием в пространстве производных U, а затем с точным
+радиационным выражением W=-s^4/(768 Phi^3). Члены с явной delta Phi
+и меньшим числом производных сохраняются. Метрические вершины пятого
+и шестого порядков этим расчётом не вычисляются.
+
+Запуск: python scripts/verify_local_vertices_v40.py
+Результат: results/local_vertices_v40/derivatives.txt, local_vertices.txt,
+finite_basis.txt, checks.csv. Требуется SymPy.
+"""
+from __future__ import annotations
+import argparse,csv,json,platform,time
+from pathlib import Path
+import sympy as s
+
+BASE=Path(__file__).resolve().parents[1]
+L,A=s.symbols('L A',positive=True)
+f2,f3,f4,f5=s.symbols('f2 f3 f4 f5')
+f=[None,None,f2,f3,f4,f5]
+CHECKS=[];START=time.monotonic()
+
+
+def check(name,expr):
+    rr=s.factor(s.cancel(s.expand(expr)))
+    if rr!=0:rr=s.simplify(rr)
+    if rr!=0:raise AssertionError(f'{name}: {rr}')
+    CHECKS.append((name,'PASS','0'))
+    print(f'[{time.monotonic()-START:.2f}s] PASS {name}',flush=True)
+
+
+def total_operator(expr,which):
+    dL=-L/A if which=='s' else -4/A
+    dA=1-L*f2/A if which=='s' else -4*f2/A
+    out=s.diff(expr,L)*dL+s.diff(expr,A)*dA
+    out+=sum(s.diff(expr,f[j])*f[j+1]*dL for j in range(2,5))
+    return s.factor(out)
+
+
+def finite_derivative(a,b):
+    n=a+b
+    if n==1:return L**(-4) if a else 1/(3*L**3)
+    m=n-1
+    g=[None]+[f[j+1]/(s.factorial(j+1)*A) for j in range(1,5)]
+    T=[s.S.One,-m*g[1],-m*g[2]+m*(m+1)*g[1]**2/2,
+       -m*g[3]+m*(m+1)*g[1]*g[2]-m*(m+1)*(m+2)*g[1]**3/6,
+       -m*g[4]+m*(m+1)*(g[1]*g[3]+g[2]**2/2)-m*(m+1)*(m+2)*g[1]**2*g[2]/2+m*(m+1)*(m+2)*(m+3)*g[1]**4/24]
+    out=(-1)**n*s.factorial(n-2)*4**a*L**(b-n-3)*A**(1-n)*sum(s.binomial(b-5,n-2-j)*L**j*T[j] for j in range(n-1))
+    return s.factor(out)
+
+
+def main():
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',type=Path,default=BASE/'results/local_vertices_v40');args=ap.parse_args();args.output.mkdir(parents=True,exist_ok=True)
+    derivatives={}
+    Phi,ss=s.symbols('Phi s',nonzero=True)
+    radiation=-ss**4/(768*Phi**3)
+    for n in range(1,7):
+        for a in range(n,-1,-1):
+            b=n-a
+            value=finite_derivative(a,b);derivatives[a,b]=value
+            if n>1:
+                if a:
+                    # For a=1,b>0 this follows the s-seeded route. For pure
+                    # Phi derivatives the Phi seed is used.
+                    previous=derivatives[a-1,b] if b else derivatives[a-1,0]
+                    direct=total_operator(previous,'Phi')
+                else:direct=total_operator(derivatives[0,b-1],'s')
+                check(f'T09.closed_formula_vs_differentiation_{a}_{b}',value-direct)
+            rad=value.subs({A:ss,L:-4*Phi/ss,f2:0,f3:0,f4:0,f5:0},simultaneous=True)
+            check(f'T09.radiation_derivative_{a}_{b}',rad-s.diff(radiation,Phi,a,ss,b))
+    assert len(derivatives)==27
+    # Commutator check on all nontrivial intermediate coordinates.
+    for variable in [L,A,f2,f3]:
+        check(f'T09.commuting_partial_derivatives_{variable}',total_operator(total_operator(variable,'s'),'Phi')-total_operator(total_operator(variable,'Phi'),'s'))
+    q,vel,grad2,xi=s.symbols('phi phi_dot grad_phi_squared xi')
+    ds=[0,vel,-grad2/(2*ss),grad2*vel/(2*ss**2),-grad2*vel**2/(2*ss**3)-grad2**2/(8*ss**3),grad2*vel**3/(2*ss**4)+3*grad2**2*vel/(8*ss**4),-grad2*vel**4/(2*ss**5)-3*grad2**2*vel**2/(4*ss**5)-grad2**3/(16*ss**5)]
+    ds_poly=sum(ds[j]*xi**j for j in range(1,7))
+    check('T09.square_root_series_identity',s.series((ss+ds_poly)**2-(ss+xi*vel)**2+xi**2*grad2,xi,0,7).removeO())
+    W={(a,b):s.Symbol(f'W{a}{b}') for a,b in derivatives}
+    # Truncate after every multiplication: do not expand high-degree garbage.
+    powers=[s.S.One]
+    for b in range(1,7):
+        product=s.expand(powers[-1]*ds_poly)
+        powers.append(sum(product.coeff(xi,k)*xi**k for k in range(7)))
+    series=sum(W[a,b]*q**a*xi**a*powers[b]/(s.factorial(a)*s.factorial(b)) for a,b in W)
+    vertices={n:s.expand(series).coeff(xi,n) for n in range(2,7)}
+    rad_exact=-( (ss+xi*vel)**2-xi**2*grad2 )**2/(768*(Phi+xi*q)**3)
+    rad_series=s.series(rad_exact,xi,0,7).removeO()
+    w_rad={W[a,b]:s.diff(radiation,Phi,a,ss,b) for a,b in W}
+    for n,expr in vertices.items():
+        check(f'T09.full_local_vertex_radiation_order_{n}',expr.subs(w_rad)-s.expand(rad_series).coeff(xi,n))
+    (args.output/'derivatives.txt').write_text('A=L^3*Delta_Phi; f_m=d^m/dL^m(L^5 U_prime), m=2..5.\n\n'+'\n\n'.join(f'W_Phi^{a}_s^{b}\n{v}' for (a,b),v in derivatives.items())+'\n',encoding='utf-8')
+    (args.output/'local_vertices.txt').write_text('Wab = partial_Phi^a partial_s^b W, evaluated at the background.\n\n'+'\n\n'.join(f'L{n}\n{v}' for n,v in vertices.items())+'\n',encoding='utf-8')
+    z,m,b=s.symbols('z m b');gg=s.symbols('g1:5')
+    basis=[1,-m*gg[0],-m*gg[1]+m*(m+1)*gg[0]**2/2,-m*gg[2]+m*(m+1)*gg[0]*gg[1]-m*(m+1)*(m+2)*gg[0]**3/6,-m*gg[3]+m*(m+1)*(gg[0]*gg[2]+gg[1]**2/2)-m*(m+1)*(m+2)*gg[0]**2*gg[1]/2+m*(m+1)*(m+2)*(m+3)*gg[0]**4/24]
+    (args.output/'finite_basis.txt').write_text('\n'.join(f'T{j}(m) = {v}' for j,v in enumerate(basis))+'\n',encoding='utf-8')
+    data={'derivatives':{f'{a},{b}':str(v) for (a,b),v in derivatives.items()},'vertices':{str(n):str(v) for n,v in vertices.items()},'checks':len(CHECKS),'python':platform.python_version(),'sympy':s.__version__}
+    (args.output/'results.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8')
+    with (args.output/'checks.csv').open('w',encoding='utf-8',newline='') as file:
+        writer=csv.writer(file);writer.writerow(['calculation','status','exact_residual']);writer.writerows(CHECKS)
+    print(f'PASS: 27 derivatives, 5 full local vertices, {len(CHECKS)} independent checks.',flush=True)
+    return 0
+
+if __name__=='__main__':raise SystemExit(main())

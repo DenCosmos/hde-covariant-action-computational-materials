@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+"""Проверка редакторских нормировок и точного применения окончательных замен.
+
+Это ограниченный набор тождеств и структурных проверок, а не новая проверка
+всех коэффициентов ADM-действия или доказательство полноты физических амплитуд.
+"""
+from __future__ import annotations
+import hashlib
+import json
+from pathlib import Path
+import re
+import sys
+import sympy as sp
+
+BASE = Path(__file__).resolve().parents[1]
+
+
+def main() -> int:
+    checks = []
+    def check(name, value):
+        ok = bool(value)
+        checks.append({'id': name, 'status': 'PASS' if ok else 'FAIL'})
+        if not ok:
+            raise AssertionError(name)
+    target = BASE / 'results/editorial_verification.json'
+    try:
+        manifest = json.loads((BASE / 'patches/replacements_v39_to_v40.json').read_text(encoding='utf-8'))
+        old = (BASE / 'source/article_v39.tex').read_bytes()
+        new = (BASE / 'article_v40.tex').read_bytes()
+        check('source_SHA256', hashlib.sha256(old).hexdigest() == manifest['base_sha256'])
+        check('result_SHA256', hashlib.sha256(new).hexdigest() == manifest['result_sha256'])
+        text = old.decode('utf-8')
+        for patch in reversed(manifest['patches']):
+            check('unique_' + patch['id'], text.count(patch['find']) == 1)
+            text = text.replace(patch['find'], patch['replace'], 1)
+        check('all_edits_reproduce_article', text.encode('utf-8') == new)
+        md = (BASE / 'patches/find_replace_v39_to_v40.md').read_text(encoding='utf-8')
+        blocks = re.findall(r'```latex\n(.*?)\n```', md, re.S)
+        check('44_Markdown_blocks', len(blocks) == 44)
+        check('Markdown_equals_manifest', all(blocks[2*i] == p['find'] and blocks[2*i+1] == p['replace'] for i,p in enumerate(manifest['patches'])))
+        r, z = sp.symbols('r z', positive=True)
+        p0 = sp.Matrix([0,0,1]); p1 = -p0
+        p2 = sp.Matrix([-r*sp.sqrt(1-z*z),0,-r*z]); p3 = -p2
+        check('external_momentum_conservation', p0+p1+p2+p3 == sp.zeros(3,1))
+        check('incoming_squared_radius', p0.dot(p0) == 1)
+        check('outgoing_squared_radius', sp.simplify(p2.dot(p2)-r*r) == 0)
+        matrices = [sp.diag(1,-1,0), sp.diag(1,1,-2)]
+        for i,j in [(0,1),(0,2),(1,2)]:
+            m = sp.zeros(3); m[i,j]=m[j,i]=1; matrices.append(m)
+        check('homogeneous_squared_norms', [sp.trace(m.T*m) for m in matrices] == [2,6,2,2,2])
+        check('homogeneous_traceless', all(sp.trace(m) == 0 for m in matrices))
+        x = sp.symbols('x', positive=True)
+        # phi=-x<0; d((-phi)^(1/4))/dphi=-1/(4*x^(3/4)).
+        check('psi_derivative_branch_sign', -sp.diff(x**sp.Rational(1,4), x) == -1/(4*x**sp.Rational(3,4)))
+        catalogue = (BASE/'mathematical_catalogue_v40.tex').read_text(encoding='utf-8')
+        check('contact_scale_article', r'\frac{H_4(x)}{g_{\mathrm R}^2k^4}' in text)
+        check('contact_scale_catalogue', r'\frac{H_4}{g_{\mathrm R}^2k^4}' in catalogue)
+        check('cubic_scale_catalogue', r'\frac{[L_3]_{ij,I}}{g_{\mathrm R}k^3}' in catalogue)
+        target.write_text(json.dumps({'success':True,'check_count':len(checks),'checks':checks,'scope':__doc__},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        print(f'PASS: {len(checks)} editorial and normalization checks.')
+        return 0
+    except Exception as exc:
+        target.write_text(json.dumps({'success':False,'error':repr(exc),'checks':checks},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        print(f'FAIL: {exc}',file=sys.stderr)
+        return 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+"""Т08: совместный мягкий предел, девять пар и пять граничных слагаемых.
+
+Подстановка r=1+mu*q выполняется в точном рациональном поле. Проверяются
+коэффициенты кубических вершин и контакта; это не численная выборка r=1.
+"""
+from pathlib import Path
+import json,csv,itertools
+import sympy as sp
+import radial_coeff_algebra as a
+from assemble_radial_v40 import decode_file,load
+from angular_coefficients_v40 import transfer,f_boundary
+B=Path(__file__).resolve().parents[1];D=B/'results/radial_generic';OUT=B/'results/soft_v40';R,Q=a.F.gens
+CHECK=[];EXP=[]
+def joint(v):
+    def poly(p):return sum((co*(1+R*Q)**mon[0]*Q**mon[1] for mon,co in p.items()),a.F.zero)
+    return a.Coeff({ph:poly(rat.numer)/poly(rat.denom) for ph,rat in v.d.items()})
+def valuation(v):
+    for rat in v.d.values():
+        low=min(m[1] for m in rat.denom)
+        assert all(m[0]==0 for m in rat.denom if m[1]==low), 'Nonconstant angular leading denominator'
+    return min((min(m[1] for m in rat.numer)-min(m[1] for m in rat.denom) for rat in v.d.values()),default=999)
+def check(name,test,detail):
+    if not test:raise AssertionError(name+': '+str(detail))
+    CHECK.append({'id':name,'status':'PASS','detail':str(detail)})
+def main():
+    OUT.mkdir(parents=True,exist_ok=True)
+    for sa,sb in itertools.product(range(3),repeat=2):
+        key=f'02{sa}{sb}';d=decode_file(D/'pair'/(key+'.json'))
+        f=transfer(f_boundary(0,2,sa,sb));cs=lambda s:a.O/a.SQ3 if s==0 else a.O
+        om=cs(sa)-a.K.gens[0]*cs(sb)
+        regA=a.la_add({p:transfer(v) for p,v in d['A'][0].items()},{-2:f,-1:a.I*om*f})
+        regB=a.la_add({p:transfer(v) for p,v in d['B'][0].items()},{-1:-f})
+        for name,vals in [('Areg',regA),('Breg',regB)]:
+            for p,v in vals.items():
+                order=valuation(joint(v));check(f'{key}.{name}.x{p}',order>=0,order)
+        for I in [1,2]:
+            for name in ['A','B']:
+                for p,v in d[name][I].items():
+                    val=joint(transfer(v));order=valuation(val)-(1 if I==2 else 0)
+                    check(f'{key}.{name}.tensor{I}.x{p}',order>=0,order)
+    for path in (D/'contacts').glob('*.json'):
+        for p,v in load(json.loads(path.read_text())['full_H4']).items():
+            # A full contact contains both transfer denominators. After mapping
+            # the plus channel the opposite denominator stays regular at q=0.
+            order=valuation(joint(transfer(v)))
+            check(f'contact.{path.stem}.x{p}',order>=-2,order)
+    ai,af,bi,bf=sp.symbols('a_i a_f b_i b_f');S=(af-ai)*(bf-bi)
+    groups=[af*(bf-bi),-bi*(af-ai),af*bi,-af*bf/2,-ai*bi/2]
+    reverse=[bf*(af-ai),-ai*(bf-bi),bf*ai,-bf*af/2,-bi*ai/2]
+    check('five_boundary_groups_plus_reverse',sp.expand(sum(groups)+sum(reverse)-S)==0,0)
+    qi,qf,q,mu=sp.symbols('x_i x_f q mu',positive=True);f=4*sp.sqrt(3)*sp.I*mu/q
+    raw=24*sp.sqrt(3)*mu**2/q**3*(1/qi-1/qf)**2
+    correction=(sum(groups)+sum(reverse)).subs({ai:f/qi,af:f/qf,bi:f/qi,bf:f/qf})/(2*q/sp.sqrt(3))
+    check('scalar_q_minus3_cancellation',sp.simplify(sp.expand(raw+correction))==0,0)
+    for n,(g,h) in enumerate(zip(groups,reverse),1):
+        val=sp.factor((g+h).subs({ai:f/qi,af:f/qf,bi:f/qi,bf:f/qf})/(2*q/sp.sqrt(3)))
+        EXP.append(f'boundary_group_{n} = {val}')
+    with (OUT/'checks.csv').open('w',newline='') as out:w=csv.DictWriter(out,fieldnames=['id','status','detail']);w.writeheader();w.writerows(CHECK)
+    (OUT/'five_groups.txt').write_text('\n'.join(EXP)+'\n')
+    (OUT/'summary.json').write_text(json.dumps({'success':True,'checks':len(CHECK),'joint_limit':'r=1+mu*q, q->0; all nine hard pairs and all 81 contacts'},indent=2))
+    print('PASS:',len(CHECK),'exact soft-limit checks')
+if __name__=='__main__':main()
