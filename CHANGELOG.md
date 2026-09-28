@@ -1,5 +1,13 @@
 # Changelog
 
+## English mathematical catalogue -- reviewed corrections, 28 September 2026
+
+Replaced the English catalogue source and PDF with the reviewed documents synchronized with the corrected Russian catalogue. Clarified contact partitions, angular reconstruction, position and Wigner indices, homogeneous-coordinate terminology, normalization and the scope of the local vertices. Removed version designations and production notes from the document. The coefficient data and the equation numbering 1--1145 remain unchanged. The auxiliary integer exponents in the Wigner sum are renamed consistently.
+
+The existing PDF filename is retained to preserve repository links. The bibliography is now embedded in the standalone source; its optional `.bib` and `.bbl` exports are synchronized. Updated compilation instructions, repository citation metadata and SHA256SUMS. No arXiv identifier, DOI, tag or new computational release is asserted.
+
+Scientific programs, parameters, reference results, publication-to-code maps and licensing are unchanged. The scientific calculations were not rerun for this document update. Historical validation records remain historical records.
+
 ## V52-R1 — author-selected licensing update, 27 September 2026
 
 Added the author-approved restrictive LICENSE (all rights reserved with limited permission for unmodified, non-commercial scholarly verification), using the author name already present in the source metadata. Added LICENSE_SCOPE.md; updated README, CFF/BibTeX descriptions and the local licensing decision record. No invented SPDX identifier or public URL is used. Removed the superseded LICENSE_PENDING.md.

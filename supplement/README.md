@@ -1,9 +1,19 @@
-# Standalone mathematical supplement — V52
+# Standalone mathematical supplement
 
-`V52_mathematical_supplement.pdf` is the compiled document. `source/mathematical_catalogue.tex` contains the entire text, equations and three extended tables in one file. `source/references.bib` and `source/mathematical_catalogue.bbl` are the only other source dependencies. The article source, article PDF, article `.aux`, Python results and historical generators are not needed for compilation.
+[`V52_mathematical_supplement.pdf`](V52_mathematical_supplement.pdf) is the corrected English mathematical catalogue. The existing filename is retained to preserve repository links; the document itself has no version designation. [`source/mathematical_catalogue.tex`](source/mathematical_catalogue.tex) is the complete standalone source, including the text, equations, three extended tables and bibliography.
 
-From `source/`, run `pdflatex mathematical_catalogue.tex` three times. To update bibliography metadata, run `pdflatex mathematical_catalogue.tex`, `bibtex mathematical_catalogue`, and `pdflatex mathematical_catalogue.tex` three times. No network is needed once TeX and the explicitly named packages are installed.
+From `source/`, run:
 
-The document accompanies Danylo Yerokhin's main manuscript V52, dated 27 September 2026. It is a locally prepared supplement, not a separately published journal paper. Main-article external numbers are fixed to V52 and were verified from its independent build. Local equation numbers run from 1 to 1145. Do not regenerate this source from `original_scripts/`.
+```bash
+pdflatex -interaction=nonstopmode -halt-on-error mathematical_catalogue.tex
+pdflatex -interaction=nonstopmode -halt-on-error mathematical_catalogue.tex
+pdflatex -interaction=nonstopmode -halt-on-error mathematical_catalogue.tex
+```
 
-The supplement source has no macros, class files or style files added for the split. The article citation is intentionally an unpublished-manuscript record without an invented arXiv identifier. Complete release metadata and choose a licence before public distribution. See the package-level README for verification scope and the pre-existing non-centre-of-mass provenance issue.
+BibTeX is not required. `source/references.bib` and `source/mathematical_catalogue.bbl` are synchronized optional bibliography exports; the source no longer reads them. The article source, article PDF, article `.aux`, Python results and historical generators are not needed for compilation. The explicitly named TeX packages must be installed.
+
+The catalogue accompanies Danylo Yerokhin's manuscript *A minimal local covariant action for holographic dark energy: constraints, perturbations, and nonlinear dynamics*. References explicitly identified as belonging to the main article use its numbering; all other section and equation numbers belong to this supplement. The local equation numbers remain 1--1145.
+
+The English source contains the reviewed translation and editorial corrections synchronized with the corrected Russian catalogue. These clarify indexing, angular reconstruction, normalization and terminology without changing the coefficient data. The computational programs and their reference results are unchanged. Do not regenerate this reviewed source with historical catalogue generators.
+
+See the repository [LICENSE](../LICENSE), [verification scope](../VALIDATION_SUMMARY.md), [known limitations](../KNOWN_LIMITATIONS.md) and [change log](../CHANGELOG.md). This document update does not assert a new computational release, arXiv identifier, DOI or journal reference.

@@ -1,9 +1,9 @@
 # V52-R1 computational materials
 
 **A minimal local covariant action for holographic dark energy: constraints, perturbations, and nonlinear dynamics**  
-Danylo Yerokhin — scientific article **V52**, computational package **V52-R1**, proposed tag **v52-r1**.
+Danylo Yerokhin — computational package **V52-R1**; the mathematical supplement contains the reviewed English editorial corrections.
 
-This is a **local package prepared for author-controlled GitHub upload**, not an already uploaded repository or published release. Zenodo is deferred and no DOI is required for the current GitHub-only route. No repository URL, release date or commit identifier has been invented. The author has selected the restrictive licence below; publication and account-level decisions remain with the author. See the [GitHub publication guide in Russian](PUBLICATION_GUIDE_RU.md).
+This repository provides the author-controlled computational materials and mathematical supplement for the associated article. The English catalogue includes the reviewed corrections described in [CHANGELOG.md](CHANGELOG.md). No new computational release or DOI is asserted by this catalogue update. The author-selected restrictive licence is unchanged. See the [GitHub publication guide in Russian](PUBLICATION_GUIDE_RU.md).
 
 ## Copyright and permitted use
 
@@ -35,7 +35,7 @@ Supply the original article source directory, including `references.bib` and its
 
 ## What is in this repository
 
-The [mathematical supplement](supplement/V52_mathematical_supplement.pdf) and its [standalone source](supplement/source/mathematical_catalogue.tex) remain the unchanged V52 comparison object. [scripts](scripts/) contains the executable themed programs; [lib](lib/) contains the shared exact algebra. [parameters](parameters/) distinguishes live JSON configurations from descriptions of embedded constants.
+The [mathematical supplement](supplement/V52_mathematical_supplement.pdf) and its [standalone source](supplement/source/mathematical_catalogue.tex) contain the reviewed English corrections. The document has no version designation; its existing PDF filename is retained for link compatibility. The coefficient data and equation numbering are unchanged. The bibliography is embedded in the source; see the [compilation instructions](supplement/README.md). [scripts](scripts/) contains the executable themed programs; [lib](lib/) contains the shared exact algebra. [parameters](parameters/) distinguishes live JSON configurations from descriptions of embedded constants.
 
 [reference_results](reference_results/) separates inherited V51/V52 outputs from newly produced V52-R1 results. [validation](validation/) contains the actual commands, return codes and preparation checks. [historical archive](historical/) is a **non-executable, sanitized historical archive**, not another working pipeline. Original unredacted historical files are retained only in the author's local work archive.
 

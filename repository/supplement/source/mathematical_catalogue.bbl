@@ -1,6 +1,0 @@
-% Optional synchronized bibliography export; not required by the standalone source.
-\begin{thebibliography}{1}
-\bibitem{YerokhinArticle}
-D. Yerokhin, \textit{A minimal local covariant action for holographic dark energy:
-constraints, perturbations, and nonlinear dynamics} (2026).
-\end{thebibliography}

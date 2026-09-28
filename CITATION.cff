@@ -1,16 +1,18 @@
 cff-version: 1.2.0
 # Custom restrictive terms: see LICENSE and LICENSE_SCOPE.md.
 # Do not use "All Rights Reserved" or an invented LicenseRef in the SPDX-only license field.
-# Add license-url only when the actual public URL of LICENSE is available.
 message: >-
-  Please cite computational version V52-R1 and its actual GitHub release URL
-  when available, together with the associated scientific publication.
-  Copyright 2026 Danylo Yerokhin. All rights reserved; limited scholarly
-  verification permission only. See LICENSE. This local copy has not been
-  published and contains no assigned repository URL or DOI.
+  Please cite this repository together with the associated scientific
+  publication and identify the commit used for exact reproducibility.
+  The computational package remains V52-R1; the English catalogue includes
+  reviewed editorial corrections. Copyright 2026 Danylo Yerokhin.
+  All rights reserved; limited scholarly verification permission only.
+  See LICENSE. No DOI or new computational release is asserted here.
 title: "Computational materials and mathematical supplement for A minimal local covariant action for holographic dark energy: constraints, perturbations, and nonlinear dynamics"
 type: software
 version: V52-R1
+repository-code: "https://github.com/DenCosmos/hde-covariant-action-computational-materials"
+url: "https://github.com/DenCosmos/hde-covariant-action-computational-materials"
 authors:
   - family-names: Yerokhin
     given-names: Danylo
@@ -20,8 +22,9 @@ abstract: >-
   Exact and numerical computations supporting scientific article V52:
   local scalar vertices, reduced identities, finite-time radiation contact
   and scalar-tensor exchange coefficients, non-center-of-mass checks,
-  angular dictionaries and three figure reconstructions. The unchanged
-  mathematical supplement is included; the main article is not.
+  angular dictionaries and three figure reconstructions. The mathematical
+  supplement includes reviewed editorial corrections without changes to
+  its coefficient data; the main article is not included.
   No regulator-free unitary limit is established by this package.
 keywords:
   - holographic dark energy

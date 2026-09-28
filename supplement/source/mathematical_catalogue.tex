@@ -1,5 +1,4 @@
-% V52 standalone supplement. Compile mathematical_catalogue.tex with pdfLaTeX.
-% The supplied mathematical_catalogue.bbl also permits compilation without BibTeX.
+% Standalone mathematical supplement. Compile twice with pdfLaTeX.
 \documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -13,8 +12,8 @@
 \usepackage{xurl}
 \usepackage[hidelinks,unicode,pdfencoding=auto]{hyperref}
 \usepackage{bookmark}
-\hypersetup{pdftitle={Mathematical supplement to A minimal local covariant action for holographic dark energy: constraints, perturbations, and nonlinear dynamics (V52)},pdfauthor={Danylo Yerokhin},
-  pdfsubject={Separate mathematical catalogue, version V52},
+\hypersetup{pdftitle={Mathematical supplement to A minimal local covariant action for holographic dark energy: constraints, perturbations, and nonlinear dynamics},pdfauthor={Danylo Yerokhin},
+  pdfsubject={Mathematical catalogue},
   pdfkeywords={holographic dark energy, covariant action, constraints, perturbations, strong coupling}}
 \urlstyle{same}
 \setcounter{tocdepth}{2}
@@ -28,25 +27,21 @@ constraints, perturbations, and nonlinear dynamics}
 ORCID: \href{https://orcid.org/0009-0003-8645-327X}{0009-0003-8645-327X}.}\\[0.5em]
 \normalsize V.\,N. Karazin Kharkiv National University\\
 \normalsize 4 Svobody Sq., Kharkiv 61022, Ukraine}
-\date{27 September 2026}
+\date{}
 \begin{document}
 \maketitle
-\noindent Version V52 --- 27 September 2026.
-This document contains the complete mathematical catalogue accompanying the article cited in Ref.~\cite{YerokhinV52Article}. The catalogue, expanded coefficient tables, available verification programs, and saved results form a separate supplementary package prepared for GitHub. They are not included in the main article's PDF or arXiv source archive. Repository and release metadata have not yet been supplied; the local package is technically prepared but requires completion of those metadata before publication.
-
 \tableofcontents
 \clearpage
 
-% BEGIN PRESERVED V51 CATALOGUE (editorial references only)
 \section{Mathematical catalogue}
 \label{app:mathematical-catalogue}
 \subsection{Scope and indexing}
 \label{sec:cat-scope}
-This standalone mathematical supplement accompanies version V52 of the main article~\cite{YerokhinV52Article}. References explicitly identified as belonging to the main article, including Appendices~A--E, use the numbers in that version. All other section and equation numbers refer to this supplement. The two documents compile independently; the external numbers have been checked against the V52 build. The definitions and domains of validity are stated below.
+This standalone mathematical supplement accompanies the main article~\cite{YerokhinArticle}. References explicitly identified as belonging to the main article, including Appendices~A--E, use its section and equation numbers. All other section and equation numbers refer to this supplement.
 
-Subsections~\ref{sec:cat-contacts}--\ref{sec:cat-angular} and~\ref{sec:cat-rationals}, together with the kinematics and normalizations given below, apply to the radiation-like branch $ U=0 $ in the absence of an independent matter sector. The independent parameters used are the ratio of the magnitudes of the comoving momenta $ r=k'/k>0 $, the cosine of the angle between them $ -1<z<1 $, and the variable $ x=k\eta $. Subsection~\ref{sec:cat-local-vertices} contains a separate local result for a general potential $ U\in C^6 $ at $ \chi<0 $ and $ \Delta_\Phi\ne0 $. The condition $ U=0 $ and the kinematics of the radiation-like branch do not apply to that section. The catalogue does not give the general gravitational amplitude on an arbitrary background. The formulas in the article retain the external frequency factors, the overall scale, and the separate volume normalization of exactly homogeneous lines.
+Subsections~\ref{sec:cat-contacts}--\ref{sec:cat-angular} and~\ref{sec:cat-rationals}, together with the kinematics and normalizations given below, apply to the radiation-like branch $ U=0 $ in the absence of an independent matter sector. The independent parameters used are the ratio of the magnitudes of the comoving momenta $ r=k'/k>0 $, the cosine of the angle between them $ -1<z<1 $, and the variable $ x=k\eta $. Subsection~\ref{sec:cat-local-vertices} contains a separate local result for a general potential $ U\in C^6 $ at $ \chi<0 $ and $ \Delta_\Phi\ne0 $. The condition $ U=0 $ and the kinematics of the radiation-like branch do not apply to that subsection. The catalogue does not give the general gravitational amplitude on an arbitrary background. The tabulated coefficients do not include the external frequency factors, the overall scale, or the separate volume normalization of exactly homogeneous lines. These factors are retained in the formulas of the main article.
 
-The position indices $0,1,2,3$ correspond to positions $1,2,3,4$ in the article. The field indices $0,1,2$ denote the scalar and the first and second linear tensor polarizations. The inward-directed momenta in units of $k$ are
+The position indices $0,1,2,3$ coincide with those in Subsection~C.3 of the main article. In its main text, the description of the channel $13|24$ preceding Eq.~(195) labels the same positions $1,2,3,4$. The field indices $0,1,2$ denote the scalar and the first and second linear tensor polarizations. The inward-directed momenta in units of $k$ are
 \begin{equation}
 \shortstack[l]{$\displaystyle \mathbf p_0=(0,0,1),\quad \mathbf p_1=(0,0,-1),$\\
 $\displaystyle \mathbf p_2=(-r\sqrt{1-z^2},0,-rz),\quad \mathbf p_3=(r\sqrt{1-z^2},0,rz).$}
@@ -65,7 +60,7 @@ For each contact component, four sets of coefficients of powers of $x$ are given
 \frac{H_4}{g_{\mathrm R}^2k^4}=\sum_{p=-4}^{0}h_px^p,\qquad h_p=b_p+u_p+v_p.
 \label{eq:cat-contact-parts}
 \end{equation}
-The individual partitions needed to reconstruct the angular dependence are recovered from the sums $u_p,v_p$ as specified in Subsection~\ref{sec:cat-contact-partitions}. Coefficients of powers not listed are zero. The symbols $R_s$ in the following formulas denote the explicit algebraic functions in Subsection~\ref{sec:cat-rationals}, not external electronic records. When expressed in terms of $z$, some sources for the global Cartesian tensors contain $\sqrt{1-z^2}$; after changing to $t_\theta$, all functions are rational.
+The individual partitions needed for the angular reconstruction are specified in Subsection~\ref{sec:cat-contact-partitions}. The sums $u_p,v_p$ alone do not determine them. Coefficients of powers not listed are zero. The symbols $R_s$ in the following formulas denote the explicit algebraic functions in Subsection~\ref{sec:cat-rationals}, not external electronic records. When expressed in terms of $z$, some sources for the global Cartesian tensors contain $\sqrt{1-z^2}$; after changing to $t_\theta$, all functions are rational.
 
 Let $T$ exchange the incoming and outgoing pairs, and let $S$ exchange the two positions within one pair. The exact rules are
 \begin{equation}
@@ -73,7 +68,7 @@ Let $T$ exchange the incoming and outgoing pairs, and let $S$ exchange the two p
  h_p^{C D A B}(r,z)=r^{4+p}\overline{h_p^{A B C D}(1/r,z)}.
 \label{eq:cat-contact-symmetries}
 \end{equation}
-The indices within each pair are ordered first, and the pairs are then ordered lexicographically. An odd number of within-pair exchanges gives $z\mapsto-z$. Exchanging the pairs corresponds to the substitution $r\mapsto1/r$, complex conjugation, and multiplication by $r^{4+p}$. These identities have been checked separately for each of the 81 components. The same identities also hold separately for $ b_p,u_p,v_p $ defined in \eqref{eq:cat-contact-parts}. The starting point is the total Lagrangian density $ \mathcal L_\psi+\mathcal L_g $ on the radiation-like background, given in Eqs. (342)--(343) of the main article~\cite{YerokhinV52Article}. Substituting the linear constraints into its quadrilinear part gives $ b_p $ with the opposite sign. Eliminating the second-order auxiliary variables gives $ u_p $, and the Legendre transform in Eq. (191) of the main article gives $ v_p $. The corresponding decomposition of the full contact term is given in Eq. (351) of the main article~\cite{YerokhinV52Article}.
+The indices within each pair are ordered first, and the pairs are then ordered lexicographically. An odd number of within-pair exchanges gives $z\mapsto-z$. Exchanging the pairs corresponds to the substitution $r\mapsto1/r$, complex conjugation, and multiplication by $r^{4+p}$. These identities have been checked separately for each of the 81 components. The same identities also hold separately for $ b_p,u_p,v_p $ defined in \eqref{eq:cat-contact-parts}. The starting point is the total Lagrangian density $ \mathcal L_\psi+\mathcal L_g $ on the radiation-like background, given in Eqs. (342)--(343) of the main article. Substituting the solutions of the linear constraints into its quadrilinear part gives $ b_p $ with the opposite sign. Eliminating the auxiliary variables at second order in the perturbations gives $ u_p $, and the Legendre transform in Eq. (191) of the main article gives $ v_p $. The corresponding decomposition of the full contact term is given in Eq. (351) of the main article.
 % Main article: eq:v34r-exact-scalar-density; eq:v34r-exact-gravity-density; eq:v33-legendre-contact; eq:radiation-contact-decomposition.
 
 In the quadrilinear coefficients of these parts of the contact term, all external-wave data are permuted: field types, momenta, signed frequencies, and polarizations. For $ u_p $ and $ v_p $, each partition is first transformed according to \eqref{eq:cat-partition-permutations}, including the replacement $ +\leftrightarrow- $ when the two positions within one external pair are exchanged. The three partitions $ 0,+,- $ are then summed according to \eqref{eq:cat-partition-contact-sum}. The resulting sums satisfy \eqref{eq:cat-contact-symmetries}. For a fixed partition label, the rules \eqref{eq:cat-partition-permutations} must be used. The original part $ b_p $ requires no such summation.
@@ -424,7 +419,7 @@ $\displaystyle v^{2222}_{-2}=R_{167}$}
 \end{equation}
 \subsubsection{Complete table}
 \label{sec:cat-component-table}
-A value of one in column $S$ denotes $z\mapsto-z$; in column $T$, it denotes the exchange of the incoming and outgoing pairs defined in \eqref{eq:cat-contact-symmetries}. No transformations are required for zero rows.
+A value of one in column $S$ denotes $z\mapsto-z$. In column $T$, it denotes the substitution $r\mapsto1/r$ with complex conjugation and multiplication by $r^{4+p}$ according to \eqref{eq:cat-contact-symmetries}. No transformations are required for zero rows.
 \begin{longtable}{ccccc}
 Component & Representative & $S$ & $T$ & Nonzero\\\hline
 0000 & 0000 & 0 & 0 & 1\\
@@ -509,7 +504,7 @@ Component & Representative & $S$ & $T$ & Nonzero\\\hline
 2221 & 1222 & 1 & 1 & 0\\
 2222 & 2222 & 0 & 0 & 1\\
 \end{longtable}
-\subsection{Coefficients of the internal field and its x-derivative for all 54 pairs}
+\subsection{Coefficients of the internal field and its \texorpdfstring{$x$}{x}-derivative for all 54 pairs}
 \label{sec:cat-pairs}
 In the heading $ij:ab$, the first two indices denote the momentum positions, and the second two denote the types of the two external fields. The coefficients are defined by
 \begin{equation}
@@ -2497,12 +2492,12 @@ For a line with nonzero momentum, $\nu_I=c_I|\mathbf p_i+\mathbf p_j|$. The exch
 \end{equation}
 Each coefficient of $x^py^s$ is multiplied by $-D_{ps}(\Omega_a+\nu_I,\Omega_b-\nu_I)$. The corresponding row of the table is used for the reverse time ordering.
 
-For a global coordinate, set $X_a=A_a$, $Y_a=\sigma_I[(x-x_i)A_a+B_a]$. The covariance bilinear form (402) of the main article is used instead of \eqref{eq:cat-ordered-exchange}.
+For a homogeneous coordinate, set $X_a=A_a$, $Y_a=\sigma_I[(x-x_i)A_a+B_a]$. The covariance bilinear form (402) of the main article is used instead of \eqref{eq:cat-ordered-exchange}.
 % Main article: eq:v34-global-contraction.
 For the scalar, $\sigma_I=-1$, and there is no division by a negative norm; for the tensors, $\sigma_I=1$, and division by $2,6,2,2,2$ is retained. The physical covariances $C_{QQ},C_{PP},C_{QP}$ are fixed before choosing $k$, whereas the dimensionless covariances transform as $C_{qq}=kC_{QQ}$, $C_{pp}=C_{PP}/k$, $C_{qp}=C_{QP}$. The additional volume factor and the two spatial delta functions are not included in $A,B$.
-\subsection{Finite reconstruction of the angular dependence}
+\subsection{Finite angular reconstruction}
 \label{sec:cat-angular}
-The radial basis in Subsections~\ref{sec:cat-contacts}--\ref{sec:cat-pairs} is also a complete basis for the angular coefficients. The following finite procedure computes each coefficient without requiring data in machine-readable form. All operations are performed before taking the limit $r\to1$.
+The coefficients in Subsections~\ref{sec:cat-contacts}--\ref{sec:cat-pairs} provide the starting data for the angular reconstruction. The individual contact partitions, boundary coefficients, and finite convolutions required to complete it are given below. The following finite procedure computes each coefficient without requiring data in machine-readable form. All operations are performed before taking the limit $r\to1$.
 
 For the partition $\varsigma=\pm1$, substitute $z_\varsigma=(1+r^2-q^2)\varsigma/(2r)$. After cancellation of common factors in the rational expression, its denominator is a product of a power of $q$ and a factor depending only on $r$. Multiplying out and collecting terms with equal powers of $q$ therefore gives the finite series
 \begin{equation}
@@ -2510,7 +2505,7 @@ For the partition $\varsigma=\pm1$, substitute $z_\varsigma=(1+r^2-q^2)\varsigma
  B_{a,I,p}(r,z_\varsigma)=\sum_u b_{a,I,p,u}(r)q^u.
 \label{eq:cat-angular-source-transfer}
 \end{equation}
-The left-hand sides are given explicitly in terms of the functions $R_s$. Obtaining these series requires neither differentiating the action nor solving new constraints. The absence of a nonmonomial denominator in $q$ is checked separately in the computational verification protocol.
+The left-hand sides are given explicitly in terms of the functions $R_s$. Obtaining these series requires neither differentiating the action nor solving new constraints. The absence of a nonmonomial denominator in $q$ is checked separately by the program that computes the angular coefficients.
 
 Let $m=h_0-h_1$, $n=h_2-h_3$, $Z=(1+r^2)/(2r)$, and
 \begin{equation}
@@ -2518,17 +2513,17 @@ Let $m=h_0-h_1$, $n=h_2-h_3$, $Z=(1+r^2)/(2r)$, and
  p_{jmn}=\sqrt{(j+m)!(j-m)!(j+n)!(j-n)!}.
 \label{eq:cat-angular-wigner-factor}
 \end{equation}
-For each admissible $b$, set $A_b=j+(n-m)/2-b$, $B_b=(m-n)/2+b$. The finite set of coefficients $w_{2d}$ of the polynomial $W_{jmn}(z_\varsigma)=\sum_d w_{2d}q^{2d}$ is given by
+For each admissible $b$, set $\alpha_b=j+(n-m)/2-b$, $\beta_b=(m-n)/2+b$. The finite set of coefficients $w_{2d}$ of the polynomial $W_{jmn}(z_\varsigma)=\sum_d w_{2d}q^{2d}$ is given by
 \begin{equation}
 \shortstack[l]{
 $\displaystyle w_{2d}=\sum_b\frac{(-1)^{m-n+b}}{2^j(j+n-b)!b!(m-n+b)!(j-m-b)!}$\\
-$\displaystyle \hspace{8mm}\times\sum_{u+v=d}\binom{A_b}{u}\binom{B_b}{v}
- (1+\varsigma Z)^{A_b-u}(1-\varsigma Z)^{B_b-v}
+$\displaystyle \hspace{8mm}\times\sum_{u+v=d}\binom{\alpha_b}{u}\binom{\beta_b}{v}
+ (1+\varsigma Z)^{\alpha_b-u}(1-\varsigma Z)^{\beta_b-v}
  \left(-\frac{\varsigma}{2r}\right)^u
  \left(\frac{\varsigma}{2r}\right)^v.$}
 \label{eq:cat-angular-explicit-wigner-coefficients}
 \end{equation}
-The outer sum is restricted by the nonnegativity of the factorial arguments, and the inner sum by the conditions $0\leq u\leq A_b$, $0\leq v\leq B_b$. All coefficients $w$ with odd indices are zero. Set $\mathcal N_I=n_Iq^{d_I}$, where $(n_I,d_I)=(1,0),(2,0),(2,2)$, and
+The outer sum is restricted by the nonnegativity of the factorial arguments, and the inner sum by the conditions $0\leq u\leq \alpha_b$, $0\leq v\leq \beta_b$. All coefficients $w$ with odd indices are zero. Set $\mathcal N_I=n_Iq^{d_I}$, where $(n_I,d_I)=(1,0),(2,0),(2,2)$, and
 \begin{equation}
  v_{a,I,p,u}^{\pm}=a_{a,I,p,u}\mp ic_I b_{a,I,p,u-1}.
 \label{eq:cat-angular-velocity-shift}
@@ -2545,11 +2540,11 @@ The individual parts $h_p^{(d)}$ of the contact term are first reconstructed usi
  H_{p\ell}^{(d)}=\sum_{t+u=\ell-1}w_t h_{p,u}^{(d)}.
 \label{eq:cat-angular-contact-convolution}
 \end{equation}
-The original contact term and the homogeneous part have no soft momentum-transfer denominator. They can be integrated with respect to $z$ using the rule $\int_{-1}^{1}z^v dz=2/(v+1)$ for even $v$; for odd $v$, the integral is zero. For homogeneous exchange, this rule applies to the products $A_aA_b$, $A_aB_b$, $B_aA_b$, $B_aB_b$ with the appropriate normalization. The fixed covariance bilinear form of the preceding section is then reconstructed using $X,Y$.
+The original contact term and the homogeneous part have no soft momentum-transfer denominator. They can be integrated with respect to $z$ using the rule $\int_{-1}^{1}z^v dz=2/(v+1)$ for even $v$; for odd $v$, the integral is zero. For homogeneous exchange, this rule applies to the products $A_aA_b$, $A_aB_b$, $B_aA_b$, $B_aB_b$ with the appropriate normalization. The fixed covariance bilinear form of Subsection~\ref{sec:cat-exchanges} is then reconstructed using $X,Y$.
 
 The transformation to helicities is performed by a finite sum over the four linear polarization indices with $C_{00}=1$, $C_{h1}=1/2$, $C_{h2}=i\operatorname{sgn}(h)/2$. Coefficients not listed are zero. The overall factors $p_{jmn}/r$, $2\pi/\sqrt{(1+\delta_{h_0h_1})(1+\delta_{h_2h_3})}$, the frequency factors in the normalization of the external one-particle states, and $g_{\mathrm R}^2k^3$ are restored according to the article. No additional tensor normalization is applied after this.
 
-For the boundary contributions, the same convolutions use $f_a V_b^-$, $V_a^+f_b$, and $f_af_b$. The nonzero coefficients $f$ in the linear polarization basis at $\zeta=\varsigma z$ are
+For the boundary contributions, set $V_a^\pm(x)=A_{a,I}(x)\mp ic_IqB_{a,I}(x)$ at $I=0$. Their coefficients $V_{a,I,p}^\pm=A_{a,I,p}\mp ic_IqB_{a,I,p}$ have expansions in $q$ with the coefficients given by \eqref{eq:cat-angular-velocity-shift}. The same convolutions use $f_a V_b^-$, $V_a^+f_b$, and $f_af_b$. The nonzero coefficients $f$ in the linear polarization basis at $\zeta=\varsigma z$ are
 \begin{equation}
 \shortstack[l]{
 $\displaystyle f_{00}=\frac{6ic_0r(r-1)(1+\zeta)}{q^2},\quad
@@ -2557,15 +2552,15 @@ $\displaystyle f_{00}=\frac{6ic_0r(r-1)(1+\zeta)}{q^2},\quad
 $\displaystyle f_{22}=-\frac{12ir(r-1)\zeta(1+\zeta)}{q^2},\qquad f_{ab}=0\quad(a\ne b).$}
 \label{eq:cat-boundary-explicit-basis}
 \end{equation}
-The coefficients of their finite series in $q$ replace one or both coefficients $v$ in \eqref{eq:cat-angular-exchange-convolution} at $I=0$. The coefficients are multiplied by exactly the time factors in Eqs. (390)--(391) of the main article~\cite{YerokhinV52Article}. The factors $x_i^{-1},x_f^{-1}$ are not included in the coefficients a second time. The contributions from both time orderings are summed. The five boundary terms are given in Subsection~C.6 of the main article~\cite{YerokhinV52Article}, Eqs. (393)--(394). That subsection also shows the exact cancellation of the leading contribution proportional to $q^{-3}$ when the boundary terms are combined with the bulk exchange.
+The coefficients of their finite series in $q$ replace one or both coefficients $v$ in \eqref{eq:cat-angular-exchange-convolution} at $I=0$. The coefficients are multiplied by exactly the time factors in Eqs. (390)--(391) of the main article. The factors $x_i^{-1},x_f^{-1}$ are not included in the coefficients a second time. The contributions from both time orderings are summed. The five boundary terms are given in Subsection~C.6 of the main article, Eqs. (393)--(394). That subsection also shows the exact cancellation of the leading contribution proportional to $q^{-3}$ when the boundary terms are combined with the bulk exchange.
 % Main article: eq:v34r-boundary-table-mixed-dictionary; eq:v34r-boundary-table-square-dictionary; eq:boundary-five-groups-leading; eq:boundary-scalar-five-coefficients.
 
-The radial basis given here and the finite convolutions determine all bulk and boundary entries of the following table. Equation \eqref{eq:cat-angular-explicit-wigner-coefficients}, the convolutions \eqref{eq:cat-angular-exchange-convolution}--\eqref{eq:cat-angular-contact-convolution}, and the boundary coefficients \eqref{eq:cat-boundary-explicit-basis} define an analytical procedure for any integer $ j\geq\max(|m|,|n|) $ allowed for the chosen external channels. If identical particles have equal helicities in the incoming or outgoing pair, $ j $ must be even, as stated after Eq. (369) of the main article~\cite{YerokhinV52Article}. The four checked values $ j=0,2,3,4 $ determine only the contents of the following table, not the domain of applicability of this procedure.
+The coefficients, individual contact partitions, and finite convolutions given here determine all bulk and boundary entries of the following table. Equation \eqref{eq:cat-angular-explicit-wigner-coefficients}, the convolutions \eqref{eq:cat-angular-exchange-convolution}--\eqref{eq:cat-angular-contact-convolution}, and the boundary coefficients \eqref{eq:cat-boundary-explicit-basis} define an analytical procedure for any integer $ j\geq\max(|m|,|n|) $ allowed for the chosen external channels. If identical particles have equal helicities in the incoming or outgoing pair, $ j $ must be even, as stated after Eq. (369) of the main article. The four checked values $ j=0,2,3,4 $ determine only the contents of the following table, not the domain of applicability of this procedure.
 % Main article: eq:v34-bose-radial-factor; eq:angular-block-complete-order.
 
 \subsubsection{Table of 74 bulk and 74 boundary entries}
 \label{sec:cat-angular-table}
-In the table, $a$ is the incoming channel number and $c$ is the outgoing channel number, with numbering starting from zero. The columns give the helicity values, so the external indices and the arguments of the Wigner polynomial are uniquely determined. Zero entries are retained.
+In the table, $a$ is the incoming channel number and $c$ is the outgoing channel number, with numbering starting from zero. The columns give the helicity values, so the external indices and the indices $m,n$ of the Wigner polynomial are uniquely determined. Zero entries are retained.
 \begin{longtable}{rrrrrrrr}
 $j$ & $c$ & $a$ & $h_0,h_1$ & $h_2,h_3$ & $m$ & $n$ & Number of exchanges\\\hline
 0 & 0 & 0 & $0,0$ & $0,0$ & 0 & 0 & 24\\
@@ -2658,7 +2653,7 @@ $\displaystyle h_p=b_p+u_p^{(0)}+u_p^{(+)}+u_p^{(-)}
                    +v_p^{(0)}+v_p^{(+)}+v_p^{(-)}.$}
 \label{eq:cat-partition-contact-sum}
 \end{equation}
-The external indices $ABCD$ are omitted in these equalities. The seven terms in the second line are the individual parts of the contact term denoted by $h_p^{(d)}$ in \eqref{eq:cat-angular-contact-convolution} and in Eq. (378) of the main article~\cite{YerokhinV52Article}.
+The external indices $ABCD$ are omitted in these equalities. The seven terms in the second line are the individual parts of the contact term denoted by $h_p^{(d)}$ in \eqref{eq:cat-angular-contact-convolution} and in Eq. (378) of the main article.
 % Main article: eq:angular-contact-finite-reconstruction.
 
 \paragraph{Legendre-transform contact terms.}
@@ -2677,9 +2672,9 @@ $\displaystyle (\sigma_I)=(-1,1,1,1,1,1),\qquad
  (\mathcal N_I^{(0)})=(1,2,6,2,2,2).$}
 \label{eq:cat-partition-velocity-homogeneous}
 \end{equation}
-In both convolutions, $s,t\in\{-2,-1,0\}$; coefficients not listed are zero. The minus sign at $I=0$ in \eqref{eq:cat-partition-velocity-homogeneous} corresponds to the inverse kinetic coefficient of the homogeneous scalar coordinate. No additional factor of $1/2$ is introduced: the two cross terms of the quadratic correction arising from the Legendre transform have already been combined for one unordered partition. Nor is a second reversal of the polarizations at the other end of the internal line required, since it is already accounted for by the factor $\tau_I$.
+In both convolutions, $s,t\in\{-2,-1,0\}$; coefficients not listed are zero. The minus sign at $I=0$ in \eqref{eq:cat-partition-velocity-homogeneous} corresponds to the inverse kinetic coefficient of the homogeneous scalar coordinate. No additional factor of $1/2$ is introduced: the two cross terms of the quadratic correction arising from the Legendre transform have already been combined within each unordered partition. Nor is a second reversal of the polarizations at the other end of the internal line required, since it is already accounted for by the factor $\tau_I$.
 
-\paragraph{Homogeneous contact term from constraint elimination.}
+\paragraph{Homogeneous contact term from auxiliary-variable elimination.}
 Define the dimensionless Laurent polynomials $\mathcal J_{01}^{AB}(x)$ and $\mathcal J_{23}^{CD}(x)$ by
 \begin{equation}
 \shortstack[l]{$\displaystyle \mathcal J_{01}^{00}=-18x^{-2}-\frac{20\sqrt3\,i}{3}x^{-1}+\frac43,$\\
@@ -2693,17 +2688,17 @@ All polynomials with mixed external indices are zero. Denoting by $[x^p]$ the op
  u_p^{(0),ABCD}=2[x^p]\bigl(\mathcal J_{01}^{AB}(x)\mathcal J_{23}^{CD}(x)\bigr).
 \label{eq:cat-partition-auxiliary-homogeneous}
 \end{equation}
-This finite rule determines the homogeneous part independently of the behavior of nonzero momentum transfer as $r\to1$ and $z\to\pm1$.
+This finite rule determines the homogeneous part independently of the behavior of the nonzero-transfer contributions as $r\to1$ and $z\to\pm1$.
 
-\paragraph{Contact terms from constraint elimination in the crossed partitions.}
+\paragraph{Contact terms from auxiliary-variable elimination in the crossed partitions.}
 The 46 nonzero coefficients $u_p^{(+),ABCD}$ for the 13 representatives in Subsection~\ref{sec:cat-contacts} are given below. Coefficients of all other powers, including $p=0$, are zero. The formulas retain the full rational functions, including the regular terms. For each representative, the coefficients of the second crossed partition are determined from the sum in Subsection~\ref{sec:cat-contacts}:
 \begin{equation}
  u_p^{(-),ABCD}=u_p^{ABCD}-u_p^{(0),ABCD}-u_p^{(+),ABCD}.
 \label{eq:cat-partition-auxiliary-minus}
 \end{equation}
-Thus, the coefficients below, together with Eqs. \eqref{eq:cat-partition-auxiliary-homogeneous} and \eqref{eq:cat-partition-auxiliary-minus}, specify both crossed parts without repeating the constraint elimination.
+Thus, the coefficients below, together with Eqs. \eqref{eq:cat-partition-auxiliary-homogeneous} and \eqref{eq:cat-partition-auxiliary-minus}, specify both crossed parts without repeating the auxiliary-variable elimination.
 
-\paragraph{Permutations and the order of reconstruction of the angular dependence.}
+\paragraph{Permutations and the order of the angular reconstruction.}
 For $w=u$ or $w=v$, permutations of the external indices also act on the partition label. Let $\iota(0)=0$, $\iota(+)=-$, $\iota(-)=+$. Then
 \begin{equation}
 \shortstack[l]{$\displaystyle
@@ -2717,7 +2712,7 @@ The table in Subsection~\ref{sec:cat-component-table} applies to the entire trip
 
 For the part labeled $+$, substitute $z=(1+r^2-q^2)/(2r)$ into \eqref{eq:cat-angular-contact-convolution}; for the part labeled $-$, substitute $z=-(1+r^2-q^2)/(2r)$. The coefficients in $q$ are extracted separately and only then summed. If the polynomial part is also separated out, division with remainder is performed in the variable $ q $ at fixed $ r $: the numerator of the reduced fraction $ u_p^{(\pm)}(r,z_\varsigma) $ or $ v_p^{(\pm)}(r,z_\varsigma) $ is divided by its denominator after the stated substitution with the corresponding sign $ \varsigma $. As in \eqref{eq:cat-angular-source-transfer}, the denominator contains only a nonnegative integer power of $ q $ and a nonzero factor depending on $ r $. The polynomial quotient therefore consists of terms with nonnegative powers of $ q $, while the remainder divided by the denominator consists of terms with negative powers. This is equivalent to separating the finite Laurent series already obtained according to the sign of the power. The division is performed separately within each reconstructed function, and the polynomial quotient retains the same partition label. If the denominator is independent of $ q $, the entire function belongs to the quotient. The sum of negative powers alone does not replace the full function: the regular part is neither discarded nor redistributed between $ + $ and $ - $.
 
-The terms $u_p^{(0)}$ and $v_p^{(0)}$ are retained separately from $b_p$ and from the regular parts at nonzero momentum transfer. Their volume normalization remains that of the isolated zero mode, specified by Eq. (403) of the main article~\cite{YerokhinV52Article}. This normalization is not obtained by substituting $q=0$ into the expression for a line with nonzero momentum. The absence of a soft momentum-transfer pole in a regular term does not by itself make that term an exactly homogeneous contribution.
+The terms $u_p^{(0)}$ and $v_p^{(0)}$ are retained separately from $b_p$ and from the regular parts at nonzero momentum transfer. Their volume normalization remains that of the isolated zero mode, specified by Eq. (403) of the main article. This normalization is not obtained by substituting $q=0$ into the expression for a line with nonzero momentum. The absence of a soft momentum-transfer pole in a regular term does not by itself make that term an exactly homogeneous contribution.
 % Main article: eq:v34-isolated-zero-distribution.
 
 \paragraph{Coefficients $u_p^{(+),0000}$.}
@@ -3087,13 +3082,13 @@ u_{-1}^{(+),2222}=- \frac{48 i r^{2} z^{2} \left(r - 1\right) \left(z + 1\right)
 
 \subsection{All 27 partial derivatives and five local vertices}
 \label{sec:cat-local-vertices}
-This section applies to a general potential $ U\in C^6 $ on the regular local branch $ \chi<0 $, $ \Delta_\Phi\ne0 $, not only to the radiation-like background. The function $ \mathcal W(\Phi,s) $ is obtained by algebraically eliminating $ L $ from the local density (162) of the main article~\cite{YerokhinV52Article}. The equation for $ L $ is $ sL+L^5U'(L)+4\Phi=0 $. Here $ A_L=s+d(L^5U')/dL=L^3\Delta_\Phi $, $ f_m=d^m(L^5U')/dL^m $ for $ m=2,3,4,5 $, as in Eq. (417) of the main article~\cite{YerokhinV52Article}.
+This subsection applies to a general potential $ U\in C^6 $ on the regular local branch $ \chi<0 $, $ \Delta_\Phi\ne0 $, not only to the radiation-like background. The function $ \mathcal W(\Phi,s) $ is obtained by algebraically eliminating $ L $ from the local density (162) of the main article. The equation for $ L $ is $ sL+L^5U'(L)+4\Phi=0 $. Here $ A_L=s+d(L^5U')/dL=L^3\Delta_\Phi $, $ f_m=d^m(L^5U')/dL^m $ for $ m=2,3,4,5 $, as in Eq. (417) of the main article.
 % Main article: eq:scalar-local-action; eq:local-sixth-finite-jets.
 
-We write $ \mathcal W_{ab}=\partial_\Phi^a\partial_s^b\mathcal W $, where $ a,b $ are nonnegative integer indices, $ 1\leq a+b\leq6 $. When differentiating with respect to one argument, the other is held fixed. After differentiation, all coefficients are evaluated on the background. In local inertial coordinates, set $ \phi=\delta\Phi $, $ s=\dot{\bar\Phi}>0 $, $ u=\dot\phi $, and $ G_\phi=\delta^{ij}\partial_i\phi\partial_j\phi $. A dot denotes differentiation with respect to local time. The notation $ u $ and $ G_\phi $ applies only to this section. The local densities $ \mathcal L_n $ with $ n=2,\ldots,6 $ contain all terms of the corresponding order in the perturbations and are defined by Eqs. (416) and (423) of the main article~\cite{YerokhinV52Article}.
+We write $ \mathcal W_{ab}=\partial_\Phi^a\partial_s^b\mathcal W $, where $ a,b $ are nonnegative integer indices, $ 1\leq a+b\leq6 $. When differentiating with respect to one argument, the other is held fixed. After differentiation, all coefficients are evaluated on the background. In local inertial coordinates, set $ \phi=\delta\Phi $, $ s=\dot{\bar\Phi}>0 $, $ u=\dot\phi $, and $ G_\phi=\delta^{ij}\partial_i\phi\partial_j\phi $. A dot denotes differentiation with respect to local time. The notation $ u $ and $ G_\phi $ applies only to this subsection. The local densities $ \mathcal L_n $ with $ n=2,\ldots,6 $ contain all terms of the corresponding order in the perturbations and are defined by Eqs. (416) and (423) of the main article.
 % Main article: eq:v34-local-vertex-generator; eq:local-sixth-complete-vertices.
 
-In the check case $ U=0 $, we have $ f_m=0 $, $ A_L=s $, and $ \mathcal W=-s^4/(768\Phi^3) $. In this local expansion, the fifth- and sixth-order gravitational constraints are not eliminated.
+As a check, for $ U=0 $ we have $ f_m=0 $, $ A_L=s $, and $ \mathcal W=-s^4/(768\Phi^3) $. These local vertices do not replace the elimination of the gravitational constraints required to obtain the full fifth- and sixth-order action.
 \begin{equation}
 \mathcal W_{10}=\frac{1}{L^{4}}
 \label{eq:cat-local-W-1-0}
@@ -3277,10 +3272,10 @@ $\displaystyle + \frac{3 G_{\phi}^{2} \mathcal W_{11} \phi u}{8 s^{4}}$}}}\right
 \label{sec:cat-rationals}
 The functions $ R_s(r,z) $ given below determine the coefficients on the radiation-like background in Subsections~\ref{sec:cat-contacts}--\ref{sec:cat-angular}. Their arguments satisfy the conditions $ r>0 $ and $ -1<z<1 $ of Subsection~\ref{sec:cat-scope}. The joint asymptotics in the soft momentum-transfer limit are defined for the combined transition kernel, not for an individual function $ R_s $.
 
-For the chosen crossed partition, set $ q=q_+ $ at $ \varsigma=+1 $ and $ q=q_- $ at $ \varsigma=-1 $, where the momentum transfers are defined in \eqref{eq:cat-partition-transfers}. The limit is specified by the conditions $ q\to0^+ $, $ r=1+\mu q $, and $ z=\varsigma(1+r^2-q^2)/(2r) $. The parameter $ \mu\in[-1,1] $, the scale $ k>0 $, the chosen external fields, and the finite time interval $ 0<\eta_i<\eta_f $ are held fixed. Hence $ x_i=k\eta_i $ and $ x_f=k\eta_f $ are also fixed. In this limit, $ k'=kr\to k $ and $ z\to\varsigma $. The values $ |\mu|=1 $ are understood as boundary values approached from $ -1<z<1 $. For the momentum transfer $ q_+ $, this is the setup preceding Eq. (195) of the main article~\cite{YerokhinV52Article}, where the catalogue partition $ 02|13 $ is denoted by $ 13|24 $.
+For the chosen crossed partition, set $ q=q_+ $ at $ \varsigma=+1 $ and $ q=q_- $ at $ \varsigma=-1 $, where the momentum transfers are defined in \eqref{eq:cat-partition-transfers}. The limit is specified by the conditions $ q\to0^+ $, $ r=1+\mu q $, and $ z=\varsigma(1+r^2-q^2)/(2r) $. The parameter $ \mu\in[-1,1] $, the scale $ k>0 $, the chosen external fields, and the finite time interval $ 0<\eta_i<\eta_f $ are held fixed. Hence $ x_i=k\eta_i $ and $ x_f=k\eta_f $ are also fixed. In this limit, $ k'=kr\to k $ and $ z\to\varsigma $. The values $ |\mu|=1 $ are understood as boundary values approached from $ -1<z<1 $. For the momentum transfer $ q_+ $, this is the setup preceding Eq. (195) of the main article, where the catalogue partition $ 02|13 $ is denoted by $ 13|24 $.
 % Main article: eq:v34r-soft-scalar-vertex; eq:v33-soft-singularity; eq:v34-transfer-variable.
 
-Before taking the limit, the contact contribution with coefficients $ b_p,u_p^{(\pm)},v_p^{(\pm)} $ and the scalar and tensor exchange contributions for both time orderings are calculated using Eq. (192) of the main article~\cite{YerokhinV52Article}. They are added to all five boundary corrections in Eq. (199) of the main article~\cite{YerokhinV52Article}. The explicit corrections for each time-ordered partition are given in Eqs. (385)--(387) of the main article~\cite{YerokhinV52Article}. The reverse time ordering is added separately. The resulting expression is $ \widetilde{\mathcal F}_{\ne0} $ in Eq. (395) of the main article~\cite{YerokhinV52Article}. In the boundary transformation, the upper boundary $ Q_* $ of the dimensionful soft band is held fixed with $ 2Q_*<k,k' $. Its lower boundary $ \epsilon $ serves as a soft regulator: the contributions are first summed at $ \epsilon>0 $, and the regulator is then removed in their sum. The contact terms $ u_p^{(0)},v_p^{(0)} $ and the exactly homogeneous exchange are retained separately with the normalization (403) of the main article and are not determined by the limit $ q\to0 $ of nonzero momentum transfer.
+Before taking the limit, the contact contribution with coefficients $ b_p,u_p^{(\pm)},v_p^{(\pm)} $ and the scalar and tensor exchange contributions for both time orderings are calculated using Eq. (192) of the main article. They are added to all five boundary corrections in Eq. (199) of the main article. The explicit corrections for each time-ordered partition are given in Eqs. (385)--(387) of the main article. The reverse time ordering is added separately. The resulting expression is $ \widetilde{\mathcal F}_{\ne0} $ in Eq. (395) of the main article. In the boundary transformation, the upper limit $ Q_* $ of the dimensionful soft band is held fixed with $ 2Q_*<k,k' $. Its lower limit $ \epsilon $ serves as a soft regulator: the contributions are first summed at $ \epsilon>0 $, and the regulator is then removed in their sum. The contact terms $ u_p^{(0)},v_p^{(0)} $ and the exactly homogeneous exchange are retained separately with the normalization (403) of the main article and are not determined by the $ q\to0 $ limit of the nonzero-transfer contributions.
 % Main article: eq:v33-radial-kernel; eq:v33-boundary-order-two; eq:v34r-boundary-complete-correction; eq:v34r-boundary-mixed-terms; eq:v34r-boundary-square-terms; eq:v34r-dressed-tree-bound; eq:v34-isolated-zero-distribution.
 \begin{equation}
 R_{1}(r,z)=\frac{N_{1}(r,z)}{D_{1}(r,z)}.
@@ -6831,10 +6826,12 @@ R_{331}(r,z)=- 8 i r
 \label{eq:cat-rational-331}
 \end{equation}
 
-% END PRESERVED V51 CATALOGUE
 \clearpage
 \phantomsection
 \addcontentsline{toc}{section}{References}
-\bibliographystyle{unsrtnat}
-\bibliography{references}
+\begin{thebibliography}{1}
+\bibitem{YerokhinArticle}
+D. Yerokhin, \textit{A minimal local covariant action for holographic dark energy:
+constraints, perturbations, and nonlinear dynamics} (2026).
+\end{thebibliography}
 \end{document}
